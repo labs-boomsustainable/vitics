@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — Vitics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+:root{
+  --sw:220px;
+  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
+  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;--gdim:rgba(34,197,94,0.08);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
+  --purple:#c084fc;--pdim:rgba(192,132,252,0.08);
+  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:8px;--r2:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;font-size:14px;line-height:1.6}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.sidebar{width:var(--sw);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto}
+.sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border2)}
+.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block;text-decoration:none}
+.sb-logo em{color:var(--green);font-style:normal}
+.sb-tag{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.sb-sec{padding:12px 20px 4px}
+.sb-secl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.sbn{list-style:none}
+.sbn li{margin-bottom:1px}
+.sbn a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s;position:relative}
+.sbn a:hover{background:var(--bg4);color:var(--text)}
+.sbn a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
+.sbn a svg{flex-shrink:0;opacity:0.65}
+.sbn a.active svg{opacity:1}
+.sb-foot{margin-top:auto;padding:12px 20px;border-top:1px solid var(--border2)}
+.sb-ver{font-family:var(--mono);font-size:9px;color:var(--text3)}
+.content{margin-left:var(--sw);flex:1;min-height:100vh}
+.topbar{height:50px;display:flex;align-items:center;padding:0 40px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50;gap:12px}
+.topbar-back{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);text-decoration:none;font-family:var(--mono);transition:color 0.15s}
+.topbar-back:hover{color:var(--green3)}
+.topbar-div{width:1px;height:16px;background:var(--border2)}
+.topbar-title{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+.page{max-width:900px;margin:0 auto;padding:48px 40px 80px}
+.page-badge{display:inline-flex;align-items:center;gap:6px;background:var(--pdim);border:1px solid rgba(192,132,252,0.2);border-radius:20px;padding:4px 12px;font-family:var(--mono);font-size:10px;color:var(--purple);font-weight:500;margin-bottom:16px}
+.page-title{font-family:var(--display);font-size:36px;font-weight:800;letter-spacing:-1px;color:var(--text);line-height:1.1;margin-bottom:14px}
+.page-title em{color:var(--green);font-style:normal}
+.page-lead{font-size:15px;color:var(--text2);line-height:1.7;max-width:680px}
+.section{margin-bottom:48px}
+.sec-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border2)}
+.sec-title{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.3px;margin-bottom:12px}
+.sec-body{font-size:14px;color:var(--text2);line-height:1.75}
+.sec-body p{margin-bottom:12px}
+.sec-body p:last-child{margin-bottom:0}
+.sec-body strong{color:var(--text);font-weight:600}
+
+/* METRIC CARDS */
+.metric-grid{display:grid;gap:12px;margin-top:14px}
+.mcard{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:18px;transition:border-color 0.2s}
+.mcard:hover{border-color:var(--border)}
+.mcard-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.mcard-name{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.mcard-conf{display:flex;align-items:center;gap:5px}
+.conf-bar{display:flex;gap:2px}
+.conf-pip{width:8px;height:8px;border-radius:2px;background:var(--bg5)}
+.conf-pip.on{background:var(--green)}
+.conf-pip.amber{background:var(--amber)}
+.conf-label{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.mcard-source{font-family:var(--mono);font-size:10px;color:var(--text3);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.src-chip{display:inline-flex;align-items:center;border-radius:20px;padding:1px 7px;font-size:9px;font-weight:600;font-family:var(--mono);border:1px solid transparent;margin-right:4px}
+.mcard-desc{font-size:13px;color:var(--text2);line-height:1.65}
+.mcard-caveats{margin-top:10px;padding-top:10px;border-top:1px solid var(--border3)}
+.caveat-label{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:5px}
+.caveat-list{display:flex;flex-direction:column;gap:4px}
+.caveat-item{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:var(--text3);font-family:var(--mono);line-height:1.4}
+.caveat-dot{width:4px;height:4px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
+
+/* PIPELINE */
+.pipeline{display:flex;flex-direction:column;gap:0;margin-top:14px}
+.pipe-step{display:flex;gap:14px;position:relative}
+.pipe-step:not(:last-child)::after{content:'';position:absolute;left:15px;top:36px;bottom:-8px;width:1px;background:var(--border2)}
+.pipe-num{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--green3);flex-shrink:0;background:var(--gdim);margin-top:4px}
+.pipe-body{flex:1;padding-bottom:20px}
+.pipe-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.pipe-desc{font-size:12px;color:var(--text3);line-height:1.55;font-family:var(--mono)}
+
+/* CONFIDENCE LEGEND */
+.conf-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.cl-item{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);padding:10px 14px}
+.cl-pips{display:flex;gap:2px}
+.cl-pip{width:8px;height:8px;border-radius:2px}
+.cl-label{font-size:12px;font-weight:500;color:var(--text)}
+.cl-desc{font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:1px}
+
+.last-updated{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:48px;padding-top:20px;border-top:1px solid var(--border2)}
+@media(max-width:800px){.sidebar{display:none}.content{margin-left:0}.page{padding:24px 20px 60px}.conf-legend{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-brand">
+    <a href="index.html" class="sb-logo">vit<em>ics</em></a>
+    <div class="sb-tag">AI Energy Intelligence</div>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Main</div>
+    <ul class="sbn">
+      <li><a href="index.html"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i>Overview</a></li>
+      <li><a href="#"><i data-lucide="smile" style="width:14px;height:14px"></i>Sentiment</a></li>
+      <li><a href="#"><i data-lucide="zap" style="width:14px;height:14px"></i>Products</a></li>
+      <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px"></i>Geography</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Intelligence</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="activity" style="width:14px;height:14px"></i>Emissions</a></li>
+      <li><a href="#"><i data-lucide="target" style="width:14px;height:14px"></i>SDG Pulse</a></li>
+      <li><a href="#"><i data-lucide="file-text" style="width:14px;height:14px"></i>Policy</a></li>
+      <li><a href="#"><i data-lucide="radar" style="width:14px;height:14px"></i>Futures</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Trust & Ethics</div>
+    <ul class="sbn">
+      <li><a href="ethics.html"><i data-lucide="shield" style="width:14px;height:14px"></i>Data Ethics</a></li>
+      <li><a href="privacy.html"><i data-lucide="lock" style="width:14px;height:14px"></i>Privacy Policy</a></li>
+      <li><a href="methodology.html" class="active"><i data-lucide="microscope" style="width:14px;height:14px"></i>Methodology</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Output</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>Reports</a></li>
+      <li><a href="#"><i data-lucide="download" style="width:14px;height:14px"></i>Export</a></li>
+      <li><a href="#"><i data-lucide="settings" style="width:14px;height:14px"></i>Settings</a></li>
+    </ul>
+  </div>
+  <div class="sb-foot"><div class="sb-ver">v2.0.0 · © 2025 Vitics</div></div>
+</aside>
+
+<div class="content">
+  <div class="topbar">
+    <a href="index.html" class="topbar-back"><i data-lucide="arrow-left" style="width:13px;height:13px"></i>Back to dashboard</a>
+    <div class="topbar-div"></div>
+    <span class="topbar-title">Methodology & Confidence</span>
+  </div>
+
+  <div class="page">
+
+    <div class="page-badge"><i data-lucide="microscope" style="width:11px;height:11px"></i>Transparency · Confidence · Limitations</div>
+    <div class="page-title">How Vitics generates<br><em>intelligence</em></div>
+    <div class="page-lead" style="margin-bottom:32px">Every insight on the Vitics dashboard has a methodology behind it. This page explains exactly how each metric is calculated, what data it draws from, how confident we are, and what its limitations are. We believe transparency in method is as important as the insight itself.</div>
+
+    <!-- CONFIDENCE SYSTEM -->
+    <div class="section">
+      <div class="sec-label">Confidence system</div>
+      <div class="sec-title">How we signal confidence</div>
+      <div class="sec-body"><p>Every Vitics insight carries a confidence indicator — a visual signal showing how reliable that specific metric is given its data source, sample size, and analytical method. Three levels are used:</p></div>
+      <div class="conf-legend">
+        <div class="cl-item">
+          <div><div class="cl-pips"><div class="cl-pip" style="background:var(--green)"></div><div class="cl-pip" style="background:var(--green)"></div><div class="cl-pip" style="background:var(--green)"></div></div></div>
+          <div><div class="cl-label">High confidence</div><div class="cl-desc">Large sample · Official API · Validated model</div></div>
+        </div>
+        <div class="cl-item">
+          <div><div class="cl-pips"><div class="cl-pip" style="background:var(--amber)"></div><div class="cl-pip" style="background:var(--amber)"></div><div class="cl-pip" style="background:var(--bg5)"></div></div></div>
+          <div><div class="cl-label">Moderate confidence</div><div class="cl-desc">Adequate sample · Modelled estimate · Some uncertainty</div></div>
+        </div>
+        <div class="cl-item">
+          <div><div class="cl-pips"><div class="cl-pip" style="background:var(--red)"></div><div class="cl-pip" style="background:var(--bg5)"></div><div class="cl-pip" style="background:var(--bg5)"></div></div></div>
+          <div><div class="cl-label">Indicative</div><div class="cl-desc">Small sample · Proxy measure · Treat as directional only</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA PIPELINE -->
+    <div class="section">
+      <div class="sec-label">Data pipeline</div>
+      <div class="sec-title">How data flows through Vitics</div>
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="pipe-num">1</div>
+          <div class="pipe-body">
+            <div class="pipe-title">Collection via official APIs</div>
+            <div class="pipe-desc">Publicly available content is collected through official platform APIs (YouTube Data API v3, Reddit PRAW, NewsAPI). No unauthorised scraping is used. Collection is keyword and topic-scoped to Nigerian energy discourse.</div>
+          </div>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-num">2</div>
+          <div class="pipe-body">
+            <div class="pipe-title">Anonymisation & PII removal</div>
+            <div class="pipe-desc">All usernames, profile references, and identifying metadata are stripped before any storage or processing. Only anonymised text content and engagement metadata proceed to the next stage.</div>
+          </div>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-num">3</div>
+          <div class="pipe-body">
+            <div class="pipe-title">AI analysis via Claude (Anthropic API)</div>
+            <div class="pipe-desc">Anonymised content is processed by Claude to extract: sentiment polarity, topic clusters, product mentions, geographic references, SDG-relevant themes, and fossil vs clean energy signals. Unlike black-box models, Claude provides reasoning alongside scores.</div>
+          </div>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-num">4</div>
+          <div class="pipe-body">
+            <div class="pipe-title">Aggregation & structured data integration</div>
+            <div class="pipe-desc">AI-extracted signals are aggregated across all collected content. Structured reference data from IEA, GOGLA, REA, and FMENV is integrated to contextualise consumer signals within verified emissions and market baselines.</div>
+          </div>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-num">5</div>
+          <div class="pipe-body">
+            <div class="pipe-title">Insight generation & confidence scoring</div>
+            <div class="pipe-desc">Final insights are generated with confidence levels assigned based on sample size, source quality, and model certainty. All insights are labelled with their data basis before display on the dashboard.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METRIC METHODOLOGIES -->
+    <div class="section">
+      <div class="sec-label">Metric methodologies</div>
+      <div class="sec-title">How each dashboard metric is calculated</div>
+      <div class="metric-grid">
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="message-circle" style="width:14px;height:14px;color:var(--green3)"></i>Conversations tracked</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip on"></div><div class="conf-pip on"></div><div class="conf-pip on"></div></div>
+              <span class="conf-label">High</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip tg" style="background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)">YouTube API</span><span class="src-chip" style="background:var(--bg5);color:var(--text2);border-color:var(--border3)">Forums</span><span class="src-chip" style="background:var(--bg5);color:var(--text2);border-color:var(--border3)">Reddit</span></div>
+          <div class="mcard-desc">Total count of publicly available posts, comments, videos, and forum threads matching Nigerian energy keywords collected in the current 30-day window. Counted at the point of API retrieval before anonymisation.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>Reflects API-accessible content only — not all public content is indexed</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Skews toward English and Nigerian Pidgin; Hausa/Yoruba/Igbo content may be undercounted</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="smile" style="width:14px;height:14px;color:var(--green3)"></i>Overall sentiment score</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip amber"></div><div class="conf-pip amber"></div><div class="conf-pip on" style="background:var(--bg5)"></div></div>
+              <span class="conf-label">Moderate</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip" style="background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)">Claude AI</span><span class="src-chip" style="background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)">All sources</span></div>
+          <div class="mcard-desc">Percentage of analysed conversations classified as positive, neutral, or negative toward decentralised energy adoption. Scored by Claude on a per-conversation basis then aggregated. Positive = favourable views on solar, mini-grid, clean energy. Negative = complaints, affordability concerns, reliability failures.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>AI sentiment classification carries inherent uncertainty (~85% accuracy on Nigerian energy vocabulary)</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Sarcasm, irony, and code-switching in Nigerian discourse may be misclassified</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Does not capture offline sentiment from non-digital populations</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="cloud" style="width:14px;height:14px;color:var(--green3)"></i>CO₂ avoided estimate</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip amber"></div><div class="conf-pip on" style="background:var(--bg5)"></div><div class="conf-pip on" style="background:var(--bg5)"></div></div>
+              <span class="conf-label">Indicative</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip" style="background:var(--bdim);color:var(--blue);border-color:rgba(56,189,248,0.15)">IEA data</span><span class="src-chip" style="background:var(--bdim);color:var(--blue);border-color:rgba(56,189,248,0.15)">GOGLA</span><span class="src-chip" style="background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)">Model</span></div>
+          <div class="mcard-desc">Estimated metric tonnes of CO₂ equivalent avoided through consumer adoption of decentralised renewable energy in Nigeria. Calculated using IPCC/IEA emission factors for displaced diesel and kerosene, cross-referenced against GOGLA off-grid solar market data and Vitics-derived adoption proxy signals. This is a modelled estimate, not a metered measurement.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>Adoption rates are proxy-estimated from conversation signals, not verified sales data</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Emission factors are global averages — Nigeria-specific factors may differ</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Treat as directional indicator, not reportable emissions accounting</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="target" style="width:14px;height:14px;color:var(--amber)"></i>SDG alignment scores</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip amber"></div><div class="conf-pip amber"></div><div class="conf-pip on" style="background:var(--bg5)"></div></div>
+              <span class="conf-label">Moderate</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip" style="background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)">Claude AI</span><span class="src-chip" style="background:var(--adim);color:var(--amber);border-color:rgba(245,158,11,0.15)">UN SDG taxonomy</span></div>
+          <div class="mcard-desc">Percentage of energy conversations that contain themes aligned with each tracked SDG target. Claude classifies each conversation against a Nigeria-specific SDG taxonomy. SDG 7 (energy access), SDG 5 (gender), SDG 8 (economic growth), SDG 10 (inequality), SDG 13 (climate). Score = proportion of relevant conversations showing positive alignment signals.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>SDG alignment is assessed from consumer discourse, not from verified programme outcomes</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Gender (SDG 5) signals are particularly underrepresented in current data sources</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="map-pin" style="width:14px;height:14px;color:var(--blue)"></i>Geographic demand signals</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip amber"></div><div class="conf-pip on" style="background:var(--bg5)"></div><div class="conf-pip on" style="background:var(--bg5)"></div></div>
+              <span class="conf-label">Indicative</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip" style="background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)">Claude AI</span><span class="src-chip" style="background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)">All sources</span></div>
+          <div class="mcard-desc">Relative conversation volume by Nigerian state, inferred from geographic references within public content. Includes explicit state/city mentions, local landmark references, and LGA names. Scores are relative — Lagos at 100 means Lagos generates the most energy discourse, not an absolute conversation count.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>Many conversations contain no geographic reference — these are excluded from state mapping</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>Urban areas are heavily overrepresented relative to rural populations</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>High conversation volume ≠ high energy need — it reflects digital discourse, not energy poverty</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <div class="mcard-head">
+            <div class="mcard-name"><i data-lucide="fuel" style="width:14px;height:14px;color:var(--red)"></i>Fossil vs clean signal</div>
+            <div class="mcard-conf">
+              <div class="conf-bar"><div class="conf-pip on"></div><div class="conf-pip on"></div><div class="conf-pip on"></div></div>
+              <span class="conf-label">High</span>
+            </div>
+          </div>
+          <div class="mcard-source"><span class="src-chip" style="background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)">Claude AI</span><span class="src-chip" style="background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)">All sources</span></div>
+          <div class="mcard-desc">Proportion of energy conversations referencing fossil fuel products (generators, diesel, petrol, kerosene) vs clean energy products (solar, mini-grid, battery storage, clean cooking). Classified at conversation level by Claude. A declining fossil share over time is the key transition signal this metric tracks.</div>
+          <div class="mcard-caveats">
+            <div class="caveat-label">Limitations</div>
+            <div class="caveat-list">
+              <div class="caveat-item"><span class="caveat-dot"></span>Conversations may reference both fossil and clean products simultaneously</div>
+              <div class="caveat-item"><span class="caveat-dot"></span>High fossil discourse may reflect complaints about fossil dependency rather than preference for it</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- POPULATION BIAS NOTE -->
+    <div class="section">
+      <div class="sec-label">Important limitation</div>
+      <div class="sec-title">Who Vitics data does not represent</div>
+      <div class="sec-body">
+        <p>Vitics data reflects the voices of Nigerians who are online, have smartphones, and participate in digital discourse. This is a significant and growing population — but it is not the full Nigerian population.</p>
+        <p><strong>Who is underrepresented:</strong> Rural communities with limited internet connectivity, elderly populations, non-smartphone users, people in the deepest energy poverty, and populations who primarily communicate in languages other than English or Nigerian Pidgin.</p>
+        <p><strong>What this means:</strong> Vitics insights describe <em>digital consumer discourse about energy</em> — not a representative survey of all Nigerian energy consumers. Policy makers and investors should treat Vitics as one intelligence input among several, complemented by field surveys, national statistics, and community-level research.</p>
+        <p>We believe being honest about this limitation makes Vitics more valuable, not less.</p>
+      </div>
+    </div>
+
+    <div class="last-updated">Last updated: May 2025 · Version 1.0 · Methodology is reviewed with each major platform update</div>
+
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

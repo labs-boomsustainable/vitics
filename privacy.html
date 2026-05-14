@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Vitics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+:root{
+  --sw:220px;
+  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
+  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;--gdim:rgba(34,197,94,0.08);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
+  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:8px;--r2:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;font-size:14px;line-height:1.6}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.sidebar{width:var(--sw);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto}
+.sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border2)}
+.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block;text-decoration:none}
+.sb-logo em{color:var(--green);font-style:normal}
+.sb-tag{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.sb-sec{padding:12px 20px 4px}
+.sb-secl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.sbn{list-style:none}
+.sbn li{margin-bottom:1px}
+.sbn a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s;position:relative}
+.sbn a:hover{background:var(--bg4);color:var(--text)}
+.sbn a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
+.sbn a svg{flex-shrink:0;opacity:0.65}
+.sbn a.active svg{opacity:1}
+.sb-foot{margin-top:auto;padding:12px 20px;border-top:1px solid var(--border2)}
+.sb-ver{font-family:var(--mono);font-size:9px;color:var(--text3)}
+.content{margin-left:var(--sw);flex:1;min-height:100vh}
+.topbar{height:50px;display:flex;align-items:center;padding:0 40px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50;gap:12px}
+.topbar-back{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);text-decoration:none;font-family:var(--mono);transition:color 0.15s}
+.topbar-back:hover{color:var(--green3)}
+.topbar-div{width:1px;height:16px;background:var(--border2)}
+.topbar-title{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+.page{max-width:860px;margin:0 auto;padding:48px 40px 80px}
+.page-badge{display:inline-flex;align-items:center;gap:6px;background:var(--bdim);border:1px solid rgba(56,189,248,0.2);border-radius:20px;padding:4px 12px;font-family:var(--mono);font-size:10px;color:var(--blue);font-weight:500;margin-bottom:16px}
+.page-title{font-family:var(--display);font-size:36px;font-weight:800;letter-spacing:-1px;color:var(--text);line-height:1.1;margin-bottom:14px}
+.page-title em{color:var(--green);font-style:normal}
+.page-lead{font-size:15px;color:var(--text2);line-height:1.7;max-width:640px;margin-bottom:8px}
+.effective{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:0}
+
+/* TOC */
+.toc{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:20px;margin:32px 0}
+.toc-title{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text3);margin-bottom:12px}
+.toc-list{display:grid;grid-template-columns:1fr 1fr;gap:4px;list-style:none}
+.toc-list li a{font-size:12px;color:var(--text2);text-decoration:none;font-family:var(--mono);transition:color 0.15s;display:flex;align-items:center;gap:5px;padding:3px 0}
+.toc-list li a:hover{color:var(--green3)}
+
+/* SECTIONS */
+.pol-section{margin-bottom:40px;scroll-margin-top:70px}
+.pol-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.pol-label::after{content:'';flex:1;height:1px;background:var(--border2)}
+.pol-title{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.3px;margin-bottom:12px}
+.pol-body{font-size:14px;color:var(--text2);line-height:1.75}
+.pol-body p{margin-bottom:12px}
+.pol-body p:last-child{margin-bottom:0}
+.pol-body strong{color:var(--text);font-weight:600}
+.pol-body ul{padding-left:20px;margin:8px 0}
+.pol-body ul li{margin-bottom:6px;color:var(--text2)}
+
+/* RIGHTS CARDS */
+.rights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.rcard{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:14px}
+.rcard-icon{margin-bottom:8px}
+.rcard-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px}
+.rcard-body{font-size:11px;color:var(--text3);line-height:1.5;font-family:var(--mono)}
+
+/* COMPLIANCE BADGES */
+.comp-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.comp-badge{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:12px 16px}
+.comp-badge-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.comp-badge-title{font-size:12px;font-weight:600;color:var(--text)}
+.comp-badge-sub{font-size:10px;color:var(--text3);font-family:var(--mono);margin-top:1px}
+
+.contact-box{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:20px;margin-top:14px;display:flex;align-items:center;gap:16px}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:var(--gdim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px}
+.contact-body{font-size:12px;color:var(--text3);font-family:var(--mono)}
+.last-updated{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:48px;padding-top:20px;border-top:1px solid var(--border2)}
+
+@media(max-width:800px){.sidebar{display:none}.content{margin-left:0}.toc-list,.rights-grid{grid-template-columns:1fr}.page{padding:24px 20px 60px}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-brand">
+    <a href="index.html" class="sb-logo">vit<em>ics</em></a>
+    <div class="sb-tag">AI Energy Intelligence</div>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Main</div>
+    <ul class="sbn">
+      <li><a href="index.html"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i>Overview</a></li>
+      <li><a href="#"><i data-lucide="smile" style="width:14px;height:14px"></i>Sentiment</a></li>
+      <li><a href="#"><i data-lucide="zap" style="width:14px;height:14px"></i>Products</a></li>
+      <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px"></i>Geography</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Intelligence</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="activity" style="width:14px;height:14px"></i>Emissions</a></li>
+      <li><a href="#"><i data-lucide="target" style="width:14px;height:14px"></i>SDG Pulse</a></li>
+      <li><a href="#"><i data-lucide="file-text" style="width:14px;height:14px"></i>Policy</a></li>
+      <li><a href="#"><i data-lucide="radar" style="width:14px;height:14px"></i>Futures</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Trust & Ethics</div>
+    <ul class="sbn">
+      <li><a href="ethics.html"><i data-lucide="shield" style="width:14px;height:14px"></i>Data Ethics</a></li>
+      <li><a href="privacy.html" class="active"><i data-lucide="lock" style="width:14px;height:14px"></i>Privacy Policy</a></li>
+      <li><a href="methodology.html"><i data-lucide="microscope" style="width:14px;height:14px"></i>Methodology</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Output</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>Reports</a></li>
+      <li><a href="#"><i data-lucide="download" style="width:14px;height:14px"></i>Export</a></li>
+      <li><a href="#"><i data-lucide="settings" style="width:14px;height:14px"></i>Settings</a></li>
+    </ul>
+  </div>
+  <div class="sb-foot"><div class="sb-ver">v2.0.0 · © 2025 Vitics</div></div>
+</aside>
+
+<div class="content">
+  <div class="topbar">
+    <a href="index.html" class="topbar-back"><i data-lucide="arrow-left" style="width:13px;height:13px"></i>Back to dashboard</a>
+    <div class="topbar-div"></div>
+    <span class="topbar-title">Privacy Policy</span>
+  </div>
+
+  <div class="page">
+
+    <div class="page-badge"><i data-lucide="lock" style="width:11px;height:11px"></i>NDPA 2023 · GDPR Compliant</div>
+    <div class="page-title">Privacy <em>Policy</em></div>
+    <div class="page-lead">This privacy policy explains how Vitics collects, processes, stores, and protects information in connection with operating this platform. It applies to all visitors and users of vitics.ai and any associated services.</div>
+    <div class="effective">Effective date: May 2025 · Last reviewed: May 2025</div>
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ul class="toc-list">
+        <li><a href="#who">1. Who we are</a></li>
+        <li><a href="#collect">2. What information we collect</a></li>
+        <li><a href="#use">3. How we use information</a></li>
+        <li><a href="#legal">4. Legal basis for processing</a></li>
+        <li><a href="#storage">5. Data storage & retention</a></li>
+        <li><a href="#sharing">6. Data sharing & third parties</a></li>
+        <li><a href="#rights">7. Your rights</a></li>
+        <li><a href="#cookies">8. Cookies & analytics</a></li>
+        <li><a href="#compliance">9. Regulatory compliance</a></li>
+        <li><a href="#contact">10. Contact & complaints</a></li>
+      </ul>
+    </div>
+
+    <div class="pol-section" id="who">
+      <div class="pol-label">Section 1</div>
+      <div class="pol-title">Who we are</div>
+      <div class="pol-body">
+        <p>Vitics is an AI-powered decentralised energy intelligence platform operated by <strong>Boom Sustainable Labs</strong>. We are registered in Nigeria and operate as a public-interest research and market intelligence service focused on Nigeria's decentralised energy transition.</p>
+        <p>For the purposes of the Nigeria Data Protection Act 2023 (NDPA) and the General Data Protection Regulation (GDPR), Vitics acts as a <strong>data controller</strong> in respect of any personal data processed through this platform.</p>
+        <p>Our data protection contact: <strong>privacy@vitics.ai</strong></p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="collect">
+      <div class="pol-label">Section 2</div>
+      <div class="pol-title">What information we collect</div>
+      <div class="pol-body">
+        <p><strong>Platform visitor data.</strong> When you visit vitics.ai, we may collect standard web analytics data including your approximate geographic region, browser type, pages visited, and time spent on pages. This data is aggregated and anonymised. We do not collect names, email addresses, or account information from visitors.</p>
+        <p><strong>Public digital content (anonymised).</strong> Vitics analyses publicly available content from digital platforms including YouTube, public forums, and social media to generate energy intelligence. Before any such content is processed or stored, all personally identifiable information — usernames, profile references, and identifying metadata — is removed. Only anonymised thematic signals are retained.</p>
+        <p><strong>Contact enquiries.</strong> If you contact us directly via email, we retain your email address and the content of your message solely for the purpose of responding to your enquiry.</p>
+        <p><strong>What we do not collect.</strong> We never collect: passwords, payment information, government identification numbers, health data, biometric data, children's data, or any data from private or restricted digital spaces.</p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="use">
+      <div class="pol-label">Section 3</div>
+      <div class="pol-title">How we use information</div>
+      <div class="pol-body">
+        <p>Visitor analytics data is used solely to understand platform usage patterns and improve the user experience. It is never sold, shared with advertisers, or used for individual profiling.</p>
+        <p>Anonymised public content signals are processed by AI models to generate aggregated energy intelligence insights — sentiment trends, product mention patterns, geographic demand signals, and SDG alignment indicators. No individual-level data appears in any published insight.</p>
+        <p>Contact information is used only to respond to your enquiry and is deleted within 90 days of resolution unless you have requested ongoing communication.</p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="legal">
+      <div class="pol-label">Section 4</div>
+      <div class="pol-title">Legal basis for processing</div>
+      <div class="pol-body">
+        <p>Under the NDPA 2023 and GDPR, we process data on the following lawful bases:</p>
+        <ul>
+          <li><strong>Legitimate interests</strong> — processing anonymised public content to generate public-interest energy intelligence, where individual privacy rights are not overridden</li>
+          <li><strong>Public interest</strong> — generating insights that support Nigeria's energy transition, SDG progress monitoring, and evidence-based policy development</li>
+          <li><strong>Consent</strong> — for any direct communication or subscription services where we request explicit consent</li>
+          <li><strong>Legal obligation</strong> — where processing is required to comply with applicable law</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pol-section" id="storage">
+      <div class="pol-label">Section 5</div>
+      <div class="pol-title">Data storage & retention</div>
+      <div class="pol-body">
+        <p>Vitics stores aggregated, anonymised intelligence data on secure servers. No personally identifiable information is retained beyond the point of anonymisation in our data pipeline.</p>
+        <p>Visitor analytics data is retained for a maximum of 13 months before deletion. Contact enquiry data is retained for 90 days after resolution. Anonymised intelligence datasets are retained indefinitely as they contain no personal data.</p>
+        <p>Data is processed and stored within jurisdictions that provide adequate data protection standards. Any international transfers comply with applicable transfer mechanisms under both NDPA and GDPR.</p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="sharing">
+      <div class="pol-label">Section 6</div>
+      <div class="pol-title">Data sharing & third parties</div>
+      <div class="pol-body">
+        <p><strong>We do not sell personal data.</strong> We never have and never will.</p>
+        <p>We use the following third-party services in operating the platform: Mapbox (map rendering — governed by Mapbox privacy policy), Anthropic API (AI text processing — anonymised content only, governed by Anthropic usage policies), and standard web hosting services.</p>
+        <p>All third-party processors are bound by data processing agreements consistent with NDPA and GDPR requirements. No personally identifiable information is shared with any third party.</p>
+        <p>We may share aggregated, non-identifiable intelligence insights with research partners, development finance institutions, and policy bodies in furtherance of our public interest mission. Such sharing contains no personal data.</p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="rights">
+      <div class="pol-label">Section 7</div>
+      <div class="pol-title">Your rights</div>
+      <div class="pol-body"><p>Under the NDPA 2023 and GDPR, you have the following rights regarding your personal data:</p></div>
+      <div class="rights-grid">
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="search" style="width:16px;height:16px;color:var(--green3)"></i></div>
+          <div class="rcard-title">Right of access</div>
+          <div class="rcard-body">Request a copy of any personal data we hold about you</div>
+        </div>
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="edit-3" style="width:16px;height:16px;color:var(--blue)"></i></div>
+          <div class="rcard-title">Right to rectification</div>
+          <div class="rcard-body">Request correction of inaccurate personal data</div>
+        </div>
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="trash-2" style="width:16px;height:16px;color:var(--red)"></i></div>
+          <div class="rcard-title">Right to erasure</div>
+          <div class="rcard-body">Request deletion of your personal data where lawfully applicable</div>
+        </div>
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="pause-circle" style="width:16px;height:16px;color:var(--amber)"></i></div>
+          <div class="rcard-title">Right to restriction</div>
+          <div class="rcard-body">Request we limit processing of your personal data</div>
+        </div>
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="x-circle" style="width:16px;height:16px;color:var(--red)"></i></div>
+          <div class="rcard-title">Right to object</div>
+          <div class="rcard-body">Object to processing based on legitimate interests</div>
+        </div>
+        <div class="rcard">
+          <div class="rcard-icon"><i data-lucide="download-cloud" style="width:16px;height:16px;color:var(--blue)"></i></div>
+          <div class="rcard-title">Right to portability</div>
+          <div class="rcard-body">Receive your data in a structured, machine-readable format</div>
+        </div>
+      </div>
+      <div class="pol-body" style="margin-top:14px"><p>To exercise any of these rights, contact us at <strong>privacy@vitics.ai</strong>. We will respond within 30 days as required by law. You also have the right to lodge a complaint with the Nigeria Data Protection Commission (NDPC) at ndpc.gov.ng or your local supervisory authority under GDPR.</p></div>
+    </div>
+
+    <div class="pol-section" id="cookies">
+      <div class="pol-label">Section 8</div>
+      <div class="pol-title">Cookies & analytics</div>
+      <div class="pol-body">
+        <p>Vitics uses minimal, privacy-respecting analytics to understand platform usage. We do not use advertising cookies, tracking pixels, or third-party behavioural analytics. Any analytics we use are configured for anonymisation and data minimisation.</p>
+        <p>Essential cookies necessary for platform operation may be set. No consent is required for strictly necessary cookies. Where non-essential cookies are used, we will request your consent before setting them.</p>
+      </div>
+    </div>
+
+    <div class="pol-section" id="compliance">
+      <div class="pol-label">Section 9</div>
+      <div class="pol-title">Regulatory compliance</div>
+      <div class="comp-row">
+        <div class="comp-badge">
+          <div class="comp-badge-icon" style="background:var(--gdim);border:1px solid var(--border)"><i data-lucide="shield-check" style="width:14px;height:14px;color:var(--green3)"></i></div>
+          <div>
+            <div class="comp-badge-title">NDPA 2023</div>
+            <div class="comp-badge-sub">Nigeria Data Protection Act · NDPC enforced</div>
+          </div>
+        </div>
+        <div class="comp-badge">
+          <div class="comp-badge-icon" style="background:var(--bdim);border:1px solid rgba(56,189,248,0.15)"><i data-lucide="shield-check" style="width:14px;height:14px;color:var(--blue)"></i></div>
+          <div>
+            <div class="comp-badge-title">GDPR</div>
+            <div class="comp-badge-sub">General Data Protection Regulation · EU/UK</div>
+          </div>
+        </div>
+        <div class="comp-badge">
+          <div class="comp-badge-icon" style="background:var(--adim);border:1px solid rgba(245,158,11,0.15)"><i data-lucide="globe" style="width:14px;height:14px;color:var(--amber)"></i></div>
+          <div>
+            <div class="comp-badge-title">Platform ToS</div>
+            <div class="comp-badge-sub">All data sourced via official APIs only</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pol-section" id="contact">
+      <div class="pol-label">Section 10</div>
+      <div class="pol-title">Contact & complaints</div>
+      <div class="contact-box">
+        <div class="contact-icon"><i data-lucide="mail" style="width:18px;height:18px;color:var(--green3)"></i></div>
+        <div>
+          <div class="contact-title">Data Protection Contact</div>
+          <div class="contact-body">privacy@vitics.ai · Boom Sustainable Labs · Nigeria · Response within 30 days</div>
+        </div>
+      </div>
+      <div class="pol-body" style="margin-top:14px">
+        <p>If you are unsatisfied with our response, you have the right to lodge a complaint with the <strong>Nigeria Data Protection Commission (NDPC)</strong> at ndpc.gov.ng, or — if you are in the EU/UK — with your local supervisory data protection authority.</p>
+      </div>
+    </div>
+
+    <div class="last-updated">Effective: May 2025 · Version 1.0 · This policy is reviewed annually and updated when our practices change</div>
+
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

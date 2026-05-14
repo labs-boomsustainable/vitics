@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Ethics — Vitics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+:root{
+  --sw:220px;
+  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
+  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;--gdim:rgba(34,197,94,0.08);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
+  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:8px;--r2:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;font-size:14px;line-height:1.6}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* SIDEBAR */
+.sidebar{width:var(--sw);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto}
+.sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border2)}
+.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block;text-decoration:none}
+.sb-logo em{color:var(--green);font-style:normal}
+.sb-tag{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.sb-sec{padding:12px 20px 4px}
+.sb-secl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.sbn{list-style:none}
+.sbn li{margin-bottom:1px}
+.sbn a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s}
+.sbn a:hover{background:var(--bg4);color:var(--text)}
+.sbn a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
+.sbn a.active::before{content:'';position:absolute;left:-1px;top:6px;bottom:6px;width:3px;background:var(--green);border-radius:0 3px 3px 0}
+.sbn a{position:relative}
+.sbn a svg{flex-shrink:0;opacity:0.65}
+.sbn a.active svg{opacity:1}
+.sb-foot{margin-top:auto;padding:12px 20px;border-top:1px solid var(--border2)}
+.sb-ver{font-family:var(--mono);font-size:9px;color:var(--text3)}
+
+/* CONTENT */
+.content{margin-left:var(--sw);flex:1;min-height:100vh}
+.topbar{height:50px;display:flex;align-items:center;padding:0 40px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50;gap:12px}
+.topbar-back{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);text-decoration:none;font-family:var(--mono);transition:color 0.15s}
+.topbar-back:hover{color:var(--green3)}
+.topbar-div{width:1px;height:16px;background:var(--border2)}
+.topbar-title{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+
+/* PAGE */
+.page{max-width:860px;margin:0 auto;padding:48px 40px 80px}
+.page-hero{margin-bottom:48px}
+.page-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gdim);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-family:var(--mono);font-size:10px;color:var(--green3);font-weight:500;margin-bottom:16px}
+.page-title{font-family:var(--display);font-size:36px;font-weight:800;letter-spacing:-1px;color:var(--text);line-height:1.1;margin-bottom:14px}
+.page-title em{color:var(--green);font-style:normal}
+.page-lead{font-size:16px;color:var(--text2);line-height:1.7;max-width:640px}
+
+/* SECTIONS */
+.section{margin-bottom:48px}
+.section-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border2)}
+.section-title{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.3px;margin-bottom:10px}
+.section-body{font-size:14px;color:var(--text2);line-height:1.75}
+.section-body p{margin-bottom:12px}
+.section-body p:last-child{margin-bottom:0}
+
+/* PRINCIPLE CARDS */
+.principle-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.pcard{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:18px;transition:border-color 0.2s}
+.pcard:hover{border-color:var(--border)}
+.pcard-icon{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.pcard-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px}
+.pcard-body{font-size:12px;color:var(--text3);line-height:1.6;font-family:var(--mono)}
+
+/* YES/NO TABLE */
+.yn-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.yn-box{background:var(--bg3);border-radius:var(--r2);padding:18px;border:1px solid var(--border2)}
+.yn-head{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;font-family:var(--mono);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border3)}
+.yn-list{display:flex;flex-direction:column;gap:7px}
+.yn-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5}
+.yn-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px}
+
+/* SOURCE TABLE */
+.src-table{width:100%;border-collapse:collapse;margin-top:16px}
+.src-table th{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--text3);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border2)}
+.src-table td{font-size:12px;padding:10px 12px;border-bottom:1px solid var(--border3);vertical-align:top}
+.src-table tr:last-child td{border-bottom:none}
+.src-table td:first-child{color:var(--text);font-weight:500}
+.src-table td:not(:first-child){color:var(--text3);font-family:var(--mono)}
+.status-dot{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:var(--mono)}
+
+/* COMMITMENT BLOCK */
+.commit-block{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:24px;margin-top:16px;position:relative;overflow:hidden}
+.commit-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.commit-title{font-family:var(--display);font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+.commit-body{font-size:13px;color:var(--text2);line-height:1.7}
+
+/* CONTACT */
+.contact-box{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:20px;margin-top:16px;display:flex;align-items:center;gap:16px}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:var(--gdim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px}
+.contact-body{font-size:12px;color:var(--text3);font-family:var(--mono)}
+
+/* LAST UPDATED */
+.last-updated{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:48px;padding-top:20px;border-top:1px solid var(--border2)}
+
+@media(max-width:800px){.sidebar{display:none}.content{margin-left:0}.principle-grid,.yn-grid{grid-template-columns:1fr}.page{padding:24px 20px 60px}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-brand">
+    <a href="index.html" class="sb-logo">vit<em>ics</em></a>
+    <div class="sb-tag">AI Energy Intelligence</div>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Main</div>
+    <ul class="sbn">
+      <li><a href="index.html"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i>Overview</a></li>
+      <li><a href="#"><i data-lucide="smile" style="width:14px;height:14px"></i>Sentiment</a></li>
+      <li><a href="#"><i data-lucide="zap" style="width:14px;height:14px"></i>Products</a></li>
+      <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px"></i>Geography</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Intelligence</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="activity" style="width:14px;height:14px"></i>Emissions</a></li>
+      <li><a href="#"><i data-lucide="target" style="width:14px;height:14px"></i>SDG Pulse</a></li>
+      <li><a href="#"><i data-lucide="file-text" style="width:14px;height:14px"></i>Policy</a></li>
+      <li><a href="#"><i data-lucide="radar" style="width:14px;height:14px"></i>Futures</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Trust & Ethics</div>
+    <ul class="sbn">
+      <li><a href="ethics.html" class="active"><i data-lucide="shield" style="width:14px;height:14px"></i>Data Ethics</a></li>
+      <li><a href="privacy.html"><i data-lucide="lock" style="width:14px;height:14px"></i>Privacy Policy</a></li>
+      <li><a href="methodology.html"><i data-lucide="microscope" style="width:14px;height:14px"></i>Methodology</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Output</div>
+    <ul class="sbn">
+      <li><a href="#"><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>Reports</a></li>
+      <li><a href="#"><i data-lucide="download" style="width:14px;height:14px"></i>Export</a></li>
+      <li><a href="#"><i data-lucide="settings" style="width:14px;height:14px"></i>Settings</a></li>
+    </ul>
+  </div>
+  <div class="sb-foot"><div class="sb-ver">v2.0.0 · © 2025 Vitics</div></div>
+</aside>
+
+<div class="content">
+  <div class="topbar">
+    <a href="index.html" class="topbar-back"><i data-lucide="arrow-left" style="width:13px;height:13px"></i>Back to dashboard</a>
+    <div class="topbar-div"></div>
+    <span class="topbar-title">Data Ethics Statement</span>
+  </div>
+
+  <div class="page">
+
+    <div class="page-hero">
+      <div class="page-badge"><i data-lucide="shield-check" style="width:11px;height:11px"></i>Ethics & Transparency</div>
+      <div class="page-title">How Vitics handles<br>data <em>responsibly</em></div>
+      <div class="page-lead">Vitics is a public-interest energy intelligence platform. We believe that meaningful insights about Nigeria's energy transition can be generated ethically, transparently, and without compromising the privacy of any individual. This page explains exactly how we do that.</div>
+    </div>
+
+    <!-- WHAT VITICS IS -->
+    <div class="section">
+      <div class="section-label">Our purpose</div>
+      <div class="section-title">What Vitics is — and what it is not</div>
+      <div class="section-body">
+        <p>Vitics is an <strong>AI-powered decentralised energy intelligence platform</strong> that analyses publicly available consumer conversations to generate anonymised insights into Nigeria's energy transition. Our goal is to surface patterns, trends, and signals that help energy investors, policy makers, development researchers, and energy startups make better decisions.</p>
+        <p>Vitics is <strong>not</strong> a surveillance tool. We do not track individuals. We do not build user profiles. We do not sell personal data. We do not monitor specific people or organisations. Our unit of analysis is always the <em>conversation</em>, never the person.</p>
+        <p>This distinction — between consumer intelligence and user surveillance — is fundamental to everything we build and every decision we make.</p>
+      </div>
+    </div>
+
+    <!-- CORE PRINCIPLES -->
+    <div class="section">
+      <div class="section-label">Principles</div>
+      <div class="section-title">Our five data ethics principles</div>
+      <div class="principle-grid">
+        <div class="pcard">
+          <div class="pcard-icon" style="background:var(--gdim);border:1px solid var(--border)"><i data-lucide="eye-off" style="width:16px;height:16px;color:var(--green3)"></i></div>
+          <div class="pcard-title">Anonymisation by design</div>
+          <div class="pcard-body">No individual post, username, profile, or identity is ever stored or displayed. Every insight is derived from aggregated patterns across thousands of conversations — never from a single identifiable source.</div>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon" style="background:var(--bdim);border:1px solid rgba(56,189,248,0.15)"><i data-lucide="minimize-2" style="width:16px;height:16px;color:var(--blue)"></i></div>
+          <div class="pcard-title">Data minimisation</div>
+          <div class="pcard-body">We collect only what is necessary to generate energy intelligence. Video titles, comment themes, engagement patterns, and topic signals — not usernames, profile photos, device identifiers, or personal contact information.</div>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon" style="background:var(--adim);border:1px solid rgba(245,158,11,0.15)"><i data-lucide="book-open" style="width:16px;height:16px;color:var(--amber)"></i></div>
+          <div class="pcard-title">Public interest framing</div>
+          <div class="pcard-body">Vitics operates as a public-interest research platform. Our insights serve energy policy, development finance, and consumer welfare — not commercial advertising, political targeting, or individual profiling.</div>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon" style="background:rgba(192,132,252,0.08);border:1px solid rgba(192,132,252,0.15)"><i data-lucide="search" style="width:16px;height:16px;color:#c084fc"></i></div>
+          <div class="pcard-title">Transparency of method</div>
+          <div class="pcard-body">Every insight on the Vitics dashboard carries a methodology indicator showing its data source, confidence level, and analytical basis. We do not publish black-box scores without explanation.</div>
+        </div>
+        <div class="pcard" style="grid-column:1/-1">
+          <div class="pcard-icon" style="background:var(--rdim);border:1px solid rgba(244,63,94,0.15)"><i data-lucide="users" style="width:16px;height:16px;color:var(--red)"></i></div>
+          <div class="pcard-title">Vulnerable population sensitivity</div>
+          <div class="pcard-body">Nigerian energy consumers include people experiencing energy poverty, rural communities, women-led micro-enterprises, and marginalised groups. Insights derived from their digital conversations are handled with care. We acknowledge that social media data skews toward urban, educated, and smartphone-owning populations — and we note this limitation explicitly in every relevant insight rather than presenting a partial picture as a complete one.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT WE COLLECT -->
+    <div class="section">
+      <div class="section-label">Data collection</div>
+      <div class="section-title">What we collect — and what we never collect</div>
+      <div class="yn-grid">
+        <div class="yn-box" style="border-color:rgba(34,197,94,0.2)">
+          <div class="yn-head" style="color:var(--green3)"><i data-lucide="check-circle" style="width:14px;height:14px"></i>What Vitics collects</div>
+          <div class="yn-list">
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Publicly visible post text and comment themes</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Video titles, descriptions, and topic metadata</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Engagement volume and trend signals</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Product mentions and brand references</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Geographic references made within public content</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Hashtag and keyword frequency patterns</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Aggregated sentiment signals across topic clusters</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--green)"></span><span>Public forum discussion themes and complaint patterns</span></div>
+          </div>
+        </div>
+        <div class="yn-box" style="border-color:rgba(244,63,94,0.2)">
+          <div class="yn-head" style="color:var(--red)"><i data-lucide="x-circle" style="width:14px;height:14px"></i>What Vitics never collects</div>
+          <div class="yn-list">
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Usernames, handles, or display names</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Profile photos or avatar images</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Email addresses or phone numbers</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Device identifiers or IP addresses</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Data from private groups, DMs, or paywalled content</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Content collected in violation of platform Terms of Service</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Health, financial, or sensitive personal information</span></div>
+            <div class="yn-item"><span class="yn-dot" style="background:var(--red)"></span><span>Location data beyond what users publicly state in content</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA SOURCES -->
+    <div class="section">
+      <div class="section-label">Sources</div>
+      <div class="section-title">Where our data comes from</div>
+      <div class="section-body">
+        <p>Vitics sources data exclusively through official platform APIs and publicly accessible content. We do not use unauthorised scraping tools or methods that violate platform terms of service.</p>
+      </div>
+      <table class="src-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Access method</th>
+            <th>What we extract</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>YouTube</td>
+            <td>Official Data API v3</td>
+            <td>Video metadata, comment themes, engagement signals</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block"></span>Primary source</span></td>
+          </tr>
+          <tr>
+            <td>Nairaland</td>
+            <td>Public forum pages</td>
+            <td>Discussion themes, complaint patterns, product mentions</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block"></span>Primary source</span></td>
+          </tr>
+          <tr>
+            <td>Reddit</td>
+            <td>Official PRAW API</td>
+            <td>Topic signals, sentiment patterns, product discussions</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block"></span>Secondary source</span></td>
+          </tr>
+          <tr>
+            <td>X / Twitter</td>
+            <td>Academic Research API</td>
+            <td>Hashtag trends, public keyword signals</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block"></span>Secondary source</span></td>
+          </tr>
+          <tr>
+            <td>News & RSS feeds</td>
+            <td>NewsAPI + public RSS</td>
+            <td>Policy announcements, market developments</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);display:inline-block"></span>Supplementary</span></td>
+          </tr>
+          <tr>
+            <td>IEA / GOGLA / REA</td>
+            <td>Public datasets</td>
+            <td>Emissions baselines, market statistics, policy data</td>
+            <td><span class="status-dot"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);display:inline-block"></span>Structured data</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LEGAL FRAMEWORK -->
+    <div class="section">
+      <div class="section-label">Legal compliance</div>
+      <div class="section-title">Our legal framework</div>
+      <div class="section-body">
+        <p><strong>Nigeria Data Protection Act 2023 (NDPA)</strong> — As a platform generating insights about Nigerian consumers, Vitics complies fully with the NDPA enforced by the Nigeria Data Protection Commission (NDPC). Our data processing is grounded in legitimate public interest, with anonymisation applied before any storage or display of insights.</p>
+        <p><strong>General Data Protection Regulation (GDPR)</strong> — Because Vitics serves European partners, researchers, and investors, we apply GDPR principles universally across the platform. This includes the right to erasure, data minimisation, purpose limitation, and privacy by design.</p>
+        <p><strong>Platform Terms of Service</strong> — All data collection is conducted through official APIs or publicly accessible channels. We do not use automated scraping tools in violation of any platform's terms of service. Our data sourcing strategy is documented and reviewable.</p>
+      </div>
+    </div>
+
+    <!-- LIMITATIONS -->
+    <div class="section">
+      <div class="section-label">Honest limitations</div>
+      <div class="section-title">What our data cannot tell you</div>
+      <div class="section-body">
+        <p>We believe intellectual honesty about data limitations is as important as the insights themselves. Every user of Vitics should understand the following:</p>
+        <p><strong>Social media data skews toward connected populations.</strong> Our insights reflect the voices of Nigerians who are online, have smartphones, and participate in digital discourse. Rural, offline, and non-smartphone-owning populations — who may face the greatest energy access challenges — are underrepresented in our data.</p>
+        <p><strong>Emissions estimates are modelled, not metered.</strong> Our CO₂ avoided calculations are estimates derived from conversion factors and adoption proxies — not direct measurements from energy meters. We indicate this clearly on every emissions insight.</p>
+        <p><strong>Sentiment analysis is probabilistic.</strong> AI-generated sentiment scores carry inherent uncertainty. Nigerian English, Pidgin, Hausa, Yoruba, and Igbo linguistic patterns require specific model tuning. We report confidence levels alongside every sentiment score.</p>
+        <p><strong>Geographic inference is approximate.</strong> Location signals are extracted from text references within public content. They are indicative of discourse geography, not precise population distribution.</p>
+      </div>
+    </div>
+
+    <!-- COMMITMENT -->
+    <div class="section">
+      <div class="section-label">Our commitment</div>
+      <div class="commit-block">
+        <div class="commit-title">Vitics is built to serve Nigeria's energy transition — not to exploit it</div>
+        <div class="commit-body">Every architectural decision, every data pipeline, and every insight displayed on this platform has been made with the question: <em>does this serve the public interest without harming any individual?</em> We will continue updating this statement as the platform evolves, as new data sources are added, and as the legal and ethical landscape around AI and data develops. We welcome feedback, challenge, and scrutiny from researchers, regulators, civil society, and the public.</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+      <div class="section-label">Contact</div>
+      <div class="section-title">Questions about our data practices</div>
+      <div class="contact-box">
+        <div class="contact-icon"><i data-lucide="mail" style="width:18px;height:18px;color:var(--green3)"></i></div>
+        <div>
+          <div class="contact-title">Reach our data ethics team</div>
+          <div class="contact-body">ethics@vitics.ai · We respond to all data ethics enquiries within 5 business days</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-updated">Last updated: May 2025 · Version 1.0 · This statement is reviewed quarterly</div>
+
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
