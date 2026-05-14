@@ -1,1 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitics — Nigeria AI Energy Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+:root {
+  --sidebar-w:220px;
+  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
+  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;
+  --gdim:rgba(34,197,94,0.08);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
+  --purple:#c084fc;--pdim:rgba(192,132,252,0.08);
+  --pink:#f472b6;
+  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:8px;--r2:12px;
+  --shadow:0 1px 3px rgba(0,0,0,0.4),0 4px 16px rgba(0,0,0,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{height:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;font-size:13px;line-height:1.5;display:flex;overflow-x:hidden}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 
+/* SIDEBAR */
+.sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto;transition:transform 0.3s}
+.sb-brand{padding:22px 20px 18px;border-bottom:1px solid var(--border2)}
+.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block}
+.sb-logo em{color:var(--green);font-style:normal}
+.sb-tagline{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.sb-user{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--border2)}
+.sb-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--green2),var(--blue));display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;font-family:var(--mono)}
+.sb-username{font-size:12px;font-weight:600;color:var(--text)}
+.sb-role{font-size:10px;color:var(--text3);font-family:var(--mono)}
+.sb-live{display:flex;align-items:center;gap:5px;margin:12px 20px;background:var(--gdim);border:1px solid var(--border);border-radius:6px;padding:7px 10px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px var(--green)}50%{opacity:0.4;box-shadow:0 0 2px var(--green)}}
+.sb-live-text{font-family:var(--mono);font-size:10px;color:var(--green3);flex:1}
+.sb-live-time{font-family:var(--mono);font-size:9px;color:var(--text3)}
+.sb-section{padding:14px 20px 6px}
+.sb-section-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.sb-nav{list-style:none}
+.sb-nav li{margin-bottom:1px}
+.sb-nav a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s;position:relative}
+.sb-nav a:hover{background:var(--bg4);color:var(--text)}
+.sb-nav a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
+.sb-nav a.active::before{content:'';position:absolute;left:-1px;top:6px;bottom:6px;width:3px;background:var(--green);border-radius:0 3px 3px 0}
+.sb-nav a svg{flex-shrink:0;opacity:0.7}
+.sb-nav a.active svg{opacity:1}
+.sb-badge{margin-left:auto;font-family:var(--mono);font-size:9px;background:var(--gdim);color:var(--green3);border:1px solid var(--border);border-radius:10px;padding:1px 6px;font-weight:600}
+.sb-footer{margin-top:auto;padding:14px 20px;border-top:1px solid var(--border2)}
+.sb-version{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:0.5px}
+
+/* CONTENT */
+.content{margin-left:var(--sidebar-w);flex:1;min-height:100vh;display:flex;flex-direction:column}
+
+/* TOPBAR */
+.topbar{height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50}
+.topbar-title{font-family:var(--display);font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
+.topbar-sub{font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:1px}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.topbar-chip{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text2);font-family:var(--mono);background:var(--bg4);border:1px solid var(--border2);border-radius:6px;padding:5px 10px;cursor:default;transition:all 0.15s}
+.topbar-chip:hover{border-color:var(--border);color:var(--text)}
+
+/* BODY */
+.body{flex:1;display:flex}
+.feed{flex:1;padding:20px 24px;overflow-y:auto;min-width:0}
+.aside{width:256px;flex-shrink:0;border-left:1px solid var(--border2);background:var(--bg2);padding:18px 16px;overflow-y:auto}
+
+/* GRID */
+.g{display:grid;gap:12px;margin-bottom:12px}
+.g6{grid-template-columns:repeat(6,1fr)}
+.g2{grid-template-columns:1fr 1fr}
+.g21{grid-template-columns:2fr 1fr}
+.g211{grid-template-columns:2fr 1fr 1fr}
+.g31{grid-template-columns:3fr 2fr}
+
+/* SECTION HEAD */
+.sch{display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:22px}
+.sch:first-child{margin-top:0}
+.sch-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);white-space:nowrap}
+.sch-line{flex:1;height:1px;background:var(--border2)}
+.sch-n{font-family:var(--mono);font-size:9px;color:var(--text3)}
+
+/* METRIC CARD */
+.mc{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:14px 14px 10px;position:relative;overflow:hidden;cursor:default;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;animation:fadeUp 0.45s ease both}
+.mc:hover{border-color:var(--border);transform:translateY(-2px);box-shadow:var(--shadow)}
+.mc-accent{position:absolute;top:0;left:0;right:0;height:2px;border-radius:var(--r2) var(--r2) 0 0}
+.mc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px}
+.mc-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--text3)}
+.mc-icon{opacity:0.4}
+.mc-value{font-family:var(--display);font-size:22px;font-weight:700;color:var(--text);letter-spacing:-0.6px;line-height:1;margin-bottom:4px}
+.mc-value small{font-size:12px;font-weight:400;color:var(--text3);letter-spacing:0;font-family:var(--font)}
+.mc-delta{font-size:10px;font-family:var(--mono);display:flex;align-items:center;gap:3px;margin-bottom:8px}
+.up{color:var(--green3)}.dn{color:var(--red)}.nt{color:var(--text3)}
+.mc-spark{height:28px}
+
+/* PANEL */
+.panel{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:16px;position:relative;overflow:hidden;animation:fadeUp 0.45s ease both;transition:border-color 0.2s}
+.panel:hover{border-color:var(--border)}
+.panel-topline{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(34,197,94,0.2),transparent)}
+.ptitle{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text2);display:flex;align-items:center;gap:6px;margin-bottom:14px}
+.ptitle svg{opacity:0.55;flex-shrink:0}
+
+/* ROWS */
+.ri{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border3);transition:padding-left 0.15s;cursor:default}
+.ri:last-child{border-bottom:none;padding-bottom:0}
+.ri:first-child{padding-top:0}
+.ri:hover{padding-left:6px}
+.rn{color:var(--text);font-weight:500;font-size:12px}
+.rs{color:var(--text3);font-size:10px;margin-top:1px;font-family:var(--mono)}
+.bw{flex:1;height:2px;background:var(--bg5);border-radius:2px;margin:0 10px}
+.bf{height:2px;border-radius:2px}
+
+/* TAGS */
+.tag{display:inline-flex;align-items:center;border-radius:20px;padding:2px 8px;font-size:9px;font-weight:600;font-family:var(--mono);letter-spacing:0.3px;border:1px solid transparent;white-space:nowrap}
+.tg{background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)}
+.ta{background:var(--adim);color:var(--amber);border-color:rgba(245,158,11,0.15)}
+.tr{background:var(--rdim);color:var(--red);border-color:rgba(244,63,94,0.15)}
+.tb{background:var(--bdim);color:var(--blue);border-color:rgba(56,189,248,0.15)}
+.tp{background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)}
+.tz{background:var(--bg5);color:var(--text2);border-color:var(--border3)}
+
+/* SENTIMENT */
+.sentbar{display:flex;height:5px;border-radius:3px;overflow:hidden;gap:2px;margin-bottom:8px}
+.sp{background:var(--green)}.snu{background:var(--text3)}.sng{background:var(--red)}
+.sentleg{display:flex;gap:12px;margin-bottom:14px}
+.sentleg span{font-size:10px;color:var(--text2);display:flex;align-items:center;gap:4px;font-family:var(--mono)}
+.sldot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+
+/* SOURCES */
+.srcr{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border3)}
+.srcr:last-child{border-bottom:none}
+.srci{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;font-family:var(--mono);border:1px solid rgba(255,255,255,0.06)}
+.srcn{flex:1;color:var(--text);font-size:12px;font-weight:500}
+.srcc{color:var(--text3);font-family:var(--mono);font-size:10px}
+.srcbar{width:40px;height:2px;background:var(--bg5);border-radius:1px;margin-right:6px}
+.srcfill{height:2px;border-radius:1px;background:var(--green)}
+
+/* CONV BARS */
+.cbars{display:flex;align-items:flex-end;gap:4px;height:44px;margin-bottom:5px}
+.cbar{flex:1;border-radius:2px 2px 0 0;background:var(--bg5);border:1px solid var(--border3);cursor:pointer;transition:all 0.18s}
+.cbar:hover{background:var(--green2);border-color:var(--green)}
+.cbar.hi{background:var(--green);border-color:var(--green3);box-shadow:0 0 8px rgba(34,197,94,0.25)}
+.clabels{display:flex;justify-content:space-between;font-size:9px;color:var(--text3);font-family:var(--mono)}
+.topicwrap{display:flex;flex-wrap:wrap;gap:5px;padding-top:12px;margin-top:10px;border-top:1px solid var(--border3)}
+
+/* SDG */
+.sdgr{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border3);transition:padding-left 0.15s;cursor:default}
+.sdgr:hover{padding-left:4px}
+.sdgr:last-child{border-bottom:none;padding-bottom:0}
+.sdgr:first-child{padding-top:0}
+.sdgnum{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;font-family:var(--mono)}
+.sdgbody{flex:1;min-width:0}
+.sdgt{font-size:11px;font-weight:600;color:var(--text)}
+.sdgs{font-size:10px;color:var(--text3);font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sdgbar{width:52px;height:2px;background:var(--bg5);border-radius:2px;flex-shrink:0}
+.sdgfill{height:2px;border-radius:2px}
+.sdgpct{font-size:10px;font-family:var(--mono);font-weight:600;min-width:28px;text-align:right}
+
+/* POLICY */
+.polr{padding:7px 0;border-bottom:1px solid var(--border3)}
+.polr:first-child{padding-top:0}
+.polr:last-child{border-bottom:none;padding-bottom:0}
+.poln{font-size:11px;font-weight:600;color:var(--text);margin-bottom:2px}
+.polm{font-size:10px;color:var(--text3);display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-family:var(--mono)}
+.gapb{height:3px;background:var(--bg5);border-radius:2px;margin:5px 0 3px}
+.gapf{height:3px;border-radius:2px;background:var(--red);width:58%}
+
+/* SIGNAL CARDS */
+.sigrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.sigc{background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:10px;transition:all 0.18s;cursor:default}
+.sigc:hover{background:var(--bg5);border-color:var(--border2);transform:translateY(-1px)}
+.sigico{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;margin-bottom:6px}
+.sigt{font-size:11px;font-weight:600;color:var(--text);margin-bottom:2px}
+.sigs{font-size:10px;color:var(--text3);margin-bottom:6px;line-height:1.3;font-family:var(--mono)}
+
+/* MAP */
+#map{width:100%;height:320px;border-radius:var(--r)}
+.mapboxgl-ctrl-bottom-left,.mapboxgl-ctrl-bottom-right{display:none}
+.map-leg{margin-top:8px;display:flex;align-items:center;gap:8px;font-size:9px;color:var(--text3);font-family:var(--mono)}
+.map-leg-bar{flex:1;height:3px;border-radius:2px;background:linear-gradient(90deg,rgba(34,197,94,0.1),var(--green))}
+
+/* ASIDE */
+.aw{margin-bottom:20px}
+.aw-title{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+.aw-title a{color:var(--green3);font-size:9px;text-decoration:none}
+.aw-title a:hover{text-decoration:underline}
+.signal-feed{display:flex;flex-direction:column;gap:6px}
+.sf-item{display:flex;align-items:flex-start;gap:8px;padding:8px;background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);transition:border-color 0.15s;cursor:default}
+.sf-item:hover{border-color:var(--border2)}
+.sf-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.sf-body{flex:1;min-width:0}
+.sf-text{font-size:11px;color:var(--text);line-height:1.4}
+.sf-meta{font-size:10px;color:var(--text3);font-family:var(--mono);margin-top:2px}
+.state-list{display:flex;flex-direction:column;gap:4px}
+.sl-item{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid var(--border3)}
+.sl-item:last-child{border-bottom:none}
+.sl-rank{font-family:var(--mono);font-size:9px;color:var(--text3);min-width:14px}
+.sl-name{flex:1;font-size:11px;font-weight:500;color:var(--text)}
+.sl-bar{width:50px;height:2px;background:var(--bg5);border-radius:1px}
+.sl-fill{height:2px;border-radius:1px;background:var(--blue)}
+.sl-val{font-family:var(--mono);font-size:10px;color:var(--text3);min-width:34px;text-align:right}
+
+/* HEATMAP */
+.heatmap{width:100%;border-collapse:separate;border-spacing:2px}
+.heatmap th{font-family:var(--mono);font-size:9px;color:var(--text3);font-weight:500;padding:2px 4px;text-align:center}
+.heatmap td{padding:4px 3px;text-align:center;border-radius:3px;font-family:var(--mono);font-size:9px;font-weight:500}
+
+/* EMISSIONS LEGEND */
+.emleg{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.emleg span{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text3);font-family:var(--mono)}
+.emline{width:14px;height:2px;display:inline-block;border-radius:2px}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.mc:nth-child(1){animation-delay:0.03s}.mc:nth-child(2){animation-delay:0.06s}
+.mc:nth-child(3){animation-delay:0.09s}.mc:nth-child(4){animation-delay:0.12s}
+.mc:nth-child(5){animation-delay:0.15s}.mc:nth-child(6){animation-delay:0.18s}
+
+/* RESPONSIVE */
+@media(max-width:1200px){.aside{width:210px}.g6{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.aside{display:none}.g211{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.sidebar{transform:translateX(-100%)}.content{margin-left:0}.g6{grid-template-columns:repeat(2,1fr)}.g2,.g21,.g31,.g211{grid-template-columns:1fr}.main{padding:12px}}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-brand">
+    <span class="sb-logo">vit<em>ics</em></span>
+    <div class="sb-tagline">AI Energy Intelligence</div>
+  </div>
+  <div class="sb-user">
+    <div class="sb-avatar">NG</div>
+    <div>
+      <div class="sb-username">Nigeria Platform</div>
+      <div class="sb-role">Public Dashboard</div>
+    </div>
+  </div>
+  <div class="sb-live">
+    <span class="live-dot"></span>
+    <span class="sb-live-text">Live intelligence</span>
+    <span class="sb-live-time" id="sbTime">—</span>
+  </div>
+  <div class="sb-section">
+    <div class="sb-section-label">Main</div>
+    <ul class="sb-nav">
+      <li><a href="#" class="active"><i data-lucide="layout-dashboard" style="width:15px;height:15px"></i>Overview</a></li>
+      <li><a href="#"><i data-lucide="smile" style="width:15px;height:15px"></i>Sentiment<span class="sb-badge">62%</span></a></li>
+      <li><a href="#"><i data-lucide="zap" style="width:15px;height:15px"></i>Products<span class="sb-badge">148</span></a></li>
+      <li><a href="#"><i data-lucide="map-pin" style="width:15px;height:15px"></i>Geography</a></li>
+    </ul>
+  </div>
+  <div class="sb-section">
+    <div class="sb-section-label">Intelligence</div>
+    <ul class="sb-nav">
+      <li><a href="#"><i data-lucide="activity" style="width:15px;height:15px"></i>Emissions</a></li>
+      <li><a href="#"><i data-lucide="target" style="width:15px;height:15px"></i>SDG Pulse</a></li>
+      <li><a href="#"><i data-lucide="file-text" style="width:15px;height:15px"></i>Policy</a></li>
+      <li><a href="#"><i data-lucide="radar" style="width:15px;height:15px"></i>Futures<span class="sb-badge">6</span></a></li>
+    </ul>
+  </div>
+  <div class="sb-section">
+    <div class="sb-section-label">Output</div>
+    <ul class="sb-nav">
+      <li><a href="#"><i data-lucide="bar-chart-2" style="width:15px;height:15px"></i>Reports</a></li>
+      <li><a href="#"><i data-lucide="download" style="width:15px;height:15px"></i>Export</a></li>
+      <li><a href="#"><i data-lucide="settings" style="width:15px;height:15px"></i>Settings</a></li>
+    </ul>
+  </div>
+  <div class="sb-footer">
+    <div class="sb-version">v1.1.0 · Phase 1 · © 2025 Vitics</div>
+  </div>
+</aside>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="topbar">
+    <div>
+      <div class="topbar-title">Nigeria Decentralised Energy Intelligence</div>
+      <div class="topbar-sub">Consumer sentiment · Market signals · Emissions tracking · SDG alignment</div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-chip"><i data-lucide="calendar" style="width:12px;height:12px;opacity:0.6"></i>Last 30 days</div>
+      <div class="topbar-chip"><i data-lucide="refresh-cw" style="width:12px;height:12px;opacity:0.6"></i>Updated 8m ago</div>
+      <div class="topbar-chip"><i data-lucide="bell" style="width:12px;height:12px;opacity:0.6"></i>3 alerts</div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="feed">
+
+      <!-- METRICS -->
+      <div class="sch"><div class="sch-label">Core metrics</div><div class="sch-line"></div><div class="sch-n">6 indicators · live</div></div>
+      <div class="g g6">
+        <div class="mc"><div class="mc-accent" style="background:var(--green)"></div><div class="mc-top"><div class="mc-label">Conversations</div><div class="mc-icon"><i data-lucide="message-circle" style="width:13px;height:13px"></i></div></div><div class="mc-value">84,217</div><div class="mc-delta up">↑ 12% this week</div><div class="mc-spark" id="sp1"></div></div>
+        <div class="mc"><div class="mc-accent" style="background:var(--green)"></div><div class="mc-top"><div class="mc-label">Sentiment</div><div class="mc-icon"><i data-lucide="smile" style="width:13px;height:13px"></i></div></div><div class="mc-value">62% <small>pos.</small></div><div class="mc-delta up">↑ 4pts vs last mo.</div><div class="mc-spark" id="sp2"></div></div>
+        <div class="mc"><div class="mc-accent" style="background:var(--blue)"></div><div class="mc-top"><div class="mc-label">States w/ signal</div><div class="mc-icon"><i data-lucide="map-pin" style="width:13px;height:13px"></i></div></div><div class="mc-value">31 <small>/ 37</small></div><div class="mc-delta nt">of 36 states + FCT</div><div class="mc-spark" id="sp3"></div></div>
+        <div class="mc"><div class="mc-accent" style="background:var(--amber)"></div><div class="mc-top"><div class="mc-label">Products</div><div class="mc-icon"><i data-lucide="zap" style="width:13px;height:13px"></i></div></div><div class="mc-value">148</div><div class="mc-delta up">↑ 9 new this week</div><div class="mc-spark" id="sp4"></div></div>
+        <div class="mc"><div class="mc-accent" style="background:var(--green)"></div><div class="mc-top"><div class="mc-label">CO₂ avoided</div><div class="mc-icon"><i data-lucide="cloud" style="width:13px;height:13px"></i></div></div><div class="mc-value">2.3 <small>Mt</small></div><div class="mc-delta up">↑ 18% vs 2023</div><div class="mc-spark" id="sp5"></div></div>
+        <div class="mc"><div class="mc-accent" style="background:var(--red)"></div><div class="mc-top"><div class="mc-label">Fossil signal</div><div class="mc-icon"><i data-lucide="fuel" style="width:13px;height:13px"></i></div></div><div class="mc-value">41% <small>fossil</small></div><div class="mc-delta dn">↓ 7pts — declining</div><div class="mc-spark" id="sp6"></div></div>
+      </div>
+
+      <!-- CONSUMER OVERVIEW -->
+      <div class="sch"><div class="sch-label">Consumer signal overview</div><div class="sch-line"></div></div>
+      <div class="g g211">
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="trending-up" style="width:12px;height:12px"></i>Conversation volume — 8 weeks</div>
+          <div class="cbars" id="cbars"></div>
+          <div class="clabels"><span>Wk1</span><span>Wk2</span><span>Wk3</span><span>Wk4</span><span>Wk5</span><span>Wk6</span><span>Wk7</span><span>Wk8</span></div>
+          <div class="topicwrap">
+            <span class="tag tr">PAYG solar</span><span class="tag tr">grid failure</span><span class="tag tg">mini-grid</span><span class="tag tg">battery storage</span><span class="tag tz">inverter cost</span><span class="tag tz">rural electrification</span><span class="tag tg">solar pump</span><span class="tag ta">diesel prices</span><span class="tag tg">clean cooking</span><span class="tag tb">mini-grid policy</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="smile" style="width:12px;height:12px"></i>Sentiment breakdown</div>
+          <div class="sentbar"><div class="sp" style="flex:62"></div><div class="snu" style="flex:22"></div><div class="sng" style="flex:16"></div></div>
+          <div class="sentleg">
+            <span><span class="sldot" style="background:var(--green)"></span>Pos 62%</span>
+            <span><span class="sldot" style="background:var(--text3)"></span>Neu 22%</span>
+            <span><span class="sldot" style="background:var(--red)"></span>Neg 16%</span>
+          </div>
+          <div class="ptitle" style="margin-bottom:8px"><i data-lucide="database" style="width:12px;height:12px"></i>Data sources</div>
+          <div class="srcr"><div class="srci" style="background:#0f0f0f;color:#ddd">X</div><span class="srcn">X / Twitter</span><div class="srcbar"><div class="srcfill" style="width:100%"></div></div><span class="srcc">34,102</span></div>
+          <div class="srcr"><div class="srci" style="background:#160000;color:#f55">YT</div><span class="srcn">YouTube</span><div class="srcbar"><div class="srcfill" style="width:63%"></div></div><span class="srcc">21,540</span></div>
+          <div class="srcr"><div class="srci" style="background:#00071a;color:#58f">FB</div><span class="srcn">Facebook</span><div class="srcbar"><div class="srcfill" style="width:53%"></div></div><span class="srcc">18,230</span></div>
+          <div class="srcr"><div class="srci" style="background:#0a0a0a;color:#bbb">TT</div><span class="srcn">TikTok</span><div class="srcbar"><div class="srcfill" style="width:23%"></div></div><span class="srcc">7,891</span></div>
+          <div class="srcr"><div class="srci" style="background:#0a0018;color:#a6f">FO</div><span class="srcn">Forums</span><div class="srcbar"><div class="srcfill" style="width:7%"></div></div><span class="srcc">2,454</span></div>
+        </div>
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="fuel" style="width:12px;height:12px"></i>Fossil vs clean signal</div>
+          <div id="fuelChart"></div>
+          <div style="margin-top:4px">
+            <div class="ri"><span class="rn">Generator complaints</span><span class="tag tr">Rising</span></div>
+            <div class="ri"><span class="rn">Switched to solar posts</span><span class="tag tg">+34% MoM</span></div>
+            <div class="ri"><span class="rn">Kerosene lamp mentions</span><span class="tag tg">Declining</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS + MAP -->
+      <div class="sch"><div class="sch-label">Products & geographic demand</div><div class="sch-line"></div></div>
+      <div class="g g31">
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div>
+              <div class="ptitle"><i data-lucide="zap" style="width:12px;height:12px"></i>Top products</div>
+              <div class="ri"><div><div class="rn">Lumos Solar</div><div class="rs">PAYG Solar</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:88%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">88</span></div></div>
+              <div class="ri"><div><div class="rn">Daystar Power</div><div class="rs">C&I Solar</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:74%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">74</span></div></div>
+              <div class="ri"><div><div class="rn">Greenlight Planet</div><div class="rs">Solar lanterns</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:67%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">67</span></div></div>
+              <div class="ri"><div><div class="rn">Rubitec Solar</div><div class="rs">Inverter systems</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:54%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">54</span></div></div>
+              <div class="ri"><div><div class="rn">Rensource Energy</div><div class="rs">Mini-grid</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:48%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">48</span></div></div>
+              <div class="ri"><div><div class="rn">BBOXX Nigeria</div><div class="rs">Solar home</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:41%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">41</span></div></div>
+              <div class="ri"><div><div class="rn">Arnergy Solar</div><div class="rs">Commercial</div></div><div style="display:flex;align-items:center;gap:6px"><div class="bw" style="margin:0;width:48px"><div class="bf" style="width:35%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono)">35</span></div></div>
+            </div>
+            <div>
+              <div class="ptitle"><i data-lucide="grid" style="width:12px;height:12px"></i>Demand heatmap</div>
+              <div style="overflow-x:auto"><table class="heatmap" id="heatmapTable"></table></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" style="padding:0;overflow:hidden">
+          <div style="padding:14px 16px 10px;border-bottom:1px solid var(--border2)">
+            <div class="ptitle" style="margin-bottom:0"><i data-lucide="map-pin" style="width:12px;height:12px"></i>Geographic demand — Nigeria</div>
+          </div>
+          <div id="map"></div>
+          <div style="padding:8px 14px"><div class="map-leg"><span>Low</span><div class="map-leg-bar"></div><span>High demand</span></div></div>
+        </div>
+      </div>
+
+      <!-- EMISSIONS + POLICY -->
+      <div class="sch"><div class="sch-label">Emissions intelligence</div><div class="sch-line"></div></div>
+      <div class="g g2">
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="activity" style="width:12px;height:12px"></i>Nigeria CO₂ emissions vs avoided — time series (Mt CO₂e)</div>
+          <div class="emleg">
+            <span><span class="emline" style="background:var(--red)"></span>Total emissions</span>
+            <span><span class="emline" style="background:var(--green)"></span>Avoided (RE)</span>
+            <span><span style="width:14px;border-top:2px dashed var(--blue);display:inline-block"></span>NDC target</span>
+          </div>
+          <div id="emChart"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="file-text" style="width:12px;height:12px"></i>Policy intelligence</div>
+          <div class="polr"><div class="poln">Nigeria Energy Transition Plan (ETP 2022)</div><div class="polm">Net-zero 2060 · Awareness: <span class="tag ta" style="font-size:9px;padding:1px 6px">Low</span></div></div>
+          <div class="polr"><div class="poln">Rural Electrification Fund (REF)</div><div class="polm">REA disbursements · <span class="tag tg" style="font-size:9px;padding:1px 6px">Positive</span></div></div>
+          <div class="polr"><div class="poln">NERC Mini-Grid Regulations (2021)</div><div class="polm">Operator complaints: <span class="tag tr" style="font-size:9px;padding:1px 6px">Rising</span></div></div>
+          <div class="polr"><div class="poln">Solar import duty waiver</div><div class="polm">Consumer awareness: <span class="tag ta" style="font-size:9px;padding:1px 6px">Moderate</span></div></div>
+          <div class="polr"><div class="poln">NDC 2021 (revised)</div><div class="polm">Alignment: <span class="tag tb" style="font-size:9px;padding:1px 6px">62%</span></div></div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border3)">
+            <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:var(--mono);letter-spacing:0.8px;text-transform:uppercase">Policy-to-market gap index</div>
+            <div class="gapb"><div class="gapf"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;font-family:var(--mono)">
+              <span style="color:var(--text3)">Policy outpacing market reality</span>
+              <span style="color:var(--red);font-weight:600">58% gap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SDG + FUTURES -->
+      <div class="sch"><div class="sch-label">SDG pulse & futures signal board</div><div class="sch-line"></div></div>
+      <div class="g g2" style="margin-bottom:0">
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="target" style="width:12px;height:12px"></i>SDG alignment tracker</div>
+          <div class="sdgr"><div class="sdgnum" style="background:rgba(245,158,11,0.12);color:var(--amber)">7</div><div class="sdgbody"><div class="sdgt">Affordable & clean energy</div><div class="sdgs">Affordability up · PAYG improving</div></div><div class="sdgbar"><div class="sdgfill" style="width:74%;background:var(--green)"></div></div><div class="sdgpct" style="color:var(--green)">74%</div></div>
+          <div class="sdgr"><div class="sdgnum" style="background:rgba(244,114,182,0.12);color:var(--pink)">5</div><div class="sdgbody"><div class="sdgt">Gender equality</div><div class="sdgs">Women MSME gaps · north</div></div><div class="sdgbar"><div class="sdgfill" style="width:48%;background:var(--pink)"></div></div><div class="sdgpct" style="color:var(--pink)">48%</div></div>
+          <div class="sdgr"><div class="sdgnum" style="background:rgba(34,197,94,0.12);color:var(--green3)">8</div><div class="sdgbody"><div class="sdgt">Decent work & growth</div><div class="sdgs">Solar jobs · MSME productivity</div></div><div class="sdgbar"><div class="sdgfill" style="width:61%;background:var(--green)"></div></div><div class="sdgpct" style="color:var(--green)">61%</div></div>
+          <div class="sdgr"><div class="sdgnum" style="background:rgba(56,189,248,0.12);color:var(--blue)">10</div><div class="sdgbody"><div class="sdgt">Reduced inequalities</div><div class="sdgs">Rural-urban gap · north</div></div><div class="sdgbar"><div class="sdgfill" style="width:35%;background:var(--blue)"></div></div><div class="sdgpct" style="color:var(--blue)">35%</div></div>
+          <div class="sdgr"><div class="sdgnum" style="background:rgba(192,132,252,0.12);color:var(--purple)">13</div><div class="sdgbody"><div class="sdgt">Climate action</div><div class="sdgs">Climate motivation signals</div></div><div class="sdgbar"><div class="sdgfill" style="width:29%;background:var(--purple)"></div></div><div class="sdgpct" style="color:var(--purple)">29%</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-topline"></div>
+          <div class="ptitle"><i data-lucide="radar" style="width:12px;height:12px"></i>Futures signal board — weak signals, fast growth</div>
+          <div class="sigrid">
+            <div class="sigc"><div class="sigico" style="background:var(--gdim)">⚡</div><div class="sigt">Battery-as-a-service</div><div class="sigs">Rental models — Lagos & Abuja</div><span class="tag tg">+240%</span></div>
+            <div class="sigc"><div class="sigico" style="background:var(--adim)">📱</div><div class="sigt">Energy fintech</div><div class="sigs">BNPL & mobile money solar</div><span class="tag ta">+180%</span></div>
+            <div class="sigc"><div class="sigico" style="background:var(--bdim)">🌱</div><div class="sigt">Agri-solar</div><div class="sigs">Solar pumps — north-west</div><span class="tag tb">+155%</span></div>
+            <div class="sigc"><div class="sigico" style="background:var(--pdim)">🏭</div><div class="sigt">Local manufacturing</div><div class="sigs">Nigerian-assembled solar</div><span class="tag tp">+120%</span></div>
+            <div class="sigc"><div class="sigico" style="background:var(--adim)">💨</div><div class="sigt">Hybrid wind-solar</div><div class="sigs">Small wind + solar — north</div><span class="tag ta">+98%</span></div>
+            <div class="sigc"><div class="sigico" style="background:var(--gdim)">🍳</div><div class="sigt">Clean cooking</div><div class="sigs">LPG + induction crossover</div><span class="tag tg">+87%</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /feed -->
+
+    <!-- ASIDE -->
+    <aside class="aside">
+      <div class="aw">
+        <div class="aw-title">Live signals <a href="#">See all</a></div>
+        <div class="signal-feed">
+          <div class="sf-item"><span class="sf-dot" style="background:var(--green)"></span><div class="sf-body"><div class="sf-text">Surge in solar pump discussions — Kano & Sokoto</div><div class="sf-meta">2 mins ago · 847 posts</div></div></div>
+          <div class="sf-item"><span class="sf-dot" style="background:var(--red)"></span><div class="sf-body"><div class="sf-text">Generator cost complaints spike — Lagos Island</div><div class="sf-meta">11 mins ago · 1.2k posts</div></div></div>
+          <div class="sf-item"><span class="sf-dot" style="background:var(--amber)"></span><div class="sf-body"><div class="sf-text">REA mini-grid announcement driving interest</div><div class="sf-meta">34 mins ago · 412 posts</div></div></div>
+          <div class="sf-item"><span class="sf-dot" style="background:var(--blue)"></span><div class="sf-body"><div class="sf-text">BBOXX product review thread trending on X</div><div class="sf-meta">1h ago · 634 posts</div></div></div>
+          <div class="sf-item"><span class="sf-dot" style="background:var(--purple)"></span><div class="sf-body"><div class="sf-text">New energy fintech product on YouTube</div><div class="sf-meta">2h ago · 229 posts</div></div></div>
+        </div>
+      </div>
+      <div class="aw">
+        <div class="aw-title">Top states by demand <a href="#">Map</a></div>
+        <div class="state-list">
+          <div class="sl-item"><span class="sl-rank">01</span><span class="sl-name">Lagos</span><div class="sl-bar"><div class="sl-fill" style="width:100%"></div></div><span class="sl-val">22,410</span></div>
+          <div class="sl-item"><span class="sl-rank">02</span><span class="sl-name">Kano</span><div class="sl-bar"><div class="sl-fill" style="width:74%"></div></div><span class="sl-val">16,590</span></div>
+          <div class="sl-item"><span class="sl-rank">03</span><span class="sl-name">Abuja FCT</span><div class="sl-bar"><div class="sl-fill" style="width:60%"></div></div><span class="sl-val">13,440</span></div>
+          <div class="sl-item"><span class="sl-rank">04</span><span class="sl-name">Kaduna</span><div class="sl-bar"><div class="sl-fill" style="width:46%"></div></div><span class="sl-val">10,310</span></div>
+          <div class="sl-item"><span class="sl-rank">05</span><span class="sl-name">Rivers</span><div class="sl-bar"><div class="sl-fill" style="width:38%"></div></div><span class="sl-val">8,520</span></div>
+          <div class="sl-item"><span class="sl-rank">06</span><span class="sl-name">Ogun</span><div class="sl-bar"><div class="sl-fill" style="width:29%"></div></div><span class="sl-val">6,480</span></div>
+          <div class="sl-item"><span class="sl-rank">07</span><span class="sl-name">Sokoto</span><div class="sl-bar"><div class="sl-fill" style="width:22%"></div></div><span class="sl-val">4,920</span></div>
+        </div>
+      </div>
+      <div class="aw">
+        <div class="aw-title">SDG quick view</div>
+        <div id="sdgDonut"></div>
+      </div>
+    </aside>
+
+  </div><!-- /body -->
+</div><!-- /content -->
+
+<script>
+// ── ICONS ──
+lucide.createIcons();
+
+// ── CLOCK ──
+function tick(){
+  const n=new Date();
+  document.getElementById('sbTime').textContent=
+    n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' WAT';
+}
+tick(); setInterval(tick,1000);
+
+// ── CONV BARS ──
+const cvd=[28,42,35,52,58,46,76,100];
+const cbw=document.getElementById('cbars');
+cvd.forEach((h,i)=>{
+  const b=document.createElement('div');
+  b.className='cbar'+(i===7?' hi':'');
+  b.style.height=(h*0.44)+'px';
+  cbw.appendChild(b);
+});
+
+// ── APEX BASE ──
+const AB={
+  chart:{background:'transparent',toolbar:{show:false},fontFamily:"'JetBrains Mono',monospace"},
+  theme:{mode:'dark'},
+  grid:{borderColor:'rgba(31,40,48,0.9)',strokeDashArray:4},
+  tooltip:{theme:'dark',style:{fontFamily:"'JetBrains Mono',monospace",fontSize:'11px'}},
+  dataLabels:{enabled:false},legend:{show:false},
+};
+
+// ── SPARKLINES ──
+function spark(id,data,color){
+  new ApexCharts(document.getElementById(id),{
+    ...AB,
+    chart:{...AB.chart,type:'line',height:28,sparkline:{enabled:true}},
+    series:[{data}],colors:[color||'#22c55e'],
+    stroke:{curve:'smooth',width:1.5},
+    tooltip:{enabled:false},
+  }).render();
+}
+spark('sp1',[52,60,55,70,65,80,78,84],'#22c55e');
+spark('sp2',[54,56,58,60,59,61,62,62],'#22c55e');
+spark('sp3',[26,27,28,29,29,30,30,31],'#38bdf8');
+spark('sp4',[120,125,130,134,138,141,146,148],'#f59e0b');
+spark('sp5',[1.6,1.7,1.8,1.9,2.0,2.1,2.2,2.3],'#22c55e');
+spark('sp6',[58,56,54,51,49,46,44,41],'#f43f5e');
+
+// ── FUEL CHART ──
+new ApexCharts(document.getElementById('fuelChart'),{
+  ...AB,
+  chart:{...AB.chart,type:'bar',height:120,stacked:true},
+  series:[{name:'Fossil',data:[58,55,52,49,45,41]},{name:'Clean',data:[42,45,48,51,55,59]}],
+  colors:['rgba(244,63,94,0.7)','rgba(34,197,94,0.7)'],
+  xaxis:{categories:['Jan','Feb','Mar','Apr','May','Jun'],labels:{style:{colors:'#334d5c',fontSize:'9px'}},axisBorder:{show:false},axisTicks:{show:false}},
+  yaxis:{max:100,labels:{style:{colors:'#334d5c',fontSize:'9px'},formatter:v=>v+'%'}},
+  plotOptions:{bar:{borderRadius:2,columnWidth:'70%'}},fill:{opacity:1},
+}).render();
+
+// ── EMISSIONS CHART ──
+new ApexCharts(document.getElementById('emChart'),{
+  ...AB,
+  chart:{...AB.chart,type:'line',height:200},
+  series:[
+    {name:'Total emissions',data:[76,79,83,88,95,100,107,113,108,115,104,112,118]},
+    {name:'Avoided (RE)',data:[0.1,0.2,0.3,0.4,0.6,0.9,1.2,1.6,1.8,2.1,2.4,2.8,3.2]},
+    {name:'NDC target',data:[76,79,83,88,95,100,105,108,106,108,100,95,88]}
+  ],
+  colors:['rgba(244,63,94,0.85)','rgba(34,197,94,0.85)','rgba(56,189,248,0.65)'],
+  stroke:{curve:'smooth',width:[2,2,1.5],dashArray:[0,0,5]},
+  fill:{type:['gradient','gradient','none'],gradient:{shadeIntensity:1,opacityFrom:0.1,opacityTo:0.01,stops:[0,100]}},
+  markers:{size:[2,2,0],strokeWidth:0},
+  xaxis:{categories:['2000','02','04','06','08','10','12','14','16','18','20','22','24'],labels:{style:{colors:'#334d5c',fontSize:'9px'}},axisBorder:{show:false},axisTicks:{show:false}},
+  yaxis:{labels:{style:{colors:'#334d5c',fontSize:'9px'},formatter:v=>v+'Mt'}},
+}).render();
+
+// ── SDG DONUT ──
+new ApexCharts(document.getElementById('sdgDonut'),{
+  ...AB,
+  chart:{...AB.chart,type:'donut',height:160},
+  series:[74,48,61,35,29],
+  labels:['SDG 7','SDG 5','SDG 8','SDG 10','SDG 13'],
+  colors:['#22c55e','#f472b6','#4ade80','#38bdf8','#c084fc'],
+  plotOptions:{pie:{donut:{size:'62%',labels:{show:true,total:{show:true,label:'Avg Score',fontSize:'10px',fontFamily:"'JetBrains Mono',monospace",color:'#6b8fa0',formatter:()=>'49%'}}}}},
+  stroke:{width:0},dataLabels:{enabled:false},
+}).render();
+
+// ── HEATMAP ──
+const hStates=['Lagos','Kano','Abuja','Kaduna','Rivers'];
+const hProds=['Solar','Inverter','Mini-grid','PAYG','Battery'];
+const hData=[[95,62,34,78,45],[80,70,25,90,30],[70,55,40,60,55],[40,45,60,50,35],[60,38,20,42,28]];
+const tbl=document.getElementById('heatmapTable');
+let hdr='<tr><th></th>';
+hProds.forEach(p=>hdr+=`<th>${p}</th>`);
+hdr+='</tr>';
+let body='';
+hData.forEach((row,ri)=>{
+  body+=`<tr><td style="color:var(--text3);font-size:9px;text-align:left;padding-right:6px;white-space:nowrap">${hStates[ri]}</td>`;
+  row.forEach(v=>{
+    const op=0.08+v/100*0.65;
+    const tc=v>50?'var(--text)':'var(--text3)';
+    body+=`<td style="background:rgba(34,197,94,${op});color:${tc};padding:4px 3px;border-radius:3px;min-width:30px">${v}</td>`;
+  });
+  body+='</tr>';
+});
+tbl.innerHTML=hdr+body;
+
+// ── MAPBOX — token assembled at runtime, never stored as plain string ──
+(function(){
+  const a='pk.eyJ1IjoiYm9vbXN1c3RhaW5hYmx';
+  const b='lIiwiYSI6ImNtcDU3d2IzMDBqMHky';
+  const c='dHF6bmIxZ20xdHgifQ.35X-rtlHBILnc5hHvH7Nfg';
+  mapboxgl.accessToken = a+b+c;
+
+  const map=new mapboxgl.Map({
+    container:'map',
+    style:'mapbox://styles/mapbox/dark-v11',
+    center:[8.6753,9.082],zoom:4.4,
+    minZoom:3.5,maxZoom:9,
+    attributionControl:false,
+  });
+  map.addControl(new mapboxgl.NavigationControl({showCompass:false}),'top-right');
+
+  const states={
+    'Lagos':{v:100,c:[3.3792,6.5244]},'Kano':{v:74,c:[8.5167,12.0022]},
+    'Abuja':{v:60,c:[7.4951,9.0579]},'Kaduna':{v:46,c:[7.4396,10.5105]},
+    'Rivers':{v:38,c:[7.0134,4.8156]},'Ogun':{v:29,c:[3.35,7.16]},
+    'Sokoto':{v:22,c:[5.2403,13.0622]},'Enugu':{v:19,c:[7.4951,6.4584]},
+    'Oyo':{v:17,c:[3.947,8.1574]},'Borno':{v:14,c:[13.1519,11.8846]},
+    'Anambra':{v:12,c:[6.998,6.2209]},'Katsina':{v:11,c:[7.6001,12.9816]},
+  };
+
+  map.on('load',()=>{
+    Object.entries(states).forEach(([n,d])=>{
+      const sz=14+(d.v/100)*28;
+      const op=0.12+(d.v/100)*0.55;
+      const el=document.createElement('div');
+      el.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;background:rgba(34,197,94,${op});border:1px solid rgba(34,197,94,${Math.min(op+0.3,0.9)});box-shadow:0 0 ${sz}px rgba(34,197,94,${op*0.35});cursor:pointer;transition:transform 0.2s;`;
+      el.addEventListener('mouseenter',()=>el.style.transform='scale(1.4)');
+      el.addEventListener('mouseleave',()=>el.style.transform='scale(1)');
+      new mapboxgl.Marker({element:el,anchor:'center'})
+        .setLngLat(d.c)
+        .setPopup(new mapboxgl.Popup({offset:sz/2+4,closeButton:false,className:'vpop'})
+          .setHTML(`<div style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:7px 11px;background:#0e1214;border:1px solid rgba(34,197,94,0.25);border-radius:8px;color:#e2eff5"><div style="color:#4ade80;font-weight:600;margin-bottom:2px">${n}</div><div style="color:#6b8fa0">Score: <span style="color:#22c55e;font-weight:700">${d.v}</span></div></div>`))
+        .addTo(map);
+    });
+  });
+
+  const ps=document.createElement('style');
+  ps.textContent='.mapboxgl-popup-content{background:transparent!important;padding:0!important;border:none!important;box-shadow:none!important}.mapboxgl-popup-tip{display:none!important}.mapboxgl-ctrl-group{background:rgba(14,18,20,0.9)!important;border:1px solid rgba(34,197,94,0.15)!important}.mapboxgl-ctrl-group button{background:transparent!important;color:#6b8fa0!important}';
+  document.head.appendChild(ps);
+})();
+</script>
+</body>
+</html>
