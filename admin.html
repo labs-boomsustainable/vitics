@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitics Admin — Intelligence Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+:root{
+  --sw:220px;
+  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
+  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;--gdim:rgba(34,197,94,0.08);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
+  --purple:#c084fc;--pdim:rgba(192,132,252,0.08);
+  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:8px;--r2:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;font-size:13px;line-height:1.5}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* SIDEBAR */
+.sidebar{width:var(--sw);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto}
+.sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border2)}
+.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block;text-decoration:none}
+.sb-logo em{color:var(--green);font-style:normal}
+.sb-tag{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.sb-sec{padding:12px 20px 4px}
+.sb-secl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.sbn{list-style:none}
+.sbn li{margin-bottom:1px}
+.sbn a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s;position:relative}
+.sbn a:hover{background:var(--bg4);color:var(--text)}
+.sbn a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
+.sbn a svg{flex-shrink:0;opacity:0.65}
+.sbn a.active svg{opacity:1}
+.sb-foot{margin-top:auto;padding:12px 20px;border-top:1px solid var(--border2)}
+.sb-ver{font-family:var(--mono);font-size:9px;color:var(--text3)}
+
+/* CONTENT */
+.content{margin-left:var(--sw);flex:1;min-height:100vh}
+.topbar{height:50px;display:flex;align-items:center;padding:0 32px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50;gap:12px;justify-content:space-between}
+.tb-left{display:flex;align-items:center;gap:12px}
+.topbar-back{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);text-decoration:none;font-family:var(--mono);transition:color 0.15s}
+.topbar-back:hover{color:var(--green3)}
+.topbar-div{width:1px;height:16px;background:var(--border2)}
+.topbar-title{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+.admin-badge{background:var(--adim);border:1px solid rgba(245,158,11,0.2);color:var(--amber);font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:20px;font-weight:500}
+
+/* PAGE */
+.page{padding:28px 32px 60px;max-width:1100px}
+
+/* SECTION */
+.sec{margin-bottom:32px}
+.sec-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-hd-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);white-space:nowrap}
+.sec-hd-line{flex:1;height:1px;background:var(--border2)}
+
+/* CARDS */
+.card{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+.card-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.card-desc{font-size:12px;color:var(--text3);margin-bottom:14px;line-height:1.6;font-family:var(--mono)}
+
+/* FORM ELEMENTS */
+.form-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:10px}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-bottom:10px}
+input[type="text"],select,textarea{
+  background:var(--bg4);border:1px solid var(--border2);border-radius:var(--r);
+  padding:9px 12px;font-size:12px;color:var(--text);font-family:var(--mono);
+  width:100%;outline:none;transition:border-color 0.15s;
+}
+input[type="text"]:focus,select:focus,textarea:focus{border-color:var(--border);background:var(--bg5)}
+input[type="text"]::placeholder{color:var(--text3)}
+textarea{resize:vertical;min-height:80px;line-height:1.5}
+select option{background:var(--bg4);color:var(--text)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:var(--r);font-size:12px;font-weight:500;font-family:var(--mono);cursor:pointer;border:1px solid transparent;transition:all 0.15s;white-space:nowrap}
+.btn-green{background:var(--gdim);color:var(--green3);border-color:var(--border)}
+.btn-green:hover{background:var(--green2);color:#fff;border-color:var(--green2)}
+.btn-amber{background:var(--adim);color:var(--amber);border-color:rgba(245,158,11,0.2)}
+.btn-amber:hover{background:var(--amber);color:#000;border-color:var(--amber)}
+.btn-red{background:var(--rdim);color:var(--red);border-color:rgba(244,63,94,0.15)}
+.btn-red:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-ghost{background:var(--bg5);color:var(--text2);border-color:var(--border3)}
+.btn-ghost:hover{background:var(--bg4);color:var(--text);border-color:var(--border2)}
+
+/* TAG LIST */
+.tag-list{display:flex;flex-wrap:wrap;gap:6px;min-height:40px;padding:8px;background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);margin-bottom:10px}
+.kw-tag{display:inline-flex;align-items:center;gap:5px;background:var(--bg5);border:1px solid var(--border2);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--text2);font-family:var(--mono)}
+.kw-tag button{background:none;border:none;color:var(--text3);cursor:pointer;font-size:12px;padding:0;line-height:1;transition:color 0.15s}
+.kw-tag button:hover{color:var(--red)}
+.kw-tag.new{border-color:var(--border);color:var(--green3);background:var(--gdim)}
+
+/* POLICY TIMELINE */
+.timeline{position:relative;padding-left:20px}
+.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--border2)}
+.tl-item{position:relative;margin-bottom:16px;padding-left:18px}
+.tl-dot{position:absolute;left:-14px;top:4px;width:10px;height:10px;border-radius:50%;border:2px solid var(--border2);background:var(--bg4);flex-shrink:0}
+.tl-dot.marker{border-color:var(--green);background:var(--gdim)}
+.tl-dot.critical{border-color:var(--red);background:var(--rdim)}
+.tl-year{font-family:var(--mono);font-size:10px;color:var(--text3);margin-bottom:2px}
+.tl-name{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px}
+.tl-reality{font-size:11px;color:var(--text3);line-height:1.4;font-family:var(--mono)}
+.tl-impact{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;margin-top:4px;padding:2px 7px;border-radius:20px}
+
+/* VIDEO FLAGS */
+.video-card{background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:10px;margin-bottom:8px;display:flex;align-items:flex-start;gap:10px}
+.video-thumb{width:48px;height:36px;border-radius:5px;background:var(--bg5);border:1px solid var(--border3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.video-title{font-size:12px;font-weight:500;color:var(--text);margin-bottom:2px}
+.video-meta{font-size:10px;color:var(--text3);font-family:var(--mono)}
+.video-actions{display:flex;gap:6px;margin-top:6px}
+
+/* INSIGHT REVIEW */
+.insight-card{background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:12px;margin-bottom:8px}
+.insight-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.insight-source{font-family:var(--mono);font-size:9px;color:var(--text3)}
+.insight-text{font-size:12px;color:var(--text);line-height:1.5;margin-bottom:8px}
+.insight-actions{display:flex;gap:6px}
+
+/* STATUS */
+.status-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border3)}
+.status-row:last-child{border-bottom:none}
+.status-label{flex:1;font-size:12px;color:var(--text)}
+.status-val{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.status-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:12px 18px;font-size:12px;font-family:var(--mono);color:var(--green3);display:none;z-index:999;animation:sfin 0.3s ease}
+@keyframes sfin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+@media(max-width:800px){.sidebar{display:none}.content{margin-left:0}.g2{grid-template-columns:1fr}.page{padding:16px 16px 40px}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-brand">
+    <a href="index.html" class="sb-logo">vit<em>ics</em></a>
+    <div class="sb-tag">AI Energy Intelligence</div>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Main</div>
+    <ul class="sbn">
+      <li><a href="index.html"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i>Dashboard</a></li>
+    </ul>
+  </div>
+  <div class="sb-sec">
+    <div class="sb-secl">Admin</div>
+    <ul class="sbn">
+      <li><a href="admin.html" class="active"><i data-lucide="settings" style="width:14px;height:14px"></i>Intelligence Mgmt</a></li>
+      <li><a href="ethics.html"><i data-lucide="shield" style="width:14px;height:14px"></i>Data Ethics</a></li>
+      <li><a href="privacy.html"><i data-lucide="lock" style="width:14px;height:14px"></i>Privacy Policy</a></li>
+      <li><a href="methodology.html"><i data-lucide="microscope" style="width:14px;height:14px"></i>Methodology</a></li>
+    </ul>
+  </div>
+  <div class="sb-foot"><div class="sb-ver">v3.0.0 · Admin · © 2025 Vitics</div></div>
+</aside>
+
+<div class="content">
+  <div class="topbar">
+    <div class="tb-left">
+      <a href="index.html" class="topbar-back"><i data-lucide="arrow-left" style="width:13px;height:13px"></i>Back to dashboard</a>
+      <div class="topbar-div"></div>
+      <span class="topbar-title">Intelligence Management</span>
+    </div>
+    <div class="admin-badge">Human Intelligence Layer</div>
+  </div>
+
+  <div class="page">
+
+    <!-- ENGINE STATUS -->
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-hd-label">Engine status</div><div class="sec-hd-line"></div></div>
+      <div class="card">
+        <div class="card-title"><i data-lucide="cpu" style="width:14px;height:14px;color:var(--purple)"></i>AI Intelligence Engine — Phase 3</div>
+        <div class="status-row"><span class="status-label">YouTube Data API</span><span class="status-dot" style="background:var(--green)"></span><span class="status-val">Connected</span></div>
+        <div class="status-row"><span class="status-label">Anthropic Claude API</span><span class="status-dot" style="background:var(--green)"></span><span class="status-val">Active</span></div>
+        <div class="status-row"><span class="status-label">Keyword file</span><span class="status-dot" style="background:var(--green)"></span><span class="status-val">vitics-keywords.js · <span id="kwCount">—</span> keywords loaded</span></div>
+        <div class="status-row"><span class="status-label">Policy knowledge base</span><span class="status-dot" style="background:var(--green)"></span><span class="status-val">vitics-knowledge.js · 24 policies loaded</span></div>
+        <div class="status-row"><span class="status-label">Date range</span><span class="status-dot" style="background:var(--green)"></span><span class="status-val">2011 → Present · Year-by-year sweep</span></div>
+        <div class="status-row"><span class="status-label">Last AI analysis</span><span class="status-dot" style="background:var(--amber)"></span><span class="status-val" id="lastAnalysis">Not yet run this session</span></div>
+      </div>
+    </div>
+
+    <!-- KEYWORD MANAGEMENT -->
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-hd-label">Keyword management</div><div class="sec-hd-line"></div></div>
+
+      <div class="g2">
+        <!-- ADD KEYWORD -->
+        <div class="card">
+          <div class="card-title"><i data-lucide="plus-circle" style="width:14px;height:14px;color:var(--green3)"></i>Add new keyword</div>
+          <div class="card-desc">Type a search term you want Vitics to look for on YouTube. Be specific — "solar pump Kano Nigeria" works better than just "solar".</div>
+          <div class="form-row">
+            <input type="text" id="newKeyword" placeholder="e.g. solar pump Kano Nigeria" />
+            <select id="kwCategory" style="width:140px;flex-shrink:0">
+              <option value="products">Products</option>
+              <option value="fossil_fuel">Fossil fuel</option>
+              <option value="grid_utility">Grid & utility</option>
+              <option value="pidgin_local">Pidgin & local</option>
+              <option value="locations">Locations</option>
+              <option value="policy_consumer">Policy</option>
+              <option value="sdg_themes">SDG themes</option>
+              <option value="emerging">Emerging</option>
+              <option value="hashtags">Hashtags</option>
+            </select>
+          </div>
+          <button class="btn btn-green" onclick="addKeyword()">
+            <i data-lucide="plus" style="width:12px;height:12px"></i>Add keyword
+          </button>
+          <div style="margin-top:14px">
+            <div style="font-family:var(--mono);font-size:9px;color:var(--text3);margin-bottom:6px;letter-spacing:0.8px;text-transform:uppercase">Recently added keywords</div>
+            <div class="tag-list" id="newKwList">
+              <span style="font-family:var(--mono);font-size:10px;color:var(--text3)">No keywords added this session yet</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLAG A VIDEO -->
+        <div class="card">
+          <div class="card-title"><i data-lucide="youtube" style="width:14px;height:14px;color:var(--red)"></i>Flag a YouTube video</div>
+          <div class="card-desc">Found a YouTube video with rich Nigerian energy content? Paste the full URL here and Vitics will prioritise it in the next analysis run.</div>
+          <input type="text" id="videoUrl" placeholder="https://www.youtube.com/watch?v=..." style="margin-bottom:10px"/>
+          <input type="text" id="videoNote" placeholder="Why is this video valuable? (optional)" style="margin-bottom:10px"/>
+          <button class="btn btn-green" onclick="flagVideo()">
+            <i data-lucide="flag" style="width:12px;height:12px"></i>Flag video
+          </button>
+          <div style="margin-top:14px">
+            <div style="font-family:var(--mono);font-size:9px;color:var(--text3);margin-bottom:6px;letter-spacing:0.8px;text-transform:uppercase">Flagged videos this session</div>
+            <div id="flaggedVideos">
+              <div style="font-family:var(--mono);font-size:10px;color:var(--text3);padding:8px">No videos flagged yet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CURRENT KEYWORD CATEGORIES -->
+      <div class="card">
+        <div class="card-title"><i data-lucide="list" style="width:14px;height:14px;color:var(--blue)"></i>Current keyword library</div>
+        <div class="card-desc">All active keywords organised by category. These are read from vitics-keywords.js. To permanently save new keywords, copy them into the keyword file on GitHub.</div>
+        <div id="kwLibrary" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"></div>
+      </div>
+    </div>
+
+    <!-- POLICY TIMELINE -->
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-hd-label">Policy intelligence timeline</div><div class="sec-hd-line"></div></div>
+      <div class="card">
+        <div class="card-title"><i data-lucide="calendar" style="width:14px;height:14px;color:var(--amber)"></i>Nigeria energy policy — consumer reality view · 2001–2025</div>
+        <div class="card-desc">From vitics-knowledge.js. Transition markers show years when consumer behaviour actually changed. Edit vitics-knowledge.js on GitHub to add your expert knowledge to any policy entry.</div>
+        <div class="timeline" id="policyTimeline"></div>
+      </div>
+    </div>
+
+    <!-- MANUAL INSIGHT ENTRY -->
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-hd-label">Human intelligence input</div><div class="sec-hd-line"></div></div>
+      <div class="card">
+        <div class="card-title"><i data-lucide="edit-3" style="width:14px;height:14px;color:var(--purple)"></i>Add a manual insight</div>
+        <div class="card-desc">You have domain knowledge the AI cannot have. Add your own observations, field findings, or expert insights here. These are saved locally and can be incorporated into the AI prompt.</div>
+        <div style="margin-bottom:10px">
+          <select id="insightType" style="margin-bottom:8px">
+            <option value="market">Market observation</option>
+            <option value="product">Product intelligence</option>
+            <option value="geographic">Geographic signal</option>
+            <option value="policy">Policy insight</option>
+            <option value="gender">Gender & equity signal</option>
+            <option value="correction">AI correction</option>
+          </select>
+          <textarea id="insightText" placeholder="e.g. Women in Kano's Sabon Gari market are increasingly discussing PAYG solar as an alternative to generator costs for their trading stalls — this is not yet visible in YouTube data..."></textarea>
+        </div>
+        <input type="text" id="insightSource" placeholder="Source (your observation, field visit, paper, interview)" style="margin-bottom:10px"/>
+        <button class="btn btn-green" onclick="addInsight()">
+          <i data-lucide="save" style="width:12px;height:12px"></i>Save insight
+        </button>
+      </div>
+
+      <!-- SAVED INSIGHTS -->
+      <div class="card">
+        <div class="card-title"><i data-lucide="database" style="width:14px;height:14px;color:var(--green3)"></i>Saved human insights</div>
+        <div id="savedInsights">
+          <div style="font-family:var(--mono);font-size:11px;color:var(--text3);padding:8px">No insights saved yet this session</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GITHUB INSTRUCTIONS -->
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-hd-label">How to permanently save changes</div><div class="sec-hd-line"></div></div>
+      <div class="card">
+        <div class="card-title"><i data-lucide="github" style="width:14px;height:14px;color:var(--text2)"></i>Saving keywords to GitHub</div>
+        <div class="card-desc">Changes made on this page are saved in your browser session only. To permanently add keywords so they survive page refresh:</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:8px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
+            <span style="font-family:var(--mono);font-size:10px;color:var(--green3);font-weight:700;flex-shrink:0">1.</span>
+            <span style="font-size:12px;color:var(--text2)">Go to <strong style="color:var(--text)">github.com/labs-boomsustainable/vitics</strong></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:8px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
+            <span style="font-family:var(--mono);font-size:10px;color:var(--green3);font-weight:700;flex-shrink:0">2.</span>
+            <span style="font-size:12px;color:var(--text2)">Click <strong style="color:var(--text)">vitics-keywords.js</strong> → click the pencil (edit) icon</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:8px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
+            <span style="font-family:var(--mono);font-size:10px;color:var(--green3);font-weight:700;flex-shrink:0">3.</span>
+            <span style="font-size:12px;color:var(--text2)">Find the right category array and add your keyword in quotes with a comma</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:8px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
+            <span style="font-family:var(--mono);font-size:10px;color:var(--green3);font-weight:700;flex-shrink:0">4.</span>
+            <span style="font-size:12px;color:var(--text2)">Click <strong style="color:var(--text)">Commit changes</strong> — Vitics picks it up automatically</span>
+          </div>
+        </div>
+        <button class="btn btn-ghost" style="margin-top:12px" onclick="window.open('https://github.com/labs-boomsustainable/vitics/blob/main/vitics-keywords.js','_blank')">
+          <i data-lucide="external-link" style="width:12px;height:12px"></i>Open keyword file on GitHub
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+lucide.createIcons();
+
+// ── SESSION STORAGE ──
+let sessionKeywords = [];
+let sessionVideos = [];
+let sessionInsights = [];
+
+// ── TOAST ──
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.display = 'block';
+  setTimeout(()=>t.style.display='none', 2500);
+}
+
+// ── KEYWORD MANAGEMENT ──
+function addKeyword(){
+  const kw = document.getElementById('newKeyword').value.trim();
+  const cat = document.getElementById('kwCategory').value;
+  if(!kw){ showToast('Please enter a keyword first'); return; }
+
+  sessionKeywords.push({keyword: kw, category: cat, added: new Date().toLocaleTimeString()});
+  document.getElementById('newKeyword').value = '';
+
+  renderNewKeywords();
+  showToast(`✓ Keyword added: "${kw}" → ${cat}`);
+  updateKwCount();
+}
+
+function renderNewKeywords(){
+  const list = document.getElementById('newKwList');
+  if(sessionKeywords.length === 0){
+    list.innerHTML = '<span style="font-family:var(--mono);font-size:10px;color:var(--text3)">No keywords added this session yet</span>';
+    return;
+  }
+  list.innerHTML = sessionKeywords.map((k,i) =>
+    `<span class="kw-tag new">${k.keyword} <span style="opacity:0.5">[${k.category}]</span> <button onclick="removeKeyword(${i})">×</button></span>`
+  ).join('');
+}
+
+function removeKeyword(i){
+  sessionKeywords.splice(i,1);
+  renderNewKeywords();
+  updateKwCount();
+}
+
+function updateKwCount(){
+  // Count base keywords + session additions
+  const base = 120; // approximate count from vitics-keywords.js
+  document.getElementById('kwCount').textContent = base + sessionKeywords.length;
+}
+updateKwCount();
+
+// ── KEYWORD LIBRARY DISPLAY ──
+const kwCategories = {
+  'Products': ['solar panel Nigeria','inverter Nigeria','PAYG solar Nigeria','Lumos Solar Nigeria','EcoFlow Nigeria','solar home system Nigeria','mini grid Nigeria'],
+  'Fossil fuel': ['generator Nigeria','diesel generator Nigeria','generator wahala Nigeria','petrol price Nigeria electricity','switch from generator to solar Nigeria'],
+  'Grid & utility': ['NEPA Nigeria','PHCN Nigeria','no light Nigeria','power outage Nigeria','electricity tariff Nigeria','band A electricity Nigeria'],
+  'Pidgin & local': ['light don come Nigeria','NEPA take light','generator fuel don finish','solar e dey work Nigeria','no light since morning Nigeria'],
+  'Locations': ['solar energy Lagos','solar energy Kano','solar energy Abuja','mini grid rural Nigeria','solar energy northeast Nigeria'],
+  'Policy': ['Solar Power Naija','REA Nigeria solar','Electricity Act Nigeria 2023','fuel subsidy removal Nigeria','energy transition Nigeria'],
+  'SDG themes': ['energy poverty Nigeria','women solar Nigeria','MSME solar Nigeria','affordable electricity Nigeria','clean energy Nigeria climate'],
+  'Emerging': ['battery as a service Nigeria','energy fintech Nigeria','agri solar Nigeria','mobile money solar Nigeria','made in Nigeria solar']
+};
+
+function renderKwLibrary(){
+  const lib = document.getElementById('kwLibrary');
+  lib.innerHTML = Object.entries(kwCategories).map(([cat, kws]) => `
+    <div style="background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:10px">
+      <div style="font-family:var(--mono);font-size:9px;color:var(--green2);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:7px">${cat}</div>
+      <div style="display:flex;flex-direction:column;gap:3px">
+        ${kws.map(k=>`<div style="font-size:11px;color:var(--text3);font-family:var(--mono);padding:2px 0;border-bottom:1px solid var(--border3)">${k}</div>`).join('')}
+        ${sessionKeywords.filter(sk=>sk.category.includes(cat.toLowerCase().split(' ')[0])).map(sk=>`<div style="font-size:11px;color:var(--green3);font-family:var(--mono);padding:2px 0;border-bottom:1px solid var(--border3)">+ ${sk.keyword}</div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+renderKwLibrary();
+
+// ── VIDEO FLAGGING ──
+function flagVideo(){
+  const url = document.getElementById('videoUrl').value.trim();
+  const note = document.getElementById('videoNote').value.trim();
+  if(!url){ showToast('Please paste a YouTube URL first'); return; }
+  if(!url.includes('youtube.com') && !url.includes('youtu.be')){
+    showToast('Please enter a valid YouTube URL'); return;
+  }
+
+  const videoId = url.includes('v=') ? url.split('v=')[1].split('&')[0] : url.split('/').pop();
+  sessionVideos.push({url, videoId, note, added: new Date().toLocaleTimeString()});
+
+  document.getElementById('videoUrl').value = '';
+  document.getElementById('videoNote').value = '';
+
+  renderFlaggedVideos();
+  showToast('✓ Video flagged for priority analysis');
+}
+
+function renderFlaggedVideos(){
+  const el = document.getElementById('flaggedVideos');
+  if(sessionVideos.length === 0){
+    el.innerHTML = '<div style="font-family:var(--mono);font-size:10px;color:var(--text3);padding:8px">No videos flagged yet</div>';
+    return;
+  }
+  el.innerHTML = sessionVideos.map((v,i) => `
+    <div class="video-card">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/${v.videoId}/default.jpg"
+             style="width:100%;height:100%;object-fit:cover;border-radius:4px"
+             onerror="this.parentElement.innerHTML='<i data-lucide=\\'youtube\\' style=\\'width:18px;height:18px;color:var(--red)\\'></i>'"
+        />
+      </div>
+      <div style="flex:1;min-width:0">
+        <div class="video-title">${v.videoId}</div>
+        <div class="video-meta">${v.note || 'No note added'} · Added ${v.added}</div>
+        <div class="video-actions">
+          <a href="${v.url}" target="_blank" class="btn btn-ghost" style="font-size:10px;padding:3px 8px">
+            <i data-lucide="external-link" style="width:10px;height:10px"></i>Open
+          </a>
+          <button class="btn btn-red" style="font-size:10px;padding:3px 8px" onclick="removeVideo(${i})">
+            <i data-lucide="trash-2" style="width:10px;height:10px"></i>Remove
+          </button>
+        </div>
+      </div>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+function removeVideo(i){
+  sessionVideos.splice(i,1);
+  renderFlaggedVideos();
+  showToast('Video removed');
+}
+
+// ── POLICY TIMELINE ──
+const policies = [
+  {year:2001,name:'National Electric Power Policy (NEPP)',impact:1,marker:false},
+  {year:2003,name:'National Energy Policy (NEP)',impact:1,marker:false},
+  {year:2005,name:'Electric Power Sector Reform Act (EPSRA)',impact:2,marker:false},
+  {year:2005,name:'Renewable Energy Master Plan (REMP)',impact:1,marker:false},
+  {year:2006,name:'Renewable Electricity Policy Guidelines (REPG)',impact:1,marker:false},
+  {year:2006,name:'Renewable Electricity Action Programme (REAP)',impact:1,marker:false},
+  {year:2007,name:'Nigerian Biofuel Policy and Incentives',impact:1,marker:false},
+  {year:2008,name:'NEEDS Energy Components',impact:1,marker:false},
+  {year:2013,name:'Power Sector Privatisation',impact:7,marker:true,note:'First consumer shift to off-grid alternatives'},
+  {year:2015,name:'NREEEP',impact:3,marker:true,note:'Off-grid solar becomes visible to consumers'},
+  {year:2015,name:'Mini-Grid Regulation Framework',impact:4,marker:true,note:'Rural consumer discourse begins to shift'},
+  {year:2016,name:'Rural Electrification Strategy (RESIP)',impact:4,marker:false},
+  {year:2017,name:'Energy Transition Discussions Intensify',impact:3,marker:true,note:'Consumer solar content searchable at scale'},
+  {year:2018,name:'Energizing Economies Initiative (EEI)',impact:6,marker:true,note:'First touchable government solar programme'},
+  {year:2019,name:'Solar Power Naija Planning',impact:3,marker:false},
+  {year:2020,name:'Solar Power Naija Programme',impact:7,marker:true,note:'Highest consumer awareness of government solar ever'},
+  {year:2021,name:'Petroleum Industry Act (PIA)',impact:5,marker:false},
+  {year:2021,name:'Nigeria Energy Transition Plan (ETP)',impact:3,marker:false},
+  {year:2022,name:'NIIMIP Energy Components',impact:1,marker:false},
+  {year:2023,name:'Electricity Act 2023 + Fuel Subsidy Removal',impact:9,marker:true,critical:true,note:'WATERSHED — mass solar adoption surge'},
+  {year:2024,name:'State Electricity Market Reforms Begin',impact:4,marker:false},
+  {year:2025,name:'National Integrated Electricity Policy (NIEP)',impact:3,marker:false},
+];
+
+function renderTimeline(){
+  const tl = document.getElementById('policyTimeline');
+  tl.innerHTML = policies.map(p => {
+    const dotClass = p.critical ? 'tl-dot critical' : p.marker ? 'tl-dot marker' : 'tl-dot';
+    const impactColor = p.impact >= 7 ? 'var(--green)' : p.impact >= 4 ? 'var(--amber)' : 'var(--text3)';
+    const impactBg = p.impact >= 7 ? 'var(--gdim)' : p.impact >= 4 ? 'var(--adim)' : 'var(--bg5)';
+    return `
+      <div class="tl-item">
+        <div class="${dotClass}"></div>
+        <div class="tl-year">${p.year}</div>
+        <div class="tl-name">${p.name}</div>
+        ${p.note ? `<div class="tl-reality">${p.note}</div>` : ''}
+        <div class="tl-impact" style="color:${impactColor};background:${impactBg};border:1px solid ${impactColor}20">
+          Consumer impact: ${p.impact}/10 ${p.marker ? '· Transition marker' : ''}
+        </div>
+      </div>`;
+  }).join('');
+}
+renderTimeline();
+
+// ── MANUAL INSIGHTS ──
+function addInsight(){
+  const type = document.getElementById('insightType').value;
+  const text = document.getElementById('insightText').value.trim();
+  const source = document.getElementById('insightSource').value.trim();
+  if(!text){ showToast('Please enter your insight text'); return; }
+
+  sessionInsights.push({type, text, source: source||'Manual entry', added: new Date().toLocaleString()});
+  document.getElementById('insightText').value = '';
+  document.getElementById('insightSource').value = '';
+
+  renderInsights();
+  showToast('✓ Insight saved');
+}
+
+function renderInsights(){
+  const el = document.getElementById('savedInsights');
+  if(sessionInsights.length === 0){
+    el.innerHTML = '<div style="font-family:var(--mono);font-size:11px;color:var(--text3);padding:8px">No insights saved yet this session</div>';
+    return;
+  }
+  el.innerHTML = sessionInsights.map((ins,i) => `
+    <div class="insight-card">
+      <div class="insight-head">
+        <span class="tag ${ins.type==='correction'?'tr':ins.type==='gender'?'tp':'tg'}" style="font-size:9px">${ins.type}</span>
+        <span class="insight-source">${ins.source} · ${ins.added}</span>
+      </div>
+      <div class="insight-text">${ins.text}</div>
+      <div class="insight-actions">
+        <button class="btn btn-red" style="font-size:10px;padding:3px 8px" onclick="removeInsight(${i})">
+          <i data-lucide="trash-2" style="width:10px;height:10px"></i>Remove
+        </button>
+      </div>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+function removeInsight(i){
+  sessionInsights.splice(i,1);
+  renderInsights();
+}
+
+// ── UPDATE LAST ANALYSIS TIME ──
+function updateLastAnalysis(){
+  const el = document.getElementById('lastAnalysis');
+  if(el) el.textContent = new Date().toLocaleTimeString('en-GB');
+}
+setInterval(updateLastAnalysis, 60000);
+</script>
+</body>
+</html>
