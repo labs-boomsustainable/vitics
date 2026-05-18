@@ -1065,7 +1065,7 @@ async function analyseWithClaude(ytData, knowledgeContext){
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 1500,
+      max_tokens: 3000,
       messages: [{
         role: 'user',
         content: prompt
@@ -1090,7 +1090,32 @@ async function analyseWithClaude(ytData, knowledgeContext){
   if(jsonStr.includes('```')) jsonStr = jsonStr.replace(/```/g,'');
   jsonStr = jsonStr.trim();
 
-  const analysis = JSON.parse(jsonStr);
+  // Resilient parsing — if JSON is truncated, find last valid closing brace
+  let analysis;
+  try {
+    analysis = JSON.parse(jsonStr);
+  } catch(e) {
+    aiLog('JSON truncated — attempting recovery...', 'active');
+    // Find the last complete top-level closing brace
+    const lastBrace = jsonStr.lastIndexOf('}');
+    if(lastBrace > 0){
+      // Try progressively shorter strings until valid JSON found
+      let recovered = false;
+      for(let i = lastBrace; i > jsonStr.length * 0.5; i--){
+        if(jsonStr[i] === '}'){
+          try {
+            analysis = JSON.parse(jsonStr.substring(0, i+1) + '}');
+            aiLog('JSON recovered successfully', 'done');
+            recovered = true;
+            break;
+          } catch(e2){ continue; }
+        }
+      }
+      if(!recovered) throw new Error('JSON recovery failed: ' + e.message);
+    } else {
+      throw new Error('JSON parse failed: ' + e.message);
+    }
+  }
   aiLog(`Intelligence extracted — quality: ${analysis.data_quality}`, 'done');
 
   return analysis;
