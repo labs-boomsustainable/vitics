@@ -1,0 +1,176 @@
+{
+  "id": "batch2-doc1",
+  "batch": 2,
+  "era": "Reform era (2013–2016)",
+  "document": {
+    "title": "Partial Risk Guarantee in Support of the Power Sector Privatisation — Project Appraisal Report",
+    "issuer": "African Development Fund (ADF), ONEC Department",
+    "applicant": "Nigeria Bulk Electricity Trading PLC (NBET)",
+    "date": "December 2013",
+    "type": "Infrastructure Finance Instrument",
+    "pages": 35,
+    "format": "text-extractable PDF"
+  },
+  "consumer_impact_score": 2,
+  "scores": {
+    "direct_consumer_benefit": 2,
+    "promise_credibility": 3,
+    "structural_honesty": 5,
+    "risk_symmetry_capital_vs_citizens": 1
+  },
+  "baseline_conditions_2013": {
+    "grid_access_rate_percent": 41,
+    "needs_met_for_connected_percent": 30,
+    "effective_population_coverage_percent": 12,
+    "installed_capacity_mw": 10000,
+    "available_capacity_mw": 5500,
+    "unsuppressed_demand_mw": 10000,
+    "functional_loss_rate_percent": 45,
+    "households_on_grid_lighting_percent": 25,
+    "households_on_kerosene_percent": 64,
+    "population_without_pc_or_internet_percent": 95,
+    "gdp_lost_to_outages_percent": 3,
+    "consumer_generator_cost_naira_per_kwh_min": 60,
+    "consumer_generator_cost_naira_per_kwh_max": 80,
+    "per_capita_consumption_kwh": 121
+  },
+  "promises": [
+    {
+      "metric": "Electricity access rate",
+      "baseline": "41%",
+      "target": "50%",
+      "deadline": "2016",
+      "people_added": "~14 million"
+    },
+    {
+      "metric": "Grid capacity available",
+      "baseline": "5,500 MW",
+      "target": "8,000 MW",
+      "deadline": "2016",
+      "increase_percent": 45
+    },
+    {
+      "metric": "Per-capita consumption",
+      "baseline": "121 KWh",
+      "target": "210 KWh",
+      "deadline": "2016"
+    },
+    {
+      "metric": "New generation capacity from IPPs",
+      "baseline": "0 MW (from these IPPs)",
+      "target": "1,380 MW",
+      "deadline": "2016",
+      "ipp_breakdown": {
+        "Okija": "495 MW (greenfield, Anambra State)",
+        "Ikot_Abasi": "250 MW (floating barges, Akwa Ibom State)",
+        "Yellowstone": "351 MW (greenfield, Kogi State)",
+        "Ughelli": "+281 MW (brownfield rehab, Delta State)"
+      }
+    },
+    {
+      "metric": "DisCo billing and metering improvement",
+      "note": "Assumed from privatisation incentive — no binding targets set"
+    }
+  ],
+  "prg_mechanism": {
+    "instrument": "Standby Letter of Credit backstopped by ADF PRG",
+    "face_value_ua_million": 120,
+    "face_value_usd_million": 180,
+    "adf_pba_used_ua_million": 30,
+    "leverage_factor": 4,
+    "coverage": "3 months of NBET payment obligations to each IPP",
+    "trigger_event": "NBET non-payment to IPP under PPA",
+    "capacity_building_loan_ua_million": 2,
+    "beneficiaries": ["NBET", "NERC"]
+  },
+  "nbet_capitalisation_usd_million": {
+    "total": 820,
+    "from_2013_budget": 145,
+    "from_eurobond": 350,
+    "from_egbin_sale": 325
+  },
+  "structural_gaps": [
+    {
+      "gap": "Risk asymmetry",
+      "detail": "PRG protected IPP investors and commercial lenders. No equivalent mechanism protected household consumers. Document is structurally investor-first."
+    },
+    {
+      "gap": "Transmission excluded from PRG trigger",
+      "detail": "TCN failure to evacuate power was explicitly classified as a non-triggering risk (Table 4.1). If TCN failed, consumers received no benefit and the guarantee was irrelevant."
+    },
+    {
+      "gap": "Gas supply excluded from PRG trigger",
+      "detail": "Pipeline vandalism and Niger Delta militancy also classified as non-triggering. The most probable cause of IPP output failure had no financial backstop."
+    },
+    {
+      "gap": "Lifeline tariff — mention only",
+      "detail": "Vulnerable household tariff mentioned in one sentence. No mechanism, amount, or implementation schedule provided."
+    },
+    {
+      "gap": "DisCo improvement assumed not required",
+      "detail": "Privatisation assumed to automatically incentivise billing and metering improvement. No binding targets, timelines, or sanctions specified."
+    },
+    {
+      "gap": "NBET institutional immaturity",
+      "detail": "NBET was 3 years old with no prior donor-funded project experience, yet was the linchpin of the entire payment architecture backing USD 180M in guarantees."
+    },
+    {
+      "gap": "Vision 20:2020 target not interrogated",
+      "detail": "40,000 MW target by 2020 cited approvingly. System at 5,500 MW usable in 2013. Required 8× increase in 7 years. No credibility analysis in document."
+    },
+    {
+      "gap": "NERC enforcement capacity uncertain",
+      "detail": "Document explicitly states NERC's capacity to enforce tariff policy 'remains uncertain' — the consumer protection regulator had no guaranteed enforcement power."
+    }
+  ],
+  "policy_lineage": {
+    "thread_institutional": [
+      "NEPP 2001",
+      "NEP 2003",
+      "EPSRA 2005",
+      "Power Sector Reform Roadmap 2010",
+      "NBET created 2010",
+      "PHCN unbundled into 18 companies by 2013",
+      "DisCo sale (~$2.5B) completed 2013",
+      "AfDB PRG December 2013"
+    ],
+    "years_from_reform_law_to_finance_instrument": 8,
+    "thread_consumer_cost": "Consumers paid N60–N80/kWh generator costs from at least 2001 through 2013 while state built instruments to attract capital. Consumer bore the full cost of the institutional gap."
+  },
+  "key_institutions": {
+    "NBET": "Nigeria Bulk Electricity Trading PLC — bulk purchaser and reseller of electricity from IPPs to DisCos",
+    "NERC": "Nigeria Electricity Regulatory Commission — tariff enforcement, consumer protection",
+    "TCN": "Transmission Company of Nigeria — single transmission entity, not privatised",
+    "DisCo": "11 distribution companies — privatised by end 2013",
+    "GenCo": "6 generation companies — privatised by end 2013",
+    "PHCN": "Power Holding Company of Nigeria — predecessor state monopoly, unbundled"
+  },
+  "tariff": {
+    "instrument": "Multi-Year Tariff Order II (MYTO II)",
+    "effective_date": "1 June 2012",
+    "description": "15-year tariff path designed to be cost-reflective and attract private investment"
+  },
+  "financial_analysis": {
+    "Okija_NPV_usd_million": 62.2,
+    "Okija_IRR_percent": 22,
+    "Ikot_Abasi_NPV_usd_million": 83.0,
+    "Ikot_Abasi_IRR_percent": 21,
+    "Ughelli_NPV_usd_million": 15.3,
+    "Ughelli_IRR_percent": 16,
+    "program_economic_NPV_usd_million": 1929.9,
+    "program_economic_IRR_percent": 34
+  },
+  "keywords": [
+    "privatisation", "IPP", "PRG", "NBET", "EPSRA", "DisCo", "GenCo",
+    "TCN", "NERC", "capacity-gap", "generation", "transmission", "tariff",
+    "MYTO-II", "AfDB", "2013", "reform-era", "batch2", "Okija", "Ikot-Abasi",
+    "Yellowstone", "Ughelli", "gas-supply", "grid-access", "power-outage",
+    "generator-cost", "lifeline-tariff", "risk-guarantee", "PHCN", "unbundling"
+  ],
+  "vitics_notes": {
+    "document_character": "Financial instrument, not policy. Operates entirely above the consumer layer. Benefits flow: IPP investors → national grid → consumers (contingent on 4 links all working).",
+    "key_finding": "The PRG reveals that 8 years after EPSRA 2005, the primary obstacle to reform delivery was government creditworthiness, not policy design. The consumer bore the full cost of that gap in generator fuel throughout.",
+    "consumer_experience_gap": "Document is silent on consumer experience between 2013 and promised 2016 delivery. No consumer redress mechanism if targets were missed.",
+    "batch2_significance": "First international financial backstop for Nigerian power reform. Sets the financial architecture within which all subsequent reform-era delivery must be evaluated."
+  }
+}

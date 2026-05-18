@@ -1,0 +1,377 @@
+{
+  "policy_id": "IRENA_REMAP_NIGERIA_2023",
+
+  "metadata": {
+    "full_title": "Renewable Energy Roadmap Nigeria — Summary of Key Recommendations and Findings",
+    "short_title": "REMap Nigeria 2023",
+    "type": "TYPE 3 — Technical Reference / Expert Analysis (International Agency)",
+    "legal_status": "Non-binding technical analysis. NOT government policy. NOT law. Produced by an international agency in collaboration with the Energy Commission of Nigeria.",
+    "published_by": "International Renewable Energy Agency (IRENA)",
+    "produced_in_collaboration_with": "Energy Commission of Nigeria",
+    "published_for": "Nigeria Energy Conference, Lagos, Nigeria, 19–21 September 2023",
+    "publication_date": "February 2023",
+    "foreword_signatories": [
+      "Francesco La Camera — Director-General, IRENA",
+      "Senator (Dr) Adeleke Olorunimbe Mamora — Honourable Minister, Federal Ministry of Science, Technology and Innovation, Federal Republic of Nigeria"
+    ],
+    "methodology": "REmap (Renewable Energy Roadmap) methodology. Builds two scenarios: Planned Energy Scenario (PES) based on existing policies, and Transforming Energy Scenario (TES) representing an ambitious but realistic renewable energy transformation pathway. Time horizon: 2015–2050, with 2030 focus for near-term policy. Stakeholder workshops: Abuja, January 2020 and December 2022.",
+    "pages": 20,
+    "document_source": "PDF with embedded text — all 20 pages read from document context",
+    "vitics_document_role": "QUANTITATIVE BASELINE — provides the structural energy data that underpins all consumer discourse. Explains WHY consumers are in the situation they describe. Key consumer insight: the private generator sector (15–30 GW) is larger than the national grid (~4.5 GW available). For most urban Nigerians, the grid is the backup, not the primary supply."
+  },
+
+  "context": {
+    "nigeria_energy_context_at_publication": {
+      "year": 2023,
+      "publication_timing_note": "Published February 2023, four months before the fuel subsidy removal (29 May 2023) and the Electricity Act assent (June 2023). Represents the pre-watershed baseline. The structural problems it documents — grid underperformance, generator dependency, clean cooking deficit — are the conditions that made the 2023 shocks so consequential for consumers.",
+      "irena_framing": "Nigeria has reached a vital juncture — maintain reliance on fossil fuels accepting environmental and economic risks, or capitalise on ample indigenous renewable energy resources to drive economic development, decrease energy costs and reduce greenhouse gas emissions.",
+      "policy_history_note": "The Nigerian government has a long history of developing sound policies but has faced challenges establishing implementation mechanisms — IRENA's own assessment. This is the most diplomatically phrased confirmation of the policy-reality gap that Vitics tracks across all documents."
+    }
+  },
+
+  "key_quantitative_data": {
+    "grid_infrastructure": {
+      "total_installed_generation_capacity_GW": 13,
+      "actual_available_peak_generation_GW": 4.5,
+      "capacity_utilisation_note": "Only ~35% of installed capacity is actually available due to gas supply constraints, machine breakdowns, seasonal water shortages and limited grid capacity",
+      "generation_mix": {
+        "natural_gas_share_percent": 86,
+        "large_hydropower_share_percent": 14,
+        "solar_share_percent": "less than 1% — essentially zero at scale"
+      },
+      "transmission_wheeling_capacity_GW": {
+        "theoretical_maximum": 7.5,
+        "actual_current": 5.3,
+        "note": "Transmission is a critical bottleneck — actual wheeling capacity is below both installed generation and what is needed"
+      },
+      "transmission_losses_percent": 7.4,
+      "benchmark_transmission_losses_percent": "2–6% (emerging country benchmark)",
+      "transmission_network": "Essentially radial without redundancies — inherent reliability issues. Over 20,000 km of transmission lines. Poor voltage profile especially in the north.",
+      "system_collapses": "Multiple per year — critical infrastructure and operational challenges"
+    },
+    "private_generator_sector": {
+      "estimated_captive_generator_capacity_GW_low": 15,
+      "estimated_captive_generator_capacity_GW_high": 30.5,
+      "sources_note": "Solar Plaza 2017 estimates 15 GW; Tambari, Dioha and Failler 2020 estimates 30.5 GW — either estimate exceeds the national grid's available output",
+      "urban_households_using_backup_power_percent": 84,
+      "companies_owning_or_sharing_generator_percent": 86,
+      "nigeria_generator_import_rank": "Highest importer of generators in Africa, one of largest importers worldwide",
+      "cost_premium_of_captive_generation": "Households and SMEs spend between 2 and 3 times MORE on kerosene, diesel and petrol than they do on electricity from the grid",
+      "industrial_cost_impact": "Government figures suggest the cost of self-generating power makes Nigerian products approximately one-third more expensive than imports",
+      "vitics_consumer_insight": "CRITICAL INVERSION: The generator is NOT the backup for most urban Nigerians — it IS the primary energy system. The national grid is the backup. Consumer discourse about 'NEPA light' reflects this inversion — grid supply is the exception, not the norm. This structural reality explains why fuel subsidy removal in May 2023 was so catastrophic: it removed the economic viability of the primary energy system for millions of households and businesses."
+    },
+    "electricity_access": {
+      "electricity_access_rate_percent": "approximately 55% nationally (implied — about 45% without access to grid)",
+      "investment_required_for_universal_household_access_USD_billion": 34.5,
+      "investment_required_by": 2030,
+      "TCN_annual_grid_investment_needed_USD_billion": 1,
+      "TCN_investment_period_years": 10,
+      "world_bank_transmission_financing_USD_million": 486,
+      "AfDB_transmission_project_USD_million": 410,
+      "AfDB_additional_rural_electrification_USD_million": 200,
+      "siemens_deal_USD_billion": 3.8,
+      "siemens_deal_target_MW": 25000
+    },
+    "renewable_energy_resources": {
+      "solar": {
+        "average_irradiation_range_kWh_m2": "1,600 to 2,200 kWh/m² annually",
+        "highest_irradiation_location": "Northern Nigeria — above 2,000 kWh/m²",
+        "technical_potential_solar_PV_GW": 210,
+        "technical_potential_note": "At only 1% of suitable land utilisation",
+        "CSP_potential_GW": 88.7,
+        "CSP_location": "Primarily northern Nigeria where direct normal irradiance is highest",
+        "current_grid_deployment": "Negligible — less than 1% of generation mix",
+        "consumer_relevance": "Nigeria has the solar resource to power itself many times over. The gap between 210 GW potential and near-zero deployment is the core renewable energy story. Consumer solar adoption post-2023 is tapping a tiny fraction of this potential."
+      },
+      "wind": {
+        "average_wind_speed_range_m_per_s": "2.1 to 8 m/s at 10m height",
+        "highest_wind_speeds_location": "Northern Nigeria — above 7 m/s",
+        "southern_nigeria_wind": "Relatively low except coastal and offshore locations",
+        "technical_potential_onshore_GW": 3.2,
+        "offshore_potential": "Not yet quantified — Federal Ministry of Power conducting offshore wind mapping",
+        "NREAP_target_2020_GW": 0.17,
+        "NREAP_target_2030_GW": 0.8,
+        "consumer_relevance": "Wind is not directly relevant to household consumer discourse. Industrial/utility scale only."
+      },
+      "hydro": {
+        "large_hydro_potential_GW": 24,
+        "small_hydro_potential_GW": 3.5,
+        "installed_large_hydro_2015_GW": 1.9,
+        "installed_small_hydro_2015_MW": 60,
+        "consumer_relevance": "Hydro currently provides 14% of grid generation. Low water seasons cause generation drops that consumers experience as supply worsening in dry season."
+      },
+      "biomass": {
+        "current_primary_energy_share_percent": 43,
+        "nature_of_biomass_use": "Almost entirely traditional — firewood and charcoal for cooking. NOT modern bioenergy for electricity.",
+        "consumer_relevance": "The 43% 'renewable' share is a statistical artefact — most of it is women and children burning wood to cook. It is not clean energy. The clean cooking access deficit is a major hidden energy crisis parallel to the electricity crisis."
+      }
+    },
+    "primary_energy_mix_2015": {
+      "total_renewable_share_percent": 47,
+      "biomass_share_percent": 43,
+      "biomass_nature": "Traditional — heating and cooking, NOT modern energy",
+      "oil_share_percent": "approximately equal to biomass",
+      "natural_gas_share_percent": 18,
+      "coal_share_percent": "less than 1",
+      "other_renewables_solar_wind_share_percent": "less than 1",
+      "imported_refined_oil_products_percent": 80,
+      "key_insight": "Nigeria appears 47% renewable but this is misleading for consumers — 43 of those 47 percentage points are people burning wood. Modern renewable energy (solar, wind, modern hydro) is a tiny fraction of actual energy supply."
+    },
+    "clean_cooking": {
+      "access_to_clean_cooking_NBS_survey_percent": 18,
+      "access_to_clean_cooking_international_stats_percent": 13,
+      "data_discrepancy_note": "NBS survey vs IEA/IRENA/World Bank data disagree — likely due to different definitions of 'clean cooking'",
+      "dominant_cooking_method": "Traditional biomass — firewood, charcoal",
+      "consumer_relevance": "The clean cooking deficit is a parallel energy poverty crisis to electricity access. Women and children bear disproportionate health burden from indoor air pollution. Consumer discourse rarely links cooking fuel to electricity — Vitics should treat these as separate discourse streams."
+    }
+  },
+
+  "policy_landscape_documented": {
+    "note": "IRENA documents the following Nigerian energy policies as the basis for the Planned Energy Scenario. These represent the government policy commitments that IRENA assessed. Vitics has separate JSON files for the underlying documents.",
+    "policies_documented": [
+      {
+        "name": "National Energy Efficiency Action Plan (NEEAP)",
+        "year": 2016,
+        "key_targets": "40% efficient lighting by 2020, 100% by 2030; 20% energy efficiency increase in transport, power and industrial sectors by 2020 and 50% by 2030; distribution losses below 10% by 2030; 10% biofuel blend by 2020",
+        "responsible_agency": "Federal Ministry of Power",
+        "compliance_note": "Distribution losses remain far above 10% as of 2023. Biofuel blend target not met."
+      },
+      {
+        "name": "National Renewable Energy Action Plan (NREAP)",
+        "year": 2015,
+        "key_targets": "30 GW total generation capacity by 2030 with 30% renewables share",
+        "responsible_agency": "Federal Ministry of Power",
+        "compliance_note": "Nigeria had approximately 5 GW available in 2023 — 17% of the 30 GW target with 7 years remaining."
+      },
+      {
+        "name": "Nigeria Nationally Determined Contribution (NDC)",
+        "year": "2015, revised 2021",
+        "key_targets": "Unconditional: 20% emissions reduction. Conditional (with international finance): raised from 45% to 47% reduction",
+        "compliance_note": "PES analysis shows unconditional NDC met but conditional NDC would not be met under current policies"
+      },
+      {
+        "name": "Sustainable Energy for All (SEforALL) Action Agenda",
+        "year": 2015,
+        "key_targets": "30 GW electricity by 2030, 30% renewable share",
+        "responsible_agency": "Federal Ministry of Power"
+      },
+      {
+        "name": "National Renewable Energy and Energy Efficiency Policy (NREEEP)",
+        "year": 2014,
+        "responsible_agency": "Federal Ministry of Power"
+      },
+      {
+        "name": "National Energy Master Plan (NEMP)",
+        "year": "2007, revised 2014",
+        "key_targets": "Renewable energy share (excluding large hydro) to increase from 0.7% (2006–09) to 3.3% (2010–15) to 10.6% (2016–30)",
+        "compliance_note": "Renewable share (modern renewables) remains far below 10.6% target for 2016–30"
+      },
+      {
+        "name": "Rural Electrification Strategy and Implementation Plan (RESIP)",
+        "year": "2006, revised 2014",
+        "key_targets": "75% electricity access by 2025, 90% by 2030 with at least 10% renewable energy sources",
+        "responsible_agency": "Rural Electrification Agency",
+        "compliance_note": "Access rate was approximately 55–60% in 2023 — well below the 75% by 2025 target"
+      },
+      {
+        "name": "National Renewable Energy Master Plan (REMP)",
+        "year": "2005, revised 2012",
+        "key_targets": "4,628 MW (10%) renewable capacity for 2015; 15,966 MW (18%) for 2020; 63,032 MW (20%) for 2030",
+        "compliance_note": "CRITICAL MISS: Target was 15,966 MW renewable by 2020. Nigeria had approximately 2,000 MW of large hydro and negligible other renewables in 2020. Target missed by approximately 14,000 MW."
+      },
+      {
+        "name": "National Energy Policy (NEP)",
+        "year": "2003, revised 2006, 2013, 2018",
+        "key_targets": "75% electrification rate by 2020; generation, transmission and distribution losses below 10% by 2020",
+        "compliance_note": "75% electrification target for 2020 NOT MET. Distribution losses far exceed 10% as of 2023."
+      }
+    ],
+    "irena_assessment_of_policy_track_record": "The Nigerian government has a long history of developing sound policies but has faced challenges establishing implementation mechanisms. Translation into Vitics framework: this is the global context for the policy-reality gap that appears in every document from NEPP 2001 onward. IRENA — a diplomatic institution — is saying politely that Nigeria writes good plans and doesn't implement them."
+  },
+
+  "scenarios": {
+    "planned_energy_scenario_PES": {
+      "description": "Baseline — current and planned policies as written, with no additional measures. Assumes targets in NREAP, NEEAP, NDC, SEforALL, RESIP, NEP are realised.",
+      "primary_energy_2030_PJ": 5138,
+      "primary_energy_2050_PJ": 13044,
+      "growth_note": "5x increase in 35 years — driven by substantial economy and population expansion",
+      "renewable_share_2030_percent": 37,
+      "renewable_share_2050_percent": 33,
+      "CO2_emissions_2015_Mt": 119,
+      "CO2_emissions_2030_Mt": 201,
+      "CO2_emissions_2050_Mt": 516,
+      "NDC_compliance": "Unconditional NDC met; conditional NDC NOT met",
+      "largest_CO2_source_2030": "Transport sector — 47% of energy sector CO2 by 2030, rising to 59% by 2050",
+      "other_renewables_2030_PJ": 161,
+      "consumer_relevance": "Even under current plans, the grid improves but the generator economy persists for years. Consumer transition to solar is not driven by policy in PES — it's market-driven."
+    },
+    "transforming_energy_scenario_TES": {
+      "description": "Ambitious but realistic renewable energy transformation pathway consistent with keeping global temperature rise well below 2°C and towards 1.5°C. Maximises use of renewable energy technologies across the energy system.",
+      "renewable_share_2030_percent": 47,
+      "renewable_share_2050_percent": 57,
+      "investment_comparison": "TES investment: USD 1.22 trillion (2010). PES investment: USD 1.24 trillion (2010). TES is CHEAPER while delivering the same energy service — renewables are now cost-competitive.",
+      "CO2_emissions_2050_Mt": 189,
+      "CO2_reduction_vs_PES": "TES reduces 2050 CO2 from 516 Mt (PES) to 189 Mt — a 63% reduction",
+      "hydropower_TES_2030_GW": 13,
+      "hydropower_TES_2050_GW": 15.5,
+      "key_TES_requirements": [
+        "Acceleration of distributed solar PV deployment — the single most important technology for consumer-level impact",
+        "Hydropower to balance grid and mitigate solar variability",
+        "Faster adoption of biofuels and electric vehicles",
+        "Solar process heat for large industries",
+        "Clean cooking technology rollout",
+        "Appliance efficiency programmes",
+        "Avoiding fossil fuel lock-in — especially natural gas pipeline infrastructure"
+      ],
+      "consumer_relevance": "The TES describes the world where solar + storage replaces generators for most Nigerian households. This is the trajectory that fuel subsidy removal accidentally accelerated in 2023."
+    }
+  },
+
+  "recommended_actions": {
+    "power_sector": [
+      {
+        "action": "Improve existing financing mechanisms and explore further regulatory options",
+        "detail": "Foster innovative financing for distributed renewables and utility-scale technologies — blended finance and microfinance. The substitution of diesel generators by standalone solar systems and mini-grids has higher upfront cost but significantly lower operating cost. Strengthen and make workable the existing Renewable Purchase Obligation (RPO) mechanisms.",
+        "consumer_relevance": "HIGH. Access to finance is the primary barrier to solar adoption for poor consumers. Microfinance for solar is the key unlocking mechanism."
+      },
+      {
+        "action": "Improve and expand the regulatory framework for decentralised renewable energy solutions",
+        "detail": "Nigeria has been successful with a progressive regulatory regime for mini-grids (both off-grid and on-grid) backed by results-based financing and minimum subsidy tender. This framework must continue to evolve.",
+        "consumer_relevance": "HIGH for rural and peri-urban consumers. Mini-grid regulation is the pathway to electricity access beyond the central grid."
+      },
+      {
+        "action": "Accelerate electrification of end uses and promote supporting policies",
+        "detail": "Proactive policy making necessary to avoid fossil fuel lock-in. Delaying action can reduce opportunities for sector coupling. Ineffective policies can create transitional or reputational barriers.",
+        "consumer_relevance": "MEDIUM. This speaks to the industrial and commercial consumer rather than households directly."
+      },
+      {
+        "action": "Modernise the transmission and distribution infrastructure",
+        "detail": "Nigerian grid needs preparation for large-scale renewable integration. Strengthen existing central grid. Develop interstate/intercity regional transmission capacity. Develop smart grid to manage intermittent solar and wind, integrate surplus from decentralised generators, and curtail electricity theft.",
+        "consumer_relevance": "HIGH but long-term. Smart grid is the infrastructure that would enable net metering and prosumer economy.",
+        "electricity_theft_note": "Electricity theft is a major issue — smart grid cited as solution. Consumer context: theft inflates bills for paying customers through non-technical losses passed into tariffs."
+      },
+      {
+        "action": "Invest in renewable over fossil energy",
+        "detail": "Cost-effective to invest in renewables over coal given declining renewable costs. Nigeria should abandon current coal plans and invest more in renewables. Structured procurement policies — feed-in tariffs, premiums and auctions — are instrumental.",
+        "consumer_relevance": "MEDIUM — consumer benefit is lower long-term electricity costs."
+      },
+      {
+        "action": "Develop a robust database for renewable energy potentials and pipeline of bankable projects",
+        "detail": "Considerable dearth of information on wind, geothermal, wave and tidal potential. Comprehensive assessment of onshore and offshore wind needed.",
+        "consumer_relevance": "LOW direct — planning/investment tool for government and developers."
+      }
+    ]
+  },
+
+  "official_promises": {
+    "summary": "This document does not make government promises — it is an IRENA expert analysis. It documents existing government policy targets and assesses them. See policy_landscape_documented for the official targets. The document's own promises are scenarios and recommendations, not binding commitments.",
+    "key_finding_for_vitics": "IRENA's TES shows Nigeria could achieve 47% modern renewable energy share by 2030 — but this requires investment shifts NOW to avoid fossil fuel lock-in. The window for this shift was 2023, which is when the Electricity Act passed and fuel subsidy was removed. Those two events created both the legal framework and the economic pressure for the transition IRENA was calling for."
+  },
+
+  "consumer_reality": {
+    "consumer_impact_score": "N/A — this is a technical analysis document, not a policy with implementation",
+    "what_this_document_tells_vitics_about_consumer_reality": {
+      "the_generator_economy": "The private captive generator sector (15–30.5 GW) is larger than the entire available national grid output (~4.5 GW). This is the foundational fact of Nigerian consumer energy discourse. Every complaint about 'NEPA light', every 'generator fuel', every 'fuel cost too much' is a conversation about this inverted reality. The generator is not the backup — it IS the energy system for urban Nigeria.",
+      "the_cost_burden": "Nigerian households and SMEs spend 2–3 times MORE on generator fuel than on grid electricity. This means the 'electricity bill' complaint understates the true energy cost burden — which is dominated by fuel, not tariffs. After subsidy removal, fuel costs doubled or tripled, making this burden catastrophic.",
+      "the_import_dependency": "80% of Nigeria's refined petroleum products are imported. Nigeria is the world's largest generator importer. Every naira of generator fuel spending is economic leakage — money leaving the Nigerian economy to pay for imported refined products and imported machines. Solar adoption is import substitution in the most direct sense.",
+      "the_industrial_competitiveness_cost": "Nigerian products are approximately one-third more expensive than imports because of self-generation costs. This means electricity failure is not just a consumer inconvenience — it is a structural tax on Nigerian economic competitiveness.",
+      "the_clean_cooking_hidden_crisis": "13–18% clean cooking access. The majority of Nigerian households — predominantly women and children — cook over open fires or charcoal. This is a parallel energy poverty crisis that receives almost no attention in consumer electricity discourse. Vitics should treat cooking fuel as a separate discourse stream."
+    },
+    "consumer_search_terms_from_this_document": [
+      "generator fuel cost Nigeria",
+      "petrol for generator",
+      "diesel price Nigeria",
+      "generator vs solar cost comparison",
+      "solar cheaper than generator Nigeria",
+      "mini-grid Nigeria",
+      "solar home system Nigeria",
+      "electricity access Nigeria percentage",
+      "why is Nigerian electricity so bad",
+      "why does Nigeria import generators",
+      "renewable energy Nigeria",
+      "solar potential Nigeria",
+      "Nigeria energy transition",
+      "IRENA Nigeria",
+      "clean cooking Nigeria",
+      "cooking gas Nigeria price",
+      "kerosene Nigeria price",
+      "energy poverty Nigeria"
+    ]
+  },
+
+  "policy_to_reality_gap": {
+    "gap_score": "9/10 — Catastrophic gap between planned targets and reality",
+    "headline_gaps": [
+      {
+        "gap": "REMP 2012 target: 15,966 MW renewable capacity by 2020",
+        "reality": "Nigeria had approximately 2,000 MW (large hydro) with negligible other renewables in 2020",
+        "shortfall_MW": 14000,
+        "gap_type": "Target miss — governance failure"
+      },
+      {
+        "gap": "NEP target: 75% electrification by 2020",
+        "reality": "Approximately 55–60% electrification in 2023",
+        "gap_type": "Target miss"
+      },
+      {
+        "gap": "NEEAP target: Distribution losses below 10% by 2030",
+        "reality": "Transmission losses alone at 7.4% and total system losses (transmission + distribution) far higher in 2021",
+        "gap_type": "On track to miss"
+      },
+      {
+        "gap": "Grid available output: 4.5 GW for 220 million people",
+        "reality": "Sub-Saharan Africa average excluding South Africa is roughly 0.2 kW per person; Nigeria sits below even this low baseline",
+        "gap_type": "Structural infrastructure failure"
+      },
+      {
+        "gap": "IRENA states TES is cheaper than PES — renewables are now cost-effective",
+        "reality": "Government continued to subsidise fossil fuels (petrol subsidy removed only in May 2023) while solar deployment remained negligible at national scale",
+        "gap_type": "Policy misalignment"
+      }
+    ],
+    "irena_diplomatic_framing": "The Nigerian government has a long history of developing sound policies but has faced challenges establishing implementation mechanisms. Vitics translation: 22 years of policy documents (NEPP 2001 through Electricity Act 2023) with consistent implementation failure."
+  },
+
+  "sdg_alignment": {
+    "SDG_7_affordable_clean_energy": {
+      "irena_assessment": "Nigeria has the resources to achieve SDG7 but is far from it. 210 GW solar potential, 24 GW hydro potential — all massively underexploited. Private generator economy is the de facto energy system, at 2–3x the cost of grid electricity.",
+      "consumer_reality": "Energy is not affordable for most Nigerians — the combination of grid unreliability, generator fuel costs and lack of clean cooking access places energy as one of the largest household expenditure burdens."
+    },
+    "SDG_13_climate_action": {
+      "irena_assessment": "Under current plans (PES), CO2 emissions rise from 119 Mt (2015) to 516 Mt (2050) — a 4x increase. The TES reduces this to 189 Mt by 2050. The window for avoiding fossil fuel lock-in is now.",
+      "consumer_reality": "Nigerian consumers are not primary climate discourse participants in their energy conversations — their discourse is about cost, reliability and survival, not emissions."
+    }
+  },
+
+  "vitics_analysis_instructions": {
+    "primary_use_of_this_document": "Use the quantitative data from this document as the STRUCTURAL CONTEXT layer when analysing consumer energy discourse. When a consumer says 'light don carry', this document explains why: 4.5 GW of available generation for 220 million people. When a consumer says 'generator fuel don finish my salary', this document explains why: the private generator sector is the real energy system, and it runs on imported petroleum.",
+    "key_numbers_to_embed": {
+      "grid_available_GW": 4.5,
+      "private_generator_GW_low": 15,
+      "private_generator_GW_high": 30.5,
+      "urban_households_backup_power_percent": 84,
+      "companies_with_generator_percent": 86,
+      "fuel_vs_grid_cost_multiple": "2 to 3 times more spent on fuel than grid electricity",
+      "industrial_cost_premium_from_self_generation_percent": 33,
+      "solar_technical_potential_GW": 210,
+      "clean_cooking_access_percent": "13–18%"
+    },
+    "attribution_rules": {
+      "generator_discourse": "All consumer discourse about generator fuel, diesel, petrol costs maps onto this structural reality: the private generator economy is larger than the national grid. This discourse predates 2023 but intensified massively after fuel subsidy removal.",
+      "solar_adoption_discourse": "IRENA's TES described a solar-led transition in February 2023. The subsidy removal in May 2023 accidentally triggered a version of this at consumer level. When consumers talk about switching to solar 'because generator fuel too expensive', they are living the IRENA TES without knowing it.",
+      "cost_affordability_discourse": "When consumers complain about electricity costs — whether grid tariffs or generator fuel — the IRENA data contextualises this: energy already consumes a disproportionate share of household income. Tariff increases (2024 MYTO) added grid cost on top of an already high fuel cost burden.",
+      "do_not_attribute_to_this_document": "This document does not generate consumer discourse. It provides the expert baseline. Do not cite IRENA figures as government commitments — IRENA is not the Nigerian government."
+    },
+    "temporal_note": "This document was published February 2023 — four months before the watershed events of May–June 2023. Its data describes the pre-watershed baseline. Use it to characterise the structural conditions that consumers were already living in when the 2023 shocks hit."
+  },
+
+  "document_quality": {
+    "document_type": "PDF with embedded text — readable directly from context",
+    "pages_read": "All 20 pages",
+    "reading_confidence": "HIGH — 99%. Text-based PDF, full content extracted",
+    "key_data_reliability": "HIGH — IRENA data is internationally peer-reviewed. All quantitative figures should be treated as reliable for the period 2015–2022 data. The 2023 and forward projections are scenarios, not predictions.",
+    "limitation": "This is a summary document — the full REMap Nigeria analysis is longer. Some data may be drawn from underlying full IRENA report not provided.",
+    "json_creation_date": "2025",
+    "json_created_by": "Vitics / Claude — full document reading from embedded PDF text"
+  }
+}

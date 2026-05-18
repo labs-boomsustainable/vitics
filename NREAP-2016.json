@@ -1,0 +1,268 @@
+{
+  "vitics_knowledge_base": {
+    "version": "1.0",
+    "project": "Vitics — Nigeria AI Energy Intelligence Platform",
+    "generated": "2026-05-15",
+    "entries": [
+      {
+        "id": "nreap_2016_001",
+        "document": {
+          "title": "National Renewable Energy Action Plans (NREAP) 2015–2030",
+          "short_name": "NREAP 2016",
+          "published": "2016-07-14",
+          "version": "First Version",
+          "authority": "National Council on Power (NACOP)",
+          "adopted_by": "Inter-Ministerial Committee on Renewable Energy and Energy Efficiency (ICREEE)",
+          "ministry": "Federal Ministry of Power, Works & Housing",
+          "coverage_period": "2015–2030",
+          "framework": "ECOWAS Renewable Energy Policy (EREP); SE4All Initiative"
+        },
+        "tags": [
+          "renewable_energy",
+          "rural_electrification",
+          "solar_pv",
+          "off_grid",
+          "mini_grid",
+          "cooking_energy",
+          "feed_in_tariff",
+          "consumer_access",
+          "biofuels",
+          "wind_energy",
+          "small_hydro",
+          "biomass",
+          "policy_plan",
+          "nreap",
+          "nacop",
+          "icreee",
+          "nerc",
+          "rea",
+          "nbet",
+          "epsr_act"
+        ],
+        "gap_flags": [
+          "no_monitoring_system",
+          "investment_data_entirely_missing",
+          "policies_not_yet_active_at_publication",
+          "no_enforcement_mechanism",
+          "zero_renewable_baseline",
+          "no_cookstove_standards_body",
+          "no_installer_certification",
+          "voluntary_disco_obligations",
+          "no_legal_consequence_for_noncompliance",
+          "rural_strategy_unfinished_at_publication"
+        ],
+        "consumer_impact_level": "high",
+        "credibility_tension": "ambitious_targets_vs_near_zero_implementation_readiness",
+        "promises": {
+          "vision_statement": {
+            "label": "Electricity Vision 30:30:30",
+            "description": "30,000 MW of power by 2030, with at least 30% renewable energy in the electricity mix",
+            "stages": ["stable power supply", "sustainable power supply", "uninterruptible power supply"]
+          },
+          "grid_connected_re_targets": {
+            "label": "Grid-Connected Renewable Energy Installed Capacity",
+            "unit": "MW",
+            "data": [
+              { "year": 2010, "target_mw": 916, "re_share_percent": 21 },
+              { "year": 2020, "target_mw": 5325, "re_share_percent": 52 },
+              { "year": 2030, "target_mw": 13800, "re_share_percent": 43 }
+            ],
+            "breakdown_2030": {
+              "large_hydro_mw": 4700,
+              "small_medium_hydro_mw": 1200,
+              "solar_pv_mw": 5000,
+              "solar_thermal_mw": 1000,
+              "wind_mw": 800,
+              "bioenergy_mw": 1100,
+              "geothermal_mw": 0,
+              "tidal_wave_mw": 0
+            }
+          },
+          "solar_pv_trajectory": {
+            "label": "Solar PV Installed Capacity Targets",
+            "note": "Zero solar PV existed on the grid in 2010 and 2014",
+            "data": [
+              { "year": 2014, "target_mw": 0 },
+              { "year": 2016, "target_mw": 100 },
+              { "year": 2017, "target_mw": 500 },
+              { "year": 2018, "target_mw": 1200 },
+              { "year": 2020, "target_mw": 2000 },
+              { "year": 2025, "target_mw": 3500 },
+              { "year": 2030, "target_mw": 5000 }
+            ]
+          },
+          "electricity_access_targets": {
+            "label": "Population Electricity Access Targets",
+            "data": [
+              { "year": 2010, "population_with_electricity_percent": 40, "grid_connected_percent": 38, "rural_re_coverage_percent": 1.2 },
+              { "year": 2020, "population_with_electricity_percent": 75, "grid_connected_percent": 70, "rural_re_coverage_percent": 25 },
+              { "year": 2030, "population_with_electricity_percent": 90, "grid_connected_percent": 80, "rural_re_coverage_percent": 40 }
+            ]
+          },
+          "off_grid_targets": {
+            "label": "Off-Grid Renewable Energy Installed Capacity",
+            "unit": "MW",
+            "data": [
+              { "year": 2010, "total_off_grid_mw": 0.2 },
+              { "year": 2015, "total_off_grid_mw": 2 },
+              { "year": 2020, "total_off_grid_mw": 187.5 },
+              { "year": 2025, "total_off_grid_mw": 1499 },
+              { "year": 2030, "total_off_grid_mw": 5545 }
+            ],
+            "standalone_re_rural_percent": {
+              "2010": 1.8,
+              "2020": 4.7,
+              "2030": 5.0
+            }
+          },
+          "cooking_energy_targets": {
+            "label": "Domestic Cooking Energy Transformation",
+            "data": [
+              {
+                "year": 2010,
+                "improved_cookstove_adoption_percent": 0.24,
+                "modern_fuel_alternatives_percent": 97.66,
+                "efficient_charcoal_production_percent": 2
+              },
+              {
+                "year": 2020,
+                "improved_cookstove_adoption_percent": 40,
+                "modern_fuel_alternatives_percent": 55,
+                "efficient_charcoal_production_percent": 5
+              },
+              {
+                "year": 2030,
+                "improved_cookstove_adoption_percent": 59,
+                "modern_fuel_alternatives_percent": 34,
+                "efficient_charcoal_production_percent": 7
+              }
+            ],
+            "note": "Modern fuel alternatives include LPG, biogas, solar cookers, kerosene"
+          },
+          "solar_thermal_targets": {
+            "label": "Solar Water Heating Targets",
+            "data": {
+              "residential_buildings_percent": { "2020": 5, "2030": 7 },
+              "health_centres_schools_percent": { "2020": 0.5, "2030": 5 },
+              "agro_food_industries_percent": { "2020": 2, "2030": 5 },
+              "hotels_percent": { "2020": 5, "2030": 10 }
+            }
+          },
+          "biofuels_targets": {
+            "label": "Biofuel Blending Targets",
+            "data": [
+              { "year": 2010, "ethanol_share_of_gasoline_percent": 8.5, "biodiesel_share_of_diesel_percent": 1.8 },
+              { "year": 2020, "ethanol_share_of_gasoline_percent": 33.18, "biodiesel_share_of_diesel_percent": 6.2 },
+              { "year": 2030, "ethanol_share_of_gasoline_percent": 57.34, "biodiesel_share_of_diesel_percent": 17.45 }
+            ]
+          },
+          "feed_in_tariff": {
+            "label": "Feed-in Tariff (FiT) Scheme",
+            "status_at_publication": "Under preparation — not yet launched",
+            "promised_launch": "2016",
+            "eligible_size_range": "1 MW to 10 MW (hydro/wind); 1 MW to 5 MW (solar PV, biomass)",
+            "guarantee_period_years": 20,
+            "review_cycle": "Minor review annually; major review every 5 years",
+            "managing_body": "Nigerian Electricity Regulatory Commission (NERC)",
+            "technologies_covered": ["wind", "solar PV", "biomass", "small hydro"]
+          },
+          "rural_electrification_fund": {
+            "label": "Rural Electrification Fund (REF)",
+            "legal_basis": "EPSR Act 2005, Sections 88–91",
+            "funding_source": "NERC surplus + federal budget allocation",
+            "grant_type": "Capital grants for project start-up costs only (not operational/maintenance)",
+            "managing_body": "REF Management Directorate within Rural Electrification Agency (REA)"
+          },
+          "renewable_energy_subsidy": {
+            "label": "Renewable Energy Subsidy and Grant",
+            "status_at_publication": "Planned — no start date defined",
+            "level": "Up to 30% of initial costs of RE utilisation facilities",
+            "eligible": "Communities, enterprises, and individuals embarking on RE generation projects"
+          }
+        },
+        "gaps_and_consumer_reality": {
+          "investment_tracking": {
+            "finding": "All investment data (Table 20) listed as NA across every technology and every year from 2010 to 2030",
+            "consumer_implication": "No financial accountability existed. Consumers could not verify if money was being deployed toward RE targets.",
+            "severity": "critical"
+          },
+          "monitoring_system": {
+            "finding": "Explicitly stated: 'A monitoring system is not yet in place'",
+            "consumer_implication": "Targets had no enforcement. No independent body could verify progress or hold government accountable.",
+            "severity": "critical"
+          },
+          "policies_not_active": {
+            "finding": "At time of publication, the following were still 'planned' with no active status: FiT regulation, Competitive Procurement Program, Rural Electrification Strategy (RESIP), Soft loans via Bank of Industry, 30% RE subsidy scheme, Building Code RE integration",
+            "consumer_implication": "The policy document was largely a plan to make plans. Investors and communities had no bankable instruments to act on.",
+            "severity": "high"
+          },
+          "zero_solar_baseline": {
+            "finding": "Zero MW of solar PV, wind, bioenergy, or geothermal existed on the national grid in 2010 or 2014",
+            "consumer_implication": "The promised 2,000 MW solar PV by 2020 required building an entire industry from scratch in 6 years with no investment data and no launched FiT.",
+            "severity": "high"
+          },
+          "no_cookstove_standards": {
+            "finding": "'No national standard for improved cookstoves has been developed so far. No public body has been assigned the responsibility.'",
+            "consumer_implication": "The plan targeted 40% cookstove adoption by 2020 with no standards body, no certification, and no quality assurance for consumers buying cookstoves.",
+            "severity": "high"
+          },
+          "no_installer_certification": {
+            "finding": "RE installer certification schemes: 'No they are not in place yet'",
+            "consumer_implication": "Consumers purchasing solar systems had no assurance that installers were qualified. Document itself notes stakeholders were 'disappointed by unsatisfactory performance and durability'.",
+            "severity": "high"
+          },
+          "voluntary_disco_obligations": {
+            "finding": "Distribution companies' (DisCos) renewable energy obligations were 'voluntary at the moment'",
+            "consumer_implication": "The companies delivering electricity to consumers had no legal duty to source renewable energy. The 52% RE target by 2020 had no binding mechanism at the distribution level.",
+            "severity": "high"
+          },
+          "no_legal_consequence_for_noncompliance": {
+            "finding": "Rural electrification non-fulfilment: 'no legal and administrative consequences would ensue'",
+            "consumer_implication": "Rural Nigerians had no legal recourse if electrification promises were broken. Non-compliance was acknowledged as consequence-free.",
+            "severity": "critical"
+          },
+          "renewable_baseline_at_publication": {
+            "finding": "Only 0.8% of electricity from renewables in 2012. Target was 16% by 2030 under NREEEP 2015.",
+            "consumer_implication": "Starting from near-zero with no investment tracking, no enforcement, and key instruments still 'under preparation' made the gap between promise and delivery structurally very wide.",
+            "severity": "high"
+          },
+          "soncap_quality_gap": {
+            "finding": "SONCAP (offshore certification before import) was the only quality safeguard for RE equipment",
+            "consumer_implication": "Once equipment cleared import, there was no in-country inspection, no certified installer network, and no consumer complaints mechanism described.",
+            "severity": "medium"
+          }
+        },
+        "consumer_plain_language_truths": [
+          "You were promised 75% electricity access by 2020 — but the government's own investment tracking was completely blank when this plan was published.",
+          "The solar revolution was starting from zero. Not one megawatt of solar PV existed on the national grid two years before this document promised 100 MW.",
+          "The Feed-in Tariff meant to attract renewable energy investors hadn't launched yet — at the moment this document promised a 2016 launch.",
+          "Your dependence on generators and kerosene was officially acknowledged. Reducing it was a stated goal, but no monitoring system existed to track progress.",
+          "If the government failed to electrify rural areas, there were no legal consequences. Non-compliance was explicitly described as consequence-free.",
+          "If you bought solar equipment, there were no certified installers and no quality standards body. The document itself admitted consumers were disappointed by poor-quality RE products.",
+          "97.66% of Nigerians were still relying on kerosene, LPG, or wood for cooking in 2010. The plan promised to change this by 2030 — with no assigned standards body and no cookstove certification scheme."
+        ],
+        "key_actors": {
+          "NERC": "Nigerian Electricity Regulatory Commission — responsible for licensing, FiT regulation, tariffs",
+          "REA": "Rural Electrification Agency — responsible for rural electrification delivery",
+          "NBET": "Nigerian Bulk Electricity Trader — manages competitive procurement, buys from IPPs",
+          "TCN": "Transmission Company of Nigeria — grid operation and transmission",
+          "NAPTIN": "National Power Training Institute of Nigeria — RE capacity building",
+          "SON": "Standard Organisation of Nigeria — equipment standards (SONCAP)",
+          "ICREEE": "Inter-Ministerial Committee on Renewable Energy and Energy Efficiency — policy coordination",
+          "ECN": "Energy Commission of Nigeria — biomass and biofuel research/methodology",
+          "GIZ_NESP": "GIZ Nigerian Energy Support Programme — key development partner, FiT and grid code support"
+        },
+        "regional_context": {
+          "ecowas_targets": {
+            "2020": "23% renewable energy share across ECOWAS",
+            "2030": "31% renewable energy share across ECOWAS"
+          },
+          "nigeria_contribution": "8% of energy from renewables by 2020; 16% by 2030",
+          "mambilla_hydro": { "capacity_mw": 2600, "cost_usd_million": 4000, "planned_commissioning": "2019–2021" },
+          "zungeru_hydro": { "capacity_mw": 700, "cost_usd_million": 1077, "planned_commissioning": "2017–2019" },
+          "nigeria_wind_farm": { "capacity_mw": 300, "cost_usd_million": 477, "planned_commissioning": "2021" }
+        }
+      }
+    ]
+  }
+}

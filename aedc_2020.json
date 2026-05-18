@@ -1,0 +1,472 @@
+{
+  "schema_version": "disco_financial_schema_v1.1",
+  "disco_id": "AEDC_2020",
+
+  "section_01_metadata": {
+    "company_name": "Abuja Electricity Distribution Plc",
+    "ticker": "AEDC",
+    "report_year": 2020,
+    "period_end": "31 December 2020",
+    "report_signed": "26 May 2021",
+    "auditor_report_signed": "3 June 2021",
+    "auditor": "Ernst & Young (EY), Lagos",
+    "auditor_change_note": "EY appointed 21 January 2021; prior year auditor was KPMG (issued unmodified opinion 27 August 2020 on FY2019)",
+    "audit_opinion": "Unmodified — with Material Uncertainty Related to Going Concern paragraph",
+    "parent_company": "KANN Utility Company Limited (60% shareholder, Nigerian company)",
+    "franchise_area": "Federal Capital Territory (FCT) Abuja, Kogi, Niger and Nasarawa States",
+    "registered_number": "638681",
+    "registered_office": "1 Ziguinchor Street, Off IBB Way, Wuse Zone 4, Abuja",
+    "company_secretary": "Dansu Oluwayemisi",
+    "managing_director": "Dr. Ernest Mupwaya (Zambian)",
+    "executive_vice_chairman_ceo": "Dr. Olubunmi O. Peters (appointed November 2020)",
+    "reporting_standard": "IFRS",
+    "legal_framework": "Companies and Allied Matters Act (CAMA) 2020; Financial Reporting Council of Nigeria Act No.6, 2011",
+    "document_pages": 76,
+    "vitics_note": "This is the COVID-19 year report AND the year of Solar Power Naija peak. AEDC's franchise area covers FCT Abuja — Nigeria's capital and one of the highest solar-awareness consumer markets."
+  },
+
+  "section_02_income_statement": {
+    "currency": "NGN thousands (₦'000)",
+    "revenue_total": 133445789,
+    "revenue_from_customers": 75977525,
+    "tariff_shortfall_income": 51514693,
+    "customer_contributed_assets_income": 5953571,
+    "cost_of_sales": 114340267,
+    "cost_of_energy": 108828445,
+    "gross_profit": 19105522,
+    "operating_loss": -6961594,
+    "impairment_loss_on_receivables": -5393588,
+    "administrative_expenses": -22762181,
+    "other_income": 2088653,
+    "finance_income": 256734,
+    "finance_costs": -9465443,
+    "net_finance_cost": -9208709,
+    "loss_before_tax": -16170303,
+    "minimum_tax": -334886,
+    "income_tax": 0,
+    "loss_for_year": -16505189,
+    "total_comprehensive_loss": -15546074,
+    "prior_year_profit": 124292535,
+    "revenue_collapse_note": "Revenue fell 48% from ₦256bn (2019) to ₦133bn (2020). This is because 2019 included ₦164.91bn in cumulative tariff shortfalls for 2015-2018 awarded in that year. 2020 shortfall was only ₦51.5bn. Underlying customer revenue also fell from ₦88.3bn to ₦76.0bn — a real 14% decline driven by COVID-19 demand destruction.",
+    "vitics_signal": "Company swung from ₦124bn profit to ₦16.5bn loss in one year — but the 'profit' in 2019 was almost entirely a paper accounting entry for backdated tariff shortfalls. This is the unreliability at the heart of Nigerian DISCO finances."
+  },
+
+  "section_03_balance_sheet": {
+    "total_assets": 176699692,
+    "total_liabilities": 196816363,
+    "net_equity": -20116671,
+    "prior_year_equity": -4570597,
+    "property_plant_equipment": 116297984,
+    "right_of_use_assets": 726601,
+    "intangible_assets": 848888,
+    "trade_and_other_receivables_net": 39296512,
+    "cash_and_equivalents_total": 19298889,
+    "cash_available_unrestricted": 7810717,
+    "restricted_cash": 11488172,
+    "retained_losses": -65176882,
+    "revaluation_reserve": 45045211,
+    "share_capital": 15000,
+    "net_current_liabilities": -116533308,
+    "non_current_liabilities": -21456836,
+    "solvency_status": "TECHNICALLY INSOLVENT — equity negative ₦20.1bn. Net current liabilities of ₦116.5bn. Total liabilities exceed total assets by ₦20.1bn.",
+    "restricted_cash_note": "₦10.188bn pledged as cash-backed guarantee to UBA as letter of credit requirement for Transitional Electricity Market participation. ₦1.2bn set aside for VAT deductions under CBN/NERC Waterfall Settlement.",
+    "five_year_equity_trend": {
+      "2016": -11019635,
+      "2017": -86094604,
+      "2018": -128769598,
+      "2019": -4570597,
+      "2020": -20116671,
+      "note": "Equity has been negative in 4 of the last 5 years. The 2019 improvement to -₦4.6bn from -₦128.8bn was entirely due to ₦164.9bn in backdated tariff shortfall recognition — an accounting treatment, not real cash recovery."
+    }
+  },
+
+  "section_04_revenue_analysis": {
+    "revenue_by_customer_mode": {
+      "postpaid_revenue": 51986874,
+      "prepaid_revenue": 23990651,
+      "total_from_customers": 75977525,
+      "prepaid_share_pct": 31.6,
+      "prior_year_postpaid": 65522895,
+      "prior_year_prepaid": 22799574,
+      "trend_note": "Prepaid revenue grew from ₦22.8bn to ₦24.0bn (+5%) while postpaid revenue collapsed from ₦65.5bn to ₦52.0bn (-21%). This is the grid defection signal in nascent form: customers migrating to prepaid — and ultimately off-grid — are better payers who consume less."
+    },
+    "tariff_structure": {
+      "myto_2020_note": "On 27 August 2020, NERC issued MYTO 2020 — a service-reflective tariff with 5 bands tied to quality of service (hours of supply). Suspended 14 days later (28 Sept to 11 Oct 2020) — then reimplemented. This was the first time Nigerian tariffs formally tied payment to service quality.",
+      "service_band_introduction": true,
+      "tariff_shortfall_mechanism": "NERC awards tariff shortfalls representing the gap between cost-reflective and approved end-user tariffs. Shortfalls are netted off against NBET payables — meaning AEDC never receives cash, just a book reduction in what it owes.",
+      "cumulative_tariff_shortfall_2015_to_2020_approved": "₦164.91bn (2015-2019 awarded in 2019) + ₦57.27bn projected for 2020; ₦51.5bn recognised in 2020"
+    },
+    "customer_contributed_assets": {
+      "meters_contributed_2020": 5953571,
+      "meters_contributed_2019": 2756178,
+      "substations_contributed_2020": 0,
+      "substations_contributed_2019": 121240,
+      "map_scheme": "Meter Asset Provider (MAP) Regulation — NERC requires DISCOs to engage MAPs to close metering gap. Customers bear ALL costs of delivery, activation and maintenance. Ownership stays with AEDC. Three MAPs appointed in 2019.",
+      "capmi_note": "CAPMI (Credited Advance Payment for Metering Implementation) scheme still on balance sheet at ₦1.115bn. Customers who pre-financed meters under CAPMI are repaid via electricity credits over 3 years. No new CAPMI drawdowns in 2020.",
+      "vitics_signal": "Customers contributing ₦5.95bn in meters in 2020 — up 116% from ₦2.76bn in 2019. This is the Meter Asset Provider scheme at scale. Consumers paying for infrastructure that should be the DISCO's responsibility. Every meter financed by a consumer is a consumer who understands the value of reliable metering — and is closer to also financing their own solar."
+    }
+  },
+
+  "section_05_cost_structure": {
+    "total_cost_of_sales_and_admin": 137102448,
+    "cost_of_energy_purchased": 108828445,
+    "cost_of_energy_as_pct_of_revenue": 81.6,
+    "staff_costs": 13826666,
+    "depreciation_ppe": 4759258,
+    "operations_maintenance_fee_to_parent": 1775183,
+    "maintenance_expenses": 1239857,
+    "commission_to_super_vendors": 675744,
+    "admin_expenses_total": 22762181,
+    "energy_cost_note": "Energy cost of ₦108.8bn against revenue of ₦133.4bn leaves almost nothing for operating costs — before accounting for losses. The structural deficit is built into the tariff architecture.",
+    "o_and_m_fee_note": "AEDC pays parent KANN Utility Company Limited an Operations & Management fee. Related party transaction with limited disclosure of how the ₦1.775bn fee is justified."
+  },
+
+  "section_06_cashflow": {
+    "cash_from_operations": 13311900,
+    "net_cash_from_operations": 12905375,
+    "capex": -677274,
+    "net_investing": -478158,
+    "loan_repayments": -1933789,
+    "interest_paid": -3586144,
+    "net_financing": -5866812,
+    "net_cash_increase": 6560405,
+    "closing_cash": 7810717,
+    "capex_note": "Capital expenditure collapsed from ₦3.71bn in 2019 to ₦677m in 2020 — an 82% drop. COVID-19 response: freeze non-essential capex. Network investment near zero. The grid deteriorates.",
+    "vitics_signal": "When a DISCO stops investing in its network, supply reliability worsens further. Consumers experiencing worse supply in 2020-2021 are accelerating their own alternatives search."
+  },
+
+  "section_07_receivables_and_collections": {
+    "trade_receivables_gross": 117171565,
+    "impairment_allowance": -78957841,
+    "impairment_as_pct_of_gross": 67.4,
+    "trade_receivables_net": 38213724,
+    "impairment_charge_2020": 5393588,
+    "impairment_charge_2019": 21882536,
+    "impairment_decline_note": "Impairment charge fell from ₦21.9bn to ₦5.4bn — NOT because collection improved, but because the gross receivable base is already heavily impaired (67.4%). The bad debt pool is almost fully written down.",
+    "collection_challenge": "Recovery from post-paid customers described as 'a huge challenge partly due to estimated billings and customer apathy to bill payment' — auditors flagged this as a Key Audit Matter.",
+    "unbilled_revenue_at_year_end": 6380000,
+    "credit_risk_mitigation": "Company increasing prepaid customer share as primary credit risk mitigation. Right to disconnect non-paying customers retained but operationally difficult at scale.",
+    "vitics_signal": "67.4% of all money owed to AEDC is considered uncollectable. This means the business model is structurally dependent on government tariff shortfall payments to survive. Consumers who cannot pay electricity bills are the same consumers later cited in solar adoption research as 'cost-driven adopters'."
+  },
+
+  "section_08_payables_and_market_debt": {
+    "total_trade_and_other_payables": 164859607,
+    "nbet_and_onem_payables": 123845189,
+    "other_vendor_payables": 5922752,
+    "related_party_payables": 2589470,
+    "nelmco_payables": 745711,
+    "accruals": 5605821,
+    "statutory_deductions_payable": 26150664,
+    "nbet_payables_movement": {
+      "opening": 102955137,
+      "cost_of_energy_added": 108828445,
+      "interest_on_shortfall_added": 24631291,
+      "net_off_of_2020_tariff_shortfall": -51514693,
+      "net_off_of_interest_on_shortfall": -19148539,
+      "payments_made": -41906452,
+      "closing": 123845189
+    },
+    "nbet_interest_note": "AEDC owes NBET/ONEM interest at NIBOR plus 4% on unpaid invoices. The Company is writing back ₦19.1bn of this interest because the MYTO framework says AEDC cannot charge customers interest — so NERC allows AEDC to claim this back. But it means AEDC is perpetually accumulating debt to its power supplier.",
+    "vitics_signal": "AEDC owed ₦123.8bn to NBET/ONEM at year end — 93% of its total annual revenue. This is the debt spiral that the government's Power Sector Recovery Programme (PSRP) was designed to address but had not resolved by 2020."
+  },
+
+  "section_09_debt_structure": {
+    "total_loans_and_borrowings": 19486046,
+    "cbn_nemsf_loan": 14026544,
+    "capmi_loan": 1115520,
+    "nelmco_loan": 704489,
+    "tcn_loan": 3634958,
+    "vendor_financed_loan": 4535,
+    "cbn_loan_drawdown_total": 24800000,
+    "cbn_loan_terms": "₦24.8bn drawn (₦23.72bn in 2018 + ₦1.08bn in 2019). No drawdown in 2020. Repayable over 81 months from disbursement. Rate: 10% per annum, temporarily reduced to 5% from 1 March 2020 to 28 February 2021 (COVID relief) then reverts to 10%.",
+    "tcn_nelmco_loan_purpose": "₦6.50bn (TCN) + ₦1.21bn (NELMCO) = ₦7.71bn total. Used to fund letter of credit for NBET — i.e. borrowing money to guarantee payment for electricity the company cannot afford.",
+    "total_interest_paid_2020": 3586144,
+    "total_interest_burden_note": "Finance costs of ₦9.47bn include ₦3.59bn interest on loans, ₦5.48bn net interest on NBET/ONEM bills, and ₦207m forex losses. Interest burden is existential."
+  },
+
+  "section_10_staffing": {
+    "total_employees_2020": 3474,
+    "total_employees_2019": 3502,
+    "administration": 346,
+    "finance": 217,
+    "marketing": 1605,
+    "technical": 1306,
+    "note": "Headcount broadly stable. Marketing is the largest department by far (1,605 staff) — reflecting the effort required for revenue collection in a post-paid, partially metered environment. This is a hallmark of Nigerian DISCO operations: more collectors than engineers."
+  },
+
+  "section_11_governance": {
+    "board_restructured": "25 November 2020 — full committee restructure",
+    "new_committees": [
+      "Audit and Risk Committee",
+      "Governance, Remuneration and Nomination Committee",
+      "Finance and General-Purpose Committee",
+      "Technical and Commercial Committee"
+    ],
+    "ownership": "KANN Utility Company Limited (60%); BPE/FGN retains remaining stake",
+    "management_nationality_note": "MD Ernest Mupwaya is Zambian; multiple expatriate managers. This reflects KANN's African power sector management approach.",
+    "regulatory_fine": "AEDC was subjected to a regulatory fine (NERC) currently being contested in court. Provision of ₦250m + ₦111.04m (non-compliance with filing requirements) made in financial statements.",
+    "super_vendor_partnerships": "Kallak Power Limited, United Bank for Africa Plc, Pagatech — enabling digital vending platforms for prepaid customers at 0.5% to 4.25% commission."
+  },
+
+  "section_12_operational_performance": {
+    "customer_payment_mode_shift": {
+      "prepaid_revenue_growth_pct": 5.2,
+      "postpaid_revenue_decline_pct": -20.7,
+      "interpretation": "Prepaid growing, postpaid collapsing. Metering programme accelerating the shift."
+    },
+    "covid_19_impact": {
+      "declared_pandemic": "11 March 2020 (WHO)",
+      "nigeria_lockdown": "Yes — multiple states locked down",
+      "aedc_exempted": "Yes — classified as essential service provider",
+      "demand_impact": "Protracted fall in energy demand and slowdown in collections during initial lockdown period",
+      "cost_response": [
+        "Froze non-essential capex",
+        "Froze non-essential recruitment",
+        "Reduced marketing spend"
+      ]
+    },
+    "myto_2020_service_bands": {
+      "introduced": "1 September 2020",
+      "suspended": "28 September 2020",
+      "reimplemented": "11 October 2020",
+      "significance": "First tariff explicitly tying payment to service quality — Bands A to E. Band A = best supply, Band E = worst. Consumers in Band E pay less. This was a landmark NERC reform — suspended within 2 weeks due to consumer protests and DISCO concerns."
+    },
+    "network_note": "No customer-contributed substations in 2020 (vs ₦121.24m in 2019). Distribution network assets valued at ₦95.47bn. Capital work in progress ₦1.04bn — mostly transformers and meters in store.",
+    "vitics_signal": "MYTO 2020 service bands briefly gave Nigerian consumers a formal acknowledgement that they were receiving differentiated service quality. The rapid suspension and reimplementation reflects the political sensitivity. Consumers in Band E — paying less for terrible supply — are the prime solar conversion targets."
+  },
+
+  "section_13_grid_defection_signals": {
+    "grid_defection_score": 5,
+    "grid_defection_score_note": "Scored 5/10 — elevated from 3/10 in 2015. Multiple converging signals present.",
+    "signals": {
+      "signal_1_revenue_vs_customers": {
+        "description": "Customer-revenue falling faster than energy volumes suggest structural demand decline",
+        "postpaid_revenue_2020": 51986874,
+        "postpaid_revenue_2019": 65522895,
+        "change_pct": -20.7,
+        "interpretation": "Even accounting for COVID demand, the collapse in postpaid collections is larger than what lower consumption alone explains. Some customers are withdrawing from the formal billing relationship."
+      },
+      "signal_2_prepaid_acceleration": {
+        "description": "Prepaid revenue growing despite overall revenue contraction",
+        "prepaid_revenue_2020": 23990651,
+        "prepaid_revenue_2019": 22799574,
+        "change_pct": 5.2,
+        "interpretation": "Prepaid customers are self-managing their consumption and prepaying — behaviour that prefigures the discipline of solar ownership."
+      },
+      "signal_3_consumer_funded_meters": {
+        "description": "Consumers funding ₦5.95bn of their own meters — 116% year-on-year increase",
+        "value_2020": 5953571,
+        "value_2019": 2756178,
+        "interpretation": "A consumer who pays for their own meter is a consumer who is financially capable and technically interested in self-provision of energy services."
+      },
+      "signal_4_capex_collapse": {
+        "description": "AEDC capex fell 82% — network deterioration accelerating",
+        "capex_2020": 677274,
+        "capex_2019": 3710483,
+        "interpretation": "Zero network investment during COVID. Supply quality will worsen in 2021. Worse supply = faster solar adoption search."
+      },
+      "signal_5_service_band_awareness": {
+        "description": "MYTO 2020 introduced service bands — even temporary implementation raised consumer awareness of differentiated supply quality",
+        "interpretation": "Once consumers are told their electricity is Band D or E, they have a vocabulary for complaining. And vocabulary for complaining is the first step to searching for alternatives."
+      },
+      "signal_6_covid_demand_destruction": {
+        "description": "COVID lockdowns demonstrated to millions of Nigerian consumers that they could survive — and work — with reduced grid power or none at all",
+        "interpretation": "This is the behavioural foundation of the 2020-2021 solar surge. The lockdown forced self-sufficiency experiments. Many consumers who tried solar backup during COVID never fully returned to grid dependency."
+      }
+    },
+    "solar_power_naija_context": "Solar Power Naija launched mid-2020 with a target of 5 million solar connections. AEDC's franchise area (FCT Abuja) was a prime target. The simultaneous collapse of AEDC's grid service quality (capex freeze, COVID disruption) and the government's highest-ever solar awareness campaign created the perfect demand pull for off-grid adoption."
+  },
+
+  "section_14_force_majeure_history": {
+    "active_force_majeure_2020": false,
+    "kann_force_majeure_2015_note": "KANN (parent company) declared force majeure in April 2015, withdrawn February 2016. No force majeure events in 2020.",
+    "covid_response_classification": "COVID-19 treated as extraordinary event but formal force majeure not declared. AEDC classified as essential service, exempted from lockdown."
+  },
+
+  "section_15_cbn_intervention_fund": {
+    "nemsf_total_facility": 213000000,
+    "aedc_allocation": 27000000,
+    "total_drawn_by_aedc": 24800000,
+    "drawn_2018_tranche_1": 20230000,
+    "drawn_2018_tranche_2": 3490000,
+    "drawn_2019": 1080000,
+    "drawn_2020": 0,
+    "remaining_available": 2200000,
+    "balance_outstanding": 14026544,
+    "repayment_terms": "81 months from disbursement at 10% p.a. (temporarily 5% during COVID period Mar 2020 - Feb 2021)",
+    "purpose": "Settling outstanding market payment obligations to NBET/ONEM and legacy gas debts transferred to NELMCO",
+    "net_off_mechanism": "Shortfalls are offset against NBET payables — AEDC never receives cash; liabilities reduce on paper",
+    "vitics_signal": "CBN NEMSF was meant to stabilise the sector. AEDC drew ₦24.8bn of ₦27bn available by 2019 and drew nothing in 2020. The facility is a debt, not a grant — adding to the spiral. The sector remained structurally illiquid despite the intervention."
+  },
+
+  "section_16_nelmco_transition_liabilities": {
+    "nelmco_payables_2020": 745711,
+    "nelmco_loan_2020": 704489,
+    "total_nelmco_exposure": 1450200,
+    "nelmco_note": "NELMCO (Nigeria Electricity Liability Management Company) holds legacy PHCN liabilities transferred at privatisation. AEDC borrowed from NELMCO to fund TEM letter of credit and still carries payables related to inherited PHCN obligations."
+  },
+
+  "section_17_customer_contributed_assets": {
+    "customer_contributed_meters_2020": 5953571,
+    "customer_contributed_meters_2019": 2756178,
+    "customer_contributed_substations_2020": 0,
+    "customer_contributed_substations_2019": 121240,
+    "total_customer_contributed_2016_to_2020_estimate": "Not disclosed in full — deferred income balance on balance sheet is ₦7.35bn (current + non-current)",
+    "deferred_income_total": {
+      "non_current": 5829261,
+      "current": 1523196,
+      "total": 7352457,
+      "note": "Deferred income primarily represents customer-contributed assets recognised over the useful life of the meters/assets. The ₦7.35bn balance represents years of consumer-funded infrastructure accumulation."
+    },
+    "capmi_balance": 1115520,
+    "map_scheme_detail": "Under MAP Regulation, customers bear ALL costs of meter delivery, activation and maintenance. Ownership vests with AEDC. Three MAPs appointed 2019. In 2020, ₦5.95bn of meters contributed — the largest single-year customer capital contribution in AEDC's reported history.",
+    "vitics_signal": "Consumers have now funded over ₦7bn+ of AEDC infrastructure since privatisation. This is a consumer population that has demonstrated willingness and ability to self-finance energy infrastructure. The same savings discipline and willingness to invest in energy security are the demand drivers behind solar adoption."
+  },
+
+  "section_18_going_concern": {
+    "going_concern_flagged": true,
+    "auditor_going_concern_paragraph": true,
+    "loss_after_tax_2020": -16505189,
+    "net_current_liabilities_2020": -116533308,
+    "net_liabilities": -20116671,
+    "key_conditions": [
+      "Loss of ₦16.51bn in 2020 vs profit of ₦124.29bn in 2019 (which was driven by backdated tariff shortfall accounting)",
+      "Net current liabilities of ₦116.53bn (2019: ₦94.72bn)",
+      "Net liabilities of ₦20.12bn (2019: ₦4.57bn)",
+      "NBET/ONEM payables of ₦123.85bn due for immediate payment per NERC orders",
+      "Going concern dependent on FGN honouring PSRP commitments"
+    ],
+    "psrp_mitigants": [
+      "Continued CBN disbursements on NBET behalf",
+      "Timely payments of MDA historical debts",
+      "Negotiation to convert NBET/ONEM past-due invoices to 20-year long-term loans",
+      "NERC/NBET interest waiver on past-due amounts",
+      "Implementation of cost-reflective tariffs"
+    ],
+    "directors_conclusion": "Financial statements prepared on going concern basis on the basis that the Company will achieve its plans and that PSRP mechanisms will be honoured",
+    "vitics_signal": "AEDC's going concern depends entirely on government policy decisions — tariff increases, debt restructuring, CBN interventions. None of these depend on the company improving its service to consumers. The fundamental misalignment between DISCO survival and consumer satisfaction is the engine driving solar adoption.",
+    "historical_going_concern_pattern": "Going concern risk was first flagged by KPMG in AEDC 2015 accounts. Still present in 2020 — five consecutive years of auditor concern."
+  },
+
+  "section_19_consumer_impact_assessment": {
+    "consumer_impact_score": 8,
+    "consumer_impact_score_max": 10,
+    "score_rationale": "Score 8/10 (high negative impact). Worse than 2015 (7/10) on multiple dimensions.",
+    "dimensions": {
+      "tariff_reliability": {
+        "score": 2,
+        "note": "MYTO 2020 introduced, suspended within 2 weeks, reimplemented. Consumers experienced two tariff changes in six weeks. Uncertainty is the consistent tariff experience."
+      },
+      "supply_reliability": {
+        "score": 2,
+        "note": "Capex cut 82%. No investment in network. COVID demand disruption. Service band framework confirms consumers in different areas receive dramatically different service."
+      },
+      "metering_fairness": {
+        "score": 3,
+        "note": "MAP scheme reducing unmetered customers but consumers bearing 100% of meter costs. Estimated billing still widespread for post-paid customers. Auditors flagged revenue estimation methodology as Key Audit Matter."
+      },
+      "financial_burden": {
+        "score": 1,
+        "note": "Consumers who pay bills are subsidising the 67% who don't (via higher tariff requirements). Those who fund their own meters get no relief on tariff. The cost burden on compliant consumers is maximum."
+      },
+      "covid_experience": {
+        "score": 2,
+        "note": "COVID lockdowns coincided with AEDC supply disruption and billing confusion. Many consumers experienced worst-ever grid reliability during a period when they needed electricity most (work from home)."
+      }
+    },
+    "consumer_experience_summary": "2020 was the year Nigerian consumers simultaneously experienced their worst grid service (COVID capex freeze, supply disruptions), their highest electricity tariff confusion (MYTO 2020 suspension), and the government's biggest solar awareness campaign (Solar Power Naija). The conditions for mass grid defection were fully assembled.",
+    "what_consumers_said": {
+      "documented_complaints": [
+        "Bills arriving during lockdown for electricity not received",
+        "MYTO 2020 'service bands' — consumers discovered they were classified as low service (Band D/E) but not paying lower tariffs yet",
+        "Meter Asset Provider confusion — consumers unclear why they must pay for meters they do not own",
+        "Solar Power Naija: government offering free solar kits while AEDC still charging estimated bills"
+      ],
+      "nigerian_vocabulary": [
+        "AEDC wahala",
+        "Abuja darkness",
+        "estimated billing scam",
+        "nepa bill during lockdown",
+        "service band cheating",
+        "buy your own meter",
+        "solar power naija scam or real",
+        "AEDC vs solar which is better 2020"
+      ]
+    }
+  },
+
+  "section_20_vitics_analysis_instructions": {
+    "primary_lens": "Did AEDC's 2020 performance change anything for the FCT/Abuja energy consumer — and what did they say about it?",
+    "key_findings_for_vitics": [
+      {
+        "finding": "COVID-19 as a solar adoption accelerator",
+        "detail": "AEDC capex cut 82% + COVID disruptions + Solar Power Naija = perfect storm. When analysing Nigerian solar search data 2020-2021, Vitics should weight FCT/Abuja consumer signals heavily. These consumers experienced the gap between grid promises and reality most acutely."
+      },
+      {
+        "finding": "Consumer self-financing infrastructure — a proxy signal",
+        "detail": "₦5.95bn in consumer-funded meters in 2020. This is a searchable signal. YouTube Nigeria content about 'meter asset provider', 'MAP meter scheme', 'how to get meter in Abuja' correlates with consumers who will ALSO search for solar alternatives within 12-24 months."
+      },
+      {
+        "finding": "MYTO 2020 service bands created consumer vocabulary for grid quality failure",
+        "detail": "After September 2020, Nigerian consumers had a new phrase: 'what band am I in?' This vocabulary is detectable in social/YouTube data. Consumer awareness of service quality differentiation is a leading indicator of alternatives consideration."
+      },
+      {
+        "finding": "The 2019 profit is a lie — 2020 loss is the real picture",
+        "detail": "When consumers see claims that DISCOs are profitable (as in 2019), they question why service is not improving. Understanding that the 2019 profit was entirely a tariff shortfall accounting entry — and the underlying operation lost money continuously — explains the consumer trust deficit."
+      },
+      {
+        "finding": "Prepaid migration is grid defection in early stage",
+        "detail": "The shift from postpaid to prepaid is the consumer asserting control over their energy spending. The next step is controlling supply entirely. Vitics should treat prepaid adoption rates as a leading indicator of solar interest."
+      }
+    ],
+    "youtube_search_terms_relevant_to_2020": {
+      "direct_triggers": [
+        "solar power naija 2020",
+        "AEDC service band",
+        "MYTO 2020 tariff",
+        "how to get MAP meter AEDC",
+        "AEDC estimated billing fix",
+        "solar vs AEDC Abuja",
+        "inverter solar Abuja 2020",
+        "how to survive AEDC blackout"
+      ],
+      "indirect_triggers": [
+        "work from home power backup Nigeria",
+        "generator vs solar cost Nigeria 2020",
+        "how to apply solar power naija",
+        "NERC service band explained",
+        "AEDC complaint how to report",
+        "meter asset provider Nigeria"
+      ]
+    },
+    "transition_marker": true,
+    "transition_note": "AEDC 2020 is a transition document. The year marks: (1) COVID demand shock breaking the fiction of rising grid consumption; (2) Solar Power Naija creating mass solar vocabulary; (3) Service bands giving consumers language for their supply deprivation; (4) Consumer-funded meters at record levels showing self-provision willingness. The Vitics 2020-2023 acceleration thesis starts here."
+  },
+
+  "section_21_document_quality": {
+    "source": "AEDC Annual Report 2020, uploaded as PDF",
+    "pages": 76,
+    "format": "Mixed — text-selectable and scanned pages",
+    "extraction_method": "pdftotext for text pages; pdftoppm rasterization at 150 DPI + visual reading for financial statements, notes, and scanned pages",
+    "confidence": 9,
+    "confidence_note": "All major financial figures cross-verified across income statement, balance sheet, five-year summary, and notes. Revenue composition and going concern note read directly from scanned pages. No customer count or energy volume (GWh) data disclosed in this report — operational KPIs not reported.",
+    "data_gaps": [
+      "Energy sent out (GWh) — not disclosed in 2020 report",
+      "Total customer count (number) — not disclosed in 2020 report",
+      "Technical and non-technical loss percentage — not explicitly stated",
+      "Collection efficiency ratio — not directly stated though derivable from receivables data",
+      "Geographic breakdown of customer distribution across FCT, Kogi, Niger, Nasarawa"
+    ],
+    "comparison_with_aedc_2015": {
+      "revenue_2015": "approx ₦49bn",
+      "revenue_2020": "₦133.4bn (including ₦51.5bn shortfall)",
+      "underlying_customer_revenue_2015": "approx ₦49bn",
+      "underlying_customer_revenue_2020": "₦75.98bn",
+      "real_revenue_growth_note": "Underlying customer revenue grew ~55% over 5 years while inflation and naira depreciation eroded real purchasing power significantly. Consumer affordability worsened.",
+      "impairment_2015": "₦18.3bn",
+      "impairment_2020": "₦5.4bn annual charge (but cumulative impairment pool now ₦78.96bn)",
+      "going_concern_2015": "Flagged by KPMG",
+      "going_concern_2020": "Still flagged — now by EY. Five years and nothing resolved."
+    }
+  }
+}

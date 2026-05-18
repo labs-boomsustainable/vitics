@@ -1,0 +1,207 @@
+{
+  "policy_id": "NEPP_2001",
+  "metadata": {
+    "full_name": "National Electric Power Policy",
+    "short_name": "NEPP",
+    "year": 2001,
+    "month": "March",
+    "signed_by": "Dr. Olusegun Agagu",
+    "title": "Honourable Minister of Power & Steel",
+    "document_type": "Federal Government Policy",
+    "source_volume": "Policies of the Federal Republic of Nigeria, Volume Three, Section Seven",
+    "pages": 104,
+    "chapters": 16,
+    "administration": "President Olusegun Obasanjo",
+    "implementing_committee": "Electric Power Sector Reform Implementation Committee (EPIC)",
+    "oversight_body": "National Council on Privatisation (NCP) under Vice-President Atiku Abubakar"
+  },
+
+  "context": {
+    "nigeria_population_2001": "approximately 120 million",
+    "existing_generating_capacity_mw": 5400,
+    "capacity_description": "maximum rehabilitable — severely degraded infrastructure",
+    "grid_operator_at_time": "NEPA — National Electric Power Authority",
+    "sector_condition": "Completely failed to attract investment. Generation, transmission and distribution all degraded. Electricity demand could not be met from existing consumers.",
+    "government_diagnosis": "NEPA technically and commercially broken. Government cannot fund sector development alone. Private sector participation essential.",
+    "reform_driver": "Privatisation as cardinal economic programme of the Obasanjo administration"
+  },
+
+  "official_promises": {
+    "short_to_medium_term_3_to_5_years": [
+      "Efficient, safe, affordable and cost-effective electricity throughout Nigeria",
+      "Attract private investment from Nigeria and overseas",
+      "Develop transparent and effective regulatory framework — NERC",
+      "Government divestment from state-owned electricity entities",
+      "Full liberalisation of the electricity market",
+      "Prepayment meters to be installed expeditiously",
+      "Billing and collection progressively concessioned to private sector",
+      "Customer census to be completed",
+      "Tariffs to cover full operating costs and profit on new investments by 2002-3"
+    ],
+    "long_term_beyond_5_years": [
+      "Universal access to electricity — explicitly stated as NOT necessarily through the grid",
+      "Aggressive targets for rural electrification programme",
+      "Domestic production of electrical equipment in Nigeria",
+      "Nigerian electricity companies to become global leaders",
+      "Minimum adverse environmental impact",
+      "Flexible regulatory environment responsive to new technologies"
+    ],
+    "institutional_promises": [
+      "Nigerian Electricity Regulatory Commission (NERC) to be established as independent regulator",
+      "NEPA to be unbundled into generation, transmission and distribution companies",
+      "Licenses to be issued to private operators in the Electricity Supply Industry (ESI)",
+      "Annual reports on electricity development to be published",
+      "National Electricity Forum to be organised by Ministry of Power and Steel",
+      "Implementation machinery to start immediately after policy approval"
+    ]
+  },
+
+  "critical_document_findings": {
+    "off_grid_acknowledgement": {
+      "exact_provision": "Universal access to electricity, although not necessarily through the grid",
+      "chapter": "Chapter Two, Section 2.2 Long-Term Objectives, item c",
+      "significance": "FIRST official Nigerian government acknowledgement that off-grid solutions are a legitimate pathway to universal electricity access",
+      "year": 2001,
+      "years_before_any_programme": 14,
+      "vitics_implication": "The government knew off-grid was a solution in 2001. No programme followed until 2015. This 14-year gap is a core Vitics intelligence signal explaining why the private solar market filled the vacuum."
+    },
+    "tariff_timeline": {
+      "commitment": "Cost-reflective tariffs to be achieved by time of privatisation — i.e. by 2002-3",
+      "what_happened": "Tariffs remained politically manipulated and subsidised for 20+ years. Partial cost-reflective tariffs only partially introduced under Band A classification in 2023 — 20 years late",
+      "consumer_impact": "Consumers paid confusing, inconsistent, politically-set bills for two decades"
+    },
+    "privatisation_timeline": {
+      "original_target": "Privatisation to begin immediately, complete within 3-5 years — by 2004-2006",
+      "what_happened": "Privatisation actually completed in 2013 — 7-10 years late",
+      "ipp_capacity_caps": "Maximum guaranteed IPP capacity: 800MW in 2001, 700MW in 2002"
+    },
+    "prepayment_meters": {
+      "commitment": "Install prepayment meters expeditiously — NEPA instructed to proceed immediately",
+      "what_happened": "Prepaid meter rollout took 15+ years and remained incomplete well into the 2010s",
+      "consumer_vocabulary_generated": "estimated billing wahala"
+    }
+  },
+
+  "consumer_reality": {
+    "impact_score": 1,
+    "impact_scale": "1-10 where 10 = transformative consumer impact",
+    "assessment": "Policy created legal and institutional scaffolding — NERC, privatisation framework, tariff principles — but delivered zero consumer-visible outcomes in the period immediately following publication",
+    "consumer_experience_2001_2013": [
+      "NEPA continued as primary grid operator despite reform intentions",
+      "PHCN (Power Holding Company of Nigeria) replaced NEPA in name only — same problems, new acronym",
+      "Electricity supply worsened throughout the 2000s",
+      "Generator dependency deepened significantly — Nigeria became world's largest per-capita generator market",
+      "Estimated billing remained the norm — consumers had no metering transparency",
+      "Consumer vocabulary: NEPA wahala, PHCN = Please Have Candles Nearby",
+      "No rural electrification programme launched under NEPP",
+      "No off-grid programme despite 2001 acknowledgement"
+    ],
+    "generator_market_growth": "Generator imports and sales increased substantially 2001-2013 as consumers lost faith in grid improvement",
+    "household_energy_cost_burden": "MSMEs spending 25-40% of operating costs on diesel for generators by mid-2000s"
+  },
+
+  "policy_to_reality_gap": {
+    "gap_score": 9,
+    "gap_scale": "1-10 where 10 = complete policy failure at consumer level",
+    "summary": "Almost total disconnection between policy ambition and consumer experience. Every major consumer-facing commitment was either delayed by a decade or never implemented.",
+    "specific_gaps": [
+      {
+        "promise": "Cost-reflective tariffs by 2002-3",
+        "reality": "Achieved partially only in 2023 — 20 years late",
+        "gap_years": 20
+      },
+      {
+        "promise": "Privatisation complete within 3-5 years",
+        "reality": "Completed 2013 — 7-10 years late",
+        "gap_years": 10
+      },
+      {
+        "promise": "Prepayment meters expeditiously",
+        "reality": "15+ years and still incomplete",
+        "gap_years": 15
+      },
+      {
+        "promise": "Universal access including off-grid",
+        "reality": "No off-grid programme for 14 years after acknowledgement",
+        "gap_years": 14
+      },
+      {
+        "promise": "Rural electrification aggressive targets",
+        "reality": "No specific funded programme launched under NEPP",
+        "gap_years": 12
+      }
+    ]
+  },
+
+  "institutions_created": [
+    {
+      "name": "Nigerian Electricity Regulatory Commission (NERC)",
+      "role": "Independent electricity sector regulator — licensing, tariffs, standards",
+      "consumer_relevance": "Became visible to consumers primarily through tariff decisions and DISCO regulation"
+    },
+    {
+      "name": "Electric Power Sector Reform Implementation Committee (EPIC)",
+      "role": "23-member committee to develop reform recommendations",
+      "consumer_relevance": "Administrative — invisible to consumers"
+    }
+  ],
+
+  "sdg_alignment": {
+    "sdg7_affordable_clean_energy": {
+      "relevance": "High — core focus of policy",
+      "direction": "Intended positive — actual impact near zero for consumers 2001-2013"
+    },
+    "sdg10_reduced_inequalities": {
+      "relevance": "Medium — rural electrification mentioned but not programmed",
+      "direction": "No meaningful impact on energy inequality"
+    },
+    "sdg13_climate_action": {
+      "relevance": "Low — environmental impact mentioned once in long-term objectives",
+      "direction": "No emissions or clean energy provisions"
+    }
+  },
+
+  "consumer_search_terms": {
+    "direct_references": [
+      "NEPA Nigeria",
+      "PHCN Nigeria",
+      "NERC Nigeria",
+      "electricity reform Nigeria 2001",
+      "power privatisation Nigeria",
+      "prepaid meter Nigeria",
+      "electricity tariff Nigeria"
+    ],
+    "indirect_consumer_discourse": [
+      "NEPA wahala",
+      "PHCN please have candles nearby",
+      "no light Nigeria",
+      "generator Nigeria 2000s",
+      "estimated billing Nigeria",
+      "electricity bill wahala Nigeria",
+      "light Nigeria problem"
+    ],
+    "transition_signals": [
+      "generator alternative Nigeria",
+      "solar Nigeria 2001",
+      "off grid Nigeria early"
+    ]
+  },
+
+  "transition_marker": false,
+  "transition_note": "NEPP set legal foundations but was not a consumer transition marker. The real transition began with the 2013 privatisation completion when consumers finally lost faith in grid promises and began actively seeking alternatives.",
+
+  "vitics_analysis_instructions": {
+    "when_analysing_2001_2013_content": "Content from this period reflects deep consumer frustration with grid failure and growing generator dependency. NEPP promises were invisible to consumers. Any positive energy sentiment in this period is likely about generator technology or early solar adopters, not grid improvement.",
+    "key_signal_to_watch": "References to NEPA/PHCN failure, generator costs, darkness. These are the dominant energy consumer signals of the NEPP era.",
+    "off_grid_signal": "Any pre-2013 discussion of solar or off-grid options represents early adopter discourse — wealthy households, NGO-funded projects, telecoms towers. Not mass market.",
+    "policy_gap_signal": "If consumers in this period mention government electricity promises, the expected sentiment is cynicism and disappointment — the NEPP era trained Nigerian consumers to distrust government energy announcements."
+  },
+
+  "document_quality": {
+    "scan_quality": "TapScanner — readable but some pages have bleed-through from reverse side",
+    "text_extractable": false,
+    "reading_method": "Visual rasterization at 150 DPI — pages 1, 2, 3, 9, 10, 11, 21, 28, 33, 45 read",
+    "confidence": "High — key chapters fully read including preface, objectives, tariff policy, implementation",
+    "pages_not_read": "Chapters 7-15 covering detailed regulatory, environmental and specific sector provisions — not critical for consumer intelligence purposes"
+  }
+}

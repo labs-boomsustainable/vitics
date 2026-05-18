@@ -1,0 +1,236 @@
+{
+  "vitics_knowledge_base": {
+    "version": "1.0",
+    "created": "2026-05-15",
+    "platform": "Vitics — Nigeria AI Energy Intelligence Platform",
+    "entries": [
+      {
+        "id": "KB-001",
+        "title": "Nigeria Integrated Energy Plan (IEPT) — Full Corpus",
+        "source": {
+          "document_title": "Nigeria Integrated Energy Plan",
+          "publisher": "SEforALL, Rockefeller Foundation, Global Energy Alliance for People and Planet",
+          "date": "January 2022",
+          "components": [
+            "Executive Summary",
+            "Geospatial Model for Universal Electrification",
+            "Geospatial Model for Clean Cooking",
+            "Geospatial Model for Productive Use"
+          ]
+        },
+        "policy_promises": {
+          "electrification": {
+            "target": "100% electrification of Nigeria by 2030",
+            "new_connections_required": {
+              "total_households": "19.3 million",
+              "total_people": "106 million",
+              "mini_grid": "8.9 million connections (104,800 mini-grids)",
+              "grid_extension": "5.4 million connections",
+              "solar_home_systems": "5.0 million connections"
+            },
+            "investment": {
+              "total_nominal": "USD 25.8 billion",
+              "upfront_required": "USD 20 billion",
+              "annual_pace_from_2022": "USD 2.5 billion per year",
+              "government_share_annual": "USD 560 million per year",
+              "private_sector_share": "USD 12.8 billion total",
+              "consumer_share": "USD 4.9 billion total (SHS purchases)"
+            },
+            "subsidy_commitments": {
+              "nep_grant_committed": "USD 288 million",
+              "shs_subsidy_per_connection": "USD 266–370",
+              "mini_grid_subsidy_per_connection": "USD 145",
+              "nep_government_grant_rate": "USD 350 per connection"
+            },
+            "programs": {
+              "solar_power_naija": "Deploy 5 million SHS connections",
+              "job_creation_target": "250,000 new jobs in solar value chain",
+              "nigeria_electrification_project": "REA collaboration with World Bank and AfDB for mini-grid priority areas"
+            },
+            "technology_cost_projections": {
+              "solar_panel_cost_reduction_2021_to_2030": "37%",
+              "battery_cost_reduction_2021_to_2030": "48%"
+            }
+          },
+          "clean_cooking": {
+            "target": "Expanded clean cooking access by 2030",
+            "technologies_prioritized": ["LPG", "E-cooking", "Biogas"],
+            "lpg_national_target": "5 million MT LPG demand by 2027",
+            "lpg_clean_cooking_target": "2 million MT from clean cooking by 2027",
+            "cbn_intervention_facility": "NGN 250 billion for gas expansion program",
+            "infrastructure_required": {
+              "lpg_bottling_plants": 74,
+              "lpg_retail_skids": 84,
+              "lpg_micro_distribution_centres": 2458,
+              "biodigesters_total": 76973,
+              "biodigesters_250L": 31556,
+              "biodigesters_500L": 5621,
+              "biodigesters_1000L": 39796
+            },
+            "investment_required_usd_million": {
+              "lpg_total": 478,
+              "lpg_stoves": 133,
+              "lpg_accessories": 182,
+              "lpg_infrastructure": 163,
+              "e_cooking_total": 83,
+              "biogas_total": 847,
+              "biogas_stoves": 165,
+              "biogas_accessories": 379,
+              "biogas_biodigesters": 303
+            }
+          },
+          "productive_use": {
+            "target": "Electrify rice and maize milling in unelectrified agricultural settlements",
+            "mechanism": "Productive use demand reduces mini-grid cost per residential connection by sharing costs with milling operations",
+            "projected_impact": "~200,000 additional mini-grid connections; ~3,389 new mini-grid settlements"
+          }
+        },
+        "consumer_reality": {
+          "electrification_access_gap": {
+            "current_electrification_rate": "~60%",
+            "note_on_rate": "Facilities designated as electrified may only be partially or under-electrified — official rate likely overstates reliable access",
+            "unelectrified_healthcare_facilities": {
+              "count": "18,600 of 46,000",
+              "percentage": "~40%"
+            },
+            "unelectrified_schools": {
+              "count": "36,800 of 76,000",
+              "percentage": "~48%"
+            },
+            "unelectrified_settlements": "630,000"
+          },
+          "affordability_crisis": {
+            "shs_connections_with_affordability_gap": "92%",
+            "mini_grid_connections_with_affordability_gap": "53%",
+            "grid_connections_with_affordability_gap": "0%",
+            "shs_total_gap": "USD 1.3 billion",
+            "shs_gap_per_connection_tier2": "USD 266 (22% of system cost)",
+            "shs_gap_per_connection_tier3": "USD 370 (17% of system cost)",
+            "mini_grid_total_gap": "USD 681 million",
+            "mini_grid_gap_per_connection": "USD 50–485 (avg USD 145)",
+            "funding_committed_vs_needed": {
+              "committed_nep": "USD 288 million",
+              "total_affordability_gap": "USD 1.98 billion",
+              "coverage_ratio": "~15%"
+            },
+            "geographic_note": "Affordability gap concentrated in Northern Nigeria — highest density of unelectrified households"
+          },
+          "clean_cooking_exclusion": {
+            "households_using_emissions_intensive_cooking": "40.1 million",
+            "households_with_clean_cooking": "14.8 million",
+            "access_constrained_households": {
+              "total": "36.6 million",
+              "rural": "23.6 million",
+              "urban": "13.1 million"
+            },
+            "households_with_no_clean_cooking_option": {
+              "count": "32.3 million",
+              "percentage_of_access_constrained": "88%",
+              "note": "Cannot afford or are not likely to adopt any clean cooking technology under current conditions"
+            },
+            "adoption_opportunity_by_technology": {
+              "lpg": {
+                "total_households": "3.7 million",
+                "rural": "1.5 million",
+                "urban": "2.2 million",
+                "percent_of_access_constrained": "10%",
+                "affordability_rate": "70%",
+                "annual_fuel_demand": "76,000 MT",
+                "annual_fuel_value_ngn": "40 billion"
+              },
+              "e_cooking": {
+                "total_households": "3.5 million",
+                "rural": "1.3 million",
+                "urban": "2.1 million",
+                "percent_of_access_constrained": "10%",
+                "affordability_rate": "56%",
+                "households_currently_unelectrified": "725,000",
+                "annual_electricity_demand": "0.9 billion kWh",
+                "annual_fuel_value_ngn": "67 billion"
+              },
+              "biogas": {
+                "total_households": "4.3 million",
+                "rural": "2.0 million",
+                "urban": "2.3 million",
+                "percent_of_access_constrained": "12%",
+                "affordability_rate": "92%",
+                "annual_fuel_demand": "190 billion litres",
+                "annual_fuel_cost": "Zero (feedstock-for-payment model)"
+              }
+            }
+          },
+          "clean_cooking_cost_comparison": {
+            "note": "Annual cooking fuel cost per household",
+            "lpg_ngn": 42699,
+            "e_cooking_ngn": 65972,
+            "biogas_ngn": 0,
+            "charcoal_ngn": 6589,
+            "kerosene_ngn": 52382,
+            "insight": "Charcoal at NGN 6,589/year remains price-competitive vs all clean alternatives, driving continued use despite health and climate harms"
+          },
+          "grid_reliability_gap": {
+            "documented": true,
+            "policy_admission": "The plan explicitly recommends 'increasing hours of supply and reliability of supply on grid to ensure that power is available during mealtimes for e-cooking' — confirming current grid is insufficient even for connected households"
+          },
+          "productive_use_constraint": {
+            "farmland_proximity_issue": "92% of farmlands are more than 1 mile from community centers — beyond viable mini-grid distribution radius for irrigation",
+            "cold_chain_viability": "Limited — consumer preference for fresh catfish (70% of farmed fish) and low milk yields make cold storage unviable at scale",
+            "viable_productive_use": "Rice and maize milling only, concentrated in Northern and Central states"
+          },
+          "adoption_barrier": {
+            "clean_cooking_model_sensitivity": "Highly sensitive to adoption assumptions — base case is only 10-12%; aggressive adoption scenario could yield 13–22 million households",
+            "key_barrier": "Female adult education used as adoption proxy — social, cultural, and gender factors exclude millions even where technology and affordability criteria are met"
+          }
+        },
+        "co_benefits_if_targets_met": {
+          "health": {
+            "lpg_illnesses_avoided_annually": 12100,
+            "lpg_deaths_avoided_annually": 551,
+            "e_cooking_illnesses_avoided_annually": 11500,
+            "e_cooking_deaths_avoided_annually": 524,
+            "biogas_illnesses_avoided_annually": 14300,
+            "biogas_deaths_avoided_annually": 649
+          },
+          "climate": {
+            "lpg_emissions_reduction_vs_bau": "29.9%",
+            "e_cooking_emissions_reduction_vs_bau": "30%",
+            "biogas_emissions_reduction_vs_bau": "30%",
+            "lpg_forest_loss_avoided_kg": "6.9 billion kg",
+            "e_cooking_forest_loss_avoided_kg": "6.6 billion kg",
+            "biogas_forest_loss_avoided_kg": "8.2 billion kg"
+          },
+          "time_savings": {
+            "cooking_and_fuel_prep_hours_saved_per_hh_per_year": 107,
+            "applies_to": "All three clean cooking technologies equally"
+          }
+        },
+        "key_metrics_for_dashboard": {
+          "nigeria_electrification_rate_2022": 0.60,
+          "unelectrified_households_2030_projection": 19300000,
+          "unelectrified_people": 106000000,
+          "total_investment_needed_usd_bn": 25.8,
+          "government_subsidy_committed_usd_mn": 288,
+          "shs_affordability_gap_usd_bn": 1.3,
+          "mini_grid_affordability_gap_usd_mn": 681,
+          "households_emissions_intensive_cooking": 40100000,
+          "households_no_clean_cooking_option": 32300000,
+          "unelectrified_health_facilities": 18600,
+          "unelectrified_schools": 36800,
+          "funding_gap_percentage": 0.85
+        },
+        "ai_engine_context": {
+          "document_type": "Government planning document with embedded gap analysis",
+          "consumer_experience_framing": "The IEPT is a forward-looking model, not an outcomes report. Consumer reality is extracted from: (1) affordability gap admissions, (2) institutional electrification data, (3) the 88% exclusion rate from clean cooking, and (4) the plan's own recommendations about grid reliability — which presuppose current unreliability.",
+          "key_tension": "The plan models what is technically possible at least cost. It does not model whether the funding, political will, or institutional capacity exists to execute. The gap between USD 25.8 billion needed and USD 288 million committed is the central consumer reality.",
+          "vitics_use_cases": [
+            "Benchmark actual grid reliability data against the IEPT electrification rate claims",
+            "Map affordability gap geographically — Northern Nigeria households most at risk",
+            "Track LPG demand growth against 5 million MT government target",
+            "Monitor NEP grant disbursements vs USD 288 million commitment",
+            "Assess clean cooking adoption trends against 10-12% base case projection"
+          ]
+        }
+      }
+    ]
+  }
+}

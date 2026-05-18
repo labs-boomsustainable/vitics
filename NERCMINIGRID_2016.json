@@ -1,0 +1,311 @@
+{
+  "vitics_knowledge_base": {
+    "version": "1.0",
+    "project": "Vitics — Nigeria AI Energy Intelligence Platform",
+    "generated": "2026-05-15",
+    "entries": [
+      {
+        "id": "nerc_minigrid_2016_001",
+        "document": {
+          "title": "Nigerian Electricity Regulatory Commission Regulation for Mini-Grids 2016",
+          "short_name": "NERC Mini-Grid Regulation 2016",
+          "regulation_number": "NERC/-R-110/17",
+          "published": "2016",
+          "file_created": "2019-02-21",
+          "authority": "Nigerian Electricity Regulatory Commission (NERC)",
+          "legal_basis": "Electric Power Sector Reform Act 2005 (Act No.6 of 2005), Sections 96(1) and 70(8)",
+          "pages": 139,
+          "scope": "All mini-grids with Generation Capacity up to 1 MW in Nigeria"
+        },
+        "tags": [
+          "mini_grid",
+          "off_grid",
+          "rural_electrification",
+          "nerc",
+          "regulation",
+          "tariff",
+          "feed_in_tariff",
+          "myto",
+          "consumer_rights",
+          "complaint_procedure",
+          "dispute_resolution",
+          "isolated_mini_grid",
+          "interconnected_mini_grid",
+          "disco",
+          "permit",
+          "registration",
+          "community_contract",
+          "asset_compensation",
+          "quality_of_service",
+          "epsr_act"
+        ],
+        "gap_flags": [
+          "registered_operators_exempt_from_technical_codes",
+          "no_compensation_for_registered_operators_on_grid_arrival",
+          "underserved_communities_must_pay_higher_tariffs_than_main_grid",
+          "operator_not_liable_for_supply_interruptions_beyond_control",
+          "community_responsible_for_anti_vandalism_security",
+          "all_key_tariff_figures_left_as_placeholders_in_templates",
+          "95pct_availability_target_unenforceable_without_monitoring",
+          "complaint_filing_requires_literacy_unless_officer_assists",
+          "grid_arrival_can_displace_mini_grid_investors_with_2_month_notice"
+        ],
+        "consumer_impact_level": "high",
+        "credibility_tension": "detailed_rights_framework_vs_structural_power_imbalance_favoring_operators_and_discos",
+
+        "definitions": {
+          "mini_grid": "Any electricity supply system with its own generation capacity supplying more than one customer, operating in isolation from or connected to a DisCo network. Generation capacity: 0 kW to 1 MW.",
+          "isolated_mini_grid": "A mini-grid not connected to any Distribution Licensee's network.",
+          "interconnected_mini_grid": "A mini-grid connected to a Distribution Licensee's (DisCo's) network.",
+          "unserved_area": "An area within a DisCo's network without an existing distribution system (off-grid).",
+          "underserved_area": "An area within a DisCo's network with an existing but poorly supplied or non-functional distribution system.",
+          "registered_mini_grid_operator": "Operator of a system under 100 kW who submits a registration form — lighter-touch compliance than a permit holder.",
+          "mini_grid_permit_holder": "Operator of a system 100 kW to 1 MW who holds a full NERC permit — subject to all technical codes and tariff methodology.",
+          "community": "A group of people within the same geographic location organized under a local leadership structure or legally recognized corporate entity.",
+          "tripartite_contract": "The binding contract between an Interconnected Mini-Grid Operator, DisCo, and Connected Community, approved by NERC."
+        },
+
+        "regulatory_tiers": {
+          "description": "The regulation creates two tiers of mini-grid operators with different obligations",
+          "tier_1_registered": {
+            "label": "Registered Mini-Grid Operator",
+            "capacity": "Up to 100 kW distributed power",
+            "process": "Submit registration form (Annex 2) — no permit required",
+            "technical_codes": "NOT bound by full Technical Codes — may use minimum requirements in Annex 7",
+            "tariff_method": "Free to agree tariff with community (minimum 60% of electricity output represented), OR use MYTO tool",
+            "compensation_on_grid_arrival": "NONE — must decommission and remove all assets within 2 months at own cost, no refund",
+            "key_risk_to_operator": "Zero compensation if the main grid arrives"
+          },
+          "tier_2_permit_holder": {
+            "label": "Mini-Grid Permit Holder",
+            "capacity": "100 kW to 1 MW",
+            "process": "Full permit application to NERC — 30-day approval target",
+            "technical_codes": "Must comply with full Technical Codes and Standards",
+            "tariff_method": "MYTO methodology — must be NERC-approved",
+            "compensation_on_grid_arrival": {
+              "within_5_years_of_commissioning": "Remaining depreciated value of assets (including construction and development cost) PLUS 12 months prior revenue",
+              "after_5_years": "Remaining depreciated value PLUS 12 months prior revenue",
+              "note": "Compensation due BEFORE asset handover"
+            },
+            "permit_processing_time": "Maximum 30 days from receipt of complete documentation"
+          }
+        },
+
+        "permit_conditions": {
+          "isolated_mini_grid_over_100kw": [
+            "Application received by NERC for the intended area",
+            "Confirmation that Mini-Grid will not interfere with DisCo 5-year expansion plans",
+            "Written consent of the DisCo if area is within DisCo's 5-year plan",
+            "Area must be an Unserved Area not assigned to another developer",
+            "Executed agreement between Community and Mini-Grid Developer submitted",
+            "All land acquired or leased, all other permits granted",
+            "Tariff calculated using MYTO methodology and approved by NERC",
+            "Health and Safety confirmation form (Annex 6) executed and submitted"
+          ],
+          "interconnected_mini_grid": [
+            "Tripartite Contract signed by Mini-Grid Developer, DisCo, and Connected Community",
+            "Retail tariff calculated using MYTO, agreed by all three parties and approved by NERC",
+            "Contract must include: usage rights for DisCo network, ownership of new infrastructure, tariffs, voltage stability guarantees, community agreement to purchase electricity at defined tariffs"
+          ]
+        },
+
+        "tariff_framework": {
+          "methodology": "MYTO (Multi-Year Tariff Order) — same methodology used for the national grid",
+          "technical_loss_cap": "10% maximum",
+          "non_technical_loss_cap": "10% maximum",
+          "tariff_adjustment_triggers": [
+            "Inspection of accounts by NERC (requested by community, operator, or NERC)",
+            "Actual costs or revenues deviate from values used at tariff definition",
+            "New tariffs applied within 30 days of NERC approval"
+          ],
+          "inspection_fee": {
+            "operator_initiated": "200 NGN per connected customer paid to NERC",
+            "community_initiated": "200 NGN per connected customer paid to NERC"
+          },
+          "interconnected_tariff_note": "Underserved community customers may pay HIGHER tariffs than the main grid tariff — this is explicitly acknowledged as a condition of the scheme",
+          "tariff_review_community_right": "Where average monthly availability falls below 95% for more than 3 consecutive months, the community may contact NERC for a tariff change",
+          "registered_operator_flexibility": "Can agree tariff directly with community representing at least 60% of electricity output — subject to NERC intervention if operator's rate of return exceeds commercial debt rate + 6%"
+        },
+
+        "quality_of_service": {
+          "voltage_standard": "Must not deviate more than ±10% from nominal value at consumer's site",
+          "frequency_standard": "Must not vary more than ±20% from nominal value",
+          "availability_target_interconnected": "95% of the time — grid voltage and frequency within ±20% of nominal",
+          "metering": "Metering Code is mandatory for all registered and permitted mini-grids — NERC may grant derogation on request",
+          "customer_contract_quality_terms": {
+            "voltage_specification": "Nominal voltage stated in customer contract (blanks to be filled)",
+            "frequency_specification": "Nominal frequency stated in customer contract (blanks to be filled)",
+            "voltage_fluctuation_limit": "Maximum ±% stated in contract (blank to be filled by operator)",
+            "note": "All specific quality parameters in the customer contract template are left as operator-defined blanks — no nationally uniform standard is enforced at consumer level"
+          }
+        },
+
+        "consumer_rights": {
+          "right_to_contract": "Every customer connecting to a permitted mini-grid must receive a standardized customer contract (Annex 13)",
+          "right_to_complain": {
+            "first_level": "Customer Complaints Unit — every Mini-Grid Permit Holder must establish one",
+            "resolution_deadline": "15 working days; if more time needed, customer notified within 15 days and updated every 7 working days",
+            "second_level": "NERC Forum for Customer Complaints — if unresolved or delayed",
+            "forum_decision_deadline": "Maximum 1 month from receipt",
+            "appeal": "Appeal to NERC Commission within 10 working days of Forum decision",
+            "non_literate_complainants": "Complaint recorded by officer; complainant signs or uses thumb print"
+          },
+          "right_to_tariff_review": "Community may request account inspection to trigger tariff adjustment",
+          "right_to_dispute_resolution": {
+            "mechanism": "Dispute Resolution Counsellor (DRC) appointed by NERC",
+            "timeline": "DRC must resolve within 21 days",
+            "panel": "Dispute Resolution Panel (DRP) if DRC cannot resolve — legally binding decisions",
+            "court_escalation": "Only after all NERC dispute mechanisms are exhausted"
+          },
+          "operator_liability": {
+            "liable_for": "Loss or expense from operator's negligence or breach of contract",
+            "not_liable_for": [
+              "Supply interruptions caused by events beyond operator's control",
+              "Damage from improper use of electricity by customer",
+              "Damage where customer's own equipment caused the problem"
+            ]
+          }
+        },
+
+        "operator_obligations": {
+          "permit_holders": [
+            "Construct, operate, maintain distribution network per Technical Codes",
+            "Comply with Act, permit terms, community agreement, customer contracts",
+            "Grant NERC access to relevant information",
+            "Maintain separate accounting records, annual profit/loss and balance sheet",
+            "Annual accounts certified by independent auditor",
+            "Submit reports to NERC at least once every two years",
+            "Notify customers of Customer Complaints Unit existence and Forum details"
+          ],
+          "registered_operators": [
+            "Supply electricity per community agreement",
+            "Apply safety guidelines in Annex 6",
+            "Comply with environmental legislation",
+            "Metering Code mandatory (derogation possible)"
+          ]
+        },
+
+        "grid_arrival_risk": {
+          "description": "The most significant structural risk for mini-grid operators and the communities they serve",
+          "for_permit_holders": {
+            "options_when_disco_arrives": [
+              "Convert to Interconnected Mini-Grid Operator",
+              "Transfer assets to DisCo in return for compensation"
+            ],
+            "compensation_guaranteed": true,
+            "compensation_formula": "Remaining depreciated asset value + 12 months prior revenue",
+            "compensation_must_be_paid": "BEFORE asset handover",
+            "if_parties_disagree": "NERC acts as arbiter"
+          },
+          "for_registered_operators": {
+            "options_when_disco_arrives": "Must decommission and remove ALL assets within 2 months",
+            "compensation_guaranteed": false,
+            "compensation": "NONE — no refund, no compensation whatsoever",
+            "notice_period": "DisCo must have started supplying electricity to the area",
+            "consumer_implication": "A community served by a small registered operator (under 100 kW) loses their mini-grid with no guaranteed continuity and the operator receives nothing"
+          },
+          "exclusivity_protection": {
+            "initial_period": "Up to 12 months granted by community",
+            "extension": "Up to additional 12 months with community and NERC approval",
+            "caveat": "NERC will not grant exclusivity extension beyond 12 months if site is within DisCo's 5-year expansion plan",
+            "disco_reservation": "DisCo always reserves right to integrate the community into its distribution network"
+          }
+        },
+
+        "community_obligations": {
+          "under_tripartite_contract": [
+            "Provide sufficient land for mini-grid (at no or minimal cost to operator)",
+            "Procure payment of tariff from community members",
+            "Provide security measures to prevent vandalism and electricity theft",
+            "Community is financially liable for vandalism/theft if it breaches its security obligation"
+          ],
+          "note": "Community is placed as a contracting party but bears security liability and must 'procure' tariff payments from its members — burden falls on community leadership"
+        },
+
+        "structural_tensions_consumer_analysis": {
+          "higher_tariffs_for_underserved": {
+            "finding": "Interconnected Mini-Grids are explicitly designed for communities 'ready to pay higher tariffs than the main grid tariff in order to improve reliability'",
+            "consumer_implication": "Nigerians in underserved areas who already experience poor supply pay MORE than grid-connected urban consumers for a private mini-grid solution — not less.",
+            "severity": "high"
+          },
+          "registered_operator_zero_compensation": {
+            "finding": "A Registered Mini-Grid Operator (under 100 kW) receives zero compensation when the DisCo arrives and must remove all assets within 2 months",
+            "consumer_implication": "The lightest-touch tier — most likely used by small entrepreneurs serving the most remote villages — carries the highest investment risk. This discourages exactly the operators most likely to serve the hardest-to-reach communities.",
+            "severity": "critical"
+          },
+          "quality_standards_left_blank": {
+            "finding": "The customer contract template (Annex 13) leaves all specific quality parameters — voltage tolerance, frequency tolerance, availability percentage — as blanks to be filled by the operator",
+            "consumer_implication": "There is no nationally uniform quality floor for individual mini-grid customers. Consumers in different mini-grids may have radically different service quality written into their contracts.",
+            "severity": "high"
+          },
+          "community_security_liability": {
+            "finding": "The community is contractually liable for vandalism and theft if it fails to provide adequate security for the mini-grid operator",
+            "consumer_implication": "Rural communities — already among the most economically vulnerable — bear financial liability for infrastructure security that would normally fall on the operator or insurer.",
+            "severity": "medium"
+          },
+          "complaint_requires_writing": {
+            "finding": "All complaints must be lodged in writing. Non-literate complainants rely on the operator's own officer to record their complaint.",
+            "consumer_implication": "In a country with significant rural illiteracy, the primary consumer redress mechanism assumes literacy. The fallback — having the operator's own staff record complaints against the operator — creates a conflict of interest.",
+            "severity": "high"
+          },
+          "tariff_template_blanks": {
+            "finding": "The Tripartite Contract template leaves usage fee, tariff per kWh, and grid availability hours as blanks (e.g., 'XX NGN', 'XX times per week', 'XX hours')",
+            "consumer_implication": "No consumer can compare what they will pay between different mini-grid operators from the regulation alone. The framework enables any tariff as long as NERC approves it.",
+            "severity": "medium"
+          },
+          "operator_not_liable_for_interruptions": {
+            "finding": "Article 7 of the customer contract states that during supply interruptions from 'severe climatic conditions, incident, vandalism and maintenance', the operator is not responsible for providing backup supply or protecting customer appliances",
+            "consumer_implication": "Consumers who invest in appliances (refrigerators, medical equipment, small businesses) based on the mini-grid have no contractual recourse for losses during outages beyond operator negligence.",
+            "severity": "high"
+          }
+        },
+
+        "consumer_plain_language_truths": [
+          "If you live in an area with poor grid supply, you will likely pay MORE for a private mini-grid than urban consumers pay for the main grid — the regulation explicitly allows this.",
+          "The operator serving your remote village has ZERO compensation rights if the national grid arrives — making them reluctant to invest, and putting your electricity supply at risk of sudden disappearance.",
+          "Your customer contract's quality standards — voltage, frequency, availability — are blanks filled in by your operator. There is no national floor you can hold them to.",
+          "To lodge a complaint, you must do so in writing. If you can't read or write, you must rely on the operator's own staff to record your complaint against the operator.",
+          "If vandals destroy mini-grid equipment in your community, you — the community — may be held financially liable if your leadership didn't provide adequate security.",
+          "When your mini-grid goes down due to weather, vandalism, or maintenance, your operator is not legally required to compensate you or protect your appliances from damage.",
+          "The regulation promises compensation to permit holders when the grid arrives — but a Registered Operator (the small ones most likely serving the poorest villages) gets nothing and must pack up within 2 months."
+        ],
+
+        "key_actors": {
+          "NERC": "Nigerian Electricity Regulatory Commission — issues permits, approves tariffs, runs dispute resolution, acts as arbiter on compensation disputes",
+          "DisCo": "Distribution Licensee — can arrive at any mini-grid area and absorb it into the main grid; must compensate permit holders but not registered operators",
+          "Mini_Grid_Permit_Holder": "Operator of 100 kW–1 MW systems with NERC permit — full rights and obligations including compensation on grid arrival",
+          "Registered_Mini_Grid_Operator": "Operator of under 100 kW systems via registration — lighter compliance but zero compensation rights",
+          "Community_Power_Committee": "Local committee to coordinate customers and channel complaints to the operator",
+          "Dispute_Resolution_Counsellor": "NERC-appointed individual to resolve disputes within 21 days",
+          "Dispute_Resolution_Panel": "3-member NERC panel for unresolved disputes — legally binding decisions"
+        },
+
+        "annexes_summary": {
+          "Annex_1A": "Exclusivity agreement form — Isolated Mini-Grid (community + developer)",
+          "Annex_1B": "Exclusivity agreement form — Interconnected Mini-Grid (DisCo + developer + community)",
+          "Annex_2": "Registration form for mini-grids under 100 kW",
+          "Annex_3": "Full permit application form (includes geographic depiction requirement)",
+          "Annex_4": "Biennial reporting form to NERC",
+          "Annex_5": "Application proceedings guidance",
+          "Annex_6": "Health and Safety Guidelines (mandatory for all operators)",
+          "Annex_7": "Minimum technical requirements for Registered Operators (lighter than full Technical Codes)",
+          "Annex_8": "Usage charge calculation guide for Interconnected Mini-Grids",
+          "Annex_9": "Complaints Procedure Guidelines — 15-day resolution target, Forum escalation",
+          "Annex_10": "Dispute Resolution Mechanism — DRC (21 days), DRP, NERC review, courts as last resort",
+          "Annex_11": "Tripartite Contract template — DisCo, Mini-Grid Operator, Connected Community",
+          "Annex_12": "Contract template — Isolated Mini-Grid Operator and Community",
+          "Annex_13": "Mini-Grid Customer Contract template — individual consumer-facing agreement",
+          "Annex_14": "Asset Handover Document and Compensation Confirmation Sheet",
+          "Annex_15": "Tariff calculation tool based on MYTO methodology"
+        },
+
+        "relationship_to_nreap_2016": {
+          "note": "This regulation operationalizes the off-grid/mini-grid targets in NREAP 2016",
+          "nreap_target_2020_off_grid_mw": 187.5,
+          "nreap_target_2030_off_grid_mw": 5545,
+          "implementation_status_at_regulation_publication": "The regulation provides the legal framework; the NREAP targets had no monitoring system. This regulation is the enforcement instrument — but registered operators (most likely to serve the poorest areas) receive no investment protection against DisCo expansion."
+        }
+      }
+    ]
+  }
+}

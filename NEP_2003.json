@@ -1,0 +1,26 @@
+{
+  "doc_id": "NEP-2003",
+  "title": "National Energy Policy",
+  "year": 2003,
+  "issuer": "Energy Commission of Nigeria / The Presidency",
+  "consumer_impact_score": 2,
+  "type": "framework_policy",
+  "key_promises": [
+    "75% electricity coverage by 2020",
+    "Gas flaring ended by 2008",
+    "Rural Electrification Fund operational",
+    "Refining capacity > domestic consumption",
+    "Solar/mini-hydro off-grid rollout",
+    "Privatisation of electricity and oil downstream"
+  ],
+  "consumer_reality": {
+    "electricity": "Available capacity fell further after 2003. Generator dependency entrenched.",
+    "gas_flaring": "2008 deadline missed. Flaring continued at scale past 2015.",
+    "rural_energy": "REF barely funded for a decade. Rural solar rollout began ~2015.",
+    "refineries": "All four refineries dysfunctional by mid-2000s. Fuel imports dominated until 2023.",
+    "fuelwood": "Still 50%+ of energy use. No mass stove or credit programme followed.",
+    "privatisation": "EPSRA 2005 passed. PHCN unbundled 2013. Partial progress."
+  },
+  "notable_finding": "The 2008 gas flaring deadline appears six times in the document across policies, objectives, and implementation schedules — and was missed completely.",
+  "links_to_next": ["EPSRA-2005", "REMP-2005", "REPG-2006"]
+}

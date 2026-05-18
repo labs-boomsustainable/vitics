@@ -1,0 +1,390 @@
+{
+  "company": {
+    "full_name": "Abuja Electricity Distribution Plc",
+    "short_name": "AEDC",
+    "ticker": "Not listed on exchange at time of report",
+    "privatisation_year": 2013,
+    "privatisation_date": "1 November 2013",
+    "core_investor": "KANN Utility Company Limited",
+    "kann_structure": "Joint venture between Xerxes Global Investment Ltd and CEC Africa Investment Ltd",
+    "core_investor_nationality": "South African (Managing Director Neil Croucher) / Zambian directors",
+    "ultimate_parent": "Copperbelt Energy Corporation Plc (CEC Africa Investment Ltd shareholder)",
+    "regulatory_licence": "NERC licence — 15 years, expires 2028, renewable for 10 years",
+    "report_year": 2015,
+    "report_period": "Year ended 31 December 2015",
+    "report_type": "Annual Report and Audited Financial Statements",
+    "auditor": "KPMG Professional Services, Victoria Island Lagos",
+    "signed_date": "17 June 2016",
+    "registration_number": "638681",
+    "incorporation_date": "8 November 2005",
+    "company_secretary": "Mrs. Olajumoke Delano",
+    "listed": false,
+    "shareholding": {
+      "KANN_Utility_Company_Limited": "60%",
+      "Bureau_of_Public_Enterprises": "32%",
+      "Ministry_of_Finance_Incorporated": "8%"
+    },
+    "tariff_framework": "Multi-Year Tariff Order (MYTO) — regulated price control regime under NERC",
+    "market_rules": "Transitional Electricity Market (TEM) rules effective 1 February 2015"
+  },
+
+  "franchise_area": {
+    "states_covered": [
+      "Federal Capital Territory (FCT) Abuja",
+      "Niger State",
+      "Kogi State",
+      "Nasarawa State"
+    ],
+    "area_offices": 28,
+    "regional_structure": "6 regions across 4 states, each headed by regional managers",
+    "total_employees_2015": 2277,
+    "total_employees_2014": 2249,
+    "employee_breakdown_2015": {
+      "administration": 249,
+      "finance": 257,
+      "marketing": 865,
+      "technical": 906
+    },
+    "notes": "Franchise area covers FCT and three northern/central states — strategically important for Vitics northern Nigeria intelligence"
+  },
+
+  "supply_performance": {
+    "notes": "The 2015 report does not publish supply hours data directly — this is a significant data gap. Supply performance must be inferred from financial and operational signals.",
+    "energy_purchased_cost_ngn_billions": 47.59,
+    "imbalance_penalty_ngn_millions": 278.91,
+    "imbalance_penalty_note": "AEDC received MORE energy from national grid than its MYTO 2 allocation of 11.5% — penalised at 60% of normal tariff rate. Abolished by NERC effective July 2015.",
+    "imbalance_penalty_consumer_meaning": "AEDC was drawing excess power — consumers in some areas may have had better supply than allocation, but the company was financially penalised for it",
+    "capex_on_infrastructure_2015_ngn_millions": 2159.94,
+    "capex_on_infrastructure_2014_ngn_millions": 977.55,
+    "capex_increase_pct": 121,
+    "capex_note": "Capital expenditure more than doubled year on year — first sign of post-privatisation investment in infrastructure",
+    "customer_contributed_assets_ngn_millions": 127.19,
+    "customer_contributed_assets_note": "Customers donated distribution network assets to AEDC — meaning consumers were self-funding infrastructure where AEDC was not investing",
+    "government_granted_assets_2014_ngn_millions": 889.75,
+    "government_granted_assets_2015_ngn_millions": 0,
+    "metering_programme": {
+      "scheme": "CAPMI — Credited Advance Payment for Metering Implementation",
+      "description": "Customers advance funds to AEDC for their own meter procurement and installation. AEDC refunds over maximum 3 years with 12% nominal interest less installation cost.",
+      "capmi_payable_2015_ngn_millions": 979.15,
+      "capmi_payable_2014_ngn_millions": 465.72,
+      "meters_installed_fees_earned_ngn_millions": 277.89,
+      "meters_pending_installation_deferred_income_ngn_millions": 130.69,
+      "consumer_meaning": "Consumers were paying in advance to get their own meters. This is a striking reversal — consumers funding AEDC infrastructure because AEDC could not afford to meter them. Directly caused by estimated billing crisis."
+    }
+  },
+
+  "financial_performance": {
+    "currency": "NGN",
+    "all_figures_ngn_thousands": true,
+
+    "revenue": {
+      "total_revenue_2015_ngn_thousands": 62534676,
+      "total_revenue_2014_ngn_thousands": 48097381,
+      "revenue_growth_pct": 30,
+      "revenue_growth_driver": "Tariff increase of 33.20% average following commencement of TEM rules in February 2015",
+      "revenue_breakdown_note": "Revenue entirely from electricity sales across FCT, Niger, Kogi and Nasarawa"
+    },
+
+    "profitability": {
+      "gross_profit_2015_ngn_thousands": 8338832,
+      "gross_loss_2014_ngn_thousands": -256409,
+      "operating_loss_2015_ngn_thousands": -39196964,
+      "operating_loss_2014_ngn_thousands": -24908727,
+      "loss_before_tax_2015_ngn_thousands": -41718714,
+      "loss_before_tax_2014_ngn_thousands": -25606664,
+      "loss_after_tax_2015_ngn_thousands": -41972588,
+      "loss_after_tax_2014_ngn_thousands": -25971035,
+      "total_comprehensive_loss_2015_ngn_thousands": -26695163,
+      "profitable": false,
+      "has_ever_been_profitable": false,
+      "going_concern_risk": true,
+      "going_concern_note": "Directors acknowledge going concern risk. Current liabilities exceeded current assets by N45 billion in 2015 (2014: N22.59 billion). Company has never made profit since privatisation.",
+      "profitability_projection": "Directors projected profitability by end of 2017 financial year based on MYTO 2015 tariff — subject to multiple conditions including N27 billion CBN intervention fund and NBET/ONEM debt restructuring"
+    },
+
+    "costs": {
+      "cost_of_energy_2015_ngn_thousands": 47586281,
+      "cost_of_energy_2014_ngn_thousands": 40094659,
+      "cost_of_energy_as_pct_of_revenue_2015": 76.1,
+      "staff_costs_2015_ngn_thousands": 7709180,
+      "staff_costs_2014_ngn_thousands": 7086114,
+      "depreciation_2015_ngn_thousands": 5317230,
+      "maintenance_2015_ngn_thousands": 801724,
+      "security_2015_ngn_thousands": 608153,
+      "impairment_on_receivables_2015_ngn_thousands": 18343412,
+      "impairment_on_receivables_2014_ngn_thousands": 7291690,
+      "impairment_note": "Impairment on trade receivables nearly tripled in one year — from N7.3 billion to N18.3 billion. This is the single most alarming number in the report. AEDC cannot collect from its customers.",
+      "total_costs_2015_ngn_thousands": 102255660,
+      "total_costs_vs_revenue_ratio": 1.64,
+      "costs_exceed_revenue_note": "AEDC spent N1.64 for every N1.00 it earned. This is structural insolvency driven by unrecoverable receivables and inherited infrastructure debt."
+    },
+
+    "billing_and_collection": {
+      "trade_receivables_2015_ngn_thousands": 23090722,
+      "trade_receivables_2014_ngn_thousands": 14435824,
+      "trade_receivables_growth_pct": 60,
+      "impairment_allowance_2015_ngn_thousands": 26236926,
+      "impairment_allowance_2014_ngn_thousands": 7893514,
+      "receivables_aging_2015": {
+        "unbilled": 1616351,
+        "past_due_0_30_days": 692722,
+        "past_due_31_90_days": 1154536,
+        "past_due_91_120_days": 923629,
+        "past_due_120_days_and_above": 18703485
+      },
+      "past_due_120_days_pct_of_total": 81,
+      "collection_crisis_assessment": "81% of trade receivables are more than 120 days overdue. This means 4 out of 5 naira owed to AEDC has not been paid in over 4 months. The primary debtors are government institutions and private customers in hard-to-reach areas.",
+      "government_vs_private_receivables_2015": {
+        "private_individuals_companies": 15925891,
+        "government_institutions": 7164831
+      },
+      "government_debt_note": "Government institutions owe N7.2 billion — the Accountant General and Ministry of Power were asked to deduct from allocations. This rarely worked.",
+      "deferred_revenue_from_prepaid_ngn_millions": 308.76,
+      "unbilled_receivables_from_postpaid_ngn_billions": 2.77,
+      "collection_strategy": [
+        "Converting post-paid customers to prepaid via CAPMI scheme",
+        "Aggressive disconnections of non-paying customers",
+        "Automated billing systems",
+        "KPIs for employees tied to debt collection",
+        "Ministry of Finance involvement for government debts"
+      ]
+    },
+
+    "debt": {
+      "trade_payables_to_NBET_ONEM_2015_ngn_thousands": 56723268,
+      "trade_payables_to_NBET_ONEM_2014_ngn_thousands": 31315938,
+      "nbet_onem_debt_growth_pct": 81,
+      "nbet_onem_as_pct_of_current_liabilities": 94,
+      "nbet_note": "NBET (Nigerian Bulk Electricity Trading Plc) is AEDC's wholesale electricity supplier. AEDC owes NBET N56.7 billion — 94% of all current liabilities. AEDC is buying electricity it cannot pay for.",
+      "total_liabilities_2015_ngn_thousands": 73057575,
+      "total_liabilities_2014_ngn_thousands": 42406812,
+      "liabilities_growth_pct": 72,
+      "loans_and_borrowings_2015_ngn_thousands": 1453458,
+      "cbm_intervention_fund_expected_ngn_billions": 27,
+      "cbm_received_as_at_year_end": 0,
+      "cbm_note": "AEDC expected N27 billion CBN intervention fund — had not received it by year end. N25 billion was earmarked for NBET/ONEM settlement.",
+      "force_majeure_event": {
+        "issued": "10 April 2015",
+        "issued_by": "KANN Utility Company Limited (parent)",
+        "grounds": "Non-implementation of cost-reflective tariffs and exclusion of collection losses in MYTO 2.1 model",
+        "withdrawn": "10 February 2016",
+        "withdrawal_grounds": "Collection losses reinstated in MYTO 2015",
+        "consumer_meaning": "AEDC's parent company formally declared the regulatory environment made operations financially impossible. This is the parent company saying: we cannot run this business under these conditions."
+      }
+    },
+
+    "balance_sheet": {
+      "total_assets_2015_ngn_thousands": 109485860,
+      "total_assets_2014_ngn_thousands": 105530260,
+      "total_equity_2015_ngn_thousands": 36428285,
+      "total_equity_2014_ngn_thousands": 63123448,
+      "equity_erosion_ngn_thousands": 26695163,
+      "equity_erosion_note": "AEDC lost N26.7 billion of shareholder value in one year. Equity dropped from N63.1 billion to N36.4 billion.",
+      "property_plant_equipment_2015_ngn_thousands": 83079696,
+      "distribution_network_value_2015_ngn_thousands": 66119622,
+      "land_not_legally_titled": true,
+      "land_title_note": "AEDC does not have full legal title to its land as at year end. Beneficial ownership recognised under share sale agreement terms. This is a governance risk."
+    },
+
+    "tariff_data": {
+      "tariff_order_active": "MYTO 2 transitional, replaced by MYTO 2015 effective 1 February 2016",
+      "average_tariff_increase_2015_pct": 33.20,
+      "myto_2015_average_increase_2016_pct": 49,
+      "myto_2015_note": "49% tariff increase effective 1 February 2016 — announced after year end. Labour Unions filed continuous objections.",
+      "consumer_reaction_to_tariff": "Labour union objections to MYTO 2015 rates — continuous stakeholder complaints. Rates still in force at time of financial statement approval.",
+      "fixed_charge_abolished": true,
+      "fixed_charge_note": "MYTO 2015 abolished the fixed charge component — built into variable tariff. Changed CAPMI repayment calculations."
+    }
+  },
+
+  "grid_defection_signals": {
+    "description": "AEDC 2015 does not publish household solar adoption data. Grid defection must be inferred from financial signals.",
+    "signal_1_revenue_per_customer": {
+      "observation": "Revenue grew 30% in 2015 entirely due to tariff increases not volume increases",
+      "implication": "If tariffs rose 33% but revenue only rose 30%, actual energy consumption volumes declined slightly — early consumption reduction signal"
+    },
+    "signal_2_collection_crisis": {
+      "observation": "N18.3 billion impairment on receivables — consumers not paying bills at unprecedented scale",
+      "implication": "Consumers who cannot pay electricity bills are the most likely to seek solar alternatives — affordability crisis is a transition accelerant"
+    },
+    "signal_3_capmi_adoption": {
+      "observation": "Consumers self-funding meters via CAPMI scheme — N277.89 million in installation fees earned",
+      "implication": "Consumers willing to invest capital in grid infrastructure suggests engagement — but also signals desperation for reliable supply. Same consumer segment later adopts solar."
+    },
+    "signal_4_customer_contributed_assets": {
+      "observation": "Consumers donated N127.19 million worth of distribution assets to AEDC",
+      "implication": "Consumers building their own distribution infrastructure because AEDC is not doing it. This is a precursor behaviour to solar self-generation."
+    },
+    "grid_defection_score": 3,
+    "grid_defection_scale": "1-10 where 10 = mass migration from grid",
+    "grid_defection_assessment": "In 2015, grid defection was early-stage. The affordability crisis was deepening but mass solar adoption had not yet occurred in AEDC franchise area. The conditions that would drive defection — unaffordable tariffs, unreliable supply, accessible solar alternatives — were all being set. The 2023 fuel subsidy removal would be the trigger."
+  },
+
+  "consumer_intelligence": {
+    "affordability_stress_indicators": [
+      {
+        "indicator": "81% of trade receivables past due 120+ days",
+        "value": "N18.7 billion overdue 120+ days",
+        "interpretation": "Consumers cannot or will not pay electricity bills. The scale suggests systemic affordability failure, not individual non-compliance."
+      },
+      {
+        "indicator": "49% tariff increase announced for February 2016",
+        "value": "49% average increase across all customer categories",
+        "interpretation": "A near-doubling of effective tariff cost coming immediately after year end. This single event would generate massive consumer discourse and accelerate solar interest."
+      },
+      {
+        "indicator": "Consumers paying for own meters via CAPMI",
+        "value": "N277.89 million in CAPMI meter installation fees",
+        "interpretation": "Consumers paying upfront for their own meters — a service the privatised DISCO should have provided. Consumer frustration signal."
+      },
+      {
+        "indicator": "Government parastatals are largest debtors",
+        "value": "N7.16 billion owed by government institutions",
+        "interpretation": "Government agencies not paying electricity bills. Sets a non-payment culture and strains AEDC's ability to invest in supply quality."
+      }
+    ],
+    "equity_signals": {
+      "franchise_geography_note": "AEDC franchise covers affluent FCT districts (Maitama, Asokoro, Wuse) alongside underserved peri-urban areas (Nyanya, Karu, Gwagwalada) and rural Niger, Kogi, Nasarawa states",
+      "urban_rural_gap": "Report does not break down supply hours by zone — a major data gap for equity analysis",
+      "geographical_collection_challenges": "Directors cite geographical challenges in enforcing payments — code for rural and peri-urban areas where disconnection is impractical"
+    },
+    "gender_and_msme_signals": {
+      "commercial_customers": "Included in trade receivables but not separately broken out for MSMEs",
+      "msme_affordability_note": "33% tariff increase in 2015 plus 49% increase announced for 2016 would have severely impacted MSMEs operating on generators as backup — accelerating solar interest",
+      "relevant_districts": ["Wuse Zone 4", "Garki", "Maitama", "Gwagwalada", "Suleja", "Minna", "Lokoja", "Lafia"]
+    },
+    "consumer_impact_score": 7,
+    "consumer_impact_scale": "1-10 where 10 = severe negative consumer impact",
+    "consumer_experience_summary": "2015 was a year of significant deterioration for AEDC consumers. Tariffs rose 33% while supply quality remained poor. The CAPMI scheme showed consumers were willing to invest in their own meters — a signal of engagement mixed with frustration. The force majeure declaration by KANN in April 2015 — though eventually withdrawn — revealed how precarious the privatised DISCO model was. Consumers experienced higher bills, continuing estimated billing, and no visible improvement in supply reliability. This is the year when conditions for solar adoption began intensifying seriously in the AEDC franchise area."
+  },
+
+  "vitics_intelligence_signals": {
+    "key_insight": "AEDC reported a N41.97 billion loss in 2015 — its third consecutive year of massive losses since privatisation in 2013. Revenue grew 30% but only because tariffs rose 33%, not because more electricity was sold or more consumers were served. The company's fundamental problem — inability to collect payments from consumers and government institutions — worsened dramatically, with impairment on receivables nearly tripling to N18.3 billion.",
+
+    "transition_signal": "The 2015 AEDC report reveals a DISCO in financial crisis, serving consumers in financial stress. Every signal — unaffordable tariffs, collection failure, forced consumer self-metering, parent company force majeure — was pushing AEDC consumers toward alternatives. The 49% tariff increase effective February 2016 would have been the dominant consumer energy story in the FCT, Niger, Kogi and Nasarawa States in early 2016, generating significant search activity for solar alternatives.",
+
+    "solar_adoption_proxy": "No direct solar adoption data in this report. However the CAPMI scheme participation rate (consumers paying upfront for meters) and the scale of consumer non-payment suggest a consumer base under severe financial stress — which in subsequent years (2020-2023) correlates with rising solar adoption in peri-urban Abuja.",
+
+    "policy_gap_evidence": "EPSRA 2005 promised that privatisation would improve service and make tariffs cost-reflective within a reasonable period. MYTO was the tariff implementation mechanism. In 2015 — two years after privatisation — AEDC had never made a profit, had not achieved cost-reflective tariffs, and its parent declared force majeure citing regulatory failure. The policy gap between EPSRA 2005 promises and AEDC 2015 reality is near-total.",
+
+    "correlation_with_consumer_discourse": "Nigerian consumers in FCT and surrounding states in 2015-2016 discussing electricity would have been talking about: the 49% tariff increase, continuing darkness, NEPA/AEDC bill complaints, CAPMI meter schemes, and beginning to discuss solar alternatives more seriously. The Vitics keyword 'Abuja Electric complaint' and 'AEDC Nigeria' would have spiked in this period.",
+
+    "sdg7_signal": "Energy access in AEDC franchise area remained critically poor in 2015. Affordability worsened due to tariff increases while supply reliability showed no measurable improvement. SDG 7 trajectory: negative.",
+
+    "sdg10_signal": "Geographical collection challenges cited by AEDC point directly to rural and peri-urban consumers being least served and most financially burdened. FCT's inequality in supply — between Maitama elites and Nyanya residents — is embedded in AEDC's own financial statements. SDG 10 trajectory: negative.",
+
+    "sdg8_signal": "MSMEs in AEDC franchise area faced 33% tariff increase in 2015 and 49% increase in 2016. Combined with unreliable supply requiring generator backup, electricity costs continued to be a major drag on small business productivity. SDG 8 trajectory: negative."
+  },
+
+  "year_on_year_comparison": {
+    "revenue": "Up 30% — entirely tariff-driven, not volume-driven",
+    "losses": "Losses grew from N25.97 billion to N41.97 billion — 62% worse",
+    "receivables_impairment": "Tripled from N7.29 billion to N18.34 billion",
+    "total_liabilities": "Up 72% from N42.4 billion to N73.1 billion",
+    "equity": "Collapsed from N63.1 billion to N36.4 billion",
+    "capex": "More than doubled from N977 million to N2.16 billion — only positive signal",
+    "supply_hours_change": "Not reported — data gap",
+    "collection_efficiency_change": "Deteriorating — collection crisis deepening",
+    "overall_trajectory": "Declining sharply — AEDC in deep financial distress two years after privatisation",
+    "consumer_verdict": "Consumers paid significantly more for electricity in 2015 and received no measurable improvement in supply quality or reliability."
+  },
+
+  "historical_financial_summary": {
+    "note": "Financial summary table provided in report shows 5-year history",
+    "revenue_ngn_thousands": {
+      "2012": 25345342,
+      "2013": 36025798,
+      "2014": 48097381,
+      "2015": 62534676
+    },
+    "loss_for_year_ngn_thousands": {
+      "2012": -14722762,
+      "2013": -13789334,
+      "2014": -25971035,
+      "2015": -41972588
+    },
+    "net_assets_ngn_thousands": {
+      "Jan_2012": 107203888,
+      "Dec_2012": 88868063,
+      "Dec_2013": 85794218,
+      "Dec_2014": 63123448,
+      "Dec_2015": 36428285
+    },
+    "trend_analysis": "AEDC has lost N70.8 billion of net assets since January 2012 — from N107.2 billion to N36.4 billion. Revenue has been growing but losses have been growing faster. At this trajectory, AEDC would have negative equity by 2017-2018 without intervention."
+  },
+
+  "consumer_search_terms": {
+    "franchise_specific": [
+      "AEDC Nigeria",
+      "Abuja Electricity Distribution Company",
+      "Abuja Electric complaint",
+      "AEDC light Abuja",
+      "no light Abuja",
+      "AEDC bill increase",
+      "AEDC meter Nigeria",
+      "Abuja electricity problem 2015",
+      "AEDC tariff increase Nigeria"
+    ],
+    "tariff_related": [
+      "electricity tariff increase Abuja 2015",
+      "MYTO 2015 Nigeria",
+      "electricity bill too high Abuja",
+      "NERC tariff order Nigeria"
+    ],
+    "supply_related": [
+      "no light Wuse Abuja",
+      "no light Nyanya Abuja",
+      "no light Karu Nasarawa",
+      "Abuja darkness 2015",
+      "AEDC power outage FCT"
+    ],
+    "consumer_frustration": [
+      "AEDC wahala Nigeria",
+      "Abuja light don go",
+      "estimated billing Abuja",
+      "CAPMI meter Abuja"
+    ]
+  },
+
+  "schema_gaps_and_notes": [
+    {
+      "field": "supply_hours_by_zone",
+      "reason": "2015 annual report predates Band A-E classification system — hours of supply not reported by zone",
+      "alternative": "Inferred from imbalance penalty data and consumer discourse signals"
+    },
+    {
+      "field": "total_registered_customers",
+      "reason": "Not disclosed in this annual report",
+      "alternative": "Staff headcount in marketing (865) and technical (906) gives proxy for scale of operations"
+    },
+    {
+      "field": "metering_rate",
+      "reason": "Not disclosed as a percentage — inferred from CAPMI participation rates",
+      "alternative": "CAPMI scheme existence confirms significant unmetered customer population"
+    },
+    {
+      "field": "collection_efficiency_pct",
+      "reason": "Not explicitly stated — must be calculated from revenue vs receivables",
+      "alternative": "Revenue N62.5 billion vs trade receivables N23.1 billion suggests approximately 73% collection rate — but impairment of N18.3 billion implies true collection far lower"
+    }
+  ],
+
+  "schema_update_recommendations": [
+    "Add 'force_majeure_history' field — KANN declared force majeure in 2015, important regulatory signal",
+    "Add 'cbm_intervention_fund' field — government bailout mechanism specific to Nigerian DISCO sector",
+    "Add 'nelmco_pre_completion_liabilities' field — privatisation transition liabilities are unique to Nigerian context",
+    "Add 'customer_contributed_assets' field — consumers self-funding distribution infrastructure is a unique Nigerian signal",
+    "Add 'historical_loss_trajectory' field — multi-year loss data is critical for understanding DISCO viability"
+  ],
+
+  "document_quality": {
+    "report_source": "Uploaded directly by Vitics researcher",
+    "report_completeness": "Full annual report — 51 pages including audited financial statements, notes, value added statement, financial summary",
+    "audited": true,
+    "auditor_opinion": "Clean/unqualified opinion from KPMG — with going concern emphasis paragraph",
+    "prepared_under": "IFRS as issued by IASB — compliant with CAMA Nigeria and Financial Reporting Council of Nigeria Act 2011",
+    "pages_read": 51,
+    "confidence": "High — complete document read in full",
+    "notes": "This is AEDC's first year of full IFRS reporting under privatised ownership. Going concern paragraph is material. Force majeure event and CBN intervention fund discussions are critical context. The 2015 report represents AEDC at its most financially stressed — 2 years post-privatisation, pre-MYTO 2015 tariff relief."
+  }
+}

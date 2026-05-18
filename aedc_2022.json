@@ -1,0 +1,577 @@
+{
+  "report_id": "AEDC_2022",
+  "schema_version": "disco_financial_schema_v1.1",
+
+  "section_1_identification": {
+    "disco_name": "Abuja Electricity Distribution Plc",
+    "ticker_or_rc": "RC 638681",
+    "franchise_states": ["FCT Abuja", "Niger", "Kogi", "Nasarawa"],
+    "reporting_year": 2022,
+    "reporting_period": "1 January 2022 to 31 December 2022",
+    "date_signed_by_board": "14 December 2023",
+    "months_late": 23,
+    "auditor": "Ernst & Young",
+    "audit_opinion": "Unmodified with Material Uncertainty Related to Going Concern",
+    "going_concern_flag": true,
+    "going_concern_consecutive_years": "at least 2022 and 2021 confirmed; 2015 also flagged by KPMG — pattern spans 7+ years",
+    "document_source": "Signed financial statements filed December 2023",
+    "vitics_note": "Financial statements for year ended 31 December 2022 were signed on 14 December 2023 — a 23-month delay. This is itself a governance signal. When a company cannot close its books for nearly two years, it signals internal financial chaos. Nigerian consumers experienced 2022 blackouts in real time; AEDC's own accountants could not explain the numbers until late 2023."
+  },
+
+  "section_2_ownership_and_governance": {
+    "shareholding": {
+      "united_capital_trustees_limited_UCTL": "60%",
+      "bureau_of_public_enterprises_BPE": "32%",
+      "ministry_of_finance_incorporated_MoFI": "8%"
+    },
+    "ownership_history_since_privatisation": [
+      {
+        "period": "November 2013",
+        "controlling_party": "KANN Utility Company Limited",
+        "notes": "Privatisation completion — KANN acquired 60%"
+      },
+      {
+        "period": "2020",
+        "controlling_party": "CEC Africa Investments Limited",
+        "notes": "CEC Africa acquired majority of KANN shares; became ultimate controlling party"
+      },
+      {
+        "period": "31 December 2021",
+        "controlling_party": "United Capital Trustees Limited (UCTL)",
+        "notes": "Controlling 60% allotted to UCTL; United Capital Plc became ultimate holding company"
+      },
+      {
+        "period": "18 May 2023 (post year-end)",
+        "controlling_party": "Jeolan International Limited (led by Transcorp Group)",
+        "notes": "Transcorp consortium acquired 60% with commitment to immediate turnaround. New board members and MD/CEO appointed September 2023."
+      }
+    ],
+    "ownership_changes_since_privatisation": 3,
+    "board_meetings_during_year": 27,
+    "independent_directors": 0,
+    "vitics_note": "AEDC changed majority owner THREE times between 2013 and 2023 — KANN → CEC Africa → UCTL → Transcorp. Every ownership change was preceded by financial deterioration. No owner achieved operational turnaround. For Nigerian consumers, this pattern reads as: 'new owner, same darkness.' The Transcorp acquisition in May 2023 coincides almost exactly with the fuel subsidy removal watershed moment — whether Transcorp can succeed in a finally cost-reflective environment is the defining question for 2024-2025."
+  },
+
+  "section_3_income_statement": {
+    "currency": "NGN thousands",
+    "revenue": {
+      "total_revenue_2022": 148882467,
+      "total_revenue_2021": 165325621,
+      "change_pct": -9.9,
+      "breakdown": {
+        "electricity_sales_revenue": 134225334,
+        "tariff_shortfall_awarded_by_nerc": 8048000,
+        "customer_contributed_assets_revenue": 6609133
+      },
+      "electricity_sales_change_from_2021": "+3.4% (from ₦129.86bn to ₦134.23bn)",
+      "tariff_shortfall_change_from_2021": "-73% (from ₦29.80bn to ₦8.05bn)",
+      "revenue_driver_note": "Total revenue FELL despite electricity sales growth because NERC awarded far less tariff shortfall compensation in 2022 (₦8bn vs ₦30bn in 2021). The company is structurally dependent on regulatory handouts to appear viable."
+    },
+    "gross_profit": {
+      "2022": 5769177,
+      "2021": 37369953,
+      "change_note": "Gross profit collapsed 85% — from ₦37.4bn to ₦5.8bn. Cost of sales rose 12% while total revenue fell 10%. The business is operationally underwater."
+    },
+    "operating_profit_loss": {
+      "2022": 8132602,
+      "2021": -1109852,
+      "note": "Operating profit only due to ₦25.97bn of other income — including ₦13.88bn bad debt recovered from government MDAs and ₦9.41bn misc income from energy exported to other DISCOs. Strip these out and the operating position is deeply negative."
+    },
+    "net_finance_costs": {
+      "2022": -14722789,
+      "2021": -10098176,
+      "interest_on_loans": 6362049,
+      "net_interest_nbet_onem": -8623137,
+      "note": "Finance costs alone swallowed all operating profit and more. Interest on NBET/ONEM unpaid bills alone was ₦43.9bn, partially offset by ₦35.3bn write-back on tariff shortfall interest."
+    },
+    "loss_before_tax": {
+      "2022": -6590187,
+      "2021": -11208028
+    },
+    "loss_for_year": {
+      "2022": -7336802,
+      "2021": -11945351,
+      "five_year_losses": {
+        "2022": -7336802,
+        "2021": -11945351,
+        "2020": -11471618,
+        "2019": 124292535,
+        "2018": -85719329,
+        "note": "2019 profit was entirely driven by revaluation and NERC regulatory awards — not real operational improvement. 2018 loss of ₦85.7bn was catastrophic. Pattern: structural loss-making entity propped by regulatory interventions."
+      }
+    },
+    "cost_of_energy": {
+      "2022": 129811611,
+      "2021": 120820811,
+      "as_pct_of_electricity_revenue": "96.7%",
+      "note": "AEDC pays ₦129.8bn to buy electricity and earns ₦134.2bn selling it — a margin of 3.3% before any other costs. The distribution business as structured cannot be viable."
+    }
+  },
+
+  "section_4_balance_sheet": {
+    "currency": "NGN thousands",
+    "total_assets": {
+      "2022": 284125939,
+      "2021": 271901479
+    },
+    "total_liabilities": {
+      "2022": 251069489,
+      "2021": 231615972
+    },
+    "total_equity": {
+      "2022": 33056450,
+      "2021": 40285507,
+      "note": "Equity is falling each year. Accumulated losses stand at ₦66.1bn. Only the ₦99.2bn revaluation reserve (from 2021 asset revaluation) prevents negative equity."
+    },
+    "net_current_liabilities": {
+      "2022": -110889167,
+      "2021": -112432066,
+      "2020": -116858652,
+      "note": "Net current liabilities have exceeded ₦110bn for three consecutive years. The company cannot pay its short-term obligations from short-term assets. Structural insolvency."
+    },
+    "accumulated_losses": {
+      "2022": -66110031,
+      "2021": -58880974
+    },
+    "property_plant_equipment_net": {
+      "2022": 186384954,
+      "2021": 185781081,
+      "distribution_network_assets_net": 162578518,
+      "note": "At historical cost (not revalued), distribution network assets would be only ₦25.2bn — the revaluation adds ₦137bn of paper value that props up the balance sheet."
+    }
+  },
+
+  "section_5_cash_flow": {
+    "currency": "NGN thousands",
+    "net_cash_from_operating_activities": -12617429,
+    "net_cash_from_investing_activities": -3771276,
+    "net_cash_from_financing_activities": 10899581,
+    "net_decrease_in_cash": -5489124,
+    "cash_opening": 13293696,
+    "cash_closing": 7804153,
+    "capex": 3717468,
+    "note": "Operations consumed ₦12.6bn in cash. The company survived only because it borrowed ₦17.7bn from CBN (NEMSF). Without CBN bailout loans, AEDC would have run out of cash. The company is on life support from federal government intervention funds."
+  },
+
+  "section_6_revenue_analysis": {
+    "electricity_sold_gwh": {
+      "2022": 3885,
+      "2021": 4061,
+      "change_pct": -4.3,
+      "note": "Energy delivered to AEDC from the national grid FELL 4% year on year. Less electricity was available to sell."
+    },
+    "revenue_per_kwh_weighted_average": {
+      "2022": "₦56.94/kWh",
+      "2021": "₦51.66/kWh",
+      "note": "Tariff increase drove revenue growth despite volume decline. Consumers paid more for less electricity."
+    },
+    "customer_payment_mode": {
+      "postpaid_revenue": 87183878,
+      "prepaid_revenue": 47041456,
+      "postpaid_pct": "65%",
+      "prepaid_pct": "35%",
+      "note": "Postpaid (largely unmetered, estimated billing) still dominates. 65% of revenue comes from customers who cannot verify their own consumption. This is the root of both non-payment and consumer distrust."
+    },
+    "unbilled_revenue_included": {
+      "2022": 8750000,
+      "2021": 7570000,
+      "note": "₦8.75bn of revenue recognised for December meter readings not yet billed. Aggressive revenue recognition."
+    },
+    "customer_contributed_assets_detail": {
+      "total": 6609133,
+      "meters_MAP_scheme": 6188000,
+      "transformers_substations": 421000,
+      "note": "Consumers paid ₦6.6bn to fund AEDC's infrastructure in 2022. ₦6.2bn for meters they should have received free, ₦421m for transformers and substations that are AEDC's capital responsibility. Consumer as involuntary infrastructure funder — now in its 7th year since CAPMI began."
+    }
+  },
+
+  "section_7_trade_receivables_and_collections": {
+    "currency": "NGN thousands",
+    "gross_trade_receivables": {
+      "2022": 148567863,
+      "2021": 139493208
+    },
+    "ecl_allowance": {
+      "2022": 89852817,
+      "2021": 88722069
+    },
+    "net_trade_receivables": {
+      "2022": 58715046,
+      "2021": 50771138
+    },
+    "impairment_rate": {
+      "2022": "60.5%",
+      "2021": "63.6%",
+      "note": "60.5% of all billed electricity is expected never to be collected. This is the single most important number in Nigerian DISCO financials for understanding consumer behaviour."
+    },
+    "ecl_charge_for_year": {
+      "2022": 1130748,
+      "2021": 9764228,
+      "note": "ECL charge fell 88% — not because collections improved but because most bad debt was already provided for in prior years. The stock of uncollectable debt is now fully reflected in the balance sheet."
+    },
+    "bad_debt_recovered_from_govt_mdas": {
+      "amount": 13882534,
+      "period_covered": "2015 to 2020",
+      "note": "₦13.88bn recovered from government ministries and agencies for bills from 5-7 years ago. Government is the worst-paying customer class. This is a one-off — not a sign of structural improvement."
+    },
+    "ecl_by_customer_segment_2022": {
+      "prepaid_customers_PPM_legacy_debt": { "loss_rate": "96%", "gross": 1665997 },
+      "government_agencies": { "loss_rate": "75%", "gross": 7111863 },
+      "metered_maximum_demand": { "loss_rate": "30%", "gross": 6057410 },
+      "unmetered_maximum_demand": { "loss_rate": "37%", "gross": 577582 },
+      "unmetered_non_MD_high_tier": { "loss_rate": "61%", "gross": 128497554 },
+      "note": "The largest segment — unmetered non-maximum demand high tier — has ₦128.5bn gross receivable at 61% loss rate. These are ordinary residential and small commercial customers who are unmetered and dispute or cannot pay estimated bills. This is where AEDC's collection crisis lives."
+    },
+    "vitics_signal": "A DISCO with a 60.5% impairment rate is not a distribution company — it is a billing company that struggles to collect. Consumers who cannot or will not pay estimated electricity bills are the exact demographic that later adopts solar. The failure to meter customers is simultaneously the cause of collection failure and the accelerant of grid defection."
+  },
+
+  "section_8_market_debt_nbet_onem": {
+    "currency": "NGN thousands",
+    "trade_payables_to_nbet_onem": {
+      "2022": 112399214,
+      "2021": 123965001,
+      "note": "AEDC owes ₦112.4bn to NBET and ONEM for electricity it bought but did not fully pay for. This debt has been accumulating since 2013. The slight reduction from 2021 is due to NERC regulatory netting awards."
+    },
+    "nbet_onem_as_pct_of_current_liabilities": "54.4%",
+    "interest_rate_on_nbet_onem_shortfall": "NIBOR + 4%",
+    "interest_accrued_on_nbet_onem_2022": 43929036,
+    "interest_writeback_on_tariff_shortfall": 35305899,
+    "net_interest_burden_nbet_onem": 8623137,
+    "nerc_regulatory_netting_awards_in_2022": {
+      "mda_historical_debt_settlement": {
+        "amount": 23705219,
+        "description": "NERC awarded ₦23.7bn as settlement of FGN MDA electricity debts 2015-2020, to be offset against monthly market bills Jul 2022 - Jun 2023"
+      },
+      "merit_order_compensation": {
+        "amount": 1371000,
+        "description": "NERC awarded ₦1.37bn compensation for TCN non-adherence to economic merit order dispatch — offset against TCN monthly invoices"
+      }
+    },
+    "note": "AEDC is trapped in a debt spiral: it buys electricity on credit from NBET, cannot collect enough from consumers to pay, and the unpaid balance attracts NIBOR+4% interest. NERC periodically awards regulatory offsets that slow the spiral but cannot stop it. The entire market is technically insolvent."
+  },
+
+  "section_9_loans_and_borrowings": {
+    "currency": "NGN thousands",
+    "total_loans": {
+      "2022": 45681645,
+      "2021": 34887029,
+      "increase": 10794616
+    },
+    "cbn_nemsf_loan": {
+      "2022_balance": 39618568,
+      "2022_drawdown": 17748168,
+      "purpose_split": {
+        "nbet_onem_market_debt_settlement": 10220000,
+        "tcn_transmission_contractors": 7530000
+      },
+      "interest_rate": "10% (contractual); effective rates 14-20% after fair value adjustment",
+      "repayment_period": "up to 120 months, max July 2032",
+      "note": "CBN NEMSF is the life-support mechanism for the entire Nigerian electricity market. AEDC has now drawn ₦39.6bn from this facility. Without this, AEDC would have collapsed. The irony: ₦7.5bn of the 2022 drawdown went to TCN contractors — AEDC is borrowing from CBN to fund the transmission company that sells it electricity."
+    },
+    "capmi_loan": {
+      "2022_balance": 1115520,
+      "note": "Consumers advanced money to AEDC for meters (CAPMI scheme). AEDC owes consumers ₦1.1bn in meter refunds. Consumers funded AEDC operations and AEDC now owes them money."
+    },
+    "tcn_loan": { "2022_balance": 4140108 },
+    "nelmco_loan": { "2022_balance": 807449 },
+    "total_debt_to_equity": "138%"
+  },
+
+  "section_10_energy_volumes_and_losses": {
+    "energy_delivered_gwh": {
+      "2022": 3885,
+      "2021": 4061,
+      "change_pct": -4.3
+    },
+    "atc_c_losses": {
+      "disclosed": false,
+      "note": "ATC&C loss rate not explicitly stated in 2022 report but referenced as a key going concern risk factor. The going concern note specifically names 'high aggregate technical, commercial and collection losses' as cause of reported losses."
+    },
+    "weighted_average_tariff": {
+      "2022": "₦56.94/kWh",
+      "2021": "₦51.66/kWh",
+      "increase_pct": 10.2
+    },
+    "grid_defection_signal": {
+      "energy_volume_trend": "FALLING — 4% drop in 2022, grid supply constraints",
+      "customer_count_trend": "STABLE — 3,428 employees serving same customer base (no meaningful new connections)",
+      "revenue_trend": "RISING via tariff increases not volume growth",
+      "interpretation": "Revenue growing while volume falls = tariff-driven, not growth-driven. The grid is delivering less electricity to the same or more customers. Each consumer is receiving fewer kWh. This is the structural condition that drives solar adoption: I pay more, I get less.",
+      "grid_defection_score": "6/10",
+      "grid_defection_score_rationale": "2022 is Solar Power Naija's post-peak year. Fuel subsidy still in place (removed May 2023). Grid supply falling. Tariffs rising. Consumer frustration at peak. This is the final pre-watershed year — solar adoption is accelerating but mass adoption explodes in 2023."
+    }
+  },
+
+  "section_11_metering_status": {
+    "map_scheme_meters_installed_2022": "₦6.2bn worth contributed by customers",
+    "capmi_scheme_status": "outstanding balance ₦1.1bn still owed to customers",
+    "nmmp_national_mass_metering": {
+      "drawdown_used_for_nmmp_in_2021": 6000000,
+      "note": "In 2021, ₦6bn of CBN NEMSF loan was used to pay Meter Asset Providers under NMMP"
+    },
+    "unmetered_customers_scale": {
+      "substations_to_meter": "11,996 unmetered distribution transformers identified in going concern note",
+      "note": "As of 2022, AEDC itself identified 11,996 unmetered distribution substations. This represents a massive proportion of its network operating blind — no consumption data, no accurate billing, no loss attribution."
+    },
+    "obsolete_meters_to_replace": 226409,
+    "api_compliant_meters_needed": 419058,
+    "total_metering_gap": "226,409 obsolete + 419,058 new = 645,467 meters outstanding",
+    "consumer_impact": "In 2022, the majority of AEDC's residential customers were still on estimated billing — 9 years after privatisation. Estimated billing is the primary driver of: (a) consumer non-payment disputes, (b) over-billing complaints, (c) the motivation to defect to solar where your consumption is metered and controlled.",
+    "vitics_signal": "Unmetered customer = solar candidate. The correlation between estimated billing frustration and solar inquiry is direct and documentable through YouTube search data. 'AEDC estimated bill wahala' and 'how to calculate electricity bill Nigeria' are search precursors to 'solar panel Nigeria price'."
+  },
+
+  "section_12_consumer_impact": {
+    "consumer_impact_score": "8/10",
+    "consumer_impact_score_rationale": "2022 is a year of maximum consumer pain before the 2023 watershed. Energy supply fell 4%. Consumers paid 10% more per kWh. Estimated billing still dominant. Metering gap unresolved. Ownership changing hands. Going concern risk maintained. The only positive was modest ECL improvement but consumers don't read balance sheets — they experience darkness.",
+    "specific_consumer_harms_in_2022": [
+      "Energy delivered fell 4% — less electricity than 2021",
+      "Weighted average tariff rose 10% — pay more, get less",
+      "65% of customers still on postpaid (largely unmetered estimated billing)",
+      "11,996 distribution substations still unmetered — no accurate consumption data",
+      "Consumers paid ₦6.6bn to fund AEDC infrastructure (MAP meters + transformers)",
+      "AEDC still owed consumers ₦1.1bn in CAPMI meter refunds",
+      "Going concern risk maintained — company financially unstable",
+      "Third ownership change pending (Transcorp acquisition May 2023)",
+      "₦113.4bn owed to NBET/ONEM — entire supply chain under stress"
+    ],
+    "consumer_vocabulary_2022": {
+      "billing_complaints": ["AEDC estimated bill", "AEDC overbilling", "AEDC crazy bill", "AEDC bill too high"],
+      "supply_complaints": ["AEDC no light", "AEDC blackout", "AEDC when will light come", "Abuja no electricity"],
+      "metering_complaints": ["AEDC prepaid meter", "AEDC meter activation", "AEDC MAP meter cost", "how to get meter AEDC"],
+      "solar_transition_triggers": [
+        "solar panel Abuja",
+        "solar inverter Abuja",
+        "solar for home Nigeria",
+        "AEDC wahala solar alternative",
+        "how much solar panel 5kva Nigeria",
+        "inverter battery Nigeria price"
+      ],
+      "note": "2022 is the year Nigerian urban consumers moved from passive complaint to active solar research. AEDC's operational failures are directly correlated with rising solar search volumes."
+    }
+  },
+
+  "section_13_nigeria_specific_fields": {
+
+    "force_majeure_history": {
+      "2022_events": "No formal force majeure declared in 2022",
+      "historical_note": "KANN (AEDC parent) declared force majeure in April 2015, withdrawn February 2016. No 2022 equivalent but going concern language serves similar function — acknowledges inability to fulfil obligations under normal terms.",
+      "supply_constraint_note": "Energy delivered fell from 4,061gWh (2021) to 3,885gWh (2022) — a 4% grid supply reduction. No force majeure declared but consumers experienced the equivalent: less electricity, higher prices."
+    },
+
+    "cbn_intervention_fund": {
+      "facility_name": "Nigerian Electricity Market Stabilisation Facility (NEMSF)",
+      "total_drawn_to_date_2022": 39618568,
+      "drawdown_history": {
+        "2018_first_tranche": 20230000,
+        "2018_second_tranche": 3490000,
+        "2019_third_tranche": 1080000,
+        "2021_drawdown": 23170000,
+        "2022_drawdown": 17748168
+      },
+      "2022_drawdown_purposes": {
+        "nbet_onem_market_debt": 10220000,
+        "tcn_transmission_contractors": 7530000
+      },
+      "repayment_period": "up to 120 months",
+      "interest_rate": "10% contractual",
+      "effective_rates_after_fv": "14% to 20%",
+      "day_one_gain_recognised": 5820192,
+      "total_deferred_income_from_loans": 16744324,
+      "national_mass_metering_programme": {
+        "amount_used": 6000000,
+        "year": 2021,
+        "note": "₦6bn of 2021 CBN drawdown used to pay Meter Asset Providers — confirming that the National Mass Metering Programme was funded by CBN intervention, not AEDC's operational cash flows."
+      },
+      "vitics_signal": "AEDC has received over ₦65bn in CBN bailout loans since 2018. This is not a commercial business — it is a government-subsidised utility that cannot survive without federal intervention. Yet consumers pay rising tariffs. The contradiction — consumer pays more, company needs more bailout — is the defining paradox of Nigerian electricity and the primary driver of solar adoption."
+    },
+
+    "nelmco_transition_liabilities": {
+      "nelmco_loan_balance_2022": 807449,
+      "pre_completion_receivables_status": "Transferred to NELMCO as at 31 October 2013 per Deed of Assignment",
+      "pre_completion_liabilities_status": "Transferred to NELMCO as at 31 October 2013",
+      "reconciliation_status": "OUTSTANDING — as at 14 December 2023 (date of signing), reconciliation between AEDC and NELMCO had NOT been completed",
+      "payable_to_nelmco": 745711,
+      "note": "A decade after privatisation, AEDC and NELMCO have still not completed the reconciliation of pre-privatisation assets and liabilities. This unresolved legacy is a legal and financial overhang that contributes to governance instability. Consumers bear the cost of this unresolved transition."
+    },
+
+    "customer_contributed_assets": {
+      "2022_total": 6609133,
+      "2021_total": 5661654,
+      "2022_breakdown": {
+        "meters_MAP_scheme": 6188000,
+        "transformers_and_substations": 421000
+      },
+      "cumulative_note": "Customer-contributed assets have been a recurring item since at least 2015 (₦127m in 2015, ₦5.7bn in 2021, ₦6.6bn in 2022). The scale has grown 52x since 2015. Consumers are now funding a substantial portion of AEDC's capital programme.",
+      "capmi_outstanding_to_consumers": 1115520,
+      "accounting_treatment": "Recognised as revenue when company has no future performance obligations; as deferred income when performance obligation outstanding",
+      "vitics_signal": "In 2022 alone, AEDC's consumers funded ₦6.6bn of infrastructure — meters, transformers, substations. A consumer who has already paid for their own meter and contributed to local infrastructure is psychologically and financially primed to ask: 'Why am I also paying AEDC monthly bills?' This is the mental model shift that leads to solar adoption inquiry."
+    }
+  },
+
+  "section_14_going_concern": {
+    "auditor_going_concern_paragraph": "Ernst & Young drew attention to Note 34: net loss of ₦7.34bn, net current liabilities of ₦110.89bn. Material uncertainty that may cast significant doubt about ability to continue as going concern.",
+    "going_concern_years_flagged": "2015 (KPMG), 2021 (EY), 2022 (EY) — at minimum three confirmed years; likely continuous since 2015",
+    "management_going_concern_assumptions": [
+      "Full cost-reflective tariffs to be implemented in immediate future",
+      "Investment in distribution network will reduce ATC&C losses",
+      "Improved billing and collection will reduce market obligations",
+      "Amount due to NBET/ONEM for immediate payment will not be called",
+      "Transcorp turnaround commitment post year-end (May 2023)"
+    ],
+    "vitics_note": "The same going concern assumptions have appeared in AEDC reports for multiple years: 'cost-reflective tariffs soon, ATC&C losses improving, collections will get better.' These assumptions were finally partially validated in 2023 when the fuel subsidy was removed and tariff reform accelerated under the new economic framework. But from 2013 to 2022 — nine years — consumers lived through a going-concern utility. This is why they stopped trusting the grid."
+  },
+
+  "section_15_regulatory_environment": {
+    "nerc_tariff_framework": "Multi-Year Tariff Order (MYTO) — price control regime",
+    "tem_rules": "Transitional Electricity Market rules — effective 1 February 2015, amended 1 April 2015",
+    "service_based_tariff": "Referenced in CBN loan purpose — 'under-collection under the service based tariff scheme'",
+    "nerc_awards_in_2022": {
+      "tariff_shortfall": {
+        "amount": 8048000,
+        "basis": "NERC Order NERC/GL/170 (2016-2018 MYTO review) and NERC/GL/184/2019"
+      },
+      "mda_debt_settlement": {
+        "amount": 23705219,
+        "mechanism": "12-month netting at ₦1.98bn/month against market bills Jul 2022 - Jun 2023"
+      },
+      "merit_order_compensation": {
+        "amount": 1371000,
+        "mechanism": "TCN penalised for non-adherence to merit order dispatch; ₦114.2m/month netting"
+      }
+    },
+    "regulatory_fine": {
+      "amount_provided": 361040,
+      "status": "Provision maintained from 2019; contested in court",
+      "note": "AEDC has been under a regulatory fine since 2019, still unresolved in 2022. The company is simultaneously a going concern risk and a regulatory violator."
+    },
+    "licence_details": {
+      "period": 15,
+      "expires": 2028,
+      "renewal_option": "10 years"
+    }
+  },
+
+  "section_16_staffing_and_operations": {
+    "total_employees_2022": 3428,
+    "total_employees_2021": 3424,
+    "by_function": {
+      "administration": 466,
+      "finance": 228,
+      "marketing": 1438,
+      "technical": 1296
+    },
+    "note": "1,438 marketing/revenue staff vs 1,296 technical staff — the company has more people chasing revenue than maintaining the network. Reflects the collection crisis over technical investment.",
+    "staff_costs": {
+      "2022": 12944441,
+      "2021": 13924954
+    },
+    "om_service_fee_to_kann": {
+      "2022": 2797727,
+      "note": "AEDC pays its parent company KANN ₦2.8bn annually (2% of net cash collected) for 'operations and management services.' This is a related-party extraction from an already distressed company."
+    },
+    "franchise_coverage": {
+      "business_districts_fct": 33,
+      "area_offices_outer_regions": 15,
+      "regional_offices": 3,
+      "states": ["FCT Abuja", "Niger", "Kogi", "Nasarawa"]
+    },
+    "charitable_contributions": 5500,
+    "political_donations": 0
+  },
+
+  "section_17_five_year_summary": {
+    "currency": "NGN thousands",
+    "revenue": {
+      "2022": 148882467,
+      "2021": 165325621,
+      "2020": 139131455,
+      "2019": 255987711,
+      "2018": 82220731
+    },
+    "loss_for_year": {
+      "2022": -7336802,
+      "2021": -11945351,
+      "2020": -11471618,
+      "2019": 124292535,
+      "2018": -85719329
+    },
+    "total_equity": {
+      "2022": 33056450,
+      "2021": 40285507,
+      "2020": -2077491,
+      "2019": 8435013,
+      "2018": -128769598
+    },
+    "net_current_liabilities": {
+      "2022": -110889167,
+      "2021": -112432066,
+      "2020": -116858652,
+      "2019": -95037339,
+      "2018": -221568406
+    },
+    "trend_analysis": "AEDC has been technically insolvent on a current liabilities basis for all five years. Net current liabilities ranged from ₦95bn to ₦221bn. The 2019 'profit' was entirely driven by a ₦124bn accounting gain — not operational. The only year equity was positive was when the balance sheet was propped by revaluation gains and regulatory awards. Real operational performance has been consistently negative for a decade."
+  },
+
+  "section_18_vitics_analysis_instructions": {
+    "document_type": "DISCO Financial Report — TYPE 3",
+    "primary_vitics_thesis": "AEDC 2022 is the last annual report before the 2023 watershed. It documents the maximum point of consumer pain before the fuel subsidy removal forced the decisive break — both for AEDC (ownership change, tariff reform) and for consumers (mass solar adoption).",
+
+    "key_signals_for_youtube_analysis": {
+      "signal_1_tariff_pain": {
+        "description": "Tariffs rose 10% in 2022 (to ₦56.94/kWh). Energy supply fell 4%. Pay more, get less.",
+        "search_prediction": "Rising searches for 'solar panel price Nigeria 2022', 'inverter for home Abuja', 'AEDC light wahala'"
+      },
+      "signal_2_metering_crisis": {
+        "description": "11,996 unmetered distribution substations. Majority of customers on estimated billing. 645,467 meters outstanding.",
+        "search_prediction": "Searches for 'AEDC estimated bill too high', 'how to dispute AEDC bill', 'prepaid meter AEDC cost' — precursors to solar search"
+      },
+      "signal_3_ownership_chaos": {
+        "description": "Third ownership change pending. 23-month reporting delay. Going concern for 7+ years.",
+        "search_prediction": "Consumer trust at lowest point. Searches shift from 'when will AEDC improve' to 'solar as solution'"
+      },
+      "signal_4_consumer_as_infrastructure_funder": {
+        "description": "Consumers paid ₦6.6bn for AEDC's infrastructure in 2022. This is widely felt and discussed.",
+        "search_prediction": "YouTube content about 'AEDC MAP meter scandal', 'why should I pay for my own meter', 'solar vs paying AEDC'"
+      },
+      "signal_5_pre_watershed_buildup": {
+        "description": "2022 is the last year before fuel subsidy removal. Diesel prices were already rising due to forex scarcity. Generator costs were escalating. The total energy cost for consumers (grid + generator + solar) was at a breaking point.",
+        "search_prediction": "Searches for 'solar vs generator cost Nigeria', 'is solar cheaper than generator Nigeria', 'solar panel installation Lagos/Abuja cost 2022'"
+      }
+    },
+
+    "connection_to_policy_documents": {
+      "nepp_2001": "NEPP promised cost-reflective tariffs by 2002-3. In 2022 — 20 years later — AEDC is still not on cost-reflective tariffs and requires NERC shortfall awards to survive.",
+      "epsra_2005": "EPSRA created NERC and the privatisation framework. AEDC is the product of that framework — 9 years of going-concern risk, three ownership changes, consumer funding infrastructure.",
+      "privatisation_2013": "2022 is year 9 post-privatisation. Every promise of private sector efficiency has failed. AEDC's structural losses are worse than 2013 in absolute naira terms."
+    },
+
+    "transition_marker": true,
+    "transition_note": "AEDC 2022 is the pressure-maximum document. It captures the financial and operational state of Nigerian electricity distribution at its most stressed point before the 2023 reforms. Every metric — energy volume, tariff, metering gap, collection rate, debt levels, ownership stability — shows a system at breaking point. This is the quantitative foundation for understanding WHY Nigerian consumers adopted solar en masse in 2023-2024. The seeds were planted across 2013-2022; the harvest came in 2023.",
+
+    "comparison_to_aedc_2015": {
+      "loss": { "2015": -41970000, "2022": -7336802, "note": "Nominal loss improved but this understates deterioration — 2022 number is after ₦13.9bn bad debt recovery windfall and ₦25.9bn other income" },
+      "impairment_rate": { "2015": "approximately 60%", "2022": "60.5%", "note": "Collection failure rate essentially unchanged over 7 years — structural, not cyclical" },
+      "cbm_intervention": { "2015": "₦27bn expected, not received", "2022": "₦39.6bn received — facility fully deployed", "note": "The bailout that was a hope in 2015 is now reality in 2022, and AEDC is still failing" },
+      "consumer_contributed_assets": { "2015": 127000, "2022": 6609133, "note": "Consumer infrastructure contributions grew 52x in 7 years" },
+      "going_concern": { "2015": "KPMG flagged", "2022": "EY flagged", "note": "Going concern maintained across multiple auditor changes — the problem is structural not auditor-specific" },
+      "grid_defection_score": { "2015": "3/10 (early conditions building)", "2022": "6/10 (accelerating pre-watershed)" }
+    },
+
+    "questions_vitics_should_ask_of_this_document": [
+      "In 2022, did YouTube searches for solar content from FCT/Abuja correlate with AEDC's 4% energy supply reduction?",
+      "Does the 10% tariff increase in 2022 show a measurable spike in solar content searches?",
+      "Is there a pattern of Abuja/FCT solar searches following NERC tariff announcements?",
+      "What is the lag time between AEDC billing complaints (YouTube) and solar purchase intent (YouTube)?",
+      "Did the Transcorp acquisition announcement in May 2023 trigger consumer hope or continued distrust in YouTube discourse?"
+    ]
+  },
+
+  "document_quality": {
+    "reading_method": "Full text extraction from PDF — all pages readable, high quality",
+    "pages": 75,
+    "completeness": "Complete — all financial statements, notes, auditor report, five-year summary",
+    "confidence": "High",
+    "data_reliability": "Audited by Ernst & Young. Unmodified opinion on financial statements (going concern paragraph does not modify the opinion). Numbers can be relied upon.",
+    "filing_delay_note": "Signed 14 December 2023 for year ended 31 December 2022. This 23-month delay is itself material data — noted and flagged."
+  }
+}

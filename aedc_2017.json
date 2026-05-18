@@ -1,0 +1,494 @@
+{
+  "disco_report_id": "AEDC_2017",
+  "schema_version": "disco_financial_schema_v1.1",
+
+  "section_1_metadata": {
+    "company_name": "Abuja Electricity Distribution Plc",
+    "ticker_or_registration": "638681",
+    "report_year": 2017,
+    "period_end": "31 December 2017",
+    "date_signed": "14 May 2018",
+    "auditor": "KPMG Professional Services",
+    "auditor_signing_partner": "Ayodele A. Soyinka, FCA",
+    "audit_date": "23 May 2018",
+    "coverage_area": ["Federal Capital Territory (FCT)", "Abuja", "Niger State", "Kogi State", "Nasarawa State"],
+    "area_offices": 32,
+    "licence_expiry": "2028 (with 10-year renewal option)",
+    "majority_shareholder": "KANN Utility Company Limited (60%)",
+    "other_shareholders": {
+      "Bureau of Public Enterprises": "32%",
+      "Ministry of Finance Incorporated": "8%"
+    },
+    "KANN_ownership": "KANN is a joint venture between Xerxes Global Investment Ltd and CEC Africa Investments Ltd (both Zambian)",
+    "managing_director": "Ernest Mupwaya (Zambian)",
+    "chairman": "Amb. Shehu Malami",
+    "notable_event": "CFO Andrew Atterbury died during the year; Ije Ikoku Okeke appointed interim CFO. Director John Albert Jones passed away April 2017."
+  },
+
+  "section_2_financial_summary": {
+    "currency": "NGN",
+    "unit": "thousands (N'000)",
+    "revenue": {
+      "2017": 65715312,
+      "2016": 61147917,
+      "change_pct": 7.5,
+      "note": "Revenue growth of 7.5% — modest, largely from tariff structure not volume growth"
+    },
+    "cost_of_sales": {
+      "2017": 85006707,
+      "2016": 66489313,
+      "note": "Cost of energy purchased exceeded revenue collected — structurally loss-making at gross level"
+    },
+    "gross_loss": {
+      "2017": -19291395,
+      "2016": -5341396,
+      "note": "Gross loss nearly QUADRUPLED year-on-year. Every unit of electricity sold at a loss."
+    },
+    "operating_loss": {
+      "2017": -49473493,
+      "2016": -35309576
+    },
+    "finance_costs_net": {
+      "2017": -26421651,
+      "2016": -11988674,
+      "note": "Finance costs more than doubled — interest on unpaid NBET/ONEM bills alone was N26.3bn"
+    },
+    "loss_before_tax": {
+      "2017": -75895144,
+      "2016": -47298250
+    },
+    "loss_for_year": {
+      "2017": -75977300,
+      "2016": -47447920,
+      "note": "Loss increased 60% year-on-year. Fifth consecutive year of losses since privatisation (2013)."
+    },
+    "total_assets": {
+      "2017": 120147561,
+      "2016": 117207209
+    },
+    "total_liabilities": {
+      "2017": 206242165,
+      "2016": 128226844,
+      "note": "Liabilities grew 60.8% in one year — catastrophic deterioration"
+    },
+    "total_equity": {
+      "2017": -86094604,
+      "2016": -11019635,
+      "note": "Equity swung from -N11bn to -N86bn in one year. Company technically insolvent."
+    },
+    "accumulated_deficit": {
+      "2017": -105580722,
+      "2016": -29602325,
+      "note": "Accumulated deficit grew from N29.6bn to N105.6bn — tripled in one year"
+    },
+    "current_liabilities_exceed_current_assets_by": 173160000,
+    "total_liabilities_exceed_total_assets_by": 86100000
+  },
+
+  "section_3_revenue_analysis": {
+    "revenue_by_customer_type": {
+      "private_individuals_companies": {
+        "2017": 54386407,
+        "2016": 50606402
+      },
+      "government_institutions": {
+        "2017": 11328905,
+        "2016": 10541515
+      }
+    },
+    "revenue_by_payment_mode": {
+      "postpaid": {
+        "2017": 51944849,
+        "2016": 50249967,
+        "share_pct_2017": 79.1
+      },
+      "prepaid": {
+        "2017": 13770463,
+        "2016": 10897950,
+        "share_pct_2017": 20.9,
+        "note": "Prepaid share growing — from 17.8% to 20.9% year-on-year. Vitics signal: prepaid migration accelerating as customers seek control over spending."
+      }
+    },
+    "unbilled_receivables_included_in_revenue": {
+      "2017": 3530000,
+      "2016": 3580000,
+      "note": "Revenue includes N3.53bn of estimated unbilled consumption — significant estimation risk"
+    },
+    "revenue_quality_assessment": "LOW. Revenue growth driven by tariff structure, not more electricity delivered. Massive cost overrun means every N1 of revenue costs N1.29 to generate."
+  },
+
+  "section_4_cost_structure": {
+    "cost_of_energy_purchased": {
+      "2017": 78674859,
+      "2016": 61178576,
+      "note": "Energy purchase cost exceeded total revenue — company buys electricity for more than it collects"
+    },
+    "staff_costs": {
+      "2017": 11749068,
+      "2016": 9695325,
+      "employees_2017": 2775,
+      "employees_2016": 2716
+    },
+    "depreciation": {
+      "2017": 4557562,
+      "2016": 3975125
+    },
+    "impairment_on_trade_receivables": {
+      "2017": 8295111,
+      "2016": 13219831,
+      "note": "Even with reduced impairment charge, cumulative allowance reached N47.75bn"
+    },
+    "operations_and_management_fee_to_KANN": {
+      "2017": 1457435,
+      "2016": 1038625,
+      "note": "O&M fee = 2% of net cash collected, paid to parent KANN. Related party — governance concern."
+    },
+    "interest_on_NBET_ONEM_bills": {
+      "2017": 26295420,
+      "2016": 10900396,
+      "note": "CRITICAL: Interest charges on unpaid power purchase bills jumped 141% in one year. NIBOR+10% penalty rate creates a debt spiral — the less AEDC pays, the faster the debt grows."
+    }
+  },
+
+  "section_5_balance_sheet_deep_dive": {
+    "property_plant_equipment_net": {
+      "2017": 91952036,
+      "2016": 84088819,
+      "note": "PPE increased — revaluation surplus of N913m recorded at year end (land/buildings revalued)"
+    },
+    "trade_receivables_gross": {
+      "2017": 21170829,
+      "2016": 28417498,
+      "note": "Gross receivables FELL despite revenue growth — suggests write-offs or impairments consuming the balance"
+    },
+    "impairment_allowance_on_receivables": {
+      "2017": 47751868,
+      "2016": 39456757,
+      "note": "Cumulative impairment now EXCEEDS gross trade receivables balance — the company has written off more than it currently holds"
+    },
+    "receivables_aging_2017": {
+      "unbilled": 3526170,
+      "past_due_0_30_days": 4234719,
+      "past_due_31_90_days": 4587611,
+      "past_due_91_120_days": 5116951,
+      "past_due_120_days_and_above": 3705378,
+      "total": 21170829,
+      "note": "Pattern shifted dramatically from 2015. In 2015, 81% was 120+ days overdue. In 2017 the 120+ days bucket is only 17.5% but 0-30 day bucket has grown — suggests more recent customers defaulting faster."
+    },
+    "cash_and_equivalents": {
+      "2017": 4342225,
+      "2016": 2474110,
+      "note": "Cash improved — CBN NEMSF drawdown of N20.23bn post year-end helped"
+    },
+    "NBET_ONEM_trade_payables": {
+      "2017": 178981004,
+      "2016": 109216709,
+      "note": "CRITICAL: Unpaid power purchase bills grew by N69.8bn (64%) in one year. This represents 91% of total liabilities. Company survives by not paying its energy supplier.",
+      "pct_of_total_liabilities": 86.8
+    },
+    "CAPMI_loan_balance": {
+      "2017": 1335151,
+      "2016": 1791969,
+      "note": "Customers advance-funded their own meters (CAPMI). Balance declining as meters are installed and refunded via energy units."
+    }
+  },
+
+  "section_6_going_concern": {
+    "going_concern_flagged": true,
+    "auditor_going_concern_paragraph": true,
+    "directors_going_concern_assessment": "Directors believe company will remain a going concern based on PSRP commitments from FGN",
+    "key_risks_cited": [
+      "Loss of N75.98bn after tax in 2017",
+      "Current liabilities exceed current assets by N173.16bn",
+      "Total liabilities exceed total assets by N86.10bn",
+      "Non-cost-reflective tariffs are the structural root cause",
+      "PSRP implementation not within company's control",
+      "91% of liabilities owed to NBET/ONEM — debt spiral via NIBOR+10% interest"
+    ],
+    "mitigating_factors_cited": [
+      "FGN issued N701bn Payment Assurance Guarantee (PAG) in April 2017",
+      "FGN committed to fund sector deficits 2018-2021",
+      "FGN to pay MDA debts and verify 2013-2014 MDA billings",
+      "PSRP tariff trajectory to cost-reflective tariffs over 5 years",
+      "CBN NEMSF first tranche of N20.23bn received post year-end"
+    ],
+    "vitics_assessment": "Going concern language is now standard boilerplate for all DISCOs. The real signal is the PACE of deterioration — equity went from -N11bn to -N86bn in 12 months. The PSRP was announced but its implementation was already behind schedule in 2017."
+  },
+
+  "section_7_tariff_and_regulatory": {
+    "tariff_framework": "Multi-Year Tariff Order (MYTO)",
+    "market_stage": "Transitional Electricity Market (TEM) — effective 1 February 2015",
+    "tariff_shortfall_accumulated_2015_to_2017": 61370000,
+    "tariff_shortfall_2015_2016_acknowledged_by_NERC": 44860000,
+    "settlement_mechanism": "Net off against NBET/ONEM payables — timing under negotiation",
+    "interest_writeoff_pending": {
+      "amount": 40250000,
+      "status": "Directors believe interest will be written off in 2018",
+      "note": "This represents accumulated interest and penalties on market debts — not yet agreed with NERC"
+    },
+    "cost_reflective_tariff_status": "NOT ACHIEVED as of 2017 — identified as the major issue in the sector per PSRP",
+    "PSRP_approved": "April 2017 by FGN, World Bank backed",
+    "PSRP_key_commitments_relevant_to_tariff": [
+      "Elimination of accumulated deficits for 2015, 2016, 2017",
+      "Fund future sector deficits 2018-2021",
+      "Implement end-user tariff trajectory to cost-reflective over 5 years"
+    ]
+  },
+
+  "section_8_metering_and_collection": {
+    "metering_gap": "Significant — majority of postpaid customers unmetered as at 2017",
+    "estimated_billing_still_dominant": true,
+    "CAPMI_scheme": {
+      "description": "Credited Advance Payment for Metering Implementation — customers pre-fund their own meters",
+      "installation_fees_earned_2017": 208950,
+      "installation_fees_earned_2016": 242735,
+      "CAPMI_refunds_to_customers_2017": 584068,
+      "note": "CAPMI refunds exceeded new installation income — scheme maturing, more refunds than new take-up"
+    },
+    "vendor_financed_mass_metering": {
+      "contracts": 2,
+      "contract_1_tenor": "24 months at 12% for first 2 years",
+      "contract_2_tenor": "36 months at 12% for first 2 years, 15% year 3",
+      "balance_2017": 1901538,
+      "note": "Company borrowed from vendors to install meters — reflects inability to self-fund infrastructure"
+    },
+    "super_vendor_digital_payment": {
+      "partners": ["Kallak Power Limited", "UBA", "Pagatech"],
+      "commission_rate": "0.5% to 4.25% of sales",
+      "note": "Digital/online payment infrastructure expanding — reduces cash handling, improves collection velocity"
+    },
+    "collection_strategy": [
+      "Aggressive disconnections of non-payers",
+      "Converting postpaid customers to prepaid",
+      "Mass metering funded by vendors",
+      "KPIs for employees tied to collections"
+    ]
+  },
+
+  "section_9_nigeria_specific_fields": {
+
+    "force_majeure_history": {
+      "events": [
+        {
+          "entity": "KANN (parent company)",
+          "year": 2015,
+          "month": "April",
+          "event": "KANN declared force majeure in April 2015",
+          "withdrawal": "February 2016",
+          "note": "KANN's force majeure in 2015 was referenced in aedc_2015.json. By 2017 this had been withdrawn but its consequences — KANN's financial exposure and Zambian management entrenchment — continued."
+        }
+      ],
+      "status_2017": "No new force majeure declarations in 2017"
+    },
+
+    "cbn_intervention_fund": {
+      "facility_name": "CBN Nigerian Electricity Market Stabilisation Fund (NEMSF)",
+      "total_facility": 213000000,
+      "first_tranche_received_post_year_end": 20230000,
+      "purpose": "Settle outstanding payment obligations to market participants during interim rules period, and legacy debts of PHCN generation companies owed to gas suppliers (transferred to NELMCO)",
+      "repayment_tenor": "81 months",
+      "status": "AEDC had not drawn down during 2017 — received first tranche of N20.23bn post year-end (early 2018)",
+      "collateral_requirement": "Letter of credit — company borrowed N6.5bn from TCN and N1.21bn from NELMCO to collateralise letter of credit in favour of NBET; letter of credit obtained at N10.5bn from financial institution",
+      "vitics_note": "The CBN fund was first expected in 2015 (aedc_2015.json). Two years later it still had not been received during the reporting year. When it finally arrived (N20.23bn of N27bn expected), it was used to pay down NBET/ONEM debt, not to improve service."
+    },
+
+    "nelmco_transition_liabilities": {
+      "deed_of_assignment": "Signed at privatisation completion (31 October 2013)",
+      "pre_completion_receivables_transferred_to_NELMCO": "All trade receivables as at 31 October 2013",
+      "pre_completion_liabilities_transferred_to_NELMCO": "All contingent liabilities as at 31 October 2013",
+      "outstanding_dispute": "AEDC and NELMCO yet to agree on individual trade debtors and liabilities as at 2017 — unresolved since 2013",
+      "NELMCO_liability_on_books": 2172939,
+      "NELMCO_payment_demand": "NELMCO requested immediate payment of the N2.17bn provision — classified as current liability",
+      "note": "NELMCO transition liabilities remain unresolved 4 years post-privatisation. This legal/financial ambiguity is a permanent overhang."
+    },
+
+    "customer_contributed_assets": {
+      "2017_additions": 0,
+      "2016_additions": 23384,
+      "cumulative_fair_value_at_2015_revaluation": 23380000,
+      "note": "No new customer-contributed assets in 2017. The practice of customers self-funding transformers and network infrastructure has effectively paused — possibly because customers are now investing in solar instead.",
+      "vitics_signal": "The ABSENCE of customer-contributed assets in 2017 is a transition signal. In 2015 and 2016 consumers were still willing to fund grid infrastructure hoping service would improve. By 2017 that hope was fading — this is the year YouTube solar content in Nigeria became searchable at scale."
+    }
+  },
+
+  "section_10_grid_defection_signals": {
+    "grid_defection_score": 5,
+    "score_rationale": "Score upgraded from 3/10 (2015) to 5/10 (2017). Conditions for defection have materially worsened.",
+    "key_signals": {
+      "prepaid_migration": {
+        "prepaid_revenue_pct_2016": 17.8,
+        "prepaid_revenue_pct_2017": 20.9,
+        "direction": "INCREASING",
+        "interpretation": "Prepaid adoption is a behavioural precursor to solar — consumers want control over their energy spending. Same psychology drives solar adoption."
+      },
+      "customer_contributed_assets_stopped": {
+        "2016": 23384000,
+        "2017": 0,
+        "interpretation": "Consumers have stopped funding grid infrastructure. The implied signal: they no longer believe grid investment will pay off."
+      },
+      "GENCOS_eligible_customer_regulation": {
+        "description": "NERC enacted regulation allowing eligible customers to purchase directly from generation companies, bypassing DISCOs",
+        "AEDC_response": "Directors assessed probability of losing customers as low in short-medium term due to logistics required",
+        "vitics_note": "AEDC is worried about this regulation. It is an early form of energy choice — the regulatory precursor to distributed energy."
+      },
+      "revenue_not_growing_with_tariff": {
+        "cost_of_energy_growth_pct": 28.6,
+        "revenue_growth_pct": 7.5,
+        "interpretation": "Energy purchased growing faster than energy billed — ATC&C losses worsening OR customers reducing consumption (demand destruction / self-generation)"
+      },
+      "going_concern_fifth_consecutive_year": {
+        "interpretation": "The grid is not improving. Five consecutive years of losses with worsening equity means no capital available for network rehabilitation. Poor supply quality drives off-grid adoption."
+      }
+    },
+    "what_consumers_were_experiencing_in_2017": {
+      "estimated_average_supply_hours": "Not disclosed in report — typical FCT supply hours estimated at 8-12 hours/day based on industry reports",
+      "tariff_pressure": "Tariff shortfall of N61.37bn built up 2015-2017 — NERC and FGN knew cost-reflective tariffs had not been achieved",
+      "billing_complaints": "Estimated billing still dominant — consumers being billed for electricity not consumed, or amounts not matching actual usage",
+      "CAPMI_self_funding_continues": "Consumers still funding their own meters via CAPMI — paying twice (paying for meter PLUS paying for electricity)",
+      "vitics_consumer_voice": "2017 is the year Nigerian consumers began comparing solar inverter costs to their electricity bills seriously. The CAPMI scheme — where you pre-fund your own meter — is psychologically very close to buying a solar panel. Same mental model, different technology."
+    }
+  },
+
+  "section_11_psrp_and_government_intervention": {
+    "PSRP_overview": {
+      "approved": "April 2017 by FGN, World Bank backed",
+      "key_financial_interventions": [
+        "N701bn Payment Assurance Guarantee (PAG) issued to ensure NBET pays GENCOS",
+        "FGN committed to fund sector deficits 2018-2021",
+        "FGN paying MDA debts — MDAs owed N9.1bn recovered in 2017 via NBET net-off",
+        "MDA cash collections averaging 78% of monthly billings in 2017",
+        "Tariff trajectory to cost-reflective tariffs over 5 years"
+      ],
+      "implementation_status_2017": "Commenced but incomplete. Tariff cost-reflective not yet implemented. MDA payments improving. CBN fund not yet received during year."
+    },
+    "off_grid_reference_in_PSRP": {
+      "stated": true,
+      "quote_summary": "PSRP included 'Implementation of off-grid renewable solutions to increase energy access' as one of its key initiatives",
+      "vitics_significance": "This is the FGN formally acknowledging off-grid solar as part of the solution — not just a stopgap. This language in an official recovery plan signals policy legitimacy for solar, even while the grid DISCOs are collapsing financially."
+    }
+  },
+
+  "section_12_five_year_trajectory": {
+    "source": "Five Year Financial Summary (page 60)",
+    "revenue_trend": {
+      "2013": 36025798,
+      "2014": 48097381,
+      "2015": 62534676,
+      "2016": 61147917,
+      "2017": 65715312
+    },
+    "loss_for_year_trend": {
+      "2013": -13789334,
+      "2014": -25971035,
+      "2015": -41972588,
+      "2016": -47447920,
+      "2017": -75977300,
+      "note": "Losses have compounded every single year since privatisation. Revenue grew 82% from 2013-2017. Losses grew 451% over the same period. The business model is structurally broken."
+    },
+    "net_assets_trend": {
+      "2013": 85794218,
+      "2014": 63123448,
+      "2015": 36428285,
+      "2016": -11019635,
+      "2017": -86094604,
+      "note": "Net assets destroyed completely by 2016, now deeply negative. The privatisation has destroyed all shareholder value within 4 years."
+    },
+    "vitics_five_year_narrative": "Between 2013 and 2017, AEDC went from net assets of N85.8bn to negative N86.1bn — a destruction of N172bn of balance sheet value in 4 years. This is the financial story running parallel to Nigeria's solar adoption story. As AEDC's ability to deliver collapsed, consumers found alternatives."
+  },
+
+  "section_13_consumer_impact": {
+    "consumer_impact_score": 8,
+    "score_rationale": "Score upgraded from 7/10 (2015) to 8/10 (2017). The financial deterioration has directly worsened consumer experience.",
+    "direct_consumer_harms": [
+      "Estimated billing persists — consumers billed without meters, amounts disputed",
+      "CAPMI scheme — consumers paying to self-fund their own meters",
+      "Cost-reflective tariffs not implemented but tariff shortfall accumulating — future tariff shock guaranteed",
+      "Network maintenance starved of capital — infrastructure deteriorating",
+      "Aggressive disconnection policy — consumers disconnected when they cannot pay disputed bills",
+      "Five years of losses means no investment in supply quality improvement"
+    ],
+    "consumer_search_vocabulary": {
+      "direct_terms": [
+        "AEDC light",
+        "Abuja electricity",
+        "AEDC bill complaint",
+        "AEDC estimated billing",
+        "AEDC meter",
+        "CAPMI meter Abuja",
+        "Abuja NEPA",
+        "FCT electricity wahala",
+        "AEDC disconnection",
+        "AEDC darkness"
+      ],
+      "indirect_transition_terms": [
+        "solar inverter Abuja",
+        "solar panel FCT",
+        "how to leave AEDC",
+        "solar vs generator Abuja",
+        "best inverter Abuja",
+        "solar installation Abuja",
+        "off grid Abuja",
+        "backup power Abuja",
+        "solar company Abuja",
+        "I no go pay AEDC bill"
+      ],
+      "anger_expression_terms": [
+        "AEDC useless",
+        "AEDC thieves",
+        "AEDC estimated billing scam",
+        "Abuja darkness",
+        "FCT electricity terrible"
+      ]
+    }
+  },
+
+  "section_14_vitics_analysis_instructions": {
+    "document_role_in_vitics": "AEDC 2017 is the financial evidence for why Abuja consumers accelerated solar adoption in 2017-2019. It confirms the financial collapse was not new news in 2020 — it had been building since 2013.",
+    "key_signals_for_ai_analysis": [
+      "Use the five-year trajectory to show structural not cyclical failure",
+      "The PSRP off-grid language is a policy legitimacy signal for solar",
+      "Prepaid migration (17.8% → 20.9%) is a solar behavioural precursor",
+      "Customer contributed assets going to zero is a grid trust collapse signal",
+      "NBET/ONEM debt of N179bn (86% of liabilities) explains why the grid cannot be maintained — no capital flows back into infrastructure",
+      "The GENCOS eligible customer regulation is an early energy choice signal",
+      "CBN NEMSF fund — expected in 2015, arrived partially in early 2018 — shows government interventions are always late and partial"
+    ],
+    "cross_reference_to_aedc_2015": {
+      "continuity_signals": [
+        "Going concern: flagged in 2015, still flagged in 2017",
+        "CBN fund: expected 2015, still not received during 2017",
+        "CAPMI: active in 2015, still active in 2017 — metering gap not solved",
+        "Estimated billing: a complaint in 2015, still a KPMG key audit matter in 2017",
+        "Losses: N41.97bn in 2015 → N75.98bn in 2017 — accelerating not stabilising",
+        "KANN force majeure (2015) → withdrawn (2016) → Zambian management still in seat (2017)"
+      ],
+      "what_changed_2015_to_2017": [
+        "Equity went from positive N36.4bn (2015) to negative N86.1bn (2017)",
+        "Accumulated deficit went from N17.8bn surplus (2015) to N105.6bn deficit (2017)",
+        "PSRP launched (2017) — new government intervention framework",
+        "Off-grid officially acknowledged in government recovery plan (2017)",
+        "Prepaid customer share growing",
+        "Customer contributed assets stopped"
+      ]
+    },
+    "vitics_core_lens_application": "The 2017 report answers the question: what were consumers experiencing while solar YouTube content was becoming searchable in Nigeria? Answer — fifth year of losses, going concern risk, estimated billing still unresolved, own meters self-funded, grid deteriorating. The financial statements are the explanation for the search behaviour Vitics tracks.",
+    "transition_year_assessment": "2017 is a BRIDGE year — the financial collapse is well advanced but the solar adoption surge has not yet peaked. The PSRP gives the appearance of government action while the underlying numbers worsen. Consumers in 2017 are at the tipping point between hoping the grid improves and deciding to leave it."
+  },
+
+  "section_15_document_quality": {
+    "method": "Full visual read of all 62 pages of scanned PDF",
+    "pages_read": 62,
+    "confidence_level": "HIGH",
+    "legibility": "Good throughout — no pages unreadable",
+    "data_completeness": "Full financial statements, notes, five-year summary, value added statement all present",
+    "five_year_summary_available": true,
+    "comparable_prior_year": true,
+    "auditor_opinion_type": "Unmodified with Material Uncertainty — Going Concern emphasis paragraph"
+  },
+
+  "section_16_transition_marker": {
+    "transition_marker": true,
+    "transition_score": 7,
+    "transition_note": "AEDC 2017 confirms the financial collapse that was driving consumer solar adoption. The PSRP off-grid acknowledgement is a policy legitimacy signal. Prepaid migration and customer contributed assets going to zero are behavioural defection signals. This is the last year before Solar Power Naija (2020) and the watershed of 2023 — it documents the conditions that made those events inevitable."
+  }
+}

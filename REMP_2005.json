@@ -1,0 +1,81 @@
+{
+  "doc_id": "DOC-2005-REMP",
+  "title": "Renewable Energy Master Plan (REMP) — Final Draft Report",
+  "year": 2005,
+  "issuer": "Energy Commission of Nigeria (ECN) / United Nations Development Programme (UNDP)",
+  "consumer_impact_score": 2,
+  "type": "Sector Master Plan",
+  "key_promises": [
+    "Establish National Renewable Energy Agency (NREA) as implementation champion",
+    "Establish Renewable Energy Fund for incentives, micro-credit and R&D",
+    "Deploy 40,000 solar home systems by 2007; 400,000 by 2015; 4,000,000 by 2025",
+    "Deploy 300,000 improved woodstoves by 2007; 500,000 by 2015; 1,000,000 by 2025",
+    "Install 56 MW new renewable electricity by 2007; 746 MW by 2015; 2,945 MW by 2025",
+    "Implement zero-import duty moratorium on renewable energy technologies",
+    "Create Power Purchase Agreement framework for small RE producers to sell to grid",
+    "Deploy 600 MW small hydropower by 2015; 2,000 MW by 2025",
+    "Achieve 5% renewable share of national electricity by 2015; 10% by 2025",
+    "Total investment: ₦4bn short-term, ₦178bn medium-term, ₦610bn long-term"
+  ],
+  "consumer_reality": {
+    "nrea_creation": "Never established; no equivalent body until REA became operational ~2015",
+    "renewable_energy_fund": "Never established under REMP framework",
+    "solar_home_systems": "No national programme; off-grid solar remained donor/NGO-driven until ~2016",
+    "improved_woodstoves": "No scaled national programme; rural three-stone fires still dominant in 2020s",
+    "small_hydropower": "Negligible installation; under 40 MW operational by 2015 against 600 MW target",
+    "import_duty_moratorium": "Never implemented; RE equipment continued to attract import duties",
+    "grid_tie_ppa_framework": "No PPA framework for small RE producers until well into 2010s",
+    "rural_electrification": "REA non-operational until ~2015; rural RE access minimal in plan period",
+    "fuelwood_crisis": "Biomass still 37% of energy demand; 95% of rural energy use; deforestation worsening"
+  },
+  "key_quantitative_targets": {
+    "renewable_electricity_2007_MW": 56,
+    "renewable_electricity_2015_MW": 746,
+    "renewable_electricity_2025_MW": 2945,
+    "renewable_share_of_grid_2007_pct": 0.8,
+    "renewable_share_of_grid_2015_pct": 5.0,
+    "renewable_share_of_grid_2025_pct": 10.5,
+    "solar_home_systems_2007": 40000,
+    "solar_home_systems_2015": 400000,
+    "solar_home_systems_2025": 4000000,
+    "improved_woodstoves_2007": 300000,
+    "improved_woodstoves_2015": 500000,
+    "improved_woodstoves_2025": 1000000,
+    "small_hydro_2007_MW": 56,
+    "small_hydro_2015_MW": 600,
+    "small_hydro_2025_MW": 2000,
+    "solar_cookers_2007": 1500,
+    "solar_cookers_2015": 50000,
+    "investment_short_term_naira_bn": 4,
+    "investment_medium_term_naira_bn": 178,
+    "investment_long_term_naira_bn": 610,
+    "electricity_access_at_plan_launch_pct": 40,
+    "population_without_electricity_at_launch_mn": 80
+  },
+  "notable_finding": "The REMP 2005 is the most self-aware document in the series and the most completely ignored. It correctly diagnosed every structural barrier to renewable energy deployment — no institutional champion, no financing, no grid-tie mechanism, no quality standards, no import duty relief — and proposed solutions to all of them. The proposed National Renewable Energy Agency (NREA), the critical implementation body, was never created. Woodstove deployment — the cheapest, most immediately impactful intervention for rural consumers — was planned at 300,000 units by 2007 with existing technology from SERC Sokoto; zero scaled programme followed. The document's 2007 electricity targets were deliberately minimal (0.8% of grid) — the authors were already hedging against a system they knew could not deliver.",
+  "targets_met": [
+    "None of the quantitative 2007 or 2015 targets were met within their timeframes",
+    "Document successfully mapped Nigeria's renewable resource base",
+    "Provided framework later partially adopted by REA post-2015"
+  ],
+  "targets_missed": [
+    "NREA never established",
+    "Renewable Energy Fund never established",
+    "Zero-import duty moratorium never implemented",
+    "56 MW renewable electricity by 2007 — missed",
+    "40,000 solar home systems by 2007 — missed",
+    "300,000 improved woodstoves by 2007 — missed",
+    "600 MW small hydro by 2015 — missed",
+    "746 MW total renewables by 2015 — missed",
+    "5% renewable electricity share by 2015 — missed",
+    "PPA grid-tie framework for small producers — not created in plan period"
+  ],
+  "links_to_next": [
+    "REPG 2006 must address the institutional gap — no NREA, no implementation body",
+    "The fuelwood/biomass crisis (37% of energy demand, 95% rural) is unaddressed and deepening",
+    "Off-grid gap: 100 million Nigerians without electricity at time of REMP launch — figure worsening with population growth",
+    "2008 gas flaring deadline (NEP 2003) still approaching; gas-to-power remains the blocking constraint on grid expansion that RE off-grid was supposed to partially compensate for",
+    "10,000 MW by 2007 grid target (NEEDS 2004) now structurally impossible — REMP's 0.8% RE share by 2007 was premised on 7,000 MW total grid, itself wildly optimistic",
+    "Import duty on RE equipment is a consumer cost passed directly to solar PV buyers — pricing out rural households"
+  ]
+}

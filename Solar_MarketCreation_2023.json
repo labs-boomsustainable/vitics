@@ -1,0 +1,182 @@
+{
+  "document_id": "Solar_MarketCreation_Nigeria_2023",
+  "source": "Clayton Christensen Institute / All On / USADF",
+  "authors": ["Efosa Ojomo", "Sandy Sanchez"],
+  "date": "September 2023",
+  "document_title": "Accelerating the Adoption of Solar Energy in Nigeria: A Market-Creation Strategy",
+  "document_type": "Research report with primary survey and stakeholder interview data",
+  "vitics_knowledge_base_version": "1.0",
+  "entries": [
+    {
+      "id": "KB010",
+      "topic": "Electricity access gap — worsening",
+      "policy_claim": "Universal electricity access as ongoing government and development partner goal",
+      "consumer_reality": "92 million Nigerians without electricity as of 2023 — up from 80 million in 2022. The access gap is widening in absolute terms despite continued investment.",
+      "gap_severity": "Critical",
+      "key_stat": "92 million people without electricity (2023)",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Rural Electrification Agency (REA)", "Solar Power Naija"],
+      "suggested_ai_prompts": [
+        "Why is Nigeria's electricity access gap getting worse, not better?",
+        "How many Nigerians don't have electricity in 2023?"
+      ]
+    },
+    {
+      "id": "KB011",
+      "topic": "Solar energy target — missed by 80%",
+      "policy_claim": "Solar energy projected to account for 15% of Nigeria's energy mix by 2020",
+      "consumer_reality": "Solar accounts for less than 3% of Nigeria's energy mix as of 2023 — an 80% shortfall on the stated target",
+      "gap_severity": "Critical",
+      "key_stat": "15% target by 2020; actual less than 3% in 2023",
+      "programmes_referenced": ["Renewable Energy Master Plan (REMP)", "Nigeria Energy Transition Plan"],
+      "suggested_ai_prompts": [
+        "What percentage of Nigeria's energy comes from solar?",
+        "Why has solar energy failed to grow in Nigeria despite government targets?"
+      ]
+    },
+    {
+      "id": "KB012",
+      "topic": "Nigeria per capita solar capacity — bottom of peer group",
+      "policy_claim": "Nigeria as Africa's largest economy should lead clean energy adoption",
+      "consumer_reality": "Nigeria's per capita solar capacity is approximately 1W. India: 28.4W. Egypt: 16.4W. Ghana: 3W. Nigeria has the lowest solar penetration of any comparable peer nation.",
+      "gap_severity": "High",
+      "key_stat": "1W per capita solar capacity vs India 28.4W, Egypt 16.4W, Ghana 3W",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Rural Electrification Agency (REA)"],
+      "suggested_ai_prompts": [
+        "How does Nigeria's solar energy compare to other African countries?",
+        "Why does Ghana have more solar per person than Nigeria?"
+      ]
+    },
+    {
+      "id": "KB013",
+      "topic": "Generator dependency — the real consumer reality",
+      "policy_claim": "Government programmes to transition consumers from fossil fuel generators to clean energy alternatives",
+      "consumer_reality": "22 million small gasoline generators in Nigerian households (2019). Nigeria accounts for nearly half of all generators imported in sub-Saharan Africa annually. 84% of urban households use fossil fuel generators as backup power. 86% of businesses own or share a generator. The generator — not solar, not the grid — is Nigeria's actual consumer energy system.",
+      "gap_severity": "Critical",
+      "key_stat": "22 million generators in households; 84% of urban households depend on backup fossil fuel power",
+      "programmes_referenced": ["No direct programme — structural market failure"],
+      "suggested_ai_prompts": [
+        "Why do Nigerians use generators instead of solar?",
+        "How much does the average Nigerian spend on generator fuel?",
+        "Is solar cheaper than a generator in Nigeria?"
+      ]
+    },
+    {
+      "id": "KB014",
+      "topic": "Fuel subsidy removal — unresolved consumer shock (May 2023)",
+      "policy_claim": "Government fuel subsidy removal framed as economic reform to redirect savings to public investment",
+      "consumer_reality": "Petrol subsidy removed on 29 May 2023 during President Tinubu's inauguration speech. Millions of households faced an immediate, sharp increase in generator fuel costs with no solar or grid alternative in place. Consumer energy affordability collapsed overnight. Impact was still unquantified at time of report.",
+      "gap_severity": "Critical",
+      "key_stat": "Fuel subsidy removed May 29, 2023; impact on generator-dependent households unresolved",
+      "programmes_referenced": ["Federal Government of Nigeria fuel subsidy policy"],
+      "suggested_ai_prompts": [
+        "How has petrol subsidy removal affected electricity costs for Nigerians?",
+        "What happened to generator costs after the 2023 fuel subsidy removal?",
+        "Did the fuel subsidy removal push people toward solar?"
+      ]
+    },
+    {
+      "id": "KB015",
+      "topic": "Consumer perception of solar — actively negative",
+      "policy_claim": "Increased solar investment and deployment to build consumer confidence in solar products",
+      "consumer_reality": "Despite billions invested, the broad consumer perception is that solar products are expensive and perform poorly. Half of surveyed consumers could not estimate what a solar system should cost. Survey respondents were almost equally divided on whether solar would be cheaper or more expensive than generators — indicating fundamental market confusion.",
+      "gap_severity": "High",
+      "key_stat": "No clear consumer expectation of solar costs; negative perception persists despite sector growth",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Solar Power Naija", "REA Market Scale-up Challenge Fund"],
+      "suggested_ai_prompts": [
+        "Why do Nigerians not trust solar energy products?",
+        "Are solar panels reliable in Nigeria?",
+        "What do Nigerians think about solar energy?"
+      ]
+    },
+    {
+      "id": "KB016",
+      "topic": "2016 Power Purchase Agreement — stalled",
+      "policy_claim": "$2.5 billion PPA with 14 independent power producers to add significant grid capacity (2016)",
+      "consumer_reality": "The PPA remained entirely stalled as of 2023 — seven years later — due to unresolved tariff structures and transmission infrastructure limits. Consumers saw zero capacity addition from this agreement.",
+      "gap_severity": "High",
+      "key_stat": "$2.5 billion PPA signed 2016; still stalled 2023",
+      "programmes_referenced": ["2016 Power Purchase Agreement (PPA)", "14 Independent Power Producers"],
+      "suggested_ai_prompts": [
+        "What happened to the 2016 Power Purchase Agreement in Nigeria?",
+        "Why have independent power producers failed to add electricity to the Nigerian grid?"
+      ]
+    },
+    {
+      "id": "KB017",
+      "topic": "Minigrid profitability — near-zero",
+      "policy_claim": "REA target of 10,000 minigrids deployed by 2023; minigrids positioned as sustainable rural electrification solution",
+      "consumer_reality": "As of 2023, not a single minigrid company in Nigeria had achieved profitability, with the sole exception of Husk Power Systems. The entire sector depends on subsidies. When subsidies end, projects fail and communities lose power.",
+      "gap_severity": "High",
+      "key_stat": "Zero profitable minigrid companies in Nigeria except Husk Power Systems (2023)",
+      "programmes_referenced": ["REA Energising Economies Initiative", "Nigeria Electrification Project (NEP)", "Africa Minigrids Program (AMP)"],
+      "suggested_ai_prompts": [
+        "Are minigrids a sustainable solution for rural electricity in Nigeria?",
+        "Why do minigrid projects keep failing in Nigeria?",
+        "What is a minigrid and does it work in Nigeria?"
+      ]
+    },
+    {
+      "id": "KB018",
+      "topic": "Minigrid capacity utilisation — 30%",
+      "policy_claim": "Minigrids to provide reliable, productive-use electricity to rural communities",
+      "consumer_reality": "The Capacity Utilisation Factor (CUF) of minigrids across Africa is only 30%, meaning 70% of potential minigrid electricity is unused. Communities pushed onto minigrids do not have enough economic activity to consume or pay for the power — a structural mismatch between supply and productive demand.",
+      "gap_severity": "High",
+      "key_stat": "30% CUF — 70% of minigrid-generated electricity goes unused across Africa",
+      "programmes_referenced": ["REA minigrid programmes", "NEP"],
+      "suggested_ai_prompts": [
+        "Why is minigrid electricity not being used in rural Nigeria?",
+        "What does productive use of energy mean and why does it matter?"
+      ]
+    },
+    {
+      "id": "KB019",
+      "topic": "Off-grid connections — still tokenistic at scale",
+      "policy_claim": "$550M deployed to connect rural Nigerians at scale via NEP; REA targets 10M households by 2030",
+      "consumer_reality": "Total connections as of 2023: 31,825 via minigrids and 1,439,623 via solar home systems. Against 92 million without electricity, total coverage is under 1.7%. Solar home systems are largely lighting-only products — not productive energy solutions.",
+      "gap_severity": "Critical",
+      "key_stat": "~1.47M total off-grid connections vs 92M without electricity = under 1.7% coverage",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Rural Electrification Agency (REA)", "Solar Power Naija"],
+      "suggested_ai_prompts": [
+        "How many Nigerians have been connected through the Nigeria Electrification Project?",
+        "What is a solar home system and is it enough for my needs?"
+      ]
+    },
+    {
+      "id": "KB020",
+      "topic": "Push strategy failure — solar deployed to communities that cannot absorb it",
+      "policy_claim": "Government and development partners deploying solar and minigrid solutions to underserved communities",
+      "consumer_reality": "Programmes systematically deploy energy infrastructure to communities without first ensuring those communities have sufficient economic activity to pay for it. Result: unsustainable projects, abandoned infrastructure, and deepening consumer distrust of solar. Stakeholders confirmed that if communities have no way to profit from solar systems, they have no way to pay for them.",
+      "gap_severity": "High",
+      "key_stat": "Field stakeholders unanimously agreed productive demand must drive solar deployment, not access targets",
+      "programmes_referenced": ["NEP", "REA Energising Economies Initiative", "Solar Power Naija"],
+      "suggested_ai_prompts": [
+        "Why do solar projects in Nigerian villages keep failing?",
+        "What is the difference between energy access and productive use of energy?"
+      ]
+    },
+    {
+      "id": "KB021",
+      "topic": "Distribution infrastructure gap — the missing middle",
+      "policy_claim": "Billions invested in solar discovery (R&D, pilots) and democratisation (universal access programmes)",
+      "consumer_reality": "Almost no investment in distribution — the critical middle phase that makes solar accessible, affordable, maintainable, and trustworthy. Without mass marketing, technician training, after-sale support, financing, and standardisation, solar cannot reach the average Nigerian sustainably. Most solar sector investment is either upstream (discovery) or downstream (subsidised connections) — the middle is absent.",
+      "gap_severity": "High",
+      "key_stat": "Solar off-grid CAGR 12% since 2018; PAYGo 30% CAGR — but still below 3% of energy mix",
+      "programmes_referenced": ["REA", "CBN N500bn Solar Connection Intervention Facility", "NEP"],
+      "suggested_ai_prompts": [
+        "Why is solar energy growing slowly in Nigeria despite investment?",
+        "Who can I call to repair my solar system in Nigeria?",
+        "Why are there no good solar technicians in my area?"
+      ]
+    }
+  ],
+  "meta": {
+    "total_entries": 12,
+    "critical_gaps": 5,
+    "high_gaps": 7,
+    "medium_gaps": 0,
+    "key_stat": "92 million Nigerians without electricity in 2023 — worse than 2022",
+    "most_damning_finding": "Solar accounts for less than 3% of Nigeria's energy mix in 2023 vs a 15% target set for 2020",
+    "structural_insight": "Nigeria's real consumer energy system is 22 million petrol generators — not the grid, not solar",
+    "cross_reference": "Builds on NESI_ProgressReport_2022_KB — access gap worsened year-on-year"
+  }
+}

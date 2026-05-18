@@ -1,0 +1,401 @@
+{
+  "knowledge_base": {
+    "meta": {
+      "platform": "Vitics — Nigeria AI Energy Intelligence Platform",
+      "document": "Nigeria Integrated Resource Plan 2024 (NIRP 2024)",
+      "source": "Federal Ministry of Power, Federal Republic of Nigeria",
+      "processed_by": "Vitics KB Engine v1.0",
+      "date_processed": "2025-05-17",
+      "document_type": "National Energy Policy Plan",
+      "focus": "Policy promises vs consumer reality"
+    },
+    "entries": [
+      {
+        "id": "NIRP-001",
+        "category": "Grid Capacity",
+        "subcategory": "Installed vs Utilised",
+        "title": "Nigeria has 10.8 GW installed but delivers only 5.2 GW",
+        "policy_claim": "Nigeria has sufficient installed generation capacity to meet current peak demand of ~9 GW.",
+        "consumer_reality": "Only 5.2 GW (48%) of installed capacity is actually utilised. The remaining 52% is stranded due to transmission network limitations, fuel supply interruptions, and vandalism.",
+        "gap_type": "Infrastructure bottleneck",
+        "gap_severity": "critical",
+        "key_figures": {
+          "installed_capacity_gw": 10.8,
+          "utilised_capacity_gw": 5.2,
+          "utilisation_rate_percent": 48
+        },
+        "source_section": "Section 1: Introduction",
+        "year": 2024,
+        "tags": ["generation", "transmission", "stranded assets", "grid reliability"]
+      },
+      {
+        "id": "NIRP-002",
+        "category": "Access",
+        "subcategory": "Grid Access Rate",
+        "title": "Only 50% of Nigerians have grid access",
+        "policy_claim": "Universal access to electricity is a national policy target (National Integrated Electricity Policy).",
+        "consumer_reality": "As of 2024, only approximately 50% of the Nigerian population has access to electricity via the National grid. The other 50% are entirely off-grid.",
+        "gap_type": "Access deficit",
+        "gap_severity": "critical",
+        "key_figures": {
+          "grid_access_percent": 50,
+          "population_without_grid_access_percent": 50
+        },
+        "source_section": "Section 1: Introduction",
+        "year": 2024,
+        "tags": ["access", "electrification", "rural", "off-grid"]
+      },
+      {
+        "id": "NIRP-003",
+        "category": "Self-Generation",
+        "subcategory": "Scale and Cost",
+        "title": "Self-generation equals grid supply in scale, costs 3x more",
+        "policy_claim": "The National grid should be the primary source of electricity for all connected consumers.",
+        "consumer_reality": "Self-generation (petrol/diesel generators) currently accounts for approximately 49% of total on-grid equivalent demand — roughly equal in scale to grid supply. It costs consumers 3 times more than grid electricity and emits 5 times more carbon.",
+        "gap_type": "Consumer cost burden",
+        "gap_severity": "critical",
+        "key_figures": {
+          "self_gen_share_of_demand_percent": 49,
+          "cost_multiple_vs_grid": 3,
+          "emissions_multiple_vs_grid": 5
+        },
+        "source_section": "Section 2.4",
+        "year": 2024,
+        "tags": ["self-generation", "generators", "consumer cost", "emissions", "diesel", "petrol"]
+      },
+      {
+        "id": "NIRP-004",
+        "category": "Broken Promises",
+        "subcategory": "Universal Access Target",
+        "title": "Universal access target slipped from 2030 to 2035",
+        "policy_claim": "The National Integrated Electricity Policy (NIEP) targets universal access to electricity by 2030.",
+        "consumer_reality": "The NIRP 2024 formally abandons the 2030 universal access target. Working group consensus concluded 2030 is 'unattainable.' The revised target is 2035, which the document itself describes as 'still challenging.'",
+        "gap_type": "Policy target failure",
+        "gap_severity": "high",
+        "key_figures": {
+          "original_target_year": 2030,
+          "revised_target_year": 2035,
+          "slip_years": 5
+        },
+        "source_section": "Section 2.4; Executive Summary",
+        "year": 2024,
+        "tags": ["universal access", "electrification", "target slip", "policy failure", "2030"]
+      },
+      {
+        "id": "NIRP-005",
+        "category": "Broken Promises",
+        "subcategory": "Self-Generation Phase-Out",
+        "title": "Self-generation phase-out target slipped from 2030 to 2035",
+        "policy_claim": "National policy targets phasing out self-generation by 2030 as grid supply becomes reliable.",
+        "consumer_reality": "The 2030 phase-out target is officially declared unattainable in the NIRP. The revised target is 2035. This 5-year delay will cost the economy $29 billion in additional costs and produce 90 million additional tonnes of CO2 emissions.",
+        "gap_type": "Policy target failure",
+        "gap_severity": "high",
+        "key_figures": {
+          "original_target_year": 2030,
+          "revised_target_year": 2035,
+          "slip_years": 5,
+          "additional_cost_usd_billion": 29,
+          "additional_emissions_mtco2": 90
+        },
+        "source_section": "Section 2.4",
+        "year": 2024,
+        "tags": ["self-generation", "phase-out", "target slip", "cost", "emissions", "2030"]
+      },
+      {
+        "id": "NIRP-006",
+        "category": "Broken Promises",
+        "subcategory": "Solar IPP Projects",
+        "title": "14 solar IPPs signed in 2016 — zero built by 2024",
+        "policy_claim": "In 2016, the Federal Government signed Power Purchase Agreements (PPAs) with 14 independent power producers to build 1,125 MW of grid-connected solar capacity.",
+        "consumer_reality": "As of 2024 — eight years after signing — not one of the 14 solar IPP plants has reached financial close or been built. The primary obstacle: the government signed contracts but failed to provide sovereign guarantees to cover developer risk. Discussions on reactivating the PPAs were ongoing at time of publication but no agreements had been announced.",
+        "gap_type": "Implementation failure — financing and guarantees",
+        "gap_severity": "critical",
+        "key_figures": {
+          "ppas_signed_year": 2016,
+          "number_of_ipps": 14,
+          "total_planned_capacity_mw": 1125,
+          "plants_built_by_2024": 0,
+          "years_elapsed": 8
+        },
+        "source_section": "Section 5 (Stress Tests); Section 3.1",
+        "year": 2024,
+        "tags": ["solar", "IPP", "PPAs", "financial close", "sovereign guarantee", "renewable energy", "broken promise"]
+      },
+      {
+        "id": "NIRP-007",
+        "category": "Transmission",
+        "subcategory": "Network Bottleneck",
+        "title": "Transmission is the #1 barrier — yet most underfunded",
+        "policy_claim": "Nigeria plans to develop generation and transmission in parallel to deliver reliable electricity.",
+        "consumer_reality": "The NIRP explicitly states transmission network development is 'the first and most critical investment.' Yet transmission costs only represent 0.3% of total planned costs ($0.3 billion of $63 billion NPV). The NIRP was developed without the TCN Transmission Master Plan (still being prepared). The model admits it underestimates true transmission needs.",
+        "gap_type": "Planning and investment misalignment",
+        "gap_severity": "high",
+        "key_figures": {
+          "transmission_npv_usd_billion": 0.3,
+          "total_plan_npv_usd_billion": 63,
+          "transmission_share_of_total_percent": 0.5,
+          "existing_north_south_lines": 10,
+          "existing_east_west_lines": 20
+        },
+        "source_section": "Section 3; Section 4.3",
+        "year": 2024,
+        "tags": ["transmission", "TCN", "network", "bottleneck", "investment gap"]
+      },
+      {
+        "id": "NIRP-008",
+        "category": "Transmission",
+        "subcategory": "Grid Orientation Mismatch",
+        "title": "Nigeria's grid is oriented east-west; least-cost future needs north-south",
+        "policy_claim": "Current transmission investments are expanding Nigeria's national grid.",
+        "consumer_reality": "The NIRP modelling shows that optimal operation requires strong north-south transmission interconnectors (to move northern solar generation to southern demand centres). Current investments are focused on east-west connections — the opposite of what the future energy mix requires.",
+        "gap_type": "Strategic misalignment",
+        "gap_severity": "medium",
+        "key_figures": {
+          "existing_north_south_lines": 10,
+          "existing_east_west_lines": 20
+        },
+        "source_section": "Section 4.3",
+        "year": 2024,
+        "tags": ["transmission", "north-south", "solar", "grid planning", "misalignment"]
+      },
+      {
+        "id": "NIRP-009",
+        "category": "Planning",
+        "subcategory": "Document Reliability",
+        "title": "NIRP results are explicitly 'indicative' — not a final plan",
+        "policy_claim": "The NIRP 2024 provides Nigeria's integrated resource plan for the power sector.",
+        "consumer_reality": "The document repeatedly describes its own results as 'indicative' and 'simplified.' It uses a four-zone model because the TCN Transmission Master Plan was not available. A second, more complete version was promised for 2025 once transmission data is incorporated.",
+        "gap_type": "Planning completeness",
+        "gap_severity": "medium",
+        "key_figures": {
+          "model_zones": 4,
+          "transmission_master_plan_due": 2025
+        },
+        "source_section": "Section 4.1; Section 4.5",
+        "year": 2024,
+        "tags": ["planning", "PLEXOS", "modelling", "indicative", "incomplete"]
+      },
+      {
+        "id": "NIRP-010",
+        "category": "Investment",
+        "subcategory": "Scale Required",
+        "title": "$122 billion needed by 2045 — with no funded mechanism",
+        "policy_claim": "The NIRP sets out a least-cost investment pathway to build Nigeria's power system to 111 GW by 2045.",
+        "consumer_reality": "The total investment required between 2024 and 2045 is $122 billion. The document identifies no funded financing mechanism for this. The largest single investment is solar PV ($56 billion), followed by hydro ($39 billion) and gas ($16 billion). The NIRP's own risk table flags capital mobilisation as a major risk, citing the 14 solar IPP precedent as an example of how financing barriers can stall projects indefinitely.",
+        "gap_type": "Financing gap",
+        "gap_severity": "critical",
+        "key_figures": {
+          "total_investment_2024_2045_usd_billion": 122,
+          "solar_pv_investment_usd_billion": 56,
+          "hydro_investment_usd_billion": 39,
+          "gas_investment_usd_billion": 16,
+          "target_capacity_2045_gw": 111
+        },
+        "source_section": "Section 4.3; Table 10",
+        "year": 2024,
+        "tags": ["investment", "financing", "capital", "solar", "hydro", "gas", "2045"]
+      },
+      {
+        "id": "NIRP-011",
+        "category": "Demand",
+        "subcategory": "Growth Projections",
+        "title": "Peak demand expected to grow 9x by 2045",
+        "policy_claim": "The NIRP demand forecast guides investment planning to meet Nigeria's growing electricity needs.",
+        "consumer_reality": "Peak demand is projected to grow from 5 GW in 2024 to 45 GW in 2045 — a 9x increase. Energy demand grows from 30 TWh to 301 TWh. The base case assumes 7.7% average annual energy growth. Results are described as highly sensitive to this forecast — a lower demand scenario reduces total costs by 41%.",
+        "gap_type": "Demand-supply planning risk",
+        "gap_severity": "medium",
+        "key_figures": {
+          "peak_demand_2024_gw": 5,
+          "peak_demand_2030_gw": 12,
+          "peak_demand_2040_gw": 31,
+          "peak_demand_2045_gw": 45,
+          "energy_demand_2024_twh": 30,
+          "energy_demand_2045_twh": 301,
+          "base_case_annual_growth_rate_percent": 7.7
+        },
+        "source_section": "Section 4.3; Table 6",
+        "year": 2024,
+        "tags": ["demand", "growth", "forecast", "planning", "peak demand"]
+      },
+      {
+        "id": "NIRP-012",
+        "category": "Renewable Energy",
+        "subcategory": "Solar Potential",
+        "title": "Northern Nigeria to become solar powerhouse — but needs transmission first",
+        "policy_claim": "Nigeria's renewable energy targets include 30% renewables by 2030 and 55% by 2050.",
+        "consumer_reality": "NIRP modelling confirms northern Nigeria (Zones 2 and 3) will dominate solar generation. RES capacity share of 37% in 2030 exceeds the 30% target. However, this potential is locked behind missing north-south transmission lines. Without the grid to move northern solar south, the renewable energy transition cannot be realised at least cost.",
+        "gap_type": "Enablement gap",
+        "gap_severity": "high",
+        "key_figures": {
+          "res_capacity_2024_percent": 18,
+          "res_capacity_2030_percent": 37,
+          "res_capacity_2040_percent": 61,
+          "res_capacity_2045_percent": 75,
+          "national_res_target_2030_percent": 30,
+          "solar_pv_max_candidate_capacity_gw": 250
+        },
+        "source_section": "Section 4.3; Section 4.5",
+        "year": 2024,
+        "tags": ["solar", "renewable energy", "north", "transmission", "2030 target"]
+      },
+      {
+        "id": "NIRP-013",
+        "category": "Consumer Cost",
+        "subcategory": "LCOE",
+        "title": "Planned electricity cost: 4.93 cents/kWh — but consumers pay far more via generators",
+        "policy_claim": "The NIRP least-cost solution delivers electricity at an LCOE of $49.3/MWh (4.93 c/kWh).",
+        "consumer_reality": "The grid LCOE of 4.93 c/kWh is the planning target. Consumers relying on diesel and petrol generators pay approximately 3x this rate. The NIRP does not model or acknowledge the full consumer cost burden of the self-generation system it has failed to displace.",
+        "gap_type": "Consumer cost burden",
+        "gap_severity": "high",
+        "key_figures": {
+          "planned_lcoe_usd_per_mwh": 49.3,
+          "planned_lcoe_cents_per_kwh": 4.93,
+          "consumer_self_gen_cost_multiple": 3
+        },
+        "source_section": "Section 4.3; Table 6",
+        "year": 2024,
+        "tags": ["tariff", "LCOE", "consumer cost", "generator", "diesel"]
+      },
+      {
+        "id": "NIRP-014",
+        "category": "Governance",
+        "subcategory": "Institutional Structure",
+        "title": "ISO — the key implementing body — does not yet exist",
+        "policy_claim": "The 2023 Electricity Act establishes an Independent System Operator (ISO) to manage Nigeria's power system.",
+        "consumer_reality": "As of the NIRP's publication, the ISO has not been established. The document repeatedly defers critical decisions — NIRP ownership, PLEXOS model transfer, regulatory instruments — to the ISO 'when established.' In the interim, responsibilities sit with a joint FMoP/NERC/TCN management team whose authority and funding are not fully defined.",
+        "gap_type": "Institutional gap",
+        "gap_severity": "high",
+        "key_figures": {
+          "electricity_act_year": 2023,
+          "iso_established": false
+        },
+        "source_section": "Section 6.1; Section 6.2",
+        "year": 2024,
+        "tags": ["ISO", "governance", "NERC", "TCN", "FMoP", "institutional", "Electricity Act 2023"]
+      },
+      {
+        "id": "NIRP-015",
+        "category": "Risk",
+        "subcategory": "Acknowledged Risks",
+        "title": "Government acknowledges 8 major risks that could derail the plan",
+        "policy_claim": "The NIRP provides a robust, implementable pathway for Nigeria's power sector development.",
+        "consumer_reality": "The document's own stress test table lists: (1) gas supply interruptions, (2) high gas prices, (3) water availability for hydro, (4) demand outturns above or below forecast, (5) network development delays causing stranded assets, (6) capital availability and financing failures, (7) environmental and regulatory procedure delays, (8) security — vandalism on infrastructure sites. Each of these has already materialised in Nigeria's power sector history.",
+        "gap_type": "Implementation risk",
+        "gap_severity": "high",
+        "key_figures": {
+          "number_of_major_risks_identified": 8
+        },
+        "source_section": "Section 5; Table 12",
+        "year": 2024,
+        "tags": ["risk", "implementation", "gas", "security", "financing", "vandalism", "stress test"]
+      },
+      {
+        "id": "NIRP-016",
+        "category": "Technology",
+        "subcategory": "Generation Mix",
+        "title": "Gas dominates through 2035; solar dominates after — a decade-long transition gap",
+        "policy_claim": "Nigeria will transition to a predominantly renewable energy system aligned with its Energy Transition Plan.",
+        "consumer_reality": "The NIRP's own model shows gas and hydro carrying the system through 2030 while large-scale solar only becomes dominant after 2035. This means consumers — especially in the south — remain dependent on gas-based electricity for at least another decade. Storage infrastructure (BESS) only becomes significant from 2040 onwards.",
+        "gap_type": "Transition timing gap",
+        "gap_severity": "medium",
+        "key_figures": {
+          "gas_generation_share_2024_percent": 72,
+          "solar_pv_installed_2030_gw": 1.1,
+          "solar_pv_installed_2040_gw": 24.6,
+          "solar_pv_installed_2045_gw": 61.1,
+          "storage_installed_2040_gw": 0,
+          "storage_installed_2045_gw": 3.4
+        },
+        "source_section": "Section 4.3; Table 21",
+        "year": 2024,
+        "tags": ["gas", "solar", "transition", "BESS", "storage", "generation mix"]
+      },
+      {
+        "id": "NIRP-017",
+        "category": "Regional",
+        "subcategory": "Zonal Disparities",
+        "title": "Zone 1 (Lagos, Abuja, Ibadan, Ikeja) carries 50% of national demand",
+        "policy_claim": "The NIRP addresses Nigeria's energy needs at a national level.",
+        "consumer_reality": "Zone 1 (covering Abuja, Eko/Lagos, Ibadan, and Ikeja DisCos) accounts for 50% of national on-grid demand in 2025, declining to 42% by 2035 as northern zones electrify. Zone 4 (Benin, Enugu, Port Harcourt) accounts for 25%. The northern zones (2 and 3) have the best renewable resources but the least current demand and infrastructure.",
+        "gap_type": "Regional inequality",
+        "gap_severity": "medium",
+        "key_figures": {
+          "zone1_demand_share_2025_percent": 50,
+          "zone2_demand_share_2025_percent": 15,
+          "zone3_demand_share_2025_percent": 10,
+          "zone4_demand_share_2025_percent": 25,
+          "zone1_discos": ["Abuja", "Eko", "Ibadan", "Ikeja"],
+          "zone2_discos": ["Kaduna", "Kano"],
+          "zone3_discos": ["Jos", "Yola"],
+          "zone4_discos": ["Benin", "Enugu", "Port Harcourt"]
+        },
+        "source_section": "Section 4.2; Table 2",
+        "year": 2024,
+        "tags": ["zones", "regional", "DisCo", "demand", "Lagos", "Abuja", "Kano", "Port Harcourt"]
+      },
+      {
+        "id": "NIRP-018",
+        "category": "Environment",
+        "subcategory": "Emissions",
+        "title": "Total emissions 644 mtCO2eq projected — delayed action makes it worse",
+        "policy_claim": "Nigeria's Energy Transition Plan targets 20% emissions reduction from business-as-usual by 2030 and net zero by 2060.",
+        "consumer_reality": "The NIRP scenario projects total cumulative grid emissions of 644 mtCO2eq between 2024 and 2045. This excludes self-generation emissions. The 5-year delay in the self-gen phase-out alone adds 90 million tonnes. Net zero by 2060 is described as 'very challenging' in the plan's own assessment.",
+        "gap_type": "Climate commitment gap",
+        "gap_severity": "high",
+        "key_figures": {
+          "total_emissions_2024_2045_mtco2eq": 644,
+          "additional_emissions_from_delay_mtco2eq": 90,
+          "net_zero_target_year": 2060
+        },
+        "source_section": "Section 4.3; Section 4.5",
+        "year": 2024,
+        "tags": ["emissions", "CO2", "net zero", "ETP", "climate", "self-generation"]
+      }
+    ],
+    "summary_statistics": {
+      "total_entries": 18,
+      "critical_gaps": 6,
+      "high_severity_gaps": 8,
+      "medium_severity_gaps": 4,
+      "gap_categories": {
+        "broken_promises": 3,
+        "infrastructure_bottleneck": 2,
+        "consumer_cost_burden": 2,
+        "financing_gap": 2,
+        "planning_completeness": 2,
+        "institutional_gap": 1,
+        "strategic_misalignment": 1,
+        "transition_timing": 1,
+        "regional_inequality": 1,
+        "climate_commitment": 1,
+        "risk": 1
+      }
+    },
+    "key_facts_for_ai_engine": {
+      "installed_capacity_gw": 10.8,
+      "utilised_capacity_gw": 5.2,
+      "utilisation_rate_percent": 48,
+      "grid_access_percent": 50,
+      "self_gen_share_percent": 49,
+      "self_gen_cost_multiple_vs_grid": 3,
+      "self_gen_emissions_multiple_vs_grid": 5,
+      "universal_access_original_target": 2030,
+      "universal_access_revised_target": 2035,
+      "self_gen_phaseout_original_target": 2030,
+      "self_gen_phaseout_revised_target": 2035,
+      "delay_cost_usd_billion": 29,
+      "delay_additional_emissions_mtco2": 90,
+      "solar_ipps_signed_year": 2016,
+      "solar_ipps_count": 14,
+      "solar_ipps_planned_mw": 1125,
+      "solar_ipps_built_by_2024": 0,
+      "total_investment_needed_usd_billion": 122,
+      "target_capacity_2045_gw": 111,
+      "lcoe_cents_per_kwh": 4.93,
+      "total_emissions_mtco2eq": 644,
+      "net_zero_target_year": 2060,
+      "transmission_master_plan_due": 2025,
+      "iso_established": false
+    }
+  }
+}

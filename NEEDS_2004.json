@@ -1,0 +1,38 @@
+{
+  "doc_id": "NEEDS-2004",
+  "title": "National Economic Empowerment and Development Strategy",
+  "year": 2004,
+  "published": 2005,
+  "issuer": "Nigerian National Planning Commission / IMF",
+  "consumer_impact_score": 2,
+  "type": "poverty_reduction_strategy",
+  "period": "2003-2007",
+  "key_quantitative_targets": {
+    "power_mw_2007": 10000,
+    "power_mw_baseline_2003": 4000,
+    "td_losses_target_pct": 15,
+    "td_losses_actual_pct": 45,
+    "bill_collection_target_pct": 95,
+    "local_content_oil_gas_pct": 50
+  },
+  "consumer_cost_data": {
+    "private_gen_share_of_startup_costs_pct": 25,
+    "private_gen_cost_vs_grid_multiple": 2.5,
+    "potential_manufacturing_gain_if_reformed": "triple by 2007"
+  },
+  "key_admissions": [
+    "Oil sector described as 'external sector with no links to other sectors'",
+    "No new power stations built 1990-1999",
+    "Only 19 of 79 generating units operational in 1999",
+    "T&D losses at 45%"
+  ],
+  "targets_met": ["EPSRA 2005 passed", "NERC established", "PHCN unbundled (delayed to 2013)"],
+  "targets_missed": [
+    "10,000 MW by 2007 — missed by ~13 years",
+    "Full downstream deregulation by 2007",
+    "National gas grid by 2007",
+    "Gas flaring terminal date",
+    "T&D losses reduced to 15%"
+  ],
+  "links_to_next": ["EPSRA-2005", "REMP-2005"]
+}

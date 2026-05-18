@@ -1,0 +1,501 @@
+{
+  "schema_version": "disco_financial_schema_v1.1",
+  "document_id": "AEDC_2014",
+  "disco_name": "Abuja Electricity Distribution Plc",
+  "disco_abbreviation": "AEDC",
+  "report_year": 2014,
+  "period_end": "31 December 2014",
+  "filing_date": "17 June 2016",
+  "auditor_sign_date": "18 November 2016",
+  "auditor": "KPMG Professional Services, Lagos",
+  "audit_opinion": "QUALIFIED",
+  "audit_qualification_reason": "Unable to obtain sufficient appropriate audit evidence on opening balances carried forward from 2012 financial statements due to management's inability to provide supporting documentation. Also unable to perform substantive procedures on revenue and expenses from 1 January 2013 to 31 October 2013 due to ineffective internal controls. Disclaimer issued on 2013 P&L and cash flows.",
+  "going_concern_flag": false,
+  "going_concern_note": "Directors assessed going concern and expressed no doubt in 2014 report (unlike 2015 which had explicit going concern risk noted by KPMG). However current liabilities exceeded current assets by N22.59 billion and the Company had losses for the year of N25.97 billion. Going concern premised on: MYTO 2015 tariff increase (47% average), CBN intervention fund (N27.7bn expected), MDA debt recovery, and shareholder support from Xerxes Global Investment and Copperbelt Energy Corporation Plc.",
+
+  "section_1_corporate_identity": {
+    "registration_number": "638681",
+    "incorporation_date": "8 November 2005",
+    "incorporation_purpose": "To take over electricity distribution activities of PHCN in FCT, Niger, Kogi and Nasarawa States",
+    "registered_address": "1 Ziguinchor Street, Off IBB Way, Wuse Zone 4, Abuja",
+    "licence_type": "Distribution Licence",
+    "licence_issuer": "NERC",
+    "licence_duration_years": 15,
+    "licence_expiry": 2028,
+    "licence_renewal_option_years": 10,
+    "coverage_states": ["Federal Capital Territory (FCT)", "Niger", "Kogi", "Nasarawa"],
+    "business_units": 28,
+    "regulatory_framework": "EPSRA 2005, MYTO",
+    "privatisation_completion_date": "1 November 2013",
+    "ownership_structure": {
+      "KANN_Utility_Company_Limited": "60%",
+      "Bureau_of_Public_Enterprises": "32%",
+      "Ministry_of_Finance_Incorporated": "8%"
+    },
+    "parent_company": "KANN Utility Company Limited",
+    "parent_ultimate_owners": "Xerxes Global Investment Ltd and CEC Africa Investment Ltd (joint venture)",
+    "managing_director": "Neil Frederick Croucher (South African)",
+    "chairman": "Amb. Shehu Malami",
+    "total_shares": "10,000,000 ordinary shares of 50 kobo each",
+    "share_capital_ngn_000": 5000
+  },
+
+  "section_2_income_statement": {
+    "currency": "NGN thousands (N'000)",
+    "revenue_ngn_000": 48097381,
+    "revenue_prior_year_ngn_000": 36025798,
+    "revenue_change_pct": 33.5,
+    "revenue_change_driver": "Directors report states 34% increase. Energy available for distribution was 3,458,452,676 kWh vs 3,067,303,460 kWh in prior year — more energy available AND more customers billed. Unbilled revenue estimate of N919.99m included (2013: Nil).",
+    "cost_of_sales_ngn_000": 48353790,
+    "cost_of_energy_ngn_000": 40094659,
+    "imbalance_penalty_ngn_000": 2063450,
+    "imbalance_penalty_note": "Penalty for receiving more energy from national grid than MYTO 2 allocation of 11.5%. Computed at 60% of normal tariff rate billed by Market Operator.",
+    "gross_profit_loss_ngn_000": -256409,
+    "gross_margin_pct": -0.53,
+    "administrative_expenses_ngn_000": 24927541,
+    "operating_loss_ngn_000": -24908727,
+    "finance_income_ngn_000": 175280,
+    "finance_costs_ngn_000": 873217,
+    "finance_costs_breakdown": {
+      "interest_on_CAPMI_payable_ngn_000": 70593,
+      "unwinding_discount_CAPMI_ngn_000": 20506,
+      "interest_working_capital_facility_ngn_000": 18565,
+      "foreign_exchange_loss_ngn_000": 18818,
+      "interest_market_operator_shortfall_ngn_000": 744735
+    },
+    "interest_on_MO_shortfall_note": "Interest arising from Company's default on minimum base line remittances on Market Operator invoices. Company required to remit 53% of MO monthly bills to May 2014, then 65.13% from June 2014. Shortfall attracts interest at NIBOR plus 7.5%. Unpaid at year end — included in trade payables.",
+    "net_finance_cost_ngn_000": -697937,
+    "loss_before_tax_ngn_000": -25606664,
+    "minimum_tax_ngn_000": 364371,
+    "income_tax_expense_ngn_000": 0,
+    "loss_for_year_ngn_000": -25971035,
+    "loss_prior_year_ngn_000": -13789334,
+    "loss_increase_yoy_pct": 88.3,
+    "total_comprehensive_loss_ngn_000": -22670770,
+    "other_comprehensive_income_ngn_000": 3300265,
+    "revaluation_surplus_ngn_000": 3300265,
+    "revaluation_deficit_in_pl_ngn_000": 634855,
+    "expenses_by_nature_detail": {
+      "cost_of_energy_ngn_000": 40094659,
+      "imbalance_penalty_ngn_000": 2063450,
+      "consumables_direct_costs_ngn_000": 279808,
+      "maintenance_ngn_000": 1094545,
+      "depreciation_ngn_000": 5178300,
+      "operations_management_services_ngn_000": 668919,
+      "consultancy_ngn_000": 560602,
+      "security_ngn_000": 663956,
+      "staff_related_costs_ngn_000": 7086115,
+      "directors_remuneration_ngn_000": 226683,
+      "board_expenses_ngn_000": 33323,
+      "bank_charges_ngn_000": 68308,
+      "auditor_remuneration_ngn_000": 46607,
+      "amortisation_intangibles_ngn_000": 4670,
+      "insurance_transport_ngn_000": 585306,
+      "rent_ngn_000": 289406,
+      "professional_services_ngn_000": 154909,
+      "bad_debt_written_off_ngn_000": 1392264,
+      "impairment_inventory_ngn_000": 496307,
+      "impairment_trade_receivables_ngn_000": 7291690,
+      "write_off_ppe_ngn_000": 1375050,
+      "revaluation_deficit_ngn_000": 634855,
+      "provisions_ngn_000": 1851956,
+      "office_repairs_ngn_000": 214456,
+      "office_stationery_utilities_ngn_000": 925187,
+      "total_ngn_000": 73281331
+    },
+    "other_income_ngn_000": 275223,
+    "other_income_breakdown": {
+      "service_reconnection_fees_ngn_000": 137166,
+      "amortisation_govt_grant_ngn_000": 12013,
+      "CAPMI_installation_fees_ngn_000": 23598,
+      "connection_fees_ngn_000": 102446
+    },
+    "energy_distributed_kwh": 3458452676,
+    "energy_prior_year_kwh": 3067303460,
+    "energy_growth_pct": 12.75
+  },
+
+  "section_3_balance_sheet": {
+    "currency": "NGN thousands (N'000)",
+    "total_assets_ngn_000": 105530260,
+    "total_assets_prior_year_ngn_000": 96028465,
+    "non_current_assets": {
+      "ppe_ngn_000": 86784523,
+      "intangible_assets_ngn_000": 15177,
+      "prepayments_non_current_ngn_000": 40348,
+      "total_non_current_ngn_000": 86840048
+    },
+    "current_assets": {
+      "inventories_ngn_000": 554902,
+      "trade_other_receivables_ngn_000": 14523525,
+      "prepayments_current_ngn_000": 183508,
+      "cash_ngn_000": 3428277,
+      "total_current_ngn_000": 18690212
+    },
+    "total_equity_ngn_000": 63123448,
+    "equity_prior_year_ngn_000": 85794218,
+    "equity_components": {
+      "share_capital_ngn_000": 5000,
+      "retained_earnings_ngn_000": 59818183,
+      "revaluation_reserve_ngn_000": 3300265
+    },
+    "equity_erosion_from_peak_ngn_000": 44080440,
+    "equity_at_privatisation_jan_2012_ngn_000": 107203888,
+    "total_liabilities_ngn_000": 42406812,
+    "liabilities_prior_year_ngn_000": 10234247,
+    "liabilities_increase_yoy_pct": 314.3,
+    "non_current_liabilities": {
+      "deferred_income_ngn_000": 853847,
+      "loans_borrowings_ngn_000": 272042,
+      "total_non_current_ngn_000": 1125889
+    },
+    "current_liabilities": {
+      "provisions_ngn_000": 2172939,
+      "deferred_income_ngn_000": 694248,
+      "trade_other_payables_ngn_000": 37207408,
+      "current_tax_liabilities_ngn_000": 782952,
+      "loans_borrowings_ngn_000": 423376,
+      "total_current_ngn_000": 41280923
+    },
+    "net_current_assets_liabilities_ngn_000": -22590711,
+    "working_capital_deficit_commentary": "Current liabilities exceed current assets by N22.59 billion (2013: deficit N3.03 billion). One year deterioration of N19.56 billion.",
+    "adjusted_net_debt_to_equity_ratio": 0.62,
+    "adjusted_net_debt_to_equity_prior_year": 0.08,
+    "target_ratio_max": 2.00
+  },
+
+  "section_4_cashflow": {
+    "currency": "NGN thousands (N'000)",
+    "cash_from_operations_ngn_000": 868450,
+    "cash_from_operations_prior_year_ngn_000": -9649525,
+    "cash_from_investing_ngn_000": -975677,
+    "cash_from_financing_ngn_000": 591387,
+    "net_cash_movement_ngn_000": 484160,
+    "opening_cash_ngn_000": 2942860,
+    "closing_cash_ngn_000": 3428277,
+    "capex_ngn_000": 977551,
+    "capex_prior_year_ngn_000": 284765,
+    "ppe_additions_total_ngn_000": 1867300,
+    "ppe_additions_breakdown": {
+      "purchase_ppe_ngn_000": 977551,
+      "government_granted_assets_ngn_000": 889749
+    },
+    "note_on_cash_generation": "Company generated positive operating cash flow for first time (N868m vs negative N9.65bn in 2013). Driven by massive increase in trade payables (N27.6bn increase) — i.e. the company stopped paying its energy bills rather than actually collecting more cash."
+  },
+
+  "section_5_revenue_analysis": {
+    "revenue_ngn_000": 48097381,
+    "revenue_growth_pct": 33.5,
+    "revenue_growth_driver_vitics": "Revenue grew 33.5% but this was a VOLUME + AVAILABILITY story, not tariff increase story (unlike 2015 which was entirely tariff-driven). Energy available increased from 3.07bn to 3.46bn kWh (12.75%). First year fully under new private management — KANN implementing billing improvements and bringing more customers into billing net. Unbilled revenue estimate introduced for first time (N919.99m). Imbalance penalty of N2.06bn incurred for taking too much grid power — sign of genuine demand pressure.",
+    "unbilled_revenue_included_ngn_000": 919990,
+    "unbilled_revenue_prior_year_ngn_000": 0,
+    "revenue_quality_note": "Revenue includes N919.99m unbilled estimate — accounting change inflates reported revenue growth. Actual collected revenue growth was lower.",
+    "deferred_revenue_prepaid_customers_ngn_000": 653712,
+    "tariff_framework": "MYTO (Multi Year Tariff Order) — regulated by NERC. Company operates under interim period rules between privatisation completion and start of Transitional Electricity Market (TEM).",
+    "tariff_events_during_year": "NERC issued MYTO 2.1 on 1 January 2015 (post year-end) increasing tariffs for all categories except R1 and R2. TEM commenced 1 February 2015. NERC then reversed and reduced MYTO 2.1 tariffs by average 14% on 17 March 2015. MYTO 2015 issued 21 December 2015, effective 1 February 2016 — 47% average increase over 2015 tariffs."
+  },
+
+  "section_6_receivables_analysis": {
+    "trade_receivables_gross_ngn_000": 14435824,
+    "trade_receivables_net_ngn_000": 14523525,
+    "impairment_allowance_ngn_000": 7893514,
+    "impairment_opening_ngn_000": 601824,
+    "impairment_charge_year_ngn_000": 7291690,
+    "impairment_tripled_note": "Impairment allowance grew 13x in one year — from N601m to N7.89bn. Impairment charge of N7.29bn recognised during 2014.",
+    "receivables_ageing": {
+      "unbilled_ngn_000": 1010508,
+      "past_due_0_30_days_ngn_000": 433075,
+      "past_due_31_90_days_ngn_000": 721791,
+      "past_due_91_120_days_ngn_000": 577433,
+      "past_due_120_plus_days_ngn_000": 11693017,
+      "total_ngn_000": 14435824
+    },
+    "pct_past_due_120_plus": 81.0,
+    "bad_debt_written_off_ngn_000": 1392264,
+    "bad_debt_components": {
+      "NELMCO_advance_payment_ngn_000": 433000,
+      "government_subsidy_receivable_ngn_000": 958000,
+      "total_written_off_ngn_000": 1392264
+    },
+    "government_subsidy_written_off_note": "Company recorded N5.75bn MYTO-derived government subsidy entitlement in 2013 for Nov-Dec 2013. By Dec 2014, N958m remaining balance written off as collection remote. Government did not pay.",
+    "collection_strategy_stated": [
+      "Prepaid meter conversion — targeting reduction of post-paid to prepaid",
+      "Disconnect non-paying customers to drive collections improvement",
+      "Ministry of Finance involvement in collecting from government parastatals",
+      "KPIs for employees on debt collection",
+      "Automated billing and system improvements"
+    ],
+    "collection_reality_vitics": "Despite stated strategies, 81% of trade receivables are past due 120+ days. Government owed significant amounts but subsidy was written off as uncollectable. This is Year 1 of private operation — collection systems inherited from PHCN are broken."
+  },
+
+  "section_7_payables_analysis": {
+    "trade_other_payables_ngn_000": 37207408,
+    "prior_year_ngn_000": 9564708,
+    "increase_ngn_000": 27642700,
+    "increase_pct": 289.1,
+    "payables_breakdown": {
+      "trade_payables_market_operator_ngn_000": 31315938,
+      "other_payables_ngn_000": 690998,
+      "due_to_related_parties_ngn_000": 1134520,
+      "other_accruals_ngn_000": 1626128,
+      "statutory_deductions_ngn_000": 2439824,
+      "total_ngn_000": 37207408
+    },
+    "market_operator_payable_note": "N31.3bn owed to Market Operator (TCN/NBET) for cost of energy. This includes accumulated base line remittance shortfalls and associated interest penalties at NIBOR + 7.5%. Company was required to remit 53% of MO monthly bills to May 2014, then 65.13% from June 2014 but consistently falling short.",
+    "payables_as_survival_mechanism": "The dramatic increase in payables (N27.6bn) is how the company generated N868m positive operating cash in 2014. It essentially stopped paying for its electricity. This is a structural feature of the Nigerian electricity value chain — DISCOs cannot collect enough from consumers to pay GenCos/TCN, so payables accumulate industry-wide.",
+    "nelmco_liability_ngn_000": 2172939,
+    "nelmco_provision_note": "N2.17bn provision recorded as amount potentially owed to NELMCO — cash balance as at 1 November 2013 that AEDC may have to return per Share Sale Agreement terms.",
+    "capmi_payable_ngn_000": 465722,
+    "capmi_scheme_description": "Credited Advance Payment for Metering Implementation — NERC scheme allowing customers to advance-fund their own meters. Customers pay upfront, refunded in monthly installments over max 3 years at 12% less installation cost. Company recognised N23.6m installation fees from energised meters."
+  },
+
+  "section_8_debt_and_borrowings": {
+    "total_loans_borrowings_ngn_000": 695418,
+    "prior_year_ngn_000": 148955,
+    "components": {
+      "loan_from_parent_KANN_ngn_000": 229696,
+      "capmi_payables_ngn_000": 465722
+    },
+    "parent_loan_details": {
+      "lender": "KANN Utility Company Limited",
+      "facility_usd": 2500000,
+      "drawn_usd": 1140000,
+      "interest_rate_pct": 10,
+      "security": "Unsecured",
+      "maturity": "31 March 2015",
+      "interest_accrued_ngn_000": 18570
+    },
+    "cbn_intervention_fund": {
+      "status": "Expected but NOT received as at 31 December 2014",
+      "expected_amount_ngn_bn": 27.7,
+      "fund_name": "CBN-Nigerian Electricity Market Stabilization Facility (CBN-NEMSF)",
+      "purpose": "Settle outstanding MO payment obligations (IRP Debts) and legacy gas debt of PHCN generation companies",
+      "condition_for_access": "Company must meet conditions precedent — not yet fulfilled as at year end",
+      "allocated_towards": "N25bn of the N27.7bn expected to be applied towards settling outstanding MO payables",
+      "update_from_2015_report": "CBN began disbursement post year-end. AEDC 2015 report shows receipt of CBN intervention funds.",
+      "vitics_note": "The CBN intervention fund was the industry lifeline in 2014-2015. It was a government mechanism to bail out the entire electricity value chain that was technically bankrupt from Day 1 of privatisation. Consumers never saw any benefit — it went directly to settle inter-company debts."
+    },
+    "force_majeure_history": {
+      "KANN_force_majeure_2014": {
+        "declared_by": "KANN Utility Company Limited (parent)",
+        "date_declared": "10 April 2015",
+        "type": "Political force majeure",
+        "reason_cited": "Non-implementation of cost-reflective tariff regime and exclusion of collection losses in MYTO 2.1 model",
+        "status": "Withdrawn 10 February 2016 following MYTO 2015 which reinstated collection losses",
+        "impact_on_operations": "Operational activities continued during force majeure period. CBN intervention fund discussions interrupted.",
+        "vitics_note": "Within 18 months of privatisation, the private investor (KANN/Xerxes/CEC Africa) threatened to walk away. This signals that the privatisation business case was fundamentally broken. Consumers who hoped private operators would fix electricity were watching their new operators threaten to leave."
+      }
+    }
+  },
+
+  "section_9_ppe_analysis": {
+    "total_ppe_ngn_000": 86784523,
+    "prior_year_ngn_000": 88805163,
+    "ppe_decrease_note": "PPE declined despite N1.87bn additions — due to N5.18bn depreciation and N1.38bn write-off of CWIP",
+    "ppe_components": {
+      "land_ngn_000": 11997110,
+      "buildings_ngn_000": 4171322,
+      "distribution_network_ngn_000": 70178022,
+      "office_equipment_fixtures_ngn_000": 139448,
+      "motor_vehicles_ngn_000": 128497,
+      "capital_work_in_progress_ngn_000": 170124
+    },
+    "revaluation_2014": {
+      "performed": true,
+      "valuer": "Achoru Mike Chukwura / Messrs Achoru Associates Limited (FRC/2016/NIESV/00000013731)",
+      "methodology": "Sales comparison approach — Level 2 fair value inputs",
+      "revaluation_surplus_oci_ngn_000": 3300265,
+      "revaluation_deficit_pl_ngn_000": 634855,
+      "land_fair_value_ngn_000": 11997110,
+      "buildings_fair_value_ngn_000": 4171322,
+      "land_title_status": "PENDING — Company does not yet have full legal title to land. Privatisation process recognised beneficial ownership. Directors actively obtaining title."
+    },
+    "cwip_write_off_ngn_000": 1375000,
+    "cwip_write_off_note": "N1.38bn CWIP written off — basis that Company has no control over assets and future economic benefits remote.",
+    "distribution_network_depreciation_life_years": "15-50",
+    "government_granted_assets_ngn_000": 889749,
+    "government_grant_deferred_income_ngn_000": 877736,
+    "government_grant_note": "Government provided injection substations (fair value N889.75m including land). Deferred income amortised at same rate as associated PPE."
+  },
+
+  "section_10_employee_data": {
+    "headcount_2014": 2249,
+    "headcount_2013": 3658,
+    "headcount_reduction_pct": 38.5,
+    "headcount_reduction_note": "AEDC shed 1,409 employees in one year — 38.5% of workforce. This is the new private owner (KANN) rightsizing the legacy PHCN workforce. Massive impact on livelihoods across FCT, Niger, Kogi, Nasarawa.",
+    "headcount_by_function": {
+      "administration_2014": 323,
+      "finance_2014": 280,
+      "marketing_2014": 860,
+      "technical_2014": 786
+    },
+    "staff_costs_ngn_000": 7086115,
+    "staff_costs_prior_year_ngn_000": 8573060,
+    "staff_cost_reduction_pct": 17.3,
+    "note": "Staff costs fell 17% despite inflation — because despite headcount falling 38.5%, remaining staff received higher individual pay. Average per-employee cost rose significantly.",
+    "directors_remuneration_ngn_000": 226683,
+    "directors_remuneration_prior_year_ngn_000": 24556,
+    "directors_pay_increase_pct": 823.3,
+    "directors_pay_note": "Directors' remuneration rose 823% in one year — from N24.6m to N226.7m. This while the company was making N26bn loss. Chairman paid N32.9m. Highest paid director N69.4m.",
+    "operations_mgmt_fee_to_KANN_ngn_000": 668919,
+    "operations_mgmt_fee_note": "2% of cash collected paid to parent company KANN for management services. No formal agreement signed — management accruing constructive obligation. Prior year amount of N285.45m also outstanding."
+  },
+
+  "section_11_tax_position": {
+    "income_tax_charge_ngn_000": 0,
+    "reason": "No taxable or assessable profit",
+    "minimum_tax_ngn_000": 364371,
+    "minimum_tax_basis": "Gross revenue — required under Companies Income Tax Act even with no profit",
+    "deferred_tax_assets_unrecognised_ngn_000": 32058689,
+    "unrecognised_dta_breakdown": {
+      "tax_losses_will_never_expire_ngn_000": 15005444,
+      "unutilised_capital_allowance_ngn_000": 14033309,
+      "deductible_temp_differences_ngn_000": 3019936
+    },
+    "note": "N32bn in deferred tax assets not recognised — it is not probable these losses will ever generate tax benefit. This is a shadow of the company's deep financial distress.",
+    "current_tax_liability_ngn_000": 782952
+  },
+
+  "section_12_nelmco_transition": {
+    "nelmco_transfer_date": "31 October 2013",
+    "pre_completion_receivables_transferred": "All trade receivables as at 31 October 2013 transferred to NELMCO without recourse",
+    "pre_completion_liabilities_transferred": "All liabilities and contingent liabilities as at 31 October 2013 transferred to NELMCO",
+    "nelmco_cash_liability_ngn_000": 2172939,
+    "nelmco_cash_position": "Cash at 1 November 2013 initially claimed by AEDC, but Directors later assessed it belonged to NELMCO. Provision of N2.17bn recorded. Mareva accounts (garnishee bank accounts) — AEDC has no access. N320.98m reclassified from trade payables.",
+    "nelmco_advance_payment_written_off_ngn_000": 433000,
+    "nelmco_advance_payment_note": "AEDC paid N1.15bn to NELMCO in November 2013 for legacy debt collection. Directors assessed N433.93m was overpaid. Recovery attempt failed — written off as bad debt.",
+    "legacy_disputes_ngn_000": "Company and NELMCO not yet agreed on individual trade debtors/liabilities as at 1 November 2013. Contingent liabilities from ongoing litigations: N635 million maximum exposure.",
+    "vitics_note": "The NELMCO transition was messy and contested. AEDC and NELMCO disagreed on what was transferred, how much was owed, and who owned what cash. This unresolved legacy created balance sheet uncertainty in AEDC's early years and is a signal that the privatisation process itself was legally incomplete."
+  },
+
+  "section_13_consumer_impact": {
+    "consumer_impact_score": 6,
+    "consumer_impact_score_explanation": "Score 6/10 (significant negative). Less severe than 2015 (7/10) because: tariff was not dramatically increased during 2014 itself; going concern was not explicit; force majeure not yet declared. However structural conditions were worsening. Consumers experienced: (a) continued unreliable supply despite new private owners promises; (b) estimated billing continued for most post-paid customers; (c) CAPMI scheme required consumers to self-fund meters; (d) consumer-funded assets transferred to AEDC; (e) 38.5% staff cut likely impacted service quality; (f) imbalance penalty (taking too much grid power) reflects demand exceeding supply — consumers suffering blackouts.",
+    "metering_situation": {
+      "capmi_scheme_active": true,
+      "capmi_description": "Consumers must advance cash to fund their own smart meters under NERC's CAPMI scheme. AEDC receives the cash, installs meters, repays customer in monthly installments over 3 years. As at Dec 2014, meters installed worth N23.6m fees earned but N16.65m cost still deferred.",
+      "estimated_billing_continued": true,
+      "prepaid_conversion_strategy": "Company strategy — convert post-paid to prepaid to reduce credit risk. But meter gap remains large.",
+      "consumer_search_terms_related": ["estimated billing Nigeria", "AEDC meter problem", "how to get prepaid meter Abuja", "CAPMI meter Abuja", "AEDC billing problem FCT"]
+    },
+    "consumer_contributed_assets": {
+      "government_granted_assets_ngn_000": 889749,
+      "description": "Government provided infrastructure (injection substations) worth N889.75m. AEDC recognises this as PPE and deferred income. Consumers paid for government that paid for this infrastructure.",
+      "deferred_income_on_customer_assets_ngn_000": 694248,
+      "note": "Includes consumer-contributed assets from CAPMI scheme (N16.65m deferred) and government-granted assets. Pattern established in 2015 — consumers and government providing capital that should come from DISCO's own investment."
+    },
+    "supply_quality_proxy": {
+      "energy_available_for_distribution_kwh": 3458452676,
+      "prior_year_kwh": 3067303460,
+      "energy_growth_pct": 12.75,
+      "note": "More energy in 2014 than 2013 — but this is from the transitional baseline. Nigeria's total electricity demand far exceeds what any DISCO receives. 3.46bn kWh across FCT, Niger, Kogi, Nasarawa for full year = roughly 394 MW average. This is profoundly inadequate for the population served."
+    }
+  },
+
+  "section_14_grid_defection_signals": {
+    "grid_defection_score": 2,
+    "grid_defection_score_explanation": "Score 2/10. Early stage — conditions building but no mass defection yet. 2014 is the first full year of private operation. Consumers giving the new operators benefit of the doubt. Off-grid solar market exists but is not yet mainstream visible. Key pressure building: (a) continued unreliable supply; (b) no tariff-shock yet (that comes in 2015-2016); (c) metering gap keeping consumers trapped in estimated billing; (d) private operators not delivering promised transformation. Vitics analysis: 2014 is the baseline of disappointment before the acceleration.",
+    "energy_sold_vs_customers_trend": "Energy distributed grew 12.75% in 2014. Customer additions data not directly available from this report but trade receivables grew from N2.4bn to N14.4bn — partly from more customers being billed. No evidence of solar adoption at scale yet.",
+    "consumer_psychology_2014": "New private owners were given benefit of the doubt in 2014. Consumers waited. The story they told on YouTube and social media was still 'PHCN/NEPA is bad, maybe private will be better'. The disappointment narrative had not yet fully crystallised.",
+    "solar_market_2014": "Off-grid solar present but niche. Solar content on YouTube Nigeria not yet searchable at scale (that comes in 2017 per Vitics timeline). Generators remained primary backup. Solar was for the wealthy few.",
+    "transition_marker": false,
+    "transition_note": "2014 is the pre-transition baseline. The conditions for transition are accumulating but not yet triggered. 2013 was privatisation. 2014 was 'give it a chance'. 2015 onwards is disappointment. 2023 is the watershed."
+  },
+
+  "section_15_regulatory_environment": {
+    "tariff_framework": "MYTO (Multi Year Tariff Order)",
+    "myto_version_during_year": "MYTO interim rules — between privatisation completion and TEM commencement",
+    "base_line_remittance_rule": "53% of Market Operator monthly bills to May 2014, then 65.13% from June 2014",
+    "company_remittance_status": "Consistently below minimum — interest at NIBOR + 7.5% on shortfall",
+    "myto_2_energy_allocation": "11.5% of national grid — Company exceeded this, incurring N2.06bn imbalance penalty",
+    "post_year_events_tariff": {
+      "TEM_commencement": "1 February 2015 — MYTO 2.1 tariff",
+      "TEM_reversal": "17 March 2015 — NERC Order reduced MYTO 2.1 by average 14%",
+      "MYTO_2015_issued": "21 December 2015, effective 1 February 2016",
+      "MYTO_2015_increase": "Average 47% increase over 2015 tariffs across all customer categories",
+      "vitics_note": "Consumers in 2015 faced a 47% tariff increase on electricity that was still unreliable. This tariff shock is the inflection point that began accelerating the solar consideration for Abuja consumers. The force majeure threat in April 2015 confirmed to consumers that their electricity company might abandon them."
+    },
+    "nerc_licence_status": "Active — 15 year licence expiring 2028",
+    "nerc_independent_director_requirement": "NERC requires at least one independent director. AEDC did not have one in 2014 — 'in process of evaluating and selecting one.'"
+  },
+
+  "section_16_financial_trajectory": {
+    "four_year_summary": {
+      "currency": "NGN thousands (N'000)",
+      "revenue": {
+        "2012": 25345342,
+        "2013": 36025798,
+        "2014": 48097381
+      },
+      "operating_loss": {
+        "2012": -20221282,
+        "2013": -13371972,
+        "2014": -24908727
+      },
+      "loss_for_year": {
+        "2012": -14722762,
+        "2013": -13789334,
+        "2014": -25971035
+      },
+      "net_assets": {
+        "jan_2012": 107203888,
+        "dec_2012": 88868063,
+        "dec_2013": 85794218,
+        "dec_2014": 63123448
+      },
+      "ppe": {
+        "jan_2012": 85080931,
+        "dec_2012": 81392538,
+        "dec_2013": 88805163,
+        "dec_2014": 86784523
+      }
+    },
+    "equity_destruction_2012_to_2014": {
+      "jan_2012_ngn_000": 107203888,
+      "dec_2014_ngn_000": 63123448,
+      "destroyed_ngn_000": 44080440,
+      "pct_destroyed": 41.1
+    },
+    "cumulative_losses_2012_to_2014_ngn_000": 54483131,
+    "vitics_ten_year_series_note": "2014 is Year 1 of the 10-year Vitics time series (2014-2023). Key baseline metrics: Revenue N48.1bn, Loss N26bn, Net Assets N63.1bn, Energy distributed 3.46bn kWh, 81% receivables past due 120+ days, 2,249 employees, KANN parent threatening force majeure within 18 months. This is the financial DNA of the AEDC at privatisation consolidation — structurally loss-making, with a collection crisis, metering gap, and an inherited broken value chain."
+  },
+
+  "section_17_vitics_analysis_instructions": {
+    "primary_vitics_signal": "STRUCTURAL LOSS FROM DAY ONE",
+    "narrative": "AEDC 2014 is the base year for Vitics' 10-year time series. The story this document tells is that the privatisation of AEDC was completed with a fundamentally broken business model. The new private owners inherited: (a) a workforce they immediately cut by 38.5%; (b) a billing system producing 81% uncollectable receivables; (c) a grid allocation system penalising them for taking electricity consumers needed; (d) a government that promised subsidies and didn't pay; (e) tariffs set below cost recovery; (f) a parent company willing to declare force majeure within 18 months. Consumers who were told 'privatisation will fix NEPA' received: same unreliable electricity, same estimated billing, had to self-fund their own meters via CAPMI, and their contribution was recorded as AEDC's asset. The collection crisis of 2014 established the pattern that would persist until 2023 — consumers who cannot pay electricity bills are the same consumers who will later adopt solar.",
+    "key_numbers_to_remember": {
+      "revenue_ngn_bn": 48.1,
+      "loss_ngn_bn": 26.0,
+      "net_assets_ngn_bn": 63.1,
+      "liabilities_ngn_bn": 42.4,
+      "energy_distributed_bn_kwh": 3.46,
+      "receivables_past_due_120_plus_pct": 81.0,
+      "headcount": 2249,
+      "equity_erosion_from_privatisation_pct": 41.1
+    },
+    "consumer_vocabulary_2014": [
+      "NEPA wahala",
+      "AEDC wahala",
+      "light don come",
+      "estimated bill",
+      "no light Abuja",
+      "CAPMI meter",
+      "how to apply for prepaid meter",
+      "AEDC customer care",
+      "PHCN privatization hope"
+    ],
+    "compare_to_2015": "2014 is less dire than 2015 on all metrics EXCEPT the trajectory — 2014 set the accelerating decline. 2015 added: force majeure declaration, KPMG going concern risk, 49% tariff increase, third consecutive year of losses. The 2014-2015 transition is the first clear consumer crisis signal. By 2015, Nigerian consumers were actively searching for alternatives.",
+    "transition_timeline_position": "PRE-TRANSITION — conditions building. 2014 is before the solar consideration goes mainstream. Consumers still hoping private operators will fix the grid. The disappointment that triggers solar consideration crystallises in 2015-2016.",
+    "how_to_use_this_data": "When Vitics analyses YouTube comments from 2014-2015 about Abuja electricity, this data explains WHY those comments are what they are. Consumers complaining about estimated billing are responding to the reality that 81% of receivables are past due — AEDC's billing-collection system is broken. Consumers asking about generators are still in the pre-solar phase. Consumers noting 'new management no better' are responding to the KANN/privatisation story."
+  },
+
+  "section_18_document_quality": {
+    "reading_method": "Visual — scanned physical document, all pages readable",
+    "total_pages": 54,
+    "document_completeness": "Complete — all financial statements, notes, and supplementary disclosures present",
+    "data_confidence": "HIGH for 2014 figures. MEDIUM for 2013 comparatives due to KPMG qualified opinion on 2013 period. 2012 figures from financial summary page only — pre-IFRS, not directly comparable.",
+    "filing_delay_note": "2014 accounts approved 17 June 2016 — 18 months after year end. 2013 accounts approved same date. This is extraordinary — suggests AEDC was in operational/financial chaos during 2014-2015. Auditor signed 18 November 2016.",
+    "audit_qualification_impact": "Qualified opinion for both 2013 (disclaimer on P&L) and 2014 (qualified due to 2013 opening balance uncertainty). This means year-on-year comparisons have audit uncertainty. The financial distress visible in the numbers is likely understated.",
+    "vitics_confidence": "HIGH — despite audit qualification, the key signals for Vitics (losses, receivables quality, employee reductions, CAPMI, force majeure, going concern trajectory) are clearly documented and internally consistent."
+  }
+}

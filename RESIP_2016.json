@@ -1,0 +1,256 @@
+{
+  "vitics_knowledge_base": {
+    "meta": {
+      "version": "1.0",
+      "created": "2026-05-15",
+      "project": "Vitics — Nigeria AI Energy Intelligence Platform",
+      "description": "Grounded knowledge entries extracted from Nigerian energy policy documents. Focus: what consumers actually experienced vs what policy promised."
+    },
+    "documents": [
+      {
+        "doc_id": "DOC_001",
+        "title": "Rural Electrification Strategy and Implementation Plan (RESIP)",
+        "issuer": "Federal Ministry of Power, Works and Housing",
+        "year": 2016,
+        "month": "July",
+        "category": "Rural Electrification Policy",
+        "tags": [
+          "rural-electrification",
+          "REA",
+          "REF",
+          "RESIP",
+          "DisCos",
+          "off-grid",
+          "mini-grid",
+          "access-gap",
+          "abandoned-projects",
+          "policy-failure",
+          "26-percent",
+          "FGN-promises",
+          "2020-target",
+          "population-growth",
+          "rural-consumer",
+          "kerosene-dependence",
+          "fuel-wood",
+          "energy-poverty"
+        ],
+        "policy_promises": [
+          {
+            "id": "P001",
+            "promise": "Electricity access for 75% of the population (rural and urban)",
+            "target_year": 2020,
+            "source_section": "Executive Summary / Section 2.4"
+          },
+          {
+            "id": "P002",
+            "promise": "Electricity access for 90% of the population",
+            "target_year": 2030,
+            "source_section": "Executive Summary / Section 2.4"
+          },
+          {
+            "id": "P003",
+            "promise": "Universal (100%) electrification",
+            "target_year": 2040,
+            "source_section": "Section 6"
+          },
+          {
+            "id": "P004",
+            "promise": "At least 10% renewable energy mix",
+            "target_year": 2025,
+            "source_section": "Executive Summary"
+          },
+          {
+            "id": "P005",
+            "promise": "Add 1 million rural connections and 800MW of generation capacity",
+            "target_year": 2016,
+            "note": "Interim target set within the document itself",
+            "source_section": "Section 2.4"
+          },
+          {
+            "id": "P006",
+            "promise": "DisCos (Distribution Companies) to add 4 million new connections",
+            "target_year": 2017,
+            "note": "Obligation under privatization contracts with BPE",
+            "source_section": "Section 3.1 / 3.2.1"
+          },
+          {
+            "id": "P007",
+            "promise": "Connect 1.1 million additional rural households per year",
+            "target_period": "2015–2020",
+            "source_section": "Section 6"
+          },
+          {
+            "id": "P008",
+            "promise": "Establish a transparent, competitive Rural Electrification Fund (REF) for capital subsidies",
+            "target_period": "From 2015",
+            "source_section": "Executive Summary / Section 5"
+          },
+          {
+            "id": "P009",
+            "promise": "Rural Electrification Agency (REA) to maintain 6 Zonal offices nationwide",
+            "target_period": "Ongoing",
+            "source_section": "Section 4.1"
+          },
+          {
+            "id": "P010",
+            "promise": "Reliable and affordable electricity for all Nigerians regardless of location",
+            "target_period": "Ongoing",
+            "source_section": "Section 2.1 (Guiding Principles)"
+          },
+          {
+            "id": "P011",
+            "promise": "Promote cheaper, cleaner alternatives to kerosene, candles, and fossil fuel generators in rural areas",
+            "target_period": "Ongoing",
+            "source_section": "Section 2.2 (Objectives)"
+          },
+          {
+            "id": "P012",
+            "promise": "Subsidies focused on expanding access rather than consumption — benefiting the poorest rural households",
+            "target_period": "Ongoing",
+            "source_section": "Executive Summary"
+          }
+        ],
+        "admitted_failures": [
+          {
+            "id": "F001",
+            "finding": "Rural electricity access was approximately 26% in 2016 — no significant improvement from when the Rural Electrification Programme began in 1981",
+            "severity": "critical",
+            "time_span_wasted": "35 years",
+            "source_section": "Section 2.1"
+          },
+          {
+            "id": "F002",
+            "finding": "Over 70 million rural Nigerians lacked access to reliable electricity supply",
+            "severity": "critical",
+            "source_section": "Section 2.4"
+          },
+          {
+            "id": "F003",
+            "finding": "Approximately 1,600 rural electrification projects were abandoned across all states as of 2012; contractors had left sites for more than 5 years",
+            "severity": "high",
+            "cost_to_complete_NGN": 40000000000,
+            "cost_to_complete_USD": 205000000,
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F004",
+            "finding": "Many completed rural electrification projects could not be put to meaningful use because they had no reliable source of power supply — infrastructure built but non-functional",
+            "severity": "high",
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F005",
+            "finding": "The Rural Electrification Agency (REA) was suspended in late 2009, stalling strategy development for years and explaining why a plan initiated in the early 2000s was only being published in 2016",
+            "severity": "high",
+            "source_section": "Section 2.3"
+          },
+          {
+            "id": "F006",
+            "finding": "Population growth outpaced new connections — the rate of new household formation exceeded the rate of new electricity connections",
+            "severity": "high",
+            "source_section": "Section 2.1"
+          },
+          {
+            "id": "F007",
+            "finding": "DisCos' commercial objectives led them to focus on urban areas, not rural communities, despite contractual rural obligations",
+            "severity": "high",
+            "source_section": "Section 3.1"
+          },
+          {
+            "id": "F008",
+            "finding": "Most abandoned projects were grid extension projects. Even when funded, they relied on a national grid that itself lacked reliable generation",
+            "severity": "high",
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F009",
+            "finding": "The EPSR Act 2005 established the legal framework for rural electrification but contained 'few details on its implementation' — leaving a gap between legislation and action for over a decade",
+            "severity": "medium",
+            "source_section": "Section 1"
+          },
+          {
+            "id": "F010",
+            "finding": "Rural households continued to rely on fuel-wood, kerosene, candles, and fossil fuel generators — the same energy sources the programme was designed to replace since 1981",
+            "severity": "critical",
+            "consumer_impact": "direct",
+            "source_section": "Section 2.1 / Section 2.2"
+          }
+        ],
+        "key_metrics": {
+          "rural_electrification_rate_2016_percent": 26,
+          "rural_electrification_rate_1981_percent": 26,
+          "improvement_over_35_years_percent": 0,
+          "rural_nigerians_without_electricity_million": 70,
+          "abandoned_projects_count_2012": 1600,
+          "cost_to_complete_abandoned_NGN_billion": 40,
+          "cost_to_complete_abandoned_USD_million": 205,
+          "target_access_2020_percent": 75,
+          "target_access_2030_percent": 90,
+          "target_access_2040_percent": 100,
+          "target_renewable_mix_2025_percent": 10,
+          "interim_2016_target_connections_million": 1,
+          "interim_2016_target_generation_MW": 800,
+          "disco_connection_obligation_2017_million": 4,
+          "annual_rural_connections_needed_2015_2020_million": 1.1,
+          "new_generation_needed_to_reach_60pct_rural_MW": 6000,
+          "cost_to_reach_2020_target_NGN_billion_low": 311,
+          "cost_to_reach_2020_target_NGN_billion_high": 519,
+          "cost_universal_electrification_2040_NGN_trillion_low": 0.825,
+          "cost_universal_electrification_2040_NGN_trillion_high": 1.4,
+          "REA_annual_operating_budget_NGN_billion": 10,
+          "REA_annual_operating_budget_USD_million": 62.5
+        },
+        "policy_vs_reality_gaps": [
+          {
+            "gap_id": "G001",
+            "policy_assumption": "Private sector would drive rural electrification through DisCos and new market entrants",
+            "consumer_reality": "DisCos focused commercially on urban areas where returns were higher; rural areas remained unserved"
+          },
+          {
+            "gap_id": "G002",
+            "policy_assumption": "The REF would provide transparent, competitive capital subsidies from 2015",
+            "consumer_reality": "REA was suspended in 2009; REF was not operational; the 2016 document is still describing the fund as future intent"
+          },
+          {
+            "gap_id": "G003",
+            "policy_assumption": "4 million DisCo connections by 2017 would expand rural access",
+            "consumer_reality": "DisCo commercial incentives directed investment to urban, not rural, areas"
+          },
+          {
+            "gap_id": "G004",
+            "policy_assumption": "Grid extension would bring electricity to rural Local Government Areas",
+            "consumer_reality": "1,600 projects abandoned; completed projects had no reliable power supply"
+          },
+          {
+            "gap_id": "G005",
+            "policy_assumption": "Off-grid and mini-grid solutions would serve remote communities",
+            "consumer_reality": "No viable financing ecosystem; high barriers to entry; capacity gaps among developers"
+          },
+          {
+            "gap_id": "G006",
+            "policy_assumption": "75% national electricity access achievable by 2020",
+            "consumer_reality": "Rural access rate was still ~26% in 2016, unchanged from 1981"
+          },
+          {
+            "gap_id": "G007",
+            "policy_assumption": "Rural households would transition from kerosene and fuel-wood to grid or off-grid electricity",
+            "consumer_reality": "Rural households continued burning kerosene, candles, and fuel-wood — at expense to health, income, and environment"
+          },
+          {
+            "gap_id": "G008",
+            "policy_assumption": "The required 6,000MW of new generation for rural demand could be mobilised",
+            "consumer_reality": "6,000MW exceeded the entire existing capacity of the Nigerian power system at the time"
+          }
+        ],
+        "ai_narrative": "The 2016 RESIP is both a plan and an inadvertent confession. Nigeria's government admitted in writing that 35 years of rural electrification effort produced near-zero measurable improvement. The programme started in 1981. By 2016, the rural access rate was still approximately 26%. Meanwhile, 1,600 projects sat abandoned nationwide, and the very agency meant to fix the problem — the REA — had been suspended in 2009. The new plan required spending more than the entire capacity of the existing Nigerian power system just to hit its 2020 interim target. Rural consumers in 2016 were still burning firewood and kerosene — the same fuels the 1981 programme was designed to replace. The core failure was structural: grid extension as a strategy relied on a national grid that itself could not generate or deliver reliable power. Policy made promises the infrastructure could not keep.",
+        "consumer_experience_summary": "Rural Nigerians in 2016 experienced darkness, dependence on expensive and unhealthy alternatives (kerosene, candles, fuel-wood, generators), reduced economic productivity, compromised health and education outcomes, and continued migration to urban areas — all outcomes the 1981 Rural Electrification Programme and the 2005/2009 RE Policy explicitly promised to eliminate.",
+        "related_documents": [
+          "National Electric Power Policy (NEPP) 2001",
+          "National Energy Policy 2003",
+          "Electric Power Sector Reform (EPSR) Act 2005",
+          "Rural Electrification Policy 2009"
+        ]
+      }
+    ]
+  }
+}

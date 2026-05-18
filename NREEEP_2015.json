@@ -1,0 +1,292 @@
+{
+  "document_metadata": {
+    "id": "NREEEP_2015",
+    "title": "National Renewable Energy and Energy Efficiency Policy (NREEEP)",
+    "issuing_body": "Federal Ministry of Power, Federal Republic of Nigeria",
+    "approval": "Approved by Federal Executive Council (FEC)",
+    "date": "April 20, 2015",
+    "administration": "President Goodluck Ebele Jonathan",
+    "minister": "Prof. Chinedu O. Nebo, CON, FNSE",
+    "document_type": "National Policy",
+    "sector": "Electricity / Renewable Energy / Energy Efficiency",
+    "vitics_tags": ["renewable_energy", "energy_efficiency", "rural_electrification", "off_grid", "solar", "wind", "biomass", "hydropower", "feed_in_tariff", "policy_2015"]
+  },
+
+  "baseline_conditions_at_policy_approval": {
+    "year": "2012–2015",
+    "population": "170 million",
+    "grid_access_percentage": 40,
+    "rural_population_without_grid": "70% of rural Nigerians",
+    "actual_generation_capacity_MW": 5282,
+    "peak_transmission_MW": 4100,
+    "suppressed_demand_MW": 12500,
+    "self_generated_private_power_MW": 12500,
+    "hydro_contribution_to_grid_percent": 26,
+    "large_hydro_potential_MW": 10000,
+    "large_hydro_developed_percent": 15,
+    "small_medium_hydro_potential_MW": 3500,
+    "small_medium_hydro_developed_percent": 2,
+    "fuelwood_share_of_domestic_energy_percent": 50,
+    "solar_installed_MW": 15,
+    "wind_installed_MW": 10,
+    "biomass_electricity_MW": 0,
+    "key_observation": "Nigeria's private generators collectively exceeded the entire national grid capacity — consumers had already self-insured against policy failure before this policy was written."
+  },
+
+  "policy_promises": [
+    {
+      "promise_id": "PP01",
+      "category": "Access & Electrification",
+      "promise": "Bring electricity access to almost half of the Nigerian population currently without electricity, including rural and remote communities.",
+      "source_section": "Section 1.12, Policy Objective ix",
+      "target_year": "2020–2030",
+      "mechanism": "Off-grid renewable energy, Light-Up Rural Nigeria campaign, private sector framework"
+    },
+    {
+      "promise_id": "PP02",
+      "category": "Generation Targets",
+      "promise": "Total on-grid renewable electricity (including large hydro) to reach 8,188 MW by 2020 and 23,134 MW by 2030.",
+      "source_section": "Table 5.5.5",
+      "target_year": "2020 / 2030",
+      "mechanism": "NREAP implementation, private investment, FITs, IRP"
+    },
+    {
+      "promise_id": "PP03",
+      "category": "Solar",
+      "promise": "Solar electricity capacity to reach 117 MW by 2015, 1,343 MW by 2020, and 6,831 MW by 2030.",
+      "source_section": "Table 5.3.3",
+      "target_year": "2015 / 2020 / 2030",
+      "mechanism": "Feed-in tariffs, micro-credit for entrepreneurs, CSP projects >20MW, solar home systems"
+    },
+    {
+      "promise_id": "PP04",
+      "category": "Wind",
+      "promise": "Wind electricity capacity to reach 55 MW by 2015, 631 MW by 2020, and 3,211 MW by 2030.",
+      "source_section": "Table 5.3.4",
+      "target_year": "2015 / 2020 / 2030",
+      "mechanism": "Wind farms, community wind systems, incentives for producers"
+    },
+    {
+      "promise_id": "PP05",
+      "category": "Hydropower",
+      "promise": "Small hydropower to reach 140 MW by 2015, 1,607 MW by 2020, and 8,174 MW by 2030. Large hydro to reach 4,549 MW by 2020.",
+      "source_section": "Table 5.3.1",
+      "target_year": "2015 / 2020 / 2030",
+      "mechanism": "Mambila, Zungeru, Gurara II acceleration; private sector mini/micro hydro"
+    },
+    {
+      "promise_id": "PP06",
+      "category": "Biomass",
+      "promise": "Biomass electricity to reach 57 MW by 2020 and 292 MW by 2030.",
+      "source_section": "Table 5.3.2",
+      "target_year": "2020 / 2030",
+      "mechanism": "Agricultural waste conversion, anaerobic digestion, gasification"
+    },
+    {
+      "promise_id": "PP07",
+      "category": "Feed-in Tariffs",
+      "promise": "NERC to introduce stable, long-term feed-in tariffs (REFIT) for small hydro (≤30MW), biomass, solar, and wind. Guaranteed market for renewable IPPs.",
+      "source_section": "Section 2.8",
+      "target_year": "Short-term (2015–2016)",
+      "mechanism": "NERC tariff regulation; simplified licensing for IPPs up to 50MW; waived licensing for <1MW"
+    },
+    {
+      "promise_id": "PP08",
+      "category": "Energy Efficiency",
+      "promise": "Replace 40% of old and inefficient appliances by 2020. Reduce national energy intensity by 40% by 2030 at 2.5% per year improvement rate.",
+      "source_section": "Section 5.3.2",
+      "target_year": "2020 / 2030",
+      "mechanism": "Energy efficiency fund, rebates, duty-free imports of EE equipment for 5 years, LED mandates in federal buildings"
+    },
+    {
+      "promise_id": "PP09",
+      "category": "Financing",
+      "promise": "Government to provide sovereign guarantees, fiscal incentives, tax holidays (5 years for manufacturers), duty-free imports for RE/EE equipment (2 years), and soft loans from power sector development fund.",
+      "source_section": "Sections 2.7, 5.4",
+      "target_year": "Immediate upon policy passage",
+      "mechanism": "Federal budgetary backing, PBF, carbon credits, ESCO financing"
+    },
+    {
+      "promise_id": "PP10",
+      "category": "Action Plans",
+      "promise": "National Renewable Energy Action Plan (NREAP) and National Energy Efficiency Action Plan (NEEAP) to be completed within 6 to 12 months of policy adoption (i.e., by April 2016 at latest).",
+      "source_section": "Section 5.5",
+      "target_year": "October 2015 – April 2016",
+      "mechanism": "Minister of Power to develop task list; Monitoring and Evaluation Watchdog Group empanelled"
+    },
+    {
+      "promise_id": "PP11",
+      "category": "Institutional",
+      "promise": "A Monitoring and Evaluation Watchdog Group to be created immediately to track implementation, produce monthly reports, and declare a 2030 RE-EE benchmark.",
+      "source_section": "Section 5.6",
+      "target_year": "2015",
+      "mechanism": "Minister of Power to constitute consortium"
+    },
+    {
+      "promise_id": "PP12",
+      "category": "Customs & Trade",
+      "promise": "Special Task Force within Nigerian Customs Service to fast-track clearance of RE and EE equipment, with dedicated HS-Codes.",
+      "source_section": "Section 5.7",
+      "target_year": "Short-term (2015–2016)",
+      "mechanism": "Federal Ministry of Finance directive to Customs Service"
+    },
+    {
+      "promise_id": "PP13",
+      "category": "Rural / Off-Grid",
+      "promise": "Private sector to drive off-grid renewable electricity supply for remote communities. Framework for PPP models for rural RE deployment. 'Light-Up Rural Nigeria' campaign to be intensified.",
+      "source_section": "Section 2.6.2",
+      "target_year": "2015–2020",
+      "mechanism": "REA feasibility studies, private sector PPP models, Federal Government financial guarantees"
+    },
+    {
+      "promise_id": "PP14",
+      "category": "Net Metering",
+      "promise": "Net metering framework to be developed and deployed.",
+      "source_section": "Section 1.6 viii",
+      "target_year": "Short-term",
+      "mechanism": "NERC regulation"
+    },
+    {
+      "promise_id": "PP15",
+      "category": "Vision 20:2020",
+      "promise": "Nigeria to achieve 40,000 MW total electricity generation to meet Vision 20:2020 target (20th largest economy).",
+      "source_section": "Section 1.9, 2.6.1",
+      "target_year": "2020",
+      "mechanism": "Combination of all energy sources; private sector investment"
+    }
+  ],
+
+  "consumer_reality_gaps": [
+    {
+      "gap_id": "CRG01",
+      "linked_promise": "PP01",
+      "gap_title": "Rural electrification remained critically low",
+      "consumer_experience": "Despite the policy's promise, the majority of Nigeria's rural population — estimated at 70% of rural residents — had no grid access at the time of writing, and subsequent years saw marginal improvement. Off-grid solutions did not materialize at scale within the promised timeframe.",
+      "severity": "Critical",
+      "type": "Delivery failure"
+    },
+    {
+      "gap_id": "CRG02",
+      "linked_promise": "PP15",
+      "gap_title": "40,000 MW Vision 20:2020 target completely missed",
+      "consumer_experience": "Nigeria's actual installed generation capacity remained far below 40,000 MW by 2020. Grid power available to consumers hovered well below 5,000 MW for years after this policy was approved. Consumers continued to rely on private generators, paying a severe premium — estimated to cost Nigerian businesses and households billions of naira annually.",
+      "severity": "Critical",
+      "type": "Target failure"
+    },
+    {
+      "gap_id": "CRG03",
+      "linked_promise": "PP07",
+      "gap_title": "Feed-in tariffs not operationalized as promised",
+      "consumer_experience": "NERC's REFIT framework faced protracted delays. The renewable energy tariff structure was not implemented in the short-term as promised. Independent power producers — particularly small solar and wind developers — continued to face regulatory uncertainty, deterring investment that would have expanded supply to consumers.",
+      "severity": "High",
+      "type": "Regulatory failure"
+    },
+    {
+      "gap_id": "CRG04",
+      "linked_promise": "PP10",
+      "gap_title": "NREAP and NEEAP not completed within 12 months",
+      "consumer_experience": "The mandatory action plans (NREAP and NEEAP) that were to be delivered by April 2016 were significantly delayed. Without these plans, the entire implementation architecture of the policy had no executable roadmap — making all downstream promises structurally undeliverable.",
+      "severity": "High",
+      "type": "Process failure / foundational gap"
+    },
+    {
+      "gap_id": "CRG05",
+      "linked_promise": "PP11",
+      "gap_title": "Monitoring and Evaluation Watchdog Group — no evidence of operation",
+      "consumer_experience": "The promised independent watchdog group that would produce monthly progress reports and track implementation was never publicly established in any verifiable, functional form. Consumers had no independent accountability mechanism to appeal to.",
+      "severity": "High",
+      "type": "Accountability failure"
+    },
+    {
+      "gap_id": "CRG06",
+      "linked_promise": "PP03",
+      "gap_title": "Solar targets for 2015 (117 MW) were not met",
+      "consumer_experience": "Solar installed capacity at time of policy approval was approximately 15 MW. The short-term target of 117 MW by 2015 was almost certainly not achieved, leaving consumers — especially rural households that could have benefited from solar home systems — without the promised affordable alternative.",
+      "severity": "High",
+      "type": "Target failure"
+    },
+    {
+      "gap_id": "CRG07",
+      "linked_promise": "PP09",
+      "gap_title": "Tax holidays and duty-free imports inconsistently implemented",
+      "consumer_experience": "Consumers and small entrepreneurs attempting to import solar panels, inverters, and other RE equipment continued to report arbitrary customs duties, port delays, and lack of the promised special HS-Code pathway. The cost of RE technology remained inflated, keeping it out of reach for ordinary Nigerians.",
+      "severity": "High",
+      "type": "Implementation failure"
+    },
+    {
+      "gap_id": "CRG08",
+      "linked_promise": "PP08",
+      "gap_title": "Energy efficiency fund never operationalized for households",
+      "consumer_experience": "The promised energy efficiency rebate fund for on-grid customers replacing inefficient appliances was not made accessible to ordinary consumers. There is no evidence of a functional, accessible rebate mechanism being deployed at scale.",
+      "severity": "Medium",
+      "type": "Delivery failure"
+    },
+    {
+      "gap_id": "CRG09",
+      "linked_promise": "PP13",
+      "gap_title": "'Light-Up Rural Nigeria' did not achieve meaningful coverage",
+      "consumer_experience": "Despite being cited as a campaign to intensify, rural communities — particularly in the North-East, Niger-Delta coastal areas, and South-East highlands — continued to experience energy poverty with little to no off-grid renewable deployment reaching them through this policy framework.",
+      "severity": "Critical",
+      "type": "Delivery failure"
+    },
+    {
+      "gap_id": "CRG10",
+      "linked_promise": "PP14",
+      "gap_title": "Net metering framework not developed",
+      "consumer_experience": "Prosumers — consumers who generate their own solar power and could feed surplus into the grid — had no legal or operational framework to do so. This locked consumers into one-way dependence on a failing grid, with no mechanism to monetize their own investments in solar.",
+      "severity": "Medium",
+      "type": "Regulatory gap"
+    },
+    {
+      "gap_id": "CRG11",
+      "linked_promise": "PP02",
+      "gap_title": "Structural contradiction: policy assumed private investment that never materialized at scale",
+      "consumer_experience": "The policy's entire financing architecture was predicated on attracting foreign and domestic private investment. However, the enabling environment — stable tariffs, secure land rights, functioning grid infrastructure, and bankable contracts — was never fully established. The policy diagnosed its own preconditions but did not resolve them before setting targets.",
+      "severity": "Critical",
+      "type": "Structural / systemic gap"
+    }
+  ],
+
+  "key_policy_contradictions": [
+    {
+      "contradiction_id": "KC01",
+      "title": "Self-generation crisis acknowledged but not resolved",
+      "detail": "The policy explicitly acknowledges that private generators installed by Nigerians collectively exceeded the national grid capacity (12,500 MW vs ~5,282 MW installed grid). Yet the policy targets and mechanisms do not address the stranded cost consumers pay for diesel-powered self-generation, nor does it provide a credible timeline for when grid power would displace this burden."
+    },
+    {
+      "contradiction_id": "KC02",
+      "title": "Fuelwood dependency acknowledged, no consumer protection built in",
+      "detail": "The policy notes fuelwood accounts for over 50% of domestic energy consumption and is causing deforestation. Yet the biomass policy focuses on commercial electricity generation, not on protecting rural households from energy poverty or providing clean cooking alternatives as a consumer right."
+    },
+    {
+      "contradiction_id": "KC03",
+      "title": "Targets require 7x growth by 2030 from a broken baseline",
+      "detail": "The policy projects Nigeria needs over 40,000 MW by 2030 — a sevenfold increase from 2012 levels — while simultaneously acknowledging institutional failures, regulatory gaps, and absent private investment. No credible bridge strategy is provided for consumers living through the gap years."
+    },
+    {
+      "contradiction_id": "KC04",
+      "title": "Policy was Nigeria's first — but energy poverty had existed for decades",
+      "detail": "The Foreword admits this was Nigeria's first ever national RE/EE policy, approved in 2015 — decades after energy poverty became acute. Consumers had been managing energy insecurity without any national framework for this entire period, revealing a fundamental governance gap predating and underlying all specific policy failures."
+    }
+  ],
+
+  "vitics_ai_insights": [
+    "The 2015 NREEEP is a structurally sound policy document that diagnosed Nigeria's energy crisis accurately — but it was a blueprint with no builder. Nearly every promise depended on downstream action plans (NREAP/NEEAP) that were never delivered on time.",
+    "Consumers absorbed the cost of policy failure through generator fuel bills. The 12,500 MW of self-generated private power cited in the policy represents a massive, ongoing consumer tax for government inaction.",
+    "The rural energy gap was explicitly acknowledged: 70% of rural Nigerians had no grid access. Every year of delay in off-grid RE deployment represents measurable economic and human cost to these communities.",
+    "The policy's promise of a feed-in tariff regime was foundational to every private investment target. Without functional FITs, the entire renewable energy investment pipeline stalled — making all capacity targets aspirational rather than operational.",
+    "Net metering was promised in 2015. Its absence still constrains prosumer markets in Nigeria today — a decade-long regulatory vacuum that directly affects urban households with rooftop solar.",
+    "The Special Customs Task Force for RE/EE equipment was a practical, actionable promise that would have directly reduced consumer costs. Its apparent non-implementation signals that even low-complexity, high-impact interventions were not followed through."
+  ],
+
+  "vitics_knowledge_base_entry": {
+    "document_shortname": "NREEEP 2015",
+    "searchable_keywords": ["renewable energy", "energy efficiency", "solar targets", "wind targets", "hydropower", "feed-in tariff", "REFIT", "off-grid", "rural electrification", "NREAP", "NEEAP", "Light-Up Rural Nigeria", "net metering", "generator", "energy poverty", "Vision 20:2020", "40000MW", "NERC", "FIT", "biomass", "Ministry of Power", "NREEEP"],
+    "consumer_impact_score": 9,
+    "consumer_impact_note": "Near-total failure to translate policy into consumer-experienced improvement. Targets missed, action plans delayed, accountability mechanisms absent. Rural consumers worst affected.",
+    "policy_ambition_score": 8,
+    "policy_ambition_note": "Well-structured with clear targets, timelines, and mechanisms. Aligned with ECOWAS regional frameworks. First comprehensive RE/EE policy Nigeria ever had.",
+    "promise_vs_reality_score": 2,
+    "promise_vs_reality_note": "Very low delivery rate on near-term (2015) targets and foundational commitments (NREAP, NEEAP, FITs, Watchdog Group). Long-term targets (2030) remain unverified."
+  }
+}

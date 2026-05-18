@@ -1,0 +1,337 @@
+{
+  "schema_version": "disco_financial_schema_v1.1",
+  "document_id": "AEDC_2016",
+  "disco_name": "Abuja Electricity Distribution Plc",
+  "disco_acronym": "AEDC",
+  "coverage_states": ["Federal Capital Territory (Abuja)", "Kogi", "Nasarawa", "Niger"],
+  "reporting_period": "Year ended 31 December 2016",
+  "date_signed": "10 July 2017",
+  "auditor": "KPMG Professional Services, Lagos",
+  "audit_opinion": "Unmodified with Material Uncertainty Related to Going Concern",
+
+  "section_01_corporate_profile": {
+    "registration_number": "638681",
+    "incorporation_date": "8 November 2005",
+    "registered_address": "1 Ziguinchor Street, Off IBB Way, Wuse Zone 4, Abuja",
+    "licence_authority": "Nigerian Electricity Regulatory Commission (NERC)",
+    "licence_duration_years": 15,
+    "licence_expiry": "2028",
+    "licence_renewal_option_years": 10,
+    "area_offices": 28,
+    "operational_regions": 6,
+    "tariff_framework": "Multi-Year Tariff Order (MYTO) — MYTO 2015 effective 1 February 2016",
+    "market_framework": "Transitional Electricity Market (TEM) rules effective 1 February 2015, amended 18 March 2015",
+    "parent_company": "KANN Utility Company Limited (60% — joint venture between Xerxes Global Investment Ltd and CEC Africa Investment Ltd)",
+    "other_shareholders": {
+      "Bureau of Public Enterprises": "32%",
+      "Ministry of Finance Incorporated": "8%"
+    },
+    "privatisation_completion_date": "1 November 2013",
+    "management_change_2016": "Neil Croucher (Managing Director, South African) retired July 2016. Ernest Mupwaya (Zambian) appointed Managing Director 1 August 2016. Benjamin Ezra Dikki resigned 21 July 2016. Vincent Onome Akpotaire appointed 21 July 2016.",
+    "notable_post_period_event": "Andrew Atterbury (CFO) passed away 19 January 2017. Mr. John Albert Jones passed away 15 April 2017."
+  },
+
+  "section_02_financial_summary": {
+    "currency": "Nigerian Naira (NGN)",
+    "units": "NGN thousands (N'000) unless stated",
+    "revenue_2016": 61147917,
+    "revenue_2015": 62534676,
+    "revenue_change_pct": -2.2,
+    "revenue_note": "Revenue FELL by 2.2% year-on-year despite 49% tariff increase effective February 2016. Revenue from private individuals/companies fell from N45.1bn to N33.0bn — a drop of N12.1bn. Revenue from government institutions rose from N16.7bn to N28.1bn.",
+    "cost_of_sales_2016": 66489313,
+    "cost_of_sales_2015": 54195844,
+    "gross_profit_loss_2016": -5341396,
+    "gross_profit_loss_2015": 8338832,
+    "gross_margin_swing": "Swung from +N8.3bn gross profit in 2015 to -N5.3bn gross loss in 2016 — a N13.6bn deterioration",
+    "operating_loss_2016": -35309576,
+    "operating_loss_2015": -39196964,
+    "net_finance_costs_2016": -11988674,
+    "net_finance_costs_2015": -2521750,
+    "finance_cost_escalation_note": "Finance costs exploded from N2.82bn (2015) to N12.24bn (2016) — a 334% increase. Primary driver: N10.9bn interest on Market Operator (NBET/ONEM) bill for non-payment of minimum base line remittances.",
+    "loss_before_tax_2016": -47298250,
+    "loss_before_tax_2015": -41718714,
+    "loss_for_year_2016": -47447920,
+    "loss_for_year_2015": -41972588,
+    "loss_escalation_note": "Net loss grew from N41.97bn (2015) to N47.45bn (2016) — fourth consecutive year of losses since privatisation in 2013.",
+    "total_assets_2016": 117207209,
+    "total_assets_2015": 109485860,
+    "total_liabilities_2016": 128226844,
+    "total_liabilities_2015": 73057575,
+    "total_equity_2016": -11019635,
+    "total_equity_2015": 36428285,
+    "equity_collapse_note": "Equity collapsed from +N36.4bn to -N11.0bn in one year — the company is now technically insolvent. Total liabilities exceeded total assets by N11.02bn.",
+    "current_liabilities_exceed_current_assets_by": 93630000,
+    "net_assets_trajectory": {
+      "1_Jan_2013": 88868063,
+      "31_Dec_2013": 85794218,
+      "31_Dec_2014": 63123448,
+      "31_Dec_2015": 36428285,
+      "31_Dec_2016": -11019635
+    },
+    "net_assets_trajectory_note": "From N88.9bn at privatisation inception (Jan 2013) to negative N11.0bn by end 2016 — a destruction of N99.9bn in net asset value in less than 4 years of private operation."
+  },
+
+  "section_03_revenue_analysis": {
+    "revenue_breakdown_2016": {
+      "private_individuals_companies": 33047589,
+      "government_institutions": 28100328,
+      "total": 61147917
+    },
+    "revenue_breakdown_2015": {
+      "private_individuals_companies": 45111130,
+      "government_institutions": 16723546,
+      "total": 62534676
+    },
+    "revenue_composition_shift_note": "A dramatic structural shift: private sector revenue collapsed by N12.1bn (-27%) while government revenue nearly doubled (+N11.4bn). This is consistent with private customers reducing consumption, switching to generators/solar, or being unable to pay — while government billing expanded (including MDA receivables chase). Private consumer disengagement signal.",
+    "unbilled_receivables_2016": 3580074,
+    "unbilled_receivables_2015": 2773750,
+    "cost_of_energy_2016": 61178576,
+    "cost_of_energy_2015": 47586281,
+    "cost_of_energy_note": "Cost of energy (N61.18bn) EXCEEDED total revenue (N61.15bn) — AEDC paid more for electricity than it collected from customers. Structural impossibility of profitability under this model.",
+    "tariff_change_2016": "MYTO 2015 effective 1 February 2016 resulted in average 49% tariff increase across all customer categories.",
+    "tariff_impact_on_revenue": "Despite 49% tariff increase, revenue fell 2.2% — indicating either volume contraction (less electricity sold or less collected) or customer base decline/non-payment acceleration."
+  },
+
+  "section_04_receivables_and_collection": {
+    "trade_receivables_gross_2016": 28417498,
+    "trade_receivables_gross_2015": 23090722,
+    "impairment_allowance_2016": 39456757,
+    "impairment_allowance_2015": 26236926,
+    "impairment_note": "Impairment allowance of N39.46bn EXCEEDS gross trade receivables of N28.42bn — meaning accumulated bad debt provisions are greater than the current receivables book. This represents a catastrophic collection history.",
+    "impairment_loss_recognised_2016": 13219831,
+    "impairment_loss_recognised_2015": 18343412,
+    "net_impairment_charged_cumulative": "N39.46bn impairment vs N28.42bn gross receivables = effectively the entire receivables book is provisioned against.",
+    "receivables_ageing_2016": {
+      "unbilled": 3580074,
+      "past_due_0_30_days": 993497,
+      "past_due_31_90_days": 1490245,
+      "past_due_91_120_days": 1738620,
+      "past_due_120_days_and_above": 20615062,
+      "total": 28417498
+    },
+    "receivables_ageing_note": "72.5% of gross receivables are past due 120+ days (N20.6bn). Near-identical pattern to 2015 (N17.5bn at 120+ days). The 120+ days bucket grew by N3.07bn — the collection crisis is deepening.",
+    "general_impairment_2016": 22550916,
+    "specific_impairment_2016": 16905841,
+    "collection_strategies_disclosed": [
+      "Prepaid meter conversion — CAPMI scheme abolished during 2016, but meters still being installed",
+      "Aggressive disconnections",
+      "KPI-driven debt collection by staff",
+      "Ministry of Finance involvement for government MDA receivables",
+      "Super vendor electronic payment platforms (Kallak, eTranzact, UBA, Pagatech)"
+    ],
+    "government_mda_receivables": "N11.75bn owed by Federal Government Ministries, Departments and Agencies (MDAs) — validation by Office of Vice President still ongoing at date of financial statement approval (July 2017).",
+    "credit_risk_exposure_2016": 31261461,
+    "prepaid_meter_strategy": "Company expanding prepaid meter base to reduce post-paid collection risk — described as primary credit risk mitigation strategy."
+  },
+
+  "section_05_cost_structure": {
+    "total_cost_of_sales_and_admin_2016": 96868358,
+    "total_cost_of_sales_and_admin_2015": 102255660,
+    "cost_reduction_note": "Total costs fell N5.4bn — however this was overwhelmed by revenue decline and finance cost explosion.",
+    "major_cost_items_2016": {
+      "cost_of_energy": 61178576,
+      "staff_and_related_costs": 9695325,
+      "impairment_on_receivables": 13219831,
+      "operations_management_fees_KANN": 1038625,
+      "consultancy_fees": 1127644,
+      "maintenance_expenses": 1082205,
+      "depreciation": 3975125,
+      "insurance_transport": 1018432,
+      "security": 584813,
+      "directors_remuneration": 585513,
+      "professional_services": 599276,
+      "rent_accommodation": 451762,
+      "office_stationery_utilities": 526325
+    },
+    "staff_headcount_2016": 2716,
+    "staff_headcount_2015": 2277,
+    "headcount_increase_note": "Staff grew by 439 (19%) despite severe financial losses — primarily in Marketing (1,044 from 865) and Technical (1,115 from 906). Suggests active field expansion despite insolvency.",
+    "directors_remuneration_increase": "Directors' fees nearly doubled from N192.8m to N382.9m while the company posted N47.4bn loss.",
+    "operations_management_fee_note": "KANN Utility Company Ltd (parent) charges 2% of net cash collected as management fee — N1.04bn charged to loss in 2016 (2015: N920.19m). Related party extraction during insolvency."
+  },
+
+  "section_06_balance_sheet_analysis": {
+    "property_plant_equipment_2016": 84088819,
+    "property_plant_equipment_2015": 83079696,
+    "ppe_note": "PPE virtually unchanged despite N4.96bn capex additions — offset by N3.98bn depreciation. Distribution network assets fair valued at N65.34bn. Company still investing in infrastructure despite insolvency.",
+    "capex_2016": 4984248,
+    "capex_breakdown_2016": {
+      "purchase_ppe": 4960864,
+      "customer_contributed_assets": 23384
+    },
+    "capital_commitments_2016": 217060,
+    "trade_payables_2016": 121700994,
+    "trade_payables_2015": 67100359,
+    "trade_payables_increase_note": "Trade payables (owed to NBET and ONEM for energy) almost doubled from N67.1bn to N121.7bn in one year. 85.23% of total liabilities payable to NBET/ONEM. The company is accumulating an unpayable energy debt.",
+    "nbet_onem_concentration": "85.23% of total liabilities are payable to NBET and ONEM — structural insolvency driven entirely by inability to pay upstream energy costs.",
+    "cash_2016": 2474110,
+    "cash_2015": 1771442,
+    "cash_note": "Cash increased N702m — entirely from operating cash inflow of N4.69bn partially offset by N5.0bn investing activities. The company can generate operating cash but cannot service its structural debt.",
+    "naira_devaluation_impact": "USD/NGN average rate went from N199 (2015) to N382.87 (2016) — a 92% devaluation. Reporting date rate: N496/$. This impacted foreign currency exposures and increased cost of imported equipment.",
+    "loans_and_borrowings_2016": 2007800,
+    "loans_breakdown": {
+      "bank_loan_vehicle_finance": 215831,
+      "capmi_payables": 1791969,
+      "parent_company_loan": 0,
+      "note": "Parent company (KANN) working capital loan fully repaid during 2016. CAPMI payables remain as obligations to customers who pre-paid for meters."
+    }
+  },
+
+  "section_07_going_concern": {
+    "going_concern_flag": true,
+    "auditor_going_concern_paragraph": true,
+    "kpmg_finding": "Loss after tax of N47.45bn. Current liabilities exceeded current assets by N93.63bn. Total liabilities exceeded total assets by N11.02bn. Material uncertainty exists that may cast significant doubt on the Company's ability to continue as a going concern.",
+    "directors_going_concern_basis": [
+      "MYTO 2015 projects profitability from 2018 financial year",
+      "Expected receipt of CBN intervention fund (N27bn — not yet received, still awaiting conditions precedent as at year end)",
+      "Restructuring of NBET/ONEM payables into 8-year long-term loan with 18-month moratorium",
+      "Receipt of N11.75bn from Federal Government MDAs once validation completed",
+      "Power Sector Recovery Program approved by Federal Executive Council subsequent to year end"
+    ],
+    "vitics_going_concern_assessment": "All four pillars of the directors' going concern case depend on government action that had not materialised as at July 2017 (date of signing). CBN fund signed in 2014 — still not received 3 years later. MDA receivables validation still ongoing. NBET/ONEM restructuring not yet agreed. This is a company surviving on regulatory forbearance, not commercial viability.",
+    "nerc_escrow_action": "NERC instructed CBN to escrow AEDC's bank collection accounts due to low NBET/ONEM remittances. AEDC obtained court injunction to stop the escrow. The company's bank accounts were temporarily under threat of seizure."
+  },
+
+  "section_08_force_majeure_history": {
+    "kann_force_majeure_2015": {
+      "declared": "April 2015",
+      "withdrawn": "February 2016",
+      "impact": "KANN (parent company/controlling shareholder) declared force majeure on its operational and financial obligations in April 2015. This was in effect throughout most of the period covered by the 2015 report. Withdrawn February 2016, coinciding with new management (Ernest Mupwaya replacing Neil Croucher in August 2016 transition)."
+    },
+    "2016_force_majeure_status": "No new force majeure declared in 2016. KANN force majeure from 2015 was formally withdrawn February 2016.",
+    "court_injunction_2016": "AEDC obtained court injunction against NERC/CBN escrow action on collection accounts — this constitutes a legal dispute with the regulator during the reporting period."
+  },
+
+  "section_09_cbn_intervention_fund": {
+    "fund_expected": 27000000,
+    "fund_received_as_at_signing": 0,
+    "disbursement_agreement_signed": "2014",
+    "status_as_at_july_2017": "Not yet received — Company has not yet fulfilled all conditions precedent",
+    "vitics_signal": "CBN fund signed 2014, still not received as at July 2017 — 3 years of non-disbursement. This is a critical signal: government promised financial rescue to DISCOs at privatisation and did not deliver. The N25bn earmarked for MO payables settlement from this fund remains on paper only.",
+    "note_reference": "Note 29(b) — Liquidity risk section"
+  },
+
+  "section_10_nelmco_transition_liabilities": {
+    "pre_completion_receivables_transferred": "All trade receivables as at 31 October 2013 transferred to NELMCO without recourse",
+    "pre_completion_liabilities_transferred": "All liabilities and contingent liabilities as at 31 October 2013 transferred to NELMCO subject to conditions",
+    "nelmco_cash_liability_2016": 2172939,
+    "nelmco_cash_liability_note": "N2.17bn provision recorded for cash held as at 1 November 2013 that NERC/industry interpretation required to be transferred to NELMCO. Unchanged from 2015 — still unresolved.",
+    "nelmco_individual_debtors_status": "AEDC and NELMCO yet to agree on individual trade debtors and liabilities. Company does not maintain estimate — considers this NELMCO's responsibility.",
+    "litigation_exposure_nelmco_related": "N3.69bn maximum exposure on litigations (separate from NELMCO claims) — Directors believe risk of material loss is remote.",
+    "psrp_note": "Federal Executive Council approved Power Sector Recovery Program subsequent to year end (post 31 December 2016) — Directors believe this will positively impact the industry."
+  },
+
+  "section_11_customer_contributed_assets": {
+    "customer_contributed_assets_2016": 23384,
+    "customer_contributed_assets_2015": 127192,
+    "cumulative_customer_contributed_assets_in_ppe": "Recognised as PPE at fair value with corresponding deferred income. 2016 contributions: N23.38m. 2015: N127.19m.",
+    "capmi_scheme_status": "CAPMI scheme abolished during 2016. Company stopped accepting CAPMI payments. Outstanding CAPMI payables (obligations to refund customers): N1.79bn at year end.",
+    "capmi_payables_note": "Customers paid advance for meters under CAPMI. Scheme abolished but outstanding refund obligations remain. N1.79bn owed back to customers who paid for meters not yet installed or scheme terminated — a consumer welfare liability.",
+    "capmi_installation_income_2016": 242735,
+    "capmi_installation_income_2015": 277887,
+    "capmi_refunds_2016": 167485,
+    "capmi_context": "The abolition of CAPMI in 2016 marks an important transition — the consumer self-funding meter model ended. Future metering to be handled differently, possibly through NERC-mandated alternatives.",
+    "deferred_income_uninstalled_capmi_meters": 210400
+  },
+
+  "section_12_grid_defection_signals": {
+    "grid_defection_score": 5,
+    "grid_defection_score_2015": 3,
+    "grid_defection_score_rationale": "Score increased from 3/10 (2015) to 5/10 (2016). Key signals: (1) Private sector revenue collapsed 27% from N45.1bn to N33.0bn despite 49% tariff increase — this is only explicable if private customers are consuming significantly less grid electricity. (2) Naira devaluation to N382-496/$ makes solar imports expensive BUT also makes grid electricity unaffordable. (3) CAPMI scheme abolished — transition from consumer-funded metering to unknown alternative. (4) 2016 is the year solar content begins appearing on Nigerian YouTube at scale.",
+    "private_revenue_collapse_amount": 12063541,
+    "private_revenue_collapse_pct": -26.7,
+    "tariff_increase_despite_revenue_fall": "49% tariff increase + 27% private revenue fall = ~56% effective volume contraction in private customer consumption — extremely strong grid defection signal.",
+    "interpretation": "In 2016, AEDC's private customers paid 49% more per unit but the company collected N12bn less from them. The only explanations are: (a) mass non-payment/disconnection, (b) significant consumption reduction via generators/solar, or (c) both. This is precisely the year solar content begins scaling on Nigerian YouTube. The financial data is consistent with early-stage grid defection becoming economically significant.",
+    "naira_devaluation_context": "Naira devalued 92% against USD in 2016 (N199 to N382 average). This made solar panels and inverters more expensive in naira terms — paradoxically slowing solar adoption temporarily while making grid electricity unaffordable. 2016 is a transitional stress year before the 2017-2020 solar market scale-up.",
+    "prepaid_meter_push": "Company's primary strategic response to collection crisis is prepaid meter conversion — structurally this accelerates grid defection as prepaid meter customers have precise visibility of electricity cost and are first movers to solar arbitrage.",
+    "government_revenue_expansion_signal": "Government institution revenue nearly doubled (N16.7bn to N28.1bn) — suggesting government MDAs being billed more aggressively even as private consumers disengage. This is a two-track market emerging: formal government connections vs informal/solar private sector."
+  },
+
+  "section_13_regulatory_environment": {
+    "myto_2015_impact": "NERC issued MYTO 2015 — 10-year tariff order effective 1 February 2016. Average 49% tariff increase in 2016 over 2015 tariffs across all customer categories.",
+    "tem_rules": "Transitional Electricity Market (TEM) rules effective 1 February 2015. AEDC required to remit 100% of NBET and ONEM invoices.",
+    "nbet_onem_remittance_failure": "Company failed to meet 100% remittance requirement — NERC instructed CBN to escrow AEDC collection accounts as enforcement action.",
+    "imbalance_penalty": "Abolished by NERC effective July 2015 — confirmed in 2016 accounts (N0 vs N278.9m in 2015). Removed a punitive cost that had been charging AEDC for receiving more energy than its MYTO allocation.",
+    "tariff_framework_note": "AEDC operates under price control — cannot raise prices above NERC-set tariffs. Costs exceed tariff-derived revenues structurally — the MYTO model has not delivered cost-reflective tariffs in practice.",
+    "power_sector_recovery_program": "Federal Executive Council approved PSRP subsequent to 31 December 2016. Directors believe positive impact — but no details in this report."
+  },
+
+  "section_14_consumer_impact_assessment": {
+    "consumer_impact_score": 9,
+    "consumer_impact_score_2015": 7,
+    "consumer_impact_rationale": "Score increases to 9/10 (severe). In 2016 Nigerian electricity consumers in the Abuja/Kogi/Nasarawa/Niger region experienced: (1) 49% tariff increase from February 2016, (2) No improvement in supply reliability — AEDC's own costs exceed its revenues indicating persistent under-investment in service quality, (3) CAPMI scheme abolished — consumers who paid advance for meters had N1.79bn of refund obligations outstanding, (4) Aggressive disconnection strategy, (5) Company technically insolvent with no realistic prospect of service improvement under current model.",
+    "tariff_shock_2016": "49% overnight tariff increase in February 2016 — the largest single-year increase in the privatisation era to date at that point. This is a primary driver of the 2016-2017 solar search surge on Nigerian social media and YouTube.",
+    "service_quality_inference": "No service quality metrics disclosed. However: cost of energy (N61.2bn) exceeded revenue (N61.1bn) — AEDC was distributing electricity it could not pay for. This structural deficit means zero capacity for network investment, maintenance, or reliability improvement.",
+    "meter_situation": "CAPMI abolished mid-2016. Significant proportion of consumers remain on estimated billing. Company acknowledges continuing metering gap and expanding prepaid meter rollout. Estimated billing remains a major consumer grievance in Abuja.",
+    "consumer_debt_to_aedc": "N28.4bn gross receivables — growing. Majority past due 120+ days. Consumers unable or unwilling to pay at current tariff levels.",
+    "aedc_debt_to_market": "N121.7bn owed to NBET/ONEM — growing. Neither the company nor its customers can sustain the current pricing model.",
+    "key_consumer_reality": "Consumers paid 49% more for electricity in 2016. AEDC collected less total revenue. The company that provides their electricity is technically insolvent. Government promised a rescue fund in 2014 that has not arrived. This is the year Nigerian consumers began seriously searching YouTube for solar alternatives — the financial data confirms why."
+  },
+
+  "section_15_cash_flow_analysis": {
+    "operating_cash_flow_2016": 4690273,
+    "operating_cash_flow_2015": -194969,
+    "investing_cash_flow_2016": -5004814,
+    "financing_cash_flow_2016": 836049,
+    "net_cash_change_2016": 521508,
+    "operating_cash_positive_note": "Despite N47.4bn loss, operating cash flow was positive N4.69bn. This is because N13.2bn impairment (non-cash), N3.98bn depreciation (non-cash), and N42.8bn increase in trade payables (not paying NBET/ONEM) inflated operating cash. The company survives by not paying its energy supplier.",
+    "capex_note": "N4.96bn capex in 2016 — company investing in distribution assets despite insolvency. Capital funded by not paying upstream energy debts.",
+    "exchange_rate_impact_on_cash": 181160
+  },
+
+  "section_16_related_party_transactions": {
+    "kann_management_fee_2016": 1038625,
+    "kann_management_fee_2015": 920194,
+    "kann_management_fee_basis": "2% of net cash collected from customers",
+    "key_management_compensation_2016": 818831,
+    "key_management_compensation_2015": 538927,
+    "key_management_comp_increase_pct": 52,
+    "vitics_observation": "KANN (parent) extracted N1.04bn management fee from an insolvent AEDC in 2016. Key management compensation increased 52% (from N538.9m to N818.8m) while the company posted N47.4bn loss and became technically insolvent. Director fees nearly doubled to N585.5m. This is value extraction from a public utility in financial distress."
+  },
+
+  "section_17_deferred_tax_and_losses": {
+    "cumulative_tax_losses_2016": 16609818,
+    "unutilised_capital_allowance_2016": 25185893,
+    "deductible_temporary_differences_2016": 12856490,
+    "total_unrecognised_deferred_tax_2016": 54652201,
+    "deferred_tax_note": "No deferred tax asset recognised — company has N54.65bn of potential deferred tax assets but cannot recognise them as future profitability is uncertain. This represents the full accumulated fiscal cost of failure."
+  },
+
+  "section_18_vitics_analysis_instructions": {
+    "document_significance": "WATERSHED YEAR for understanding the 2016-2017 consumer solar turn",
+    "primary_vitics_signal": "The 49% tariff increase of February 2016 is the single most important regulatory event in this report. It is the proximate trigger for the surge in Nigerian consumer solar searches on YouTube in 2016-2017. When Vitics analyses YouTube content from 2016-2018, this tariff shock explains the spike.",
+    "secondary_signal": "Private sector revenue collapse of N12.1bn (-27%) despite 49% tariff increase = volume destruction. Consumers consumed significantly less grid electricity in 2016. This is the year grid defection becomes financially material in AEDC data.",
+    "tertiary_signal": "Technical insolvency of AEDC confirmed in 2016. Consumers in Abuja zone experienced service from an insolvent utility. Trust in the grid model was at an all-time low.",
+    "capmi_abolition_signal": "CAPMI scheme abolished 2016 — the consumer-funded meter model ended. The signal to consumers: the government/utility cannot even deliver a meter you paid for in advance. This is a powerful trust destruction event.",
+    "naira_devaluation_signal": "92% devaluation makes all imported electricity equipment (generators, solar, inverters) more expensive in naira — but simultaneously makes grid electricity unaffordable. 2016 is a pain year before the 2017-2020 solar coping response scales.",
+    "going_concern_public_knowledge": "If Nigerian electricity consumers knew their distribution company was technically insolvent and under going concern qualification — this would be a significant trust-destroying signal. KPMG qualified AEDC for going concern for the second consecutive year.",
+    "consumer_search_terms_implied": [
+      "AEDC light wahala 2016",
+      "Abuja electricity tariff increase",
+      "light bill too much Abuja",
+      "NEPA AEDC complaint",
+      "solar panel Abuja how much",
+      "inverter price Abuja 2016",
+      "how to reduce electricity bill Nigeria",
+      "estimated bill wahala Abuja",
+      "CAPMI meter refund",
+      "AEDC meter problem",
+      "Abuja darkness",
+      "no light Abuja",
+      "generator fuel cost Nigeria 2016"
+    ],
+    "connection_to_transition_timeline": "2016 sits between two critical transition markers: (1) 2015 — off-grid solar becomes visible to consumers; (2) 2017 — solar content on YouTube Nigeria becomes searchable at scale. The 49% tariff shock of 2016 is the bridge event that converts consumer awareness of solar into active search behaviour.",
+    "four_year_loss_pattern": "Four consecutive years of losses: 2013 (N13.8bn), 2014 (N22.7bn), 2015 (N42.0bn), 2016 (N47.4bn). Losses accelerating. By 2016 the privatisation model is demonstrably broken from a financial standpoint.",
+    "read_with": ["aedc_2015.json — compare going concern trajectory", "nepp_2001.json — contrast 2001 promises with 2016 reality", "upcoming aedc_2019_or_2020.json — track grid defection score against Solar Power Naija programme"]
+  },
+
+  "document_quality": {
+    "reading_method": "Full text extraction from scanned PDF — all 58 pages read",
+    "document_clarity": "Good — text-heavy scanned document with clear financial tables",
+    "pages_read": 58,
+    "confidence_level": "High",
+    "data_completeness": "All major financial statements extracted. Notes 1-33 read in full.",
+    "limitations": "No operational KPIs (energy distributed in GWh, customer count, SAIDI/SAIFI) disclosed in this report — a significant gap for consumer impact assessment",
+    "auditor_signing_note": "Financial statements signed 10 July 2017 for year ended 31 December 2016 — 6.5 month delay from year end, itself a signal of governance difficulties"
+  }
+}

@@ -46,13 +46,21 @@ const VITICS_KEYWORDS = {
     "Arnergy Solar Nigeria",
     "Rubitec Solar Nigeria",
     "EcoFlow Nigeria",
+    "EcoFlow Delta 2 Nigeria",
     "PowerTank Nigeria",
+    "itel power bank Nigeria",
+    "itel energy Nigeria",
+    "Sun King Nigeria",
+    "solar generator Nigeria",
+    "500W solar panel Nigeria",
+    "1000W solar inverter Nigeria",
+    "hybrid inverter Nigeria",
+    "silver cymbal inverter Nigeria",
     "Felicity Solar Nigeria",
     "solar battery Nigeria",
     "lithium battery inverter Nigeria",
     "solar pump Nigeria",
     "solar water pump Nigeria",
-    "hybrid inverter Nigeria",
     "mini grid Nigeria",
     "solar street light Nigeria",
     "solar refrigerator Nigeria",
@@ -78,7 +86,10 @@ const VITICS_KEYWORDS = {
     "switch from generator to solar Nigeria",
     "generator vs solar Nigeria",
     "generator maintenance cost Nigeria",
-    "AGO diesel Nigeria price"
+    "AGO diesel Nigeria price",
+    "fuel Nigeria generator",
+    "charge it generator Nigeria",
+    "generator fuel Nigeria 2024"
   ],
 
   // ── NIGERIAN GRID & POWER UTILITY DISCOURSE ─────────────
@@ -120,7 +131,13 @@ const VITICS_KEYWORDS = {
     "NEPA bill too much",
     "wahala with electricity Nigeria",
     "solar na better option Nigeria",
-    "buy solar Nigeria review"
+    "buy solar Nigeria review",
+    "never see light Nigeria",
+    "no light Nigeria",
+    "na solar we dey use Nigeria",
+    "NEPA light Nigeria",
+    "light Nigeria",
+    "no fuel Nigeria generator"
   ],
 
   // ── GEOGRAPHIC LOCATIONS ─────────────────────────────────
@@ -141,6 +158,18 @@ const VITICS_KEYWORDS = {
     "solar energy Oyo",
     "solar energy Ibadan",
     "solar energy Maiduguri",
+    "solar energy Ondo",
+    "solar energy Akure",
+    "solar energy Edo",
+    "solar energy Benin City",
+    "solar energy Jigawa",
+    "inverter Lagos",
+    "inverter Kano",
+    "inverter Abuja",
+    "inverter Ibadan",
+    "solar panel Lagos",
+    "solar panel Kano",
+    "solar panel Abuja",
     "mini grid rural Nigeria",
     "off grid energy northern Nigeria",
     "solar energy northeast Nigeria",
@@ -201,7 +230,30 @@ const VITICS_KEYWORDS = {
     "local solar manufacturer Nigeria",
     "solar cold chain Nigeria",
     "electric vehicle Nigeria solar",
-    "net metering Nigeria"
+    "net metering Nigeria",
+    "Oscarmini solar Nigeria",
+    "solar energy review Nigeria 2024",
+    "solar energy review Nigeria 2025"
+  ],
+
+  // ── YOUTUBE CHANNELS & CREATORS ─────────────────────────
+  // Nigerian YouTube channels and creators producing energy content
+  // Use as search queries to surface their videos directly
+  // These channels have high-quality Nigerian energy consumer discourse
+  youtube_channels: [
+    "Valor Reviews Nigeria solar",
+    "Hardware House Nigeria inverter",
+    "Adventure Gear TV Nigeria solar",
+    "Oscarmini Nigeria energy",
+    "solar panel review Nigeria YouTube",
+    "inverter review Nigeria YouTube",
+    "EcoFlow Nigeria review YouTube",
+    "itel energy Nigeria review",
+    "Sun King Nigeria review",
+    "PowerTank Nigeria review YouTube",
+    "hybrid inverter review Nigeria",
+    "solar generator Nigeria review",
+    "Delta 2 EcoFlow Nigeria review"
   ],
 
   // ── HASHTAGS ─────────────────────────────────────────────
@@ -258,7 +310,8 @@ function buildSearchQueries(count = 10) {
     ...VITICS_KEYWORDS.locations,
     ...VITICS_KEYWORDS.policy_consumer,
     ...VITICS_KEYWORDS.sdg_themes,
-    ...VITICS_KEYWORDS.emerging
+    ...VITICS_KEYWORDS.emerging,
+    ...VITICS_KEYWORDS.youtube_channels
   ].filter(q =>
     !VITICS_KEYWORDS.excluded.some(ex =>
       q.toLowerCase().includes(ex.toLowerCase())

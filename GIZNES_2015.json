@@ -1,0 +1,249 @@
+{
+  "id": "batch2-doc2",
+  "batch": 2,
+  "era": "Reform era (2013–2016)",
+  "document": {
+    "title": "The Nigerian Energy Sector: An Overview with Special Emphasis on Renewable Energy, Energy Efficiency and Rural Electrification — 2nd Edition",
+    "issuer": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit) / GOPA-International Energy Consultants",
+    "funded_by": "European Union and German Federal Ministry for Economic Cooperation and Development (BMZ)",
+    "programme": "Nigerian Energy Support Programme (NESP)",
+    "date": "June 2015",
+    "type": "Sector Overview / Baseline Study",
+    "pages": 152,
+    "format": "text-extractable PDF (Adobe InDesign)",
+    "data_collection_period": "January–October 2014, feedback to April 2015"
+  },
+  "consumer_impact_score": 3,
+  "scores": {
+    "data_quality_and_honesty": 9,
+    "consumer_conditions_visibility": 8,
+    "policy_delivery_accountability": 7,
+    "off_grid_consumer_recognition": 8,
+    "structural_reform_critique": 7
+  },
+  "document_character": "The most data-rich, consumer-grounded document in the Vitics knowledge base to date. Unlike the AfDB PRG (Batch 2, Doc 1), this is not a financing instrument — it is a forensic baseline study written by independent consultants. It documents what actually existed on the ground in 2014–2015, two years after privatisation. It is the document that measures whether the promises of NEPP 2001, EPSRA 2005, and the 2013 privatisation were being kept.",
+  "key_finding": "Nigeria's per-capita electricity generation DROPPED from 181 kWh in 2013 to 167 kWh in 2014 — the year after privatisation completed. The highest peak ever recorded in Nigeria's grid history was 4,517.6 MW on December 23, 2012. In 2014, with 13,308 MW installed, the system was generating only 3,000–4,500 MW. The grid produced less usable electricity per person after privatisation than before.",
+
+  "generation_reality_2014": {
+    "installed_capacity_licensed_mw": 19407,
+    "installed_capacity_existing_fleet_mw": 13308,
+    "available_capacity_mw": 6158,
+    "actual_generation_range_mw_low": 3000,
+    "actual_generation_range_mw_high": 4500,
+    "peak_demand_mw": 12800,
+    "all_time_peak_generated_mw": 4517.6,
+    "all_time_peak_date": "December 23, 2012",
+    "demand_to_generation_ratio": "12,800 MW demand vs ~3,000–4,500 MW generated — peak demand nearly 4x actual generation",
+    "per_capita_generation_kwh_2014": 167.6,
+    "per_capita_generation_kwh_2013": 181.4,
+    "per_capita_generation_kwh_2012": 176.4,
+    "generation_stagnated_mwh": "Total energy generated stagnated at ~29,000 MWh for three consecutive years (2012–2014)",
+    "generation_lost_to_gas_shortage_mw": 2700,
+    "generation_lost_to_water_management_mw": 500,
+    "generation_lost_to_line_constraints_mw": "several hundred",
+    "system_collapses_first_15_months_post_privatisation": 20,
+    "transmission_distribution_losses_percent": "17–20%"
+  },
+  "generation_historical_table": {
+    "description": "NERC Archive data — grid-connected generation profile 2007–2014",
+    "source": "NERC Archive (Table 3-3 in document)",
+    "years": [
+      {"year": 2007, "avg_availability_mw": 3781.3, "max_peak_mw": 3599.6, "per_capita_kwh": 155.3},
+      {"year": 2008, "avg_availability_mw": 3917.8, "max_peak_mw": 3595.9, "per_capita_kwh": 120.4},
+      {"year": 2009, "avg_availability_mw": 4401.8, "max_peak_mw": 3710.0, "per_capita_kwh": 122.0},
+      {"year": 2010, "avg_availability_mw": 4030.5, "max_peak_mw": 4333.0, "per_capita_kwh": 153.5},
+      {"year": 2011, "avg_availability_mw": 4435.8, "max_peak_mw": 4089.3, "per_capita_kwh": 165.8},
+      {"year": 2012, "avg_availability_mw": 5251.6, "max_peak_mw": 4517.6, "per_capita_kwh": 176.4},
+      {"year": 2013, "avg_availability_mw": 5150.6, "max_peak_mw": 4458.2, "per_capita_kwh": 181.4},
+      {"year": 2014, "avg_availability_mw": 6158.4, "max_peak_mw": 4395.2, "per_capita_kwh": 167.6}
+    ],
+    "critical_note": "Peak generation (actual output) FELL from 4,517.6 MW in 2012 to 4,395.2 MW in 2014, despite available capacity rising from 5,251 MW to 6,158 MW. Capacity additions were not translating into consumer electricity."
+  },
+
+  "consumer_conditions_2014_2015": {
+    "world_bank_ease_of_electricity_ranking": "187 out of 189 countries (Doing Business 2015)",
+    "days_to_obtain_electricity_connection_lagos": 260,
+    "firms_reporting_outages_as_serious_problem_percent": 83,
+    "average_outage_hours_per_day": 8,
+    "average_outage_related_sales_loss_percent": 4,
+    "businesses_with_outages_per_month": 25.2,
+    "average_outage_duration_hours": 7.8,
+    "total_outage_hours_per_month": 197,
+    "outage_as_percent_of_total_hours_per_month": 27,
+    "population_using_alternate_electricity_sources_percent": 80,
+    "companies_owning_or_sharing_generator_percent": 86,
+    "company_electricity_from_private_generators_percent": 48,
+    "decentralised_diesel_generator_capacity_gw_low": 8,
+    "decentralised_diesel_generator_capacity_gw_high": 14,
+    "note": "8–14 GW of private diesel generation existed versus ~4,500 MW of grid output. Nigeria's off-grid self-generation capacity EXCEEDED its functional grid capacity.",
+    "annual_cost_of_private_generators_small_business_households_usd_billion": 21.8,
+    "annual_cost_naira_trillion": 3.5,
+    "diesel_generator_cost_per_kwh_usd": 0.25,
+    "grid_electricity_residential_cost_per_kwh_usd_range": "0.094–0.131",
+    "off_grid_premium_vs_grid": "Diesel generation cost ~2–3x grid electricity price for residential users",
+    "nigeria_ranked_worst_of_all_peers": "Bangladesh generated almost twice as much electrical energy as Nigeria in 2012"
+  },
+
+  "electrification_2014_2015": {
+    "overall_electrification_rate_percent": 45,
+    "urban_electrification_rate_percent": 55,
+    "rural_electrification_rate_percent": 35,
+    "population_without_electricity_million": 93,
+    "subsaharan_africa_average_electrification_percent": 32,
+    "primary_reason_no_electricity_rural": "Frequent blackouts and high connection cost (over 60% of rural households surveyed)",
+    "households_main_source_phcn_grid_percent": 82.2,
+    "households_rural_electrification_minigrid_percent": 5.5,
+    "households_private_generator_percent": 1.5,
+    "households_phcn_plus_generator_percent": 8.4,
+    "energy_consumption_residential_share_percent": 85,
+    "biofuels_waste_share_of_total_energy_percent": 85,
+    "electricity_share_of_final_energy_consumption_percent": 2,
+    "cooking_fuel": "~70% of population depends on firewood/biomass for cooking",
+    "per_capita_firewood_consumption_cubic_metres_per_year": 3.3,
+    "north_south_divide": "Sharp geographic divide — thermal power stations concentrated in south, northern states systematically underserved",
+    "state_by_state_electrification": "See Table 3-6 in document — states range from 33% (Bayelsa) to near-universal grid access (Oyo 97.7%)"
+  },
+
+  "tariff_reality": {
+    "myto_2_1_introduced": "December 2014",
+    "myto_2_1_price_increase_percent": 80,
+    "consumer_petitions": "Multiple consumer groups petitioned NERC against the 80% increase",
+    "subsequent_price_drop_percent": 50,
+    "amended_myto_2_1": "April 2015",
+    "lifeline_tariff_ngn_per_kwh": 4.0,
+    "lifeline_tariff_usd_per_kwh": 0.025,
+    "lifeline_threshold_kwh_per_month": 50,
+    "residential_energy_charge_ngn_per_kwh_range": "14.96–20.89",
+    "residential_fixed_charge_ngn_per_month_range": "625–800",
+    "atc_and_c_losses_percent_range": "35–40",
+    "technical_commercial_losses_percent_range": "12.0–28.4",
+    "collection_loss_ruling": "NERC ruled in April 2015 that DisCo collection losses are 'imprudent to pass on to consumers' and set collection loss passthrough to zero",
+    "key_insight": "DisCos attempted to pass their billing failure (uncollected debts) onto paying consumers via tariff. NERC blocked this, confirming that the billing system was broken post-privatisation.",
+    "gas_wholesale_price_ngn_per_mwh": 10257,
+    "gas_wholesale_price_usd_per_mwh": 64.10,
+    "solar_pv_wholesale_tariff_ngn_per_mwh": 73300,
+    "solar_pv_wholesale_tariff_usd_per_mwh": 458.13,
+    "fuel_subsidy_2012_bln_naira": 1570,
+    "fuel_subsidy_2012_percent_gdp": 3.6
+  },
+
+  "off_grid_sector_2014": {
+    "diesel_generator_cost_per_kwh_usd": 0.25,
+    "solar_pv_already_cheaper_than_diesel": true,
+    "solar_pv_cost_trajectory": "Falling to level of small hydropower; broke even with diesel much earlier than ESMAP 2007 predicted",
+    "off_grid_licenses_mw": 305,
+    "embedded_generation_licensed_mw": 49,
+    "captive_diesel_estimated_gw_range": "8–14 GW",
+    "rural_electrification_status": "Largely left to informal market as of 2010 — neither regulated nor structured",
+    "rural_electrification_fund_status": "Established under REA but not yet operationalised at time of study",
+    "resp_status": "Draft Rural Electrification Strategy and Plan (RESP) still draft — no enacted legislation",
+    "mini_grid_regulation": "NERC developing guidelines for mini-grids <100 kW and light-handed regulation for 100 kW–1 MW (in progress at time of study)"
+  },
+
+  "policy_milestones_documented": [
+    {"year": 2001, "document": "NEPP", "status": "Implemented into EPSRA 2005"},
+    {"year": 2003, "document": "NEP", "status": "Still in force, under 2013 review. No concrete quantitative RE or EE targets set."},
+    {"year": 2004, "document": "NEEDS", "status": "Expired (covered 2003–2007)"},
+    {"year": 2005, "document": "EPSRA", "status": "In force — foundational legislation"},
+    {"year": 2006, "document": "REPG", "status": "Target: 5% RE of total generation and 5 TWh by 2016. Status: programme described as 'abandoned' with Ministry of Power restructuring."},
+    {"year": 2006, "document": "REAP", "status": "Issued same year as REPG. Focus on rural energy. Described as 'abandoned' with Ministry restructuring."},
+    {"year": 2007, "document": "National Biofuel Policy", "status": "Largely inactive. Lost momentum after 2012 global biofuel backlash."},
+    {"year": 2010, "document": "Power Sector Reform Roadmap", "status": "Updated 2013. Guiding document for privatisation."},
+    {"year": 2010, "document": "Vision 20:2020", "status": "Target: 35,000 MW by 2020. System at ~4,500 MW actual generation in 2015. Gap: 30,500 MW unfilled."},
+    {"year": 2012, "document": "REMP Update", "status": "Not signed into law. Without enactment, investors lack clear basis for financial incentives."},
+    {"year": 2013, "document": "Privatisation completed", "status": "6 GENCOs + 11 DisCos handed to private owners November 2013. TCN retained by state."},
+    {"year": 2015, "document": "NREEEP", "status": "Approved by Federal Executive Council May 2015. Umbrella renewable energy and efficiency policy. Action plans still needed."},
+    {"year": 2015, "document": "RESP (Rural Electrification Strategy and Plan)", "status": "Still in draft. No enacted legislation beyond general EPSRA 2005."},
+    {"year": 2015, "document": "TEM (Transitional Electricity Market)", "status": "Commenced 1 February 2015. First contract-based trading arrangement."}
+  ],
+
+  "policy_gap_analysis": [
+    {
+      "gap": "REPG 2006 target abandoned",
+      "detail": "The 2006 Renewable Electricity Policy Guidelines set a target of 5% renewable electricity by 2016. The document explicitly states the programme 'seems to be abandoned with the restructuring of the Ministry of Power and Steel to the new Ministry of Power.'"
+    },
+    {
+      "gap": "REAP 2006 abandoned",
+      "detail": "The companion Renewable Electricity Action Programme was similarly abandoned with Ministry restructuring. Nigeria's first renewable energy action programme lasted less than a decade before institutional discontinuity erased it."
+    },
+    {
+      "gap": "REMP not enacted",
+      "detail": "The Renewable Energy Master Plan (2005, updated 2012) has never been signed into law. Without enactment, all financial incentives (pioneer status, custom duty waivers) have no legal basis for investors."
+    },
+    {
+      "gap": "Rural electrification fund not operationalised",
+      "detail": "The Rural Electrification Fund established under REA had not been operationalised at time of study. Rural areas remained largely dependent on the informal market."
+    },
+    {
+      "gap": "Vision 20:2020 target incoherent",
+      "detail": "The 35,000 MW by 2020 target is cited in Vision 20:2020 with no demand analysis, no load estimate, and no credibility assessment. The document notes targets were set without studying how they were derived."
+    },
+    {
+      "gap": "Data infrastructure absent",
+      "detail": "NBS stated the only statistics source was PHCN, which 'does not have adequate electronic data processing facilities.' There is no comprehensive, commonly accepted database of power statistics in Nigeria as of 2015."
+    },
+    {
+      "gap": "Privatisation without billing system",
+      "detail": "The entire revenue chain (GENCOs paid via NBET paid by DisCos paid by consumers) depends on DisCo billing. ATC&C losses were 35–40%. DisCos attempted to pass uncollected debts onto paying consumers. NERC blocked this but the structural failure remained."
+    },
+    {
+      "gap": "Gas infrastructure not aligned with generation ambition",
+      "detail": "Up to 2,700 MW of generation regularly lost due to gas constraints. IOCs preferred export market over domestic sales at regulated low prices. Gas Master Plan under preparation but not implemented."
+    }
+  ],
+
+  "structural_insights": {
+    "captive_generation_vs_grid": "Nigeria's 8–14 GW of private diesel captive generation EXCEEDED the ~4,500 MW functional grid output. The real Nigerian electricity system was primarily private, unregulated, and diesel-powered.",
+    "privatisation_without_improvement": "Privatisation completed November 2013. By 2014, per-capita grid generation had fallen from 181 kWh (2013) to 167 kWh. The first 15 months saw 20 system collapses.",
+    "consumer_as_subsidiser_of_last_resort": "Consumers paid N60–N80/kWh for private generators while paying subsidised grid tariffs — effectively double-paying: taxes funding grid subsidies AND private generator costs.",
+    "policy_institutional_discontinuity": "Multiple policies (REPG, REAP) were abandoned when the Ministry of Power and Steel was restructured to Ministry of Power. Policy continuity was not institutionally protected.",
+    "renewable_energy_window": "Solar PV already cheaper than diesel in 2015, particularly in northern Nigeria far from diesel depots. The market signal existed; regulatory and financing infrastructure did not.",
+    "north_south_energy_inequality": "Thermal stations concentrated in south. Transmission grid radial and constrained. Northern states systematically received less power. North/south divide visible in state-by-state electrification data."
+  },
+
+  "comparative_benchmarks": {
+    "peer_countries": ["Bangladesh", "Brazil", "Indonesia", "South Africa"],
+    "nigeria_electricity_generation_gwh_2012": "~29,000 MWh total",
+    "bangladesh_generated_nearly_twice_nigeria_2012": true,
+    "indonesia_generation_increase_20_years": "372%",
+    "bangladesh_generation_increase_20_years": "451%",
+    "nigeria_generation_increase_20_years": "93%",
+    "nigeria_per_capita_electricity_consumption_mwh_2012": 0.18,
+    "bangladesh_per_capita_electricity_consumption_mwh_2012": 0.28,
+    "note": "Nigeria — Africa's largest oil producer and largest economy — generated less electricity per capita than Bangladesh."
+  },
+
+  "policy_lineage_position": {
+    "position": "This is the most comprehensive independent audit of what 14 years of Nigerian energy reform (2001–2015) had actually delivered on the ground. It is the document that tests every promise made in NEPP 2001, NEP 2003, EPSRA 2005, REPG 2006, REAP 2006, Biofuel 2007, Roadmap 2010, and AfDB PRG 2013.",
+    "verdict_on_delivery": "By 2015: grid access 45% (target was 75% by 2025, already behind), per-capita generation falling post-privatisation, REPG and REAP abandoned, REMP not enacted, rural electrification fund not operationalised, 20 grid collapses in first 15 months post-privatisation, 8–14 GW of diesel self-generation filling the gap the state could not fill.",
+    "consumer_experience_thread": "From NEPP 2001 through to this 2015 document, consumers paid generator costs throughout. In 2015, small businesses and households spent NGN 3.5 trillion (USD 21.8 billion) per year powering diesel and petrol generators — an entirely private, unregulated, consumer-funded parallel electricity system running alongside the officially reformed one."
+  },
+
+  "keywords": [
+    "GIZ", "NESP", "sector-overview", "baseline-study", "2015",
+    "generation-statistics", "NERC-archive", "per-capita-generation",
+    "electrification-rate", "rural-electrification", "off-grid",
+    "diesel-generators", "captive-generation", "MYTO-2.1",
+    "privatisation", "DisCo", "GenCo", "TCN", "NBET", "NERC",
+    "ATC-C-losses", "tariff", "consumer-petitions", "TEM",
+    "REPG", "REAP", "REMP", "NREEEP", "RESP", "REA",
+    "Vision-20-2020", "gas-shortage", "grid-collapse",
+    "solar-PV", "renewable-energy", "rural-divide", "north-south",
+    "reform-era", "batch2", "2014-data", "World-Bank-187-189"
+  ],
+
+  "vitics_notes": {
+    "key_numbers_for_ai_engine": [
+      "Grid generates 3,000–4,500 MW against 12,800 MW peak demand (2015)",
+      "167 kWh per capita generation in 2014 — DOWN from 181 in 2013",
+      "8–14 GW private diesel capacity vs ~4,500 MW grid output",
+      "NGN 3.5 trillion/year spent on private generators by households and small businesses",
+      "20 grid collapses in first 15 months after privatisation",
+      "Nigeria ranked 187/189 for ease of getting electricity (World Bank 2015)",
+      "45% overall electrification rate — 35% rural",
+      "REPG 2006 and REAP 2006 explicitly described as abandoned"
+    ],
+    "rhetorical_power_for_platform": "This document is uniquely powerful for Vitics because it was written by independent consultants (not the government) and contains explicit statements that reform programmes were abandoned, that the data infrastructure did not exist, and that consumers were bearing costs the state was supposed to eliminate. It provides a forensic baseline against which all post-2015 claims can be tested.",
+    "connection_to_batch2_doc1": "The AfDB PRG (Batch 2 Doc 1) was approved December 2013 promising 1,380 MW and access rising from 41% to 50% by 2016. This GIZ report (2015 data) shows the grid at 45% access, generation falling per capita, and the four promised IPPs not yet online. The gap between the promise and the ground reality is now fully visible."
+  }
+}

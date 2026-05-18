@@ -1,0 +1,322 @@
+{
+  "vitics_knowledge_base": {
+    "version": "1.0",
+    "last_updated": "2026-05-15",
+    "description": "Grounded knowledge base for Vitics — Nigeria AI Energy Intelligence Platform. Built from primary Nigerian energy policy documents. Focus: consumer experience vs policy promises.",
+    "entries": [
+      {
+        "id": "ENTRY-001",
+        "document_id": "SEforALL-SolarValueChain-2021",
+        "title": "Achieving Economies of Scale in the Nigerian Solar Value Chain",
+        "subtitle": "Opportunities and Benefits of Upstream Localization",
+        "publisher": "Sustainable Energy for All (SEforALL) & All On",
+        "date": "February 2021",
+        "document_type": "Policy and Industry Analysis Report",
+        "focus_areas": [
+          "Off-grid solar (SHS and mini-grids)",
+          "Upstream value chain localization",
+          "Solar Power Naija Programme",
+          "Nigeria Electrification Project (NEP)"
+        ],
+        "what_policy_promised": {
+          "Solar_Power_Naija": {
+            "source": "FGN / Rural Electrification Agency (REA)",
+            "promises": [
+              "5 million new solar connections reaching 25 million individuals",
+              "250,000 new jobs created in the energy sector",
+              "Increase local content in the off-grid solar value chain",
+              "Affordable electricity through long-term low-interest credit facilities"
+            ]
+          },
+          "Nigeria_Electrification_Project": {
+            "source": "FGN / REA / World Bank / AfDB",
+            "promises": [
+              "Reliable power supply for 250,000 MSMEs and 1 million households",
+              "Clean, safe, reliable, affordable electricity through renewable power sources",
+              "Data-driven off-grid model to become a Sub-Saharan Africa exemplar",
+              "Private-sector-driven implementation"
+            ]
+          },
+          "NREEEP": {
+            "full_name": "National Renewable and Energy Efficiency Policy",
+            "promises": [
+              "Fiscal incentives, subsidies to alleviate up-front costs for investors",
+              "Tax and duty exemptions for prospective investors in renewable energy",
+              "Fast-track procedures to increase private sector participation",
+              "Blueprint for sustained RE development on-grid and off-grid"
+            ]
+          },
+          "NERC_Mini_grid_Regulations_2016": {
+            "promises": [
+              "Permit issued within maximum 30 days from date of complete application",
+              "Mini-grids up to 100kW can commence operations as Registered Mini-Grid Operator while awaiting permit"
+            ]
+          },
+          "National_Content_Development_Power_Sector": {
+            "promises": [
+              "All NESI operators shall employ only Nigerians in junior and intermediate cadre",
+              "Licensees shall give first consideration to goods made in Nigeria",
+              "NNCCF to carry out periodic surveys to determine national content participation",
+              "Monitor and report local content across NESI value chain"
+            ]
+          }
+        },
+        "what_consumers_experienced": {
+          "tariff_chaos_at_ports": {
+            "severity": "HIGH",
+            "findings": [
+              "Solar panels imported standalone (HS Code 8541): 0% import duty — as promised",
+              "Solar panels bundled within SHS systems: reclassified under HS Code 8502, attracting 5% duty — policy gap",
+              "Batteries: 20.5% import duty",
+              "Inverters: 20.5% import duty",
+              "Charge controllers: 16.5% import duty",
+              "DC cables: 12.5% import duty",
+              "Appliances (TVs, fans, bulbs): 15.5% to 20.5% import duty",
+              "Distributors and assemblers paid varied, inconsistent tariffs on identical products",
+              "Customs identified as a major operational bottleneck",
+              "No priority clearance at ports unlike Kenya and Ghana"
+            ]
+          },
+          "regulatory_delays": {
+            "severity": "HIGH",
+            "findings": [
+              "Mini-grid permit applications pending for months — far exceeding 30-day legal maximum",
+              "No regulatory accommodation for mini-grids above 100kW",
+              "NERC not prioritizing solar mini-grid applications"
+            ]
+          },
+          "national_content_failure": {
+            "severity": "HIGH",
+            "findings": [
+              "NNCCF established in 2018 to develop regulation schedules and implementation guidelines",
+              "No observed impact or results post-2018 schedule development",
+              "No monitoring, no enforcement, no reporting of local content",
+              "Women's participation not specifically included in local content quotas"
+            ]
+          },
+          "affordability_barriers": {
+            "severity": "HIGH",
+            "findings": [
+              "Locally assembled 50Wp SHS baseline price: $850 — significantly above average market import price of $577",
+              "PAYGO customer ability to pay observed to decline after the first 6 months in rural households",
+              "Required minimum monthly payment: NGN 5,250 modelled at 50% of discretionary spending",
+              "High up-front costs remain a barrier to adoption",
+              "Without policy enablers, 505,374 units needed for localization to be viable — high threshold for market entry"
+            ]
+          },
+          "access_to_finance": {
+            "severity": "HIGH",
+            "findings": [
+              "Operator debt finance cost: 12% — described as prohibitive and an encumbrance to industry growth",
+              "No reserved FX access at CBN rate for solar companies",
+              "Naira devaluation increased material costs, passed on to consumers",
+              "Insufficient access to grants and subsidies to cushion rural household payments",
+              "PAYGO portfolio performance declines after 6 months without subsidy support"
+            ]
+          },
+          "quality_standards_failure": {
+            "severity": "MEDIUM",
+            "findings": [
+              "Proliferation of low-quality Chinese imports due to absence of strict quality regulations",
+              "No enforcement of quality standards at ports of entry",
+              "Market unable to differentiate between quality and substandard products"
+            ]
+          },
+          "scale_and_market_structure": {
+            "severity": "MEDIUM",
+            "findings": [
+              "Solar system enterprises predominantly small/medium scale",
+              "No coordinated bulk purchasing mechanism in operation as of 2021",
+              "Aggregate purchasing only at ideation/pilot stage",
+              "Market fragmentation prevents economies of scale",
+              "Upstream value chain almost entirely import-dependent, primarily from China"
+            ]
+          }
+        },
+        "key_numbers": {
+          "national_context": {
+            "electrification_rate_percent": 57,
+            "nigerians_without_electricity_millions": 85,
+            "urban_without_electricity_millions": 18,
+            "urban_without_electricity_percent": 16,
+            "rural_without_electricity_millions": 67,
+            "rural_without_electricity_percent": 66,
+            "grid_installed_capacity_GW": 12.5,
+            "grid_generated_GW": 3.9,
+            "grid_transmitted_GW": 3.6,
+            "grid_distributed_GW": 3.1
+          },
+          "market_potential": {
+            "households_able_to_pay_tier2_millions": 26,
+            "households_in_unelectrified_communities_millions": 17,
+            "deployment_ready_households_millions": 7,
+            "shs_electrification_potential_min_millions": 7.5,
+            "shs_electrification_potential_max_millions": 7.8,
+            "minigrid_electrification_potential_min_millions": 1.3,
+            "minigrid_electrification_potential_max_millions": 4.7,
+            "grid_extension_potential_min_millions": 0,
+            "grid_extension_potential_max_millions": 3.6
+          },
+          "geographic_distribution_deployment_ready_households": {
+            "south_west_millions": 1.11,
+            "south_south_millions": 2.11,
+            "south_east_millions": 0.73,
+            "north_central_millions": 0.65,
+            "north_west_millions": 1.54,
+            "north_east_millions": 0.64
+          },
+          "pricing": {
+            "baseline_locally_assembled_50Wp_SHS_USD": 850,
+            "average_market_import_SHS_price_USD": 577,
+            "SHS_price_with_tariff_waiver_USD": 776,
+            "SHS_price_with_20pct_subsidy_USD": 708,
+            "SHS_price_with_reduced_debt_cost_USD": 842,
+            "SHS_price_with_increased_plant_capacity_USD": 772,
+            "SHS_price_with_all_4_enablers_USD": 560,
+            "price_reduction_all_enablers_percent": 34,
+            "households_able_to_afford_increase_with_enablers_percent": 288
+          },
+          "mini_grid_tariffs_USD_per_kWh": {
+            "assembly_tariff": 0.78,
+            "with_tariff_reduction": 0.63,
+            "with_increased_connections": 0.57,
+            "with_reduced_cost_of_debt": 0.48,
+            "average_market_off_grid_solar_hybrid_tariff": 0.66
+          },
+          "localization_viability": {
+            "units_required_without_enablers": 505374,
+            "units_required_with_tariff_waiver": 461000,
+            "units_required_with_product_subsidy": 421000,
+            "units_required_with_increased_plant_capacity": 459000,
+            "units_required_with_all_4_enablers": 333105,
+            "reduction_with_all_enablers_percent": 34
+          },
+          "socioeconomic_impact_with_enablers": {
+            "jobs_created": 193053,
+            "ghg_savings_metric_tons": 356486,
+            "ecowas_export_potential_USD_billions": 2.5,
+            "ecowas_total_unelectrified_rural_population_millions": 79.6
+          },
+          "import_duties_current": {
+            "solar_panels_standalone_percent": 5,
+            "solar_panels_bundled_in_SHS_percent": 5,
+            "batteries_percent": 20.5,
+            "inverters_percent": 20.5,
+            "charge_controllers_percent": 16.5,
+            "dc_cables_percent": 12.5,
+            "mounting_accessories_percent": 12.5,
+            "appliances_percent_range": "15.5 to 20.5"
+          }
+        },
+        "policy_gap_summary": [
+          {
+            "promise": "Tariff waivers for all solar components",
+            "reality": "Inconsistent port application; bundled SHS classified under higher duty code; accessories taxed up to 20.5%; customs a major bottleneck",
+            "gap_severity": "HIGH"
+          },
+          {
+            "promise": "30-day permit processing for mini-grids (NERC)",
+            "reality": "Applications pending for months; no accommodation for mini-grids above 100kW",
+            "gap_severity": "HIGH"
+          },
+          {
+            "promise": "National Content monitoring and enforcement",
+            "reality": "NNCCF inactive post-2018; no results, no enforcement, no reporting observed",
+            "gap_severity": "HIGH"
+          },
+          {
+            "promise": "Affordable solar access for rural households",
+            "reality": "Assembly price ($850) exceeds import price ($577); PAYGO default risk rises after 6 months; minimum NGN 5,250/month required",
+            "gap_severity": "HIGH"
+          },
+          {
+            "promise": "Low-cost financing for operators",
+            "reality": "12% debt cost in place; no CBN FX reserve access; naira devaluation costs passed to consumers",
+            "gap_severity": "HIGH"
+          },
+          {
+            "promise": "Quality standards enforcement for imports",
+            "reality": "Low-quality Chinese imports flood market with no regulatory enforcement at ports",
+            "gap_severity": "MEDIUM"
+          }
+        ],
+        "key_local_players_documented": [
+          {
+            "name": "Auxano Solar",
+            "type": "Assembly / Manufacture",
+            "hq": "Nigeria",
+            "notes": "Started 6.5MW capacity in 2016, expanded to 10MW with All On/USADF/BOI support; targeting 80MW; manufactures charge controllers and solar PV"
+          },
+          {
+            "name": "Hirotec",
+            "type": "Assembly",
+            "hq": "Nigeria (Lagos)",
+            "notes": "Locally assembled SHS; own PAYG platform; designed and made in Nigeria philosophy; packaging also produced locally"
+          },
+          {
+            "name": "NASENI",
+            "type": "Assembly / Manufacture",
+            "hq": "Nigeria",
+            "notes": "Government agency; produces solar PV panels"
+          },
+          {
+            "name": "Spark Works",
+            "type": "Assembly",
+            "hq": "Nigeria",
+            "notes": "Produces printed circuit boards (PCBs)"
+          },
+          {
+            "name": "Coleman Cables",
+            "type": "Manufacture",
+            "hq": "Nigeria",
+            "notes": "Produces DC cables locally"
+          },
+          {
+            "name": "IBETO Group",
+            "type": "Assembly",
+            "hq": "Nigeria",
+            "notes": "Local battery recycling with short-term assembly plans"
+          }
+        ],
+        "ai_tags": [
+          "off-grid",
+          "solar-home-systems",
+          "SHS",
+          "mini-grid",
+          "PAYGO",
+          "Solar-Power-Naija",
+          "NEP",
+          "NREEEP",
+          "NERC",
+          "tariff-waiver",
+          "local-content",
+          "energy-access",
+          "rural-electrification",
+          "affordability",
+          "policy-implementation-gap",
+          "REA",
+          "SHS-price",
+          "FX-crisis",
+          "naira-devaluation",
+          "quality-regulation",
+          "upstream-localization",
+          "ECOWAS",
+          "job-creation",
+          "Tier-2",
+          "MSME-energy",
+          "import-duty",
+          "customs-bottleneck",
+          "NNCCF",
+          "geospatial-data",
+          "Nithio",
+          "Fraym",
+          "bulk-purchasing",
+          "economies-of-scale",
+          "localization",
+          "SEforALL",
+          "All-On"
+        ]
+      }
+    ]
+  }
+}

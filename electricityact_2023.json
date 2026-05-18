@@ -1,0 +1,526 @@
+{
+  "policy_id": "ELECTRICITY_ACT_2023",
+
+  "metadata": {
+    "full_title": "Electricity Act, 2023",
+    "short_title": "Electricity Act 2023",
+    "type": "Act of Parliament — Federal Republic of Nigeria",
+    "legal_status": "TYPE 2 — Legally Binding Statute",
+    "bill_number": "Electricity Bill, 2023",
+    "passed_by_senate": "10th May 2023",
+    "passed_by_house_of_representatives": "23rd May 2023",
+    "presidential_assent": "June 2023 (exact date partially illegible on scan — approximately 6th–9th June 2023)",
+    "assenting_president": "Bola Ahmed Tinubu, GCFR",
+    "clerk_certification": "Sani Magaji Tambawal, fcna — Clerk to the National Assembly",
+    "commencement_date": "BLANK — not gazetted as of reading date",
+    "commencement_note": "The commencement bracket on page 9 of the Act reads '[ ]' — left blank. Under Nigerian constitutional practice this means the Act has Presidential assent but no formal commencement date has been published in the Federal Government Gazette. This is a critical legal distinction: provisions requiring commencement to trigger (e.g. s.3 National Electricity Policy, s.114 metering deadline) cannot be enforced until commencement is formally gazetted.",
+    "total_sections": 233,
+    "total_pages": 151,
+    "total_parts": 22,
+    "total_schedules": "5 Schedules",
+    "document_source": "Visioneer OneTouch 4.6 scan, Xerox W100 Series, scanned October 12 2023",
+    "document_type": "Scanned PDF — no extractable text, read visually page by page",
+    "replaces": "Electric Power Sector Reform Act, No. 6, 2005 (EPSRA)",
+    "also_repeals": "All enactments listed in Third Schedule to the Act"
+  },
+
+  "context": {
+    "nigeria_energy_context_at_passage": {
+      "year": 2023,
+      "watershed_moment": true,
+      "watershed_explanation": "2023 is the most consequential year in Nigerian energy history for consumers since EPSRA 2005. Two events in the same month created a perfect storm: (1) President Tinubu removed the fuel subsidy on 29 May 2023 — his inauguration day — triggering immediate petrol price spikes from ~165 naira/litre to 480+ naira/litre; (2) The Electricity Act was passed by both chambers in May 2023 and assented in June 2023.",
+      "fuel_subsidy_removal_date": "29 May 2023",
+      "fuel_subsidy_removal_impact": "Immediate: diesel cost explosion (diesel powers virtually every generator in Nigeria). Generators which already cost roughly 50,000–150,000 naira/month to run became unaffordable for middle-income Nigerians almost overnight. This was the single largest driver of mass solar adoption in Nigerian history — not the Electricity Act itself.",
+      "grid_generation_at_passage": "Approximately 4,000–5,000 MW installed capacity, with less than 4,000 MW typically evacuated — serving a country of 220 million people with roughly 45% electricity access rate",
+      "metering_gap_at_passage": "Estimated 6–8 million unmetered customers on the grid. Estimated billing (known as 'crazy bill' or 'billy' by consumers) was endemic across all 11 DisCos.",
+      "distribution_companies": "11 privatised DisCos operating since 2013 under EPSRA. Most technically insolvent or in financial distress by 2023. Collectively owed the Nigerian Bulk Electricity Trading (NBET) company hundreds of billions of naira.",
+      "gas_to_power_crisis": "Gas pipeline vandalism, non-payment by DisCos to Gencos, and forex shortages for gas procurement meant generation remained far below installed capacity.",
+      "solar_market_pre_2023": "A private solar market had developed organically since 2015, but was still niche. Small systems (100W–300W) used mainly for phone charging and lights. Post-subsidy-removal the market exploded toward 1kW–5kW hybrid inverter systems.",
+      "consumer_trust_level": "Extremely low. 22 years of broken promises since NEPP 2001. PHCN privatisation in 2013 had not improved supply. DisCo customer service largely non-existent."
+    }
+  },
+
+  "legal_framework": {
+    "what_it_repeals": {
+      "primary_repeal": "Electric Power Sector Reform Act, No. 6, 2005 (EPSRA) — Section 231(1)",
+      "additional_repeals": "All enactments listed in Third Schedule — Section 231(2)",
+      "savings_clause": "Section 231(3): anything done under the Repealed Act that is not inconsistent with this Act is deemed done under this Act. Existing licences, orders, notifications survive."
+    },
+    "constitutional_basis": {
+      "federal_application": "Section 2(1): Act applies throughout the Federal Republic of Nigeria with respect to all aspects and segments of the power sector value chain",
+      "state_electricity_rights": "Section 2(2): Nothing in this Act shall invalidate — (a) any law passed by a State House of Assembly on generation, transmission, system operation, distribution, supply and retail within that State; (b) laws on State electricity power stations; (c) laws establishing a State electricity market or State electricity regulatory authority; (d) collaboration between States and Local Governments and Federal Government for rural electrification; (e) laws establishing a State Integrated Electricity Policy and Strategic Implementation Plan.",
+      "constitutional_schedule_reference": "Second Schedule to the Constitution — Sections 13, 14, 15 of Part II referenced",
+      "significance_of_s2_2": "This is the single most structurally important provision of the Act for Nigeria's energy future. For the first time in Nigerian electricity law, states are explicitly empowered to create entirely independent electricity markets — generate, transmit, distribute and regulate within their borders. This is a constitutional devolution that EPSRA 2005 did not provide."
+    },
+    "relationship_to_epsra_2005": {
+      "epsra_created": "NERC, ISO, TCN, NBET — these all continue but are renamed or reconstituted",
+      "key_difference_from_epsra": "EPSRA created a federal monopoly framework for privatisation. The 2023 Act creates a federal-state hybrid market. States that opt in get their own regulatory space. States that do not opt in remain under Commission (NERC) regulation per s.230(8).",
+      "transition_mechanism": "Section 230 — Consequential and transitional provisions govern the handover of regulatory responsibility from Commission to State regulators as states exercise their new powers"
+    }
+  },
+
+  "official_provisions": {
+    "part_I_objectives": {
+      "section_1_primary_objective": "Comprehensive legal and institutional framework to guide a privatised, contract and rule-based competitive electricity market in Nigeria",
+      "key_subsection_objectives": [
+        "(a) Leverage privatisation gains, accelerate generation capacity growth",
+        "(b) Promote policy to expand transmission networks",
+        "(c) Scale up generation, transmission and distribution to achieve national electricity access targets and highest per capita power consumption in Africa within a reasonable time frame",
+        "(d) Stipulate consequential, transitional and saving provisions regarding EPSRA reforms",
+        "(e) Provide clear guide and legal basis for phase-wide development since privatisation",
+        "(f) Promote development of a competitive electricity market",
+        "(g) Stimulate investment across the electricity value chain to re-energise economic growth, drive job creation and improve the living conditions of Nigerians",
+        "(h) Framework for National Integrated Electricity Policy and Implementation Plan",
+        "(i) Stimulate policies to address technology limitations and outdated infrastructure",
+        "(j) Eliminate barriers to investments in generation, transmission, distribution",
+        "(k) Promote policies to increase geographic coverage",
+        "(l) Framework to stimulate development and utilisation of renewable energy sources",
+        "(m) Provide framework for improvement of access in rural, unserved, underserved, peri-urban and urban areas through conventional sources AND renewable energy off-grid and mini-grid solutions",
+        "(n) Promote indigenous capacity in renewable energy technology",
+        "(o) Promote public education on renewable energy production and consumption",
+        "(p) Recognise third-party investments in NESI infrastructure",
+        "(q) Framework for cross-border electricity trade",
+        "(r) Promote frameworks for security of electricity infrastructure, prescribe punitive measures against electricity theft",
+        "(s) Strengthen relationship between federal electricity market and state electricity market"
+      ]
+    },
+    "part_II_national_policy": {
+      "section_3_timeline_obligation": "The Federal Government through the Ministry responsible for power SHALL, within ONE YEAR from the commencement of this Act, initiate the process for preparation and publication of a National Integrated Electricity Policy and Strategic Implementation Plan in consultation with relevant government authorities and other stakeholders",
+      "section_3_policy_scope": "Policy shall encompass: (a) development based on optimal utilisation of coal, natural gas, nuclear, solar, wind, hydro, hydrogen and other renewables; (b) captive generation or stand-alone systems for rural areas and non-conventional energy; (c) rural electrification and bulk purchase of power; (d) public-private partnerships for access to all areas including villages and hamlets; (e) power-source specific policies including waivers and subsidies for renewable energy; (f) overall development of the electricity value chain with emphasis on alignment of expansion of generation, transmission, distribution and supply infrastructure to ensure reliability of supply and minimise losses",
+      "section_4_review": "The National Integrated Electricity Policy shall be reviewed or revised as required but not later than every five years"
+    }
+  },
+
+  "legal_provisions": {
+    "section_2_2_state_electricity_markets": {
+      "provision": "Nothing in this Act shall invalidate any law passed by a State House of Assembly with respect to all aspects of generation, transmission, system operation, distribution, supply and retail of electricity within that State",
+      "consumer_significance": "WATERSHED. States can now legally build their own electricity systems end-to-end. Lagos, Rivers, Kano — any state with political will and capital can exit the federal grid-dependency cycle. Consumer discourse from 2024 onward will increasingly reference 'state electricity' as a real alternative."
+    },
+    "section_3_1_policy_timeline": {
+      "provision": "Federal Government SHALL within ONE YEAR of commencement initiate preparation of National Integrated Electricity Policy",
+      "obligation_type": "Mandatory ('shall')",
+      "compliance_status": "NOT YET MET as of 2025 — commencement not formally gazetted, so the one-year clock has not formally started. However the Act is being operationally treated as in force.",
+      "consumer_significance": "Without this policy, the regulatory framework lacks its strategic anchor. The absence of a gazetted commencement date is used by some actors to avoid implementation obligations."
+    },
+    "section_113_distribution_supply": {
+      "provision": "Part X — Distribution and Supply of Electricity. Section 113 covers Distribution and Supply Network and Renewable Energy. Distribution licensees required to extend networks.",
+      "consumer_significance": "Establishes the legal obligation of DisCos to extend distribution networks — but no hard timeline per section. Consumer impact: weak enforcement lever."
+    },
+    "section_114_metering": {
+      "provision": "From the commencement of this Act, no licensee shall supply electricity after the expiry of the date appointed by the Commission, except through installation of a proper meter in accordance with the regulations made in this regard by the Commission.",
+      "subsection_5": "It shall be the responsibility of EVERY electricity consumer to accept the installation of electricity meters duly certified by the NEMSA on their premises.",
+      "subsection_6": "Any electricity consumer who fails to comply with subsection (5) shall be disconnected for the duration that the supplier is denied access to the premises for installation of electricity meter.",
+      "obligation_type": "Mandatory for both licensee and consumer",
+      "compliance_status": "PARTIALLY MET. The Meter Asset Provider (MAP) scheme pre-dated this Act. However the 6–8 million metering gap remains a governance failure. The Commission has extended metering deadlines repeatedly.",
+      "consumer_significance": "CRITICAL. This legally ends estimated billing ('crazy bill'). Once the Commission sets a hard deadline and it passes, any DisCo continuing estimated billing is in breach of statute. The consumer's obligation to accept meters is equally important — it removes the excuse that consumers block metering.",
+      "consumer_vocabulary_link": "Crazy bill, estimated billing, meter wahala, awaiting meter"
+    },
+    "section_115_disconnection": {
+      "provision": "From the commencement of this Act, there is a mandatory obligation on all customers to pay electricity bill. Where any person neglects to pay any charge for electricity due from him to a distribution licensee, the licensee may, after giving notice in a manner prescribed in any regulations issued by the Commission, cut off the supply.",
+      "subsection_3": "These provisions are also applicable to consumers using pre-paid meters where due to defect in the meter it becomes impossible for such pre-paid consumers to input credit on the meter — thus compelling the licensee to use the average charge of electricity paid by the consumer during the preceding months.",
+      "subsection_4": "Nothing in subsection (2) shall entitle a distribution licensee, distribution franchisee or supply licensee to enforce a former landlord's or previous tenant's outstanding electricity bill against a new landlord or new tenant or new occupant of a property except against the former landlord or previous tenants.",
+      "consumer_significance": "Subsection 4 is a major consumer protection: the practice of DisCos holding new tenants hostage for previous occupants' debts is illegal under this Act. Consumer vocabulary link: 'inherited debt', 'previous tenant bill', 'landlord electricity debt'."
+    },
+    "section_116_tariffs_and_cross_subsidies": {
+      "provision": "Activities subject to tariff regulation: generation and trading (where Commission considers regulation necessary to prevent market power abuse), transmission, distribution, supply and system operation.",
+      "tariff_methodology_requirements": "Tariff methodologies shall: (a) allow licensee operating efficiently to recover full costs of business activities including a reasonable return on capital; (b) provide incentives for continued improvement of technical and economic efficiency; (c) provide incentives for continued improvement of quality of services; (d) give consumers economically efficient signals regarding the costs that their consumption imposes; (e) avoid undue discrimination between consumers and consumer categories; (f) phase out or substantially reduce cross subsidies over a time frame specified by the Commission; (g) promote co-generation and generation from renewable sources.",
+      "section_116_5_lifeline_tariff": "Commission may differentiate among consumers on the basis of differences in total electricity consumption, time periods, load factors, power factors, voltage levels, location within the country and other such criteria — and may allow a lifeline tariff for some consumers.",
+      "section_116_13": "Any fines or penalties levied against a licensee in terms of this Act or any other law or regulation shall NOT be rechargeable to the licensee's customers.",
+      "section_116_14": "Any person or licensee who contravenes subsection (13) commits an offence and is liable to a fine two times the charge to the licensee's customers or imprisonment for a term not more than one year or both.",
+      "consumer_significance": "S.116(13) is one of the most directly consumer-protective provisions in the Act. It explicitly prohibits DisCos from passing regulatory fines to consumers through tariffs. This is directly relevant to the MYTO tariff review disputes of 2023–2025."
+    },
+    "section_117_electricity_subsidy": {
+      "provision": "Notwithstanding anything contained in this Act, if the Federal or State Government desires to grant any subsidy to any consumer or class of consumers in the tariff determined by the Commission under this Act, such subsidy by the Federal or State Government or cross subsidies shall, in order to avoid undue exposure of licensees to speculative revenues, be implemented within the Power Consumer Assistance Fund established under this Act.",
+      "subsection_2": "The Commission shall ensure strict implementation of cross-subsidies and facilitate gradual reduction in cross-subsidies with the aim of entirely eliminating cross-subsidies before the declaration of the commencement of a long-term market stage under this Act.",
+      "consumer_significance": "This signals the end of cross-subsidies in the long term. The lifeline tariff will remain but the era of industrial consumers subsidising residential consumers (and vice versa) is legally being wound down. Consumer implication: tariff increases are structurally inevitable."
+    },
+    "section_119_consumer_protection_standards": {
+      "provision": "The Commission shall develop, in consultation with the licensees, the following: (a) customer service standards; (b) quality of service and supply standards; (c) customer complaint handling standards and procedures; (d) procedures for dealing with and assisting, where necessary, customers who have difficulty in paying bills; (e) procedures for applying for electricity service; (f) procedures for disconnecting non-paying customers or those in breach of other terms and conditions; (g) the information to be provided to consumers and the manner of its dissemination; (h) internal procedures for responding to emergency situations.",
+      "section_119_2": "Standards and procedures developed shall be adhered to by the applicable licensees and all persons to which they apply and shall be published by the applicable licensees in such manner and by such means as the Commission may direct.",
+      "section_119_3": "Without prejudice to the obligations of licensees regarding compliance with service delivery standards, licensees shall publish on a quarterly basis through their official websites or other online mediums, key performance indicators as it affects service delivery including: (a) technical data related to load, system and equipment; (b) operational parameters; (c) financial data; (d) customer service information and other indicators.",
+      "obligation_type": "Mandatory",
+      "compliance_status": "SUBSTANTIALLY NOT MET. As of 2025 the Commission's Consumer Protection Regulations exist but enforcement is weak. No DisCo consistently publishes quarterly KPIs as mandated by s.119(3). Complaint handling timeframes are not publicly tracked. This is an active governance failure.",
+      "consumer_significance": "VERY HIGH. This is the legal basis for the regulatory standards that consumers can cite when DisCos fail them. The quarterly KPI publication obligation (s.119(3)) is particularly powerful — if enforced, it would create accountability data that Vitics could use."
+    },
+    "section_121_competition": {
+      "provision": "The Commission shall have a continuing responsibility to monitor the NESI in regard to its potential for additional competition and to report on this subject, each year to the Minister, and until such a time as the Commission has made a declaration under section 8(1) of this Act.",
+      "consumer_significance": "The Commission must annually assess whether any regulated services should be exempted from tariff regulation as competition develops. This is the legal pathway to a full competitive market — which would ultimately benefit consumers through price competition."
+    },
+    "section_122_PCAF": {
+      "provision": "There is established the Power Consumer Assistance Fund (PCAF) to be used for the purposes specified in subsection (4).",
+      "composition": "Contributions delivered under this section, and any subsidies received from the Federal Government of Nigeria as appropriated by the National Assembly.",
+      "purpose_s122_4": "The PCAF shall be used to subsidise underprivileged power consumers as specified by the Minister in consultation with the Commission.",
+      "management": "The Commission shall keep and manage the money and assets of the PCAF and shall handle the procedures for disbursement from the PCAF under this Act.",
+      "contribution_mechanism": "Section 123–124: All consumers and eligible customers shall make contributions to the PCAF at rates determined by the Commission. These contributions are factored into tariffs.",
+      "fine_for_non_payment": "Section 126: Any person who fails to pay any amount owed under this Part commits an offence and is liable to a fine not exceeding three times the amount owed.",
+      "compliance_status": "NOT OPERATIONALISED as of 2025. The PCAF exists in law but has not been funded, staffed or made operational. No consumer has received a subsidy payment from the PCAF. This is one of the most significant governance failures in the Act relative to consumer welfare.",
+      "consumer_significance": "VERY HIGH for low-income consumers. The PCAF is the legal mechanism for protecting the poorest electricity consumers from tariff increases. Its non-operationalisation means the poor have borne the full weight of cost-reflective tariff increases with zero state protection."
+    },
+    "section_127_128_rural_electrification_agency": {
+      "provision": "There is established the Rural Electrification Agency (REA) charged with the functions provided under this Act.",
+      "key_objectives": [
+        "(a) Create enabling channel for entry into markets for rural, unserved and underserved electrification services",
+        "(b) Ensure rural, unserved and underserved electrification services are provided efficiently, economically and at performance standards which reasonably meet social, industrial and agricultural needs of rural communities",
+        "(d) Promote electricity access for rural, unserved and underserved populace to have unfettered access to electricity facilities",
+        "(e) Promote the development of off-grid electrification to rural, unserved and underserved areas",
+        "(f) Provide framework to support renewable energy sources, renewable energy promotion, renewable energy diversification, improved access through various rural electrification and renewable energy technology sources, public education for rural electrification and renewable energy production and consumption, and deployment of bio-energy technology for rural electrification"
+      ],
+      "rural_electrification_fund": "Section 142–143: Rural Electrification Fund (REF) established. Contribution rates for REF set by the Commission.",
+      "consumer_significance": "The REA and REF are the legal instruments for off-grid and mini-grid rural electrification. Combined with the private solar boom post-2023, the REA's mandate to support off-grid and mini-grid solutions is directly aligned with the energy transition happening in the market."
+    },
+    "section_164_171_renewable_energy": {
+      "section_164": "Communication to promote development and utilisation of renewable energy",
+      "section_165": "Commercial activities for renewable energy include: generation, distribution, sales, and installation",
+      "section_166": "From the commencement of this Act, the Federal Ministry responsible for Finance shall introduce such tax incentives as are necessary to promote and facilitate the generation and consumption of energy from renewable energy sources",
+      "section_168": "An electricity distribution utility shall not buy or negotiate a power purchase agreement with a generator of electricity from renewable energy sources unless it is in accordance with guidelines provided by the Commission — Feed-in tariffs rates",
+      "section_169": "A public utility shall not demand a feed-in-tariff rate for electricity generated from renewable energy sources unless the feed-in-tariff rate chargeable has been approved by the Commission",
+      "section_170": "Feed-in-tariff rates approved by the Commission for electricity generated from renewable energy sources shall be published by the Nigerian Electricity Regulatory Commission in the Federal Government Gazette and the mass media",
+      "section_171_grid_connection_obligation": "An operator of a transmission or distribution system SHALL connect a generator of electricity from a renewable energy source within the coverage area of the transmission or distribution system where a generator of electricity from renewable energy sources so requests, such request not to be unreasonably withheld. The operator shall upgrade the transmission or distribution system at reasonable economic expense to feed-in the electricity from the generator of electricity from renewable energy sources.",
+      "net_metering": "Section 164(t): The Commission shall issue guidelines on net-metering for roof-top solar PV systems, small wind power — THIS IS THE LEGAL BASIS FOR NET METERING IN NIGERIA",
+      "compliance_status_renewables": "Section 166 tax incentives: NOT FULLY IMPLEMENTED as of 2025. Section 171 grid connection obligation: largely not enforced. Net metering guidelines: drafted but not widely implemented. Feed-in tariff framework: exists in regulation but rarely used by DisCos.",
+      "consumer_significance": "VERY HIGH for prosumers (solar system owners). Section 171 gives solar system owners who generate surplus electricity a LEGAL RIGHT to connect to the grid and sell back. Net metering guidelines (s.164(t)) are the regulatory basis for this. These provisions are essentially unknown to most Nigerian solar consumers as of 2025."
+    },
+    "section_231_repeal": {
+      "provision": "Except as otherwise provided in this Act, the Electric Power Sector Reform Act, No. 6, 2005 is repealed.",
+      "significance": "18 years after EPSRA 2005 created the regulatory architecture for privatisation, it is formally replaced. All institutions created under EPSRA — NERC, ISO, TCN — continue under new statutory basis."
+    }
+  },
+
+  "institutions_created": [
+    {
+      "name": "Nigerian Electricity Regulatory Commission (NERC / the Commission)",
+      "part": "Part V — Sections 33–62",
+      "continuity": "Reconstituted from EPSRA 2005 NERC. Not new — renamed and strengthened.",
+      "key_new_powers": "Consumer protection standards (s.119), PCAF management (s.122), competition monitoring (s.121), feed-in tariff approval (s.169), net metering guidelines (s.164(t)), annual KPI enforcement from licensees",
+      "consumer_relevance": "Primary regulator of every interaction between consumers and DisCos — tariffs, metering, disconnection, complaint handling, service standards"
+    },
+    {
+      "name": "Independent System Operator (ISO)",
+      "part": "Part IV — Sections 15–32",
+      "continuity": "Created from TCN's system operation function under EPSRA. Now fully independent.",
+      "consumer_relevance": "Manages grid stability and dispatch. Consumer impact is indirect but fundamental — ISO failures translate to load shedding."
+    },
+    {
+      "name": "National Hydroelectric Power Producing Areas Development Commission (N-HYPPADEC)",
+      "part": "Part VIII — Sections 82–107",
+      "new_institution": true,
+      "mandate": "Development of the hydroelectric power producing areas (Niger Delta and others). Tackle ecological problems from dams, prevent and control floods.",
+      "consumer_relevance": "Indirect — addresses development deficit in communities that host power infrastructure but have historically had poor electricity access"
+    },
+    {
+      "name": "Rural Electrification Agency (REA)",
+      "part": "Part XVI — Sections 127–163",
+      "continuity": "Previously existed administratively; now given stronger statutory footing under this Act",
+      "consumer_relevance": "Direct for rural, unserved and underserved communities. Legal basis for mini-grid and off-grid programmes."
+    },
+    {
+      "name": "Nigerian Electricity Management Services Agency (NEMSA)",
+      "part": "Part XVIII — Sections 172–183",
+      "continuity": "Replaces Electricity Management Services Plc (incorporated 2007). Section 172(4): Electricity Management Services Plc incorporated in 2007 shall be taken over by NEMSA.",
+      "mandate": "Standards, safety and quality assurance for electrical equipment and installations including meters. NEMSA certifies meters.",
+      "consumer_relevance": "NEMSA certification of meters is the legal standard — s.114(5) requires consumers to accept NEMSA-certified meters. NEMSA is also the body that should be certifying solar inverters and batteries in the market."
+    },
+    {
+      "name": "National Power Training Institute of Nigeria (NAPTIN)",
+      "part": "Part XIX — Sections 185–207",
+      "consumer_relevance": "Indirect — workforce development for the sector"
+    },
+    {
+      "name": "Power Consumer Assistance Fund (PCAF)",
+      "part": "Part XV — Sections 122–126",
+      "type": "Fund, not an agency — managed by NERC",
+      "consumer_relevance": "Direct for low-income consumers. The legal instrument for electricity subsidies to underprivileged consumers."
+    },
+    {
+      "name": "State Electricity Markets (enabling framework)",
+      "part": "Part II (s.2(2)), Part XXI (s.230)",
+      "type": "Constitutional enabling framework — not a single institution",
+      "consumer_relevance": "Most structurally important. States that exercise their new power to create independent electricity markets will reshape the consumer experience most profoundly over the next decade."
+    }
+  ],
+
+  "consumer_rights_created": [
+    {
+      "right": "Right to a meter — estimated billing shall end",
+      "legal_basis": "Section 114(1) — no licensee shall supply electricity without proper meter after Commission's appointed deadline",
+      "enforceability": "High in law, weak in practice due to blank commencement date and repeated deadline extensions",
+      "consumer_vocabulary": "meter wahala, awaiting meter, crazy bill, estimated billing"
+    },
+    {
+      "right": "Right to have complaint settled within Commission-specified timeframe",
+      "legal_basis": "Section 113(5) — any consumer who is aggrieved may make a complaint for redress to the licensee and the licensee SHALL settle such grievances within a time frame as specified by the Commission. Section 113(7) — where licensee fails to settle, consumer shall bring complaint to attention of Commission for quick mediation and resolution.",
+      "enforceability": "Moderate — Commission's complaint resolution mechanism exists but is under-resourced",
+      "consumer_vocabulary": "NERC complaint, DisCo complaint, light bill complaint"
+    },
+    {
+      "right": "Right not to pay a previous occupant's electricity debt",
+      "legal_basis": "Section 115(4) — nothing shall entitle a distribution licensee to enforce a former landlord's or previous tenant's outstanding electricity bill against a new landlord or new tenant or new occupant of a property",
+      "enforceability": "High in law — but most consumers do not know this right exists",
+      "consumer_vocabulary": "inherited light bill, previous tenant debt, landlord electricity arrears"
+    },
+    {
+      "right": "Right that licensee fines/penalties shall not be passed to consumers",
+      "legal_basis": "Section 116(13) — any fines or penalties levied against a licensee shall NOT be rechargeable to the licensee's customers. Section 116(14) — criminal offence for doing so.",
+      "enforceability": "Moderate — requires consumer awareness and Commission enforcement",
+      "consumer_vocabulary": "DisCo fine, passed-on charges, tariff increase, MYTO"
+    },
+    {
+      "right": "Right to access licensee's tariff methodology document free of charge",
+      "legal_basis": "Section 116(12) — every licensee shall keep at his office a current copy of the tariff methodology applicable to that licensee and shall make a copy available for inspection on request by any person free of any charge during the licensee's normal working hours.",
+      "enforceability": "Low — rarely exercised",
+      "consumer_vocabulary": "tariff methodology, how is my bill calculated, MYTO"
+    },
+    {
+      "right": "Right to consumer protection standards and quarterly KPI transparency from DisCos",
+      "legal_basis": "Section 119 — Commission shall develop customer service standards, quality standards, complaint handling standards, procedures for bill difficulty, procedures for service application, disconnection procedures, and information dissemination standards. Section 119(3) — licensees SHALL publish quarterly KPIs online.",
+      "enforceability": "Currently very low — systematic non-compliance with s.119(3)",
+      "consumer_vocabulary": "DisCo accountability, hours of supply, service quality, distribution company performance"
+    },
+    {
+      "right": "Right of renewable energy generators to grid connection",
+      "legal_basis": "Section 171(1) — an operator of a transmission or distribution system SHALL connect a generator of electricity from a renewable energy source. Such request shall not be unreasonably withheld.",
+      "enforceability": "Low in practice — grid operators impose technical and financial barriers. But the legal right exists.",
+      "consumer_vocabulary": "solar grid connection, feed-in tariff, net metering, sell back to grid, export to grid"
+    },
+    {
+      "right": "Right to electricity subsidies through PCAF for underprivileged consumers",
+      "legal_basis": "Section 122(4) — the PCAF shall be used to subsidise underprivileged power consumers as specified by the Minister in consultation with the Commission",
+      "enforceability": "Zero — PCAF not operationalised as of 2025",
+      "consumer_vocabulary": "light subsidy, government electricity support, poor consumers electricity"
+    }
+  ],
+
+  "compliance_record": {
+    "section_3_national_electricity_policy": {
+      "obligation": "Publish National Integrated Electricity Policy within one year of commencement",
+      "deadline": "One year from commencement — which has not been formally gazetted",
+      "status": "NOT COMPLIED WITH. No formally gazetted commencement date means the clock has not formally started. However the Act is being operationally treated as in force. As of 2025, no comprehensive National Integrated Electricity Policy has been published under this Act.",
+      "governance_failure_level": "HIGH"
+    },
+    "section_114_metering": {
+      "obligation": "End estimated billing; mandate meters for all consumers",
+      "deadline": "Date appointed by the Commission",
+      "status": "PARTIALLY COMPLIED. Commission has set and extended multiple metering deadlines. MAP scheme partially addresses gap but 6–8 million customers remain unmetered as of 2025. Estimated billing ('crazy bill') continues across multiple DisCos.",
+      "governance_failure_level": "HIGH"
+    },
+    "section_119_consumer_protection_standards": {
+      "obligation": "Develop and enforce consumer protection standards; require quarterly KPI publication by DisCos",
+      "status": "PARTIALLY COMPLIED. NERC Consumer Protection Regulations exist. However s.119(3) quarterly KPI publication mandate is not consistently met by any DisCo. Complaint handling SLAs are not publicly tracked. Consumer awareness of these standards is near zero.",
+      "governance_failure_level": "HIGH"
+    },
+    "section_122_PCAF": {
+      "obligation": "Establish, fund and operationalise Power Consumer Assistance Fund to subsidise underprivileged consumers",
+      "status": "NOT COMPLIED. The PCAF has been legally established since June 2023. As of 2025, it has not been funded, staffed or made operational. Not a single underprivileged consumer has received a PCAF subsidy. This is the single largest gap between the Act's promises and consumer reality.",
+      "governance_failure_level": "CRITICAL"
+    },
+    "section_166_renewable_energy_tax_incentives": {
+      "obligation": "Federal Ministry of Finance shall introduce tax incentives to promote renewable energy generation and consumption from commencement",
+      "status": "PARTIALLY COMPLIED. Some import duty waivers on solar equipment have existed since before this Act. However a comprehensive tax incentive framework specifically tied to this Act has not been published.",
+      "governance_failure_level": "MODERATE"
+    },
+    "section_171_grid_connection_renewable": {
+      "obligation": "Transmission and distribution system operators SHALL connect renewable energy generators; request not to be unreasonably withheld",
+      "status": "NOT EFFECTIVELY COMPLIED. DisCos continue to impose excessive technical and financial barriers to grid connection for solar generators. Net metering is not widely operational. Most solar system owners in Nigeria as of 2025 operate fully off-grid and have no path to sell surplus to the grid.",
+      "governance_failure_level": "HIGH"
+    },
+    "section_2_2_state_electricity_markets": {
+      "obligation": "Act does not create obligation — it grants permission. States must proactively exercise their new powers.",
+      "status": "EARLY STAGE. Lagos, Rivers, Kano and other states have commenced studies and legislative drafting for state electricity laws. No state had a fully operational independent electricity market as of 2025. The process takes years — independent generation, transmission and distribution within a state requires massive capital investment.",
+      "governance_failure_level": "N/A — structural/timeline issue, not a compliance failure"
+    },
+    "commencement_blank": {
+      "obligation": "President was required to gazette a commencement date upon assent",
+      "status": "NOT DONE. The commencement bracket remains blank. This creates legal uncertainty about when various statutory clocks start running. However regulators, DisCos and the Commission are operationally treating the Act as in force.",
+      "governance_failure_level": "HIGH — this ambiguity is exploitable by those seeking to delay obligations"
+    }
+  },
+
+  "consumer_reality": {
+    "consumer_impact_score": "7/10",
+    "impact_score_explanation": "Score of 7 reflects the Act's POTENTIAL rather than its achieved impact as of 2025. The Act is structurally the most important electricity legislation in 18 years. But for the ordinary Nigerian consumer in 2023–2025, the immediate reality is: (1) tariff increases (not reductions), (2) estimated billing continues, (3) PCAF not operational, (4) same DisCos, same infrastructure, same hours of supply. The 7/10 score is forward-looking — as states develop independent markets and as metering is completed, consumer impact will be substantial.",
+    "immediate_consumer_experience_2023": {
+      "tariff_reality": "Three major tariff increases in 2024 under cost-reflective tariff (MYTO) triggered massive consumer anger. The electricity tariff for Band A customers (urban, better supply) increased from approximately N68/kWh to N225/kWh in April 2024 — a 230% increase. This increase happened within a year of this Act's passage and was enabled by the Act's cost-reflective tariff framework.",
+      "metering_reality": "Millions of customers still on estimated billing in 2024–2025. The Act's s.114 mandate has not changed this on the ground.",
+      "supply_reality": "No measurable improvement in hours of supply in 2023–2024. Grid continues to collapse periodically (generation below 4,000 MW).",
+      "solar_adoption_reality": "The Act's renewable energy provisions (s.166–171) are largely irrelevant to the solar adoption surge of 2023–2025. That surge was driven by fuel subsidy removal (making generators unaffordable) and falling solar prices — not by the Act.",
+      "state_electricity_reality": "No consumer in any Nigerian state experienced the benefit of a state electricity market in 2023–2025. The state market provisions are a 5–10 year story.",
+      "consumer_awareness": "The vast majority of Nigerian consumers are entirely unaware of the specific provisions of this Act. Even the most engaged consumers on social media discuss electricity in terms of suffering and DisCo failures — not in terms of their legal rights under the Act."
+    },
+    "what_consumers_actually_said": {
+      "dominant_discourse_2023": "Initial consumer discourse in mid-2023 was entirely dominated by fuel subsidy removal — 'subsidy removal don kill us', 'petrol don reach 500 naira', 'generator fuel don finish my salary'. The Electricity Act was not a consumer talking point.",
+      "dominant_discourse_2024": "As cost-reflective tariff increases hit in early 2024: 'NERC wan kill us with this tariff', 'Band A means nothing if there is no light', '225 per unit is wickedness', 'I rather face solar than pay NERC tariff'",
+      "consistent_complaints": "Crazy bill, meter not installed, supply is worse than before, DisCo not picking complaint calls, transformer spoil nobody repair, 'they said Band A but we don't get 20 hours'",
+      "solar_discourse_link": "Post-subsidy-removal solar discourse: 'generator don retire', 'solar na the way now', 'inverter don save my life', 'solar no dey disappoint like NEPA', 'how many panels I need to power my fridge'"
+    }
+  },
+
+  "policy_to_reality_gap": {
+    "gap_score": "8/10 — Very Large Gap (with qualification that the Act is early-stage)",
+    "gap_type": "GOVERNANCE FAILURE — the Act's provisions are strong, but implementation has been weak or absent on every major consumer-facing obligation",
+    "specific_gaps": [
+      {
+        "gap": "Blank commencement date",
+        "provision": "Section 9 bracket '[ ]'",
+        "reality": "Creates legal uncertainty that allows obligation-avoidance by all parties"
+      },
+      {
+        "gap": "PCAF not operationalised",
+        "provision": "Sections 122–126",
+        "reality": "The poor have received no subsidy protection as tariffs tripled in 2024. Zero gap between what law promised and what was delivered = maximum gap."
+      },
+      {
+        "gap": "Estimated billing continues",
+        "provision": "Section 114",
+        "reality": "Millions still receive estimated bills 2 years after assent"
+      },
+      {
+        "gap": "No National Electricity Policy published",
+        "provision": "Section 3(1) — one year obligation",
+        "reality": "Not published"
+      },
+      {
+        "gap": "Quarterly KPI publication not happening",
+        "provision": "Section 119(3)",
+        "reality": "No DisCo consistently publishes quarterly KPIs as mandated"
+      },
+      {
+        "gap": "Net metering not operational",
+        "provision": "Section 164(t), Section 171",
+        "reality": "Solar system owners cannot sell surplus to grid"
+      },
+      {
+        "gap": "Consumer rights awareness gap",
+        "provision": "All of Part XIII",
+        "reality": "Consumers do not know their rights under this Act — rights cannot be exercised without knowledge"
+      }
+    ],
+    "partial_successes": [
+      "State electricity market framework legally established — Lagos, Rivers beginning to move",
+      "Metering gap being reduced (MAP scheme, though pre-dates Act)",
+      "ISO becoming more independent from TCN",
+      "REA has become more active in supporting off-grid/mini-grid deployments"
+    ]
+  },
+
+  "sdg_alignment": {
+    "SDG_7_affordable_clean_energy": {
+      "alignment": "HIGH in intent, MODERATE in delivery",
+      "specific_provisions": "S.1(l) renewable energy framework, s.1(m) off-grid and mini-grid for underserved, s.122 PCAF for affordability, s.166 tax incentives for renewables, s.171 grid connection for renewables",
+      "reality_check": "Tariff increases in 2024 directly undermined SDG7 affordability. Renewable energy access improved mainly through private market, not Act implementation."
+    },
+    "SDG_5_gender_equality": {
+      "alignment": "MODERATE in intent",
+      "specific_provisions": "S.5(1)(e) — Minister shall promote gender mainstreaming in design and implementation of electricity projects. S.129(3)(d) REA shall foster gender mainstreaming in rural electrification activities.",
+      "reality_check": "Gender mainstreaming in energy is nascent in Nigeria. These provisions exist on paper."
+    },
+    "SDG_8_decent_work": {
+      "alignment": "MODERATE",
+      "specific_provisions": "S.1(g) — stimulate investment to re-energise economic growth and drive job creation. S.227 — local content in the power sector. S.165(1)(d) installation as a commercial activity for renewable energy.",
+      "reality_check": "Solar installation as a job creator is the most concrete SDG8 win — private market-driven, not Act-driven."
+    },
+    "SDG_10_reduced_inequalities": {
+      "alignment": "HIGH in intent via PCAF and rural electrification, LOW in delivery",
+      "specific_provisions": "PCAF (s.122), REA rural mandate, lifeline tariff provision (s.116(5))",
+      "reality_check": "PCAF non-operationalisation means the main inequality-reduction instrument has not been deployed."
+    },
+    "SDG_13_climate_action": {
+      "alignment": "MODERATE",
+      "specific_provisions": "Renewable energy Part XVII, feed-in tariffs, net metering, renewable purchase obligation",
+      "reality_check": "Nigeria's electricity sector remains gas-dominated. Private solar market advances climate goals independently of Act implementation."
+    }
+  },
+
+  "consumer_search_terms": {
+    "direct_discourse_terms": [
+      "electricity tariff increase Nigeria 2024",
+      "Band A tariff Nigeria",
+      "NERC tariff hike",
+      "crazy bill Nigeria",
+      "estimated billing DisCo",
+      "awaiting meter Nigeria",
+      "meter not installed Nigeria",
+      "Electricity Act 2023",
+      "state electricity market Nigeria",
+      "Lagos electricity law",
+      "solar grid connection Nigeria",
+      "net metering Nigeria",
+      "sell solar to grid Nigeria",
+      "PCAF Nigeria electricity",
+      "electricity subsidy Nigeria 2024",
+      "DisCo complaint Nigeria",
+      "NERC complaint",
+      "225 per unit electricity Nigeria",
+      "electricity rights Nigeria",
+      "generator retire solar Nigeria"
+    ],
+    "indirect_discourse_terms_consumer_language": [
+      "light don carry since yesterday",
+      "NEPA people wicked",
+      "they say Band A but no light",
+      "my bill don reach 50,000 naira",
+      "how they calculate estimated bill",
+      "inverter better than DisCo",
+      "solar don save my life",
+      "previous tenant bill they want me to pay",
+      "transformer don spoil",
+      "DisCo repair transformer when",
+      "generator fuel too expensive",
+      "subsidy removal don affect light bill",
+      "state government electricity",
+      "Tinubu electricity",
+      "light bill complaint number",
+      "what is NERC",
+      "my right as electricity customer Nigeria",
+      "DisCo billing wrongly",
+      "band A band B band C meaning",
+      "I want to complain about my DisCo"
+    ],
+    "solar_specific_terms_linked_to_act": [
+      "can I sell solar power to grid Nigeria",
+      "net metering Nigeria NERC",
+      "solar panel connection to EKEDC IKEDC AEDC",
+      "off-grid solar Nigeria legality",
+      "mini grid license Nigeria",
+      "renewable energy investment Nigeria 2023",
+      "feed-in tariff Nigeria solar"
+    ],
+    "state_electricity_terms": [
+      "Lagos electricity market",
+      "state electricity law Nigeria",
+      "can state generate electricity Nigeria",
+      "Lagos state power company",
+      "Rivers state electricity",
+      "state DisCo Nigeria",
+      "independent state electricity Nigeria"
+    ]
+  },
+
+  "transition_marker": true,
+  "transition_note": "The Electricity Act 2023 marks a structural transition in Nigerian energy governance. Before 2023: a federal electricity monopoly framework inherited from EPSRA 2005, with 11 privatised DisCos operating under federal regulation. After 2023: a legally authorised federal-state hybrid model in which states may build fully independent electricity markets. The analytical frame for consumer energy discourse must bifurcate post-2023: (1) federal grid consumers continue to experience the NEPA/PHCN/DisCo narrative, while (2) state electricity developments will create new local discourse patterns. Additionally, the coincidence of this Act with fuel subsidy removal in May/June 2023 means all post-2023 consumer energy discourse must be understood against two simultaneous shocks — structural (Act) and economic (subsidy removal). The solar adoption surge of 2023–2025 is primarily an economic response to subsidy removal, not a legal response to the Act.",
+
+  "vitics_analysis_instructions": {
+    "period": "Post June 2023 onward",
+    "primary_lens": "When analysing consumer content from June 2023 onward, Vitics should apply a dual lens: (1) economic shock response (fuel subsidy removal → generator cost unaffordable → solar adoption), and (2) structural reform context (Electricity Act 2023 → state markets developing → metering deadline approaching → tariff increases enabled by cost-reflective framework).",
+    "attribution_rule": "Do NOT attribute the 2023–2025 solar adoption surge primarily to the Electricity Act. Attribute it to fuel subsidy removal. The Act provides the long-term legal framework, but the economic shock drove consumer behaviour.",
+    "tariff_discourse_rule": "When consumers complain about electricity tariff increases in 2024–2025, this IS connected to the Act — cost-reflective tariff framework was enabled by the Act's s.116 tariff methodology requirements. Consumers are living the 'phase out cross-subsidies' provision of s.116(2)(f) in real time.",
+    "rights_gap_opportunity": "A large gap exists between the consumer rights created in this Act (s.113–119) and consumer awareness of those rights. When Vitics encounters a consumer complaint that maps onto a legal right in this Act — wrong billing, inherited debt, no meter, DisCo not responding to complaint — flag this as a 'rights education opportunity'.",
+    "state_electricity_signal": "When consumers mention 'state electricity', 'Lagos electricity', 'state government light', this signals awareness of the new state market framework. Treat as a high-value signal for tracking the emergence of state electricity consumer discourse.",
+    "solar_prosumer_signal": "When consumers mention wanting to 'sell back to grid', 'connect solar to NERC', 'net metering' — these consumers are engaging with s.171 and s.164(t) of the Act without knowing it. Flag as a 'prosumer rights signal'.",
+    "PCAF_signal": "Any mention of electricity subsidy, poor people electricity, government electricity support — map this to the non-operationalised PCAF. This is the Act's biggest undelivered promise to low-income consumers.",
+    "temporal_coding": {
+      "pre_june_2023": "EPSRA 2005 framework; no state electricity rights; no PCAF; no net metering legal basis",
+      "june_2023_to_dec_2023": "Act assented but commencement blank; fuel subsidy shock dominant; Act barely known by consumers",
+      "jan_2024_to_dec_2024": "Cost-reflective tariff increases (largest in Nigerian electricity history); Band A/B/C consumer segmentation discourse explodes; 'tariff increase' becomes dominant consumer search term",
+      "jan_2025_onward": "State electricity market developments beginning; metering pressure building; solar adoption normalising; long-term Act implementation beginning to manifest"
+    }
+  },
+
+  "document_quality": {
+    "scan_quality": "Good — Xerox W100 Series scanner, 150 DPI rasterisation used for reading. All pages legible. Some pages have faint text or slight skew but no content loss.",
+    "pages_read": "All 151 pages read visually — full table of contents (pp.1–8), Part I objectives (pp.9–14), Part II National Policy (pp.12–13), Part III–VI market/licensing (pp.15–46, sampled), Part VIII N-HYPPADEC (pp.50–70, sampled), tariff methodology (pp.68–71), consumer protection Part XIII (p.73–74), PCAF Part XV (pp.75–76), REA Part XVI (pp.76–79), renewable energy Part XVII (pp.96–99), NEMSA Part XVIII (p.99), final provisions Parts XXI–XXII (pp.119–129), repeal/citation/schedules (pp.127–151).",
+    "reading_confidence": "HIGH — 95%+. Key consumer-facing sections read in full. Institutional sections sampled.",
+    "critical_finding_confirmed": "Commencement bracket '[ ]' on page 9 is confirmed blank. Presidential assent signature confirmed: Bola Ahmed Tinubu, GCFR. Date of assent: 'Day of June 2023' — exact date partially illegible on scan (appears to be '9th' or could be '6th'). Senate passage: 10 May 2023. House passage: 23 May 2023.",
+    "json_creation_date": "2025",
+    "json_created_by": "Vitics / Claude — visual reading of scanned PDF, page by page"
+  }
+}

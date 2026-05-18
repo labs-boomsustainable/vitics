@@ -1,0 +1,481 @@
+{
+  "schema_version": "disco_financial_schema_v1.1",
+  "document_id": "AEDC_2023",
+  "disco_name": "Abuja Electricity Distribution Plc",
+  "ticker": "AEDC",
+  "report_year": 2023,
+  "report_period_end": "31 December 2023",
+  "filing_date": "26 September 2024",
+  "auditor": "Ernst & Young (EY)",
+  "auditor_opinion": "Unqualified — with Material Uncertainty Related to Going Concern paragraph",
+  "currency": "NGN",
+  "units": "₦'000 unless stated",
+
+  "section_01_company_overview": {
+    "legal_name": "Abuja Electricity Distribution Plc",
+    "registration_number": "638681",
+    "tax_id": "01783033-0001",
+    "incorporated": "8 November 2005",
+    "registered_office": "1 Ziguinchor Street, Off IBB Way, Wuse Zone 4, Abuja",
+    "franchise_area": ["Federal Capital Territory (FCT) Abuja", "Niger State", "Kogi State", "Nasarawa State"],
+    "licence_expiry": "2028 (with option to renew 10 years)",
+    "regulatory_framework": "NERC Multi-Year Tariff Order (MYTO) and TEM Rules effective 1 February 2015",
+    "business_districts": 33,
+    "area_offices": 15,
+    "regional_offices": 3,
+    "employees_2023": 3362,
+    "employees_2022": 3428,
+    "ownership_history": {
+      "pre_privatisation": "PHCN subsidiary",
+      "nov_2013": "KANN Utility Company Limited acquires 60% — privatisation complete",
+      "2020": "CEC Africa Investments Limited acquires majority of KANN shares",
+      "dec_2021": "United Capital Trustees Limited (UCTL) takes controlling 60%",
+      "may_2023": "Jeolan International Limited (led by Transcorp Group) acquires 60% — new investor takeover"
+    },
+    "shareholding_2023": {
+      "Jeolan_International_Limited": "60%",
+      "Bureau_of_Public_Enterprises": "32%",
+      "Ministry_of_Finance_Incorporated": "8%"
+    },
+    "parent_company_2023": "Jeolan International Limited",
+    "ultimate_group": "Transcorp Group (through Jeolan)"
+  },
+
+  "section_02_income_statement": {
+    "year": 2023,
+    "prior_year": 2022,
+    "revenue_2023_N000": 250548755,
+    "revenue_2022_N000": 148882467,
+    "revenue_growth_pct": 68.3,
+    "revenue_composition_2023": {
+      "revenue_from_contracts_with_customers_N000": 177768708,
+      "tariff_shortfall_awarded_by_NERC_N000": 70562746,
+      "customer_contributed_assets_N000": 2217301
+    },
+    "revenue_composition_2022": {
+      "revenue_from_contracts_with_customers_N000": 134225334,
+      "tariff_shortfall_awarded_by_NERC_N000": 8048000,
+      "customer_contributed_assets_N000": 6609133
+    },
+    "revenue_by_payment_mode_2023": {
+      "postpaid_N000": 106936582,
+      "prepaid_N000": 70832126
+    },
+    "revenue_by_payment_mode_2022": {
+      "postpaid_N000": 87183878,
+      "prepaid_N000": 47041456
+    },
+    "cost_of_sales_2023_N000": 256276854,
+    "cost_of_energy_2023_N000": 236660136,
+    "cost_of_energy_2022_N000": 129811611,
+    "gross_profit_loss_2023_N000": -5728099,
+    "gross_profit_loss_2022_N000": 5769177,
+    "gross_margin_2023_pct": -2.3,
+    "other_income_2023_N000": 8098188,
+    "impairment_reversal_2023_N000": 39545248,
+    "impairment_charge_2022_N000": -1130748,
+    "admin_expenses_2023_N000": 21721587,
+    "operating_profit_2023_N000": 20193750,
+    "operating_profit_2022_N000": 8132602,
+    "finance_income_2023_N000": 221770,
+    "finance_costs_2023_N000": 18760484,
+    "net_finance_costs_2023_N000": -18538714,
+    "profit_before_tax_2023_N000": 1655036,
+    "loss_before_tax_2022_N000": -6590187,
+    "minimum_tax_2023_N000": 1256808,
+    "income_tax_2023_N000": 82,
+    "net_profit_2023_N000": 398146,
+    "net_loss_2022_N000": -7336802,
+    "total_comprehensive_income_2023_N000": 21489912,
+    "vitics_note": "Nominal profit of ₦398m achieved ONLY due to ₦39.5bn impairment reversal. Without the reversal, the company would have posted a loss exceeding ₦39bn. Gross margin is negative — cost of energy alone exceeds all electricity sales revenue."
+  },
+
+  "section_03_balance_sheet": {
+    "total_assets_2023_N000": 380806600,
+    "total_assets_2022_N000": 284125939,
+    "total_liabilities_2023_N000": 326260238,
+    "total_liabilities_2022_N000": 251069489,
+    "total_equity_2023_N000": 54546362,
+    "total_equity_2022_N000": 33056450,
+    "accumulated_losses_2023_N000": -65651916,
+    "accumulated_losses_2022_N000": -66110031,
+    "share_capital_N000": 15000,
+    "revaluation_reserve_2023_N000": 120183278,
+    "net_current_liabilities_2023_N000": -112672022,
+    "net_current_liabilities_2022_N000": -110773983,
+    "ppe_net_2023_N000": 210729043,
+    "ppe_net_2022_N000": 186384954,
+    "cash_and_equivalents_2023_N000": 11076968,
+    "cash_and_equivalents_2022_N000": 7804153,
+    "trade_receivables_gross_2023_N000": 173580411,
+    "trade_receivables_gross_2022_N000": 148567863,
+    "ecl_allowance_2023_N000": 50307569,
+    "ecl_allowance_2022_N000": 89852817,
+    "trade_receivables_net_2023_N000": 123272842,
+    "trade_receivables_net_2022_N000": 58715046,
+    "trade_payables_NBET_ONEM_2023_N000": 168708484,
+    "trade_payables_NBET_ONEM_2022_N000": 112399214,
+    "statutory_deductions_payable_2023_N000": 62852332,
+    "total_current_liabilities_2023_N000": 281938564,
+    "total_loans_borrowings_2023_N000": 44845255,
+    "adjusted_net_debt_2023_N000": 315183270,
+    "equity_to_adjusted_net_debt_ratio_2023": 5.78,
+    "equity_to_adjusted_net_debt_ratio_2022": 7.36,
+    "vitics_note": "Revaluation reserve of ₦120bn is the primary reason equity looks positive. Strip out revaluation and accumulated losses exceed ₦65bn. The ₦168bn NBET/ONEM payable is the single largest balance sheet item — systemic market debt that defines AEDC's financial reality."
+  },
+
+  "section_04_cash_flow": {
+    "net_cash_from_operations_2023_N000": 15747126,
+    "net_cash_used_in_operations_2022_N000": -12681635,
+    "capex_2023_N000": -5955497,
+    "capex_2022_N000": -3717468,
+    "net_cash_investing_2023_N000": -6228792,
+    "net_cash_financing_2023_N000": -6212521,
+    "net_change_in_cash_2023_N000": 3305813,
+    "opening_cash_2023_N000": 7804153,
+    "closing_cash_2023_N000": 11076968,
+    "interest_paid_2023_N000": 7330822,
+    "principal_repayment_loans_2023_N000": 5297311,
+    "new_loan_proceeds_2023_N000": 6488780,
+    "vitics_note": "Operating cash turned positive in 2023 — significant reversal from 2022. However, ₦7.3bn interest payments to lenders and ₦168bn payable to NBET/ONEM confirm that the business generates cash only by not fully paying its creditors."
+  },
+
+  "section_05_revenue_analysis": {
+    "tariff_framework": "Multi-Year Tariff Order (MYTO) — price controlled, regulated",
+    "tariff_shortfall_mechanism": {
+      "description": "NERC awards tariff shortfall to DISCOs to compensate gap between actual tariff and cost-reflective tariff. Settled via net-off of NBET payables — not cash payment.",
+      "accumulated_shortfall_recognised_2015_to_2018_N000": 102220000,
+      "shortfall_2019_N000": 62690000,
+      "shortfall_2020_N000": 51500000,
+      "shortfall_2021_N000": 29800000,
+      "shortfall_recognised_2023_N000": 70562746,
+      "shortfall_recognised_2022_N000": 8048000
+    },
+    "customer_contributed_assets_2023_N000": 2217301,
+    "customer_contributed_assets_2022_N000": 6609133,
+    "note_on_meter_costs": "From April 1 2023, NERC directed DISCOs to repay customers who funded meter installations via MAP scheme — via energy credits not cash. Meter costs no longer recognised as revenue from this date.",
+    "prepaid_revenue_share_2023_pct": 39.9,
+    "prepaid_revenue_share_2022_pct": 35.1,
+    "vitics_note": "Revenue grew 68% but the REAL electricity sales (contracts with customers) grew only 32% — from ₦134bn to ₦178bn. The headline 68% is inflated by ₦70.6bn in NERC-awarded paper tariff shortfall (vs only ₦8bn in 2022). Stripping shortfall out: underlying electricity sales grew 32%, which is largely price increases on fewer or flat units — not more energy delivered."
+  },
+
+  "section_06_cost_analysis": {
+    "cost_of_energy_2023_N000": 236660136,
+    "cost_of_energy_2022_N000": 129811611,
+    "cost_of_energy_growth_pct": 82.3,
+    "depreciation_distribution_network_2023_N000": 9685870,
+    "maintenance_expenses_2023_N000": 2772803,
+    "staff_costs_2023_N000": 13166236,
+    "staff_costs_2022_N000": 12944441,
+    "key_observation": "Cost of energy grew 82% vs electricity sales revenue growth of 32%. This is the structural deficit: energy purchases exceed electricity sold revenue. AEDC buys more energy from NBET than it collects from customers — the gap is funded by accumulating NBET debt.",
+    "energy_cost_as_pct_of_electricity_sales_2023": 133.1,
+    "commission_to_super_vendors_2023_N000": 7158045,
+    "commission_to_super_vendors_2022_N000": 2405682,
+    "vitics_note": "Super vendor commissions nearly tripled — from ₦2.4bn to ₦7.2bn. This is the cost of distributing prepaid electricity tokens through agent networks (banks, fintech, POS agents). As prepaid adoption grows, this cost grows. Ironically, the prepaid channel that gives consumers independence from AEDC meters is also a growing cost burden on AEDC."
+  },
+
+  "section_07_receivables_and_collections": {
+    "gross_receivables_2023_N000": 173580411,
+    "gross_receivables_2022_N000": 148567863,
+    "ecl_allowance_2023_N000": 50307569,
+    "ecl_allowance_2022_N000": 89852817,
+    "net_receivables_2023_N000": 123272842,
+    "ecl_as_pct_of_gross_2023": 29.0,
+    "ecl_as_pct_of_gross_2022": 60.5,
+    "ecl_reversal_2023_N000": 39545248,
+    "why_ecl_reversed": "Recovery of ₦23.7bn from Federal Government MDAs (Ministries, Departments and Agencies) for debts from 2015–2020. Also, over 90,000 postpaid customers migrated to prepaid — their debts migrated with them, dramatically reducing the forward loss rate.",
+    "aging_breakdown_2023": {
+      "0_to_60_days": {"gross_N000": 145339685, "loss_rate_pct": 23, "ecl_N000": 33648231},
+      "61_to_120_days": {"gross_N000": 21811719, "loss_rate_pct": 58, "ecl_N000": 12757983},
+      "121_to_180_days": {"gross_N000": 3382306, "loss_rate_pct": 59, "ecl_N000": 2003739},
+      "181_to_240_days": {"gross_N000": 1092591, "loss_rate_pct": 57, "ecl_N000": 619950},
+      "241_to_300_days": {"gross_N000": 366318, "loss_rate_pct": 67, "ecl_N000": 247056},
+      "301_to_360_days": {"gross_N000": 214450, "loss_rate_pct": 66, "ecl_N000": 141476},
+      "361_plus_days": {"gross_N000": 1373342, "loss_rate_pct": 65, "ecl_N000": 889135}
+    },
+    "key_insight_2023": "Loss rate on current (0-60 day) receivables DRAMATICALLY improved — from 61% in 2022 to 23% in 2023. This is the single most important collection metric improvement in this report. The 2022 rate of 61% meant even newly billed customers were unlikely to pay. The 2023 rate of 23% suggests meaningful improvement — likely driven by tariff reform and the mass migration to prepaid metering.",
+    "vitics_note": "The 2022 position — where 61% of even CURRENT receivables were expected to be lost — was the most damning measure of collection crisis. That crisis easing in 2023 is real but fragile. ₦168.7bn still owed to NBET tells you the collection improvement has not yet translated to the supply chain."
+  },
+
+  "section_08_debt_and_market_obligations": {
+    "NBET_ONEM_payable_2023_N000": 168708484,
+    "NBET_ONEM_payable_2022_N000": 112399214,
+    "growth_in_market_debt_N000": 56309270,
+    "growth_in_market_debt_pct": 50.1,
+    "interest_on_shortfall_charged_2023_N000": 55154733,
+    "interest_written_back_on_shortfall_2023_N000": 44065782,
+    "net_interest_on_NBET_ONEM_2023_N000": 11088951,
+    "interest_rate_on_NBET_shortfall": "NIBOR + 4%",
+    "total_loans_borrowings_2023_N000": 44845255,
+    "CBN_NEMSF_loan_2023_N000": 38782178,
+    "CAPMI_loan_2023_N000": 1115520,
+    "NELMCO_loan_2023_N000": 807449,
+    "TCN_loan_2023_N000": 4140108,
+    "new_CBN_CAPEX_intervention_2023_N000": 6490000,
+    "CBN_NEMSF_total_drawn_history": {
+      "2018": "₦23.72bn (two tranches ₦20.23bn + ₦3.49bn)",
+      "2019": "₦1.08bn (gas debt settlement)",
+      "2021": "₦23.17bn (₦9.8bn market debt + ₦6bn NMMP meters + ₦8.1bn direct)",
+      "2022": "₦17.7bn (₦10.2bn market debt + ₦7.5bn TCN contractors)",
+      "2023": "₦6.49bn (paid directly to CAPEX vendors)"
+    },
+    "CAPMI_scheme_note": "Credited Advance Payment for Metering Implementation — customers pre-fund their own meters. 12% nominal interest, repaid to customers within 3 years via installments. Consumer-funded metering persists in 2023.",
+    "vitics_note": "NBET/ONEM debt grew by ₦56bn in a single year — AEDC still cannot pay its electricity bill. Total market debt obligations of ₦168.7bn compared to total electricity sales revenue of ₦178bn. AEDC essentially owes NBET almost one full year of electricity sales revenue. This structural deficit drives the solar transition — consumers who can escape this broken payment chain will."
+  },
+
+  "section_09_going_concern": {
+    "auditor_flag": "Ernst & Young flags Material Uncertainty Related to Going Concern — Note 34",
+    "accumulated_losses_2023_N000": -65650000,
+    "accumulated_losses_2022_N000": -66110000,
+    "net_current_liabilities_2023_N000": -112670000,
+    "net_current_liabilities_2022_N000": -110770000,
+    "directors_going_concern_basis": "Prepared on going concern basis",
+    "conditions_for_survival": [
+      "Full cost-reflective tariff implementation",
+      "Reduction of ATC&C losses through network investment",
+      "Improvement in billing and collection efficiency",
+      "Restructuring of historical market debt (2015–2020 shortfall from NBET/ONEM)",
+      "Write-off of accumulated interest on market debt",
+      "MDA remote metering programme (Powertech) for government customer payments",
+      "Jeolan/Transcorp turnaround plan"
+    ],
+    "jeolan_transcorp_plan": [
+      "Creation of sub-feeders for improved network efficiency",
+      "Upgrade and construction of injection substations",
+      "Automation of smart energy allocation model",
+      "30 Auto-reclosures to minimize outage duration",
+      "Full metering of unmetered customers in FCT",
+      "Advanced Metering Infrastructure (AMI) platform deployment",
+      "Aggressive debt recoveries",
+      "Energy Monitoring Center — localize and unbundle ATC&C losses"
+    ],
+    "vitics_note": "Going concern risk is now in its NINTH consecutive year (first flagged by KPMG in 2015 report). Each year a new plan replaces the previous unfulfilled plan. The Jeolan/Transcorp acquisition in May 2023 is the most credible attempted turnaround since privatisation — Transcorp is a major Nigerian conglomerate with real capital. But structural issues (NBET debt, below-cost tariffs, metering gaps, ATC&C losses) remain. Consumers watching these repeated going concern warnings are the same consumers driving solar adoption as insurance against grid collapse."
+  },
+
+  "section_10_tariff_and_regulatory": {
+    "tariff_framework": "MYTO (Multi-Year Tariff Order) — NERC regulated",
+    "tariff_shortfall_cumulative_recognised_2015_to_2023_N000": 396270000,
+    "settlement_mechanism": "Net-off against NBET payables — not cash",
+    "service_based_tariff": "SBT (Service Based Tariff) — tariff bands linked to hours of supply",
+    "NERC_key_actions_2023": [
+      "Awarded ₦70.57bn tariff shortfall for 2023",
+      "Issued new MAP regulation ordering CAPMI meter cost reimbursement to customers from April 2023",
+      "NERC approved CBN-NEMSF 3 for transmission/distribution investment"
+    ],
+    "tariff_shortfall_net_off_2023_N000": 70562746,
+    "vitics_note": "The ₦70.6bn tariff shortfall awarded in 2023 is nearly 9x the 2022 award of ₦8bn. This dramatic jump reflects both the 2023 fuel subsidy removal shock and NERC acknowledging that AEDC cannot charge cost-reflective prices but must somehow survive. The shortfall is netted against NBET debt — a circular accounting relief that does not bring cash into the system. Consumers pay below-cost tariffs while AEDC accumulates NBET debt. Both sides lose — which is why the energy consumer is increasingly exiting the grid."
+  },
+
+  "section_11_metering": {
+    "MAP_entities_appointed_2023": 10,
+    "MAP_regulation": "NERC Meter Asset Provider regulation — DISCOs must engage MAPs to close metering gap",
+    "customer_ownership_of_meters": "Customers bear all costs — but ownership resides with AEDC",
+    "NMMP_spend_2021_via_CBN_N000": 6000000,
+    "postpaid_customers_migrated_to_prepaid_2023": 90000,
+    "impact_of_migration": "Migrated debts to prepaid vending platform — substantially reduced ECL loss rates",
+    "CAPMI_loan_outstanding_2023_N000": 1115520,
+    "meter_reimbursement_order": "From April 1 2023 NERC directs DISCOs to reimburse MAP-funded customers via energy credits",
+    "prepaid_revenue_growth_2023_vs_2022": {
+      "prepaid_2023_N000": 70832126,
+      "prepaid_2022_N000": 47041456,
+      "growth_pct": 50.6
+    },
+    "vitics_note": "Prepaid revenue grew 50.6% in 2023 — significantly faster than postpaid. This is the metering transition in financial form. Each consumer who shifts to prepaid: (1) takes control of their electricity spend, (2) eliminates estimated billing, (3) becomes a more visible collection target for AEDC. The migration of 90,000 postpaid customers to prepaid is the most operationally significant consumer-facing data point in this report. It explains why the ECL reversal was possible."
+  },
+
+  "section_12_ATC_and_C_losses": {
+    "mentioned_in_going_concern_note": true,
+    "described_as": "High aggregate technical, commercial and collection losses (ATC&C losses)",
+    "quantified_in_report": false,
+    "loss_driver_note": "Directors note ATC&C losses as one of three reasons for prior year losses (alongside below-cost tariffs and interest expenses)",
+    "turnaround_actions_targeting_ATC_C": [
+      "Energy Monitoring Center project",
+      "Sub-feeder creation for improved efficiencies",
+      "AMI platform for real-time meter data visibility",
+      "Replacement of obsolete meters"
+    ],
+    "vitics_note": "AEDC does not publish its ATC&C loss percentage in this report — a notable omission. NERC licence conditions require targets. That percentage, if published, would tell consumers exactly how much electricity is either lost in the network or stolen before reaching metered customers. The silence on this metric is itself a signal."
+  },
+
+  "section_13_five_year_summary": {
+    "revenue": {
+      "2019_N000": 255987711,
+      "2020_N000": 139131455,
+      "2021_N000": 165325621,
+      "2022_N000": 148882467,
+      "2023_N000": 250548755
+    },
+    "profit_loss_after_tax": {
+      "2019_N000": 124292535,
+      "2020_N000": -11471618,
+      "2021_N000": -11945351,
+      "2022_N000": -7336802,
+      "2023_N000": 398146
+    },
+    "net_assets": {
+      "2019_N000": 8435013,
+      "2020_N000": -2077491,
+      "2021_N000": 40285507,
+      "2022_N000": 33056450,
+      "2023_N000": 54546362
+    },
+    "accumulated_losses": {
+      "2019_N000": -35537529,
+      "2020_N000": -47137702,
+      "2021_N000": -58880974,
+      "2022_N000": -66110031,
+      "2023_N000": -65651916
+    },
+    "key_pattern": "Revenue was ₦256bn in 2019 — higher than 2023's ₦250bn. But 2019 included a ₦125bn tariff shortfall recognition. Strip both years of their NERC shortfall awards and underlying electricity sales are roughly flat across 5 years while costs and market debt have grown dramatically. 2023 is first year accumulated losses have actually REDUCED — by only ₦0.46bn after 9 years of growth.",
+    "vitics_note": "The five-year summary reveals the structural stagnation: the business model has not fundamentally improved since privatisation. The 2023 first-profit is largely an accounting event (impairment reversal + tariff shortfall) not an operational turnaround. Meanwhile the consumer has been experiencing this exact failure for 10+ years — hence the solar adoption surge."
+  },
+
+  "section_14_ownership_change_2023": {
+    "date": "18 May 2023",
+    "acquirer": "Jeolan International Limited",
+    "led_by": "Transcorp Group",
+    "stake": "60%",
+    "significance": "Most significant ownership change since privatisation in 2013",
+    "management_agreement": "O&M agreement with Jeolan — Fixed Fee 2% of collections + performance Management Fee",
+    "board_changes": "Majority of old board resigned by August 2023. New board installed by Jeolan/Transcorp",
+    "auditor_change": "KPMG replaced by Ernst & Young — first EY audit",
+    "vitics_note": "The Transcorp acquisition happened in the same month Nigeria removed fuel subsidies (June 2023). These two events — new private ownership and fuel subsidy removal — define the 2023 AEDC story. Transcorp brings credibility and capital. The subsidy removal creates the biggest tariff pressure in a decade. 2023 is simultaneously the year of AEDC's best hope (new owner) and the year consumers faced their most severe affordability shock (subsidy removal → inflation → energy cost surge). The solar adoption explosion of 2023 is the consumer response to this perfect storm."
+  },
+
+  "section_15_consumer_impact": {
+    "consumer_impact_score_2023": 8,
+    "score_reasoning": "Consumers in 2023 experienced: (1) below-cost-reflective tariffs (still not getting reliable supply), (2) majority still on estimated billing or self-funded prepaid meters, (3) NBET debt ₦168bn growing — supply instability risk, (4) fuel subsidy removal June 2023 dramatically raised generator fuel costs for those already supplementing with generators, (5) AEDC ownership change created administrative uncertainty in billing/collections mid-year. Score raised from 7/10 in 2015 to 8/10 because the 2023 environment combined structural failures with the acute fuel subsidy shock.",
+    "consumer_experience_evidence": {
+      "estimated_billing_still_prevalent": true,
+      "prepaid_migration_underway": "90,000 customers migrated but base is 1.4m+ customers — majority still at risk",
+      "supply_hours": "Not stated in report — key omission",
+      "MDA_debts_2015_to_2020_eventually_settled": "₦23.7bn recovered in 2023 via NERC order — 8-year delay",
+      "consumers_still_funding_own_meters": true,
+      "consumers_donating_infrastructure": {
+        "2023_N000": 388000,
+        "note": "Transformers and substations worth ₦388m contributed by customers in 2023. Customers building the grid themselves."
+      },
+      "service_reconnection_fees_collected_2023_N000": 482959,
+      "service_reconnection_fees_collected_2022_N000": 75639,
+      "note_on_reconnection_fees": "Reconnection fees grew 540% year-on-year — massive increase in disconnections and reconnections, consistent with collection pressure in fuel-subsidy-removal year"
+    },
+    "key_consumer_language_signals": [
+      "AEDC no light",
+      "Abuja electricity problem",
+      "prepaid meter Abuja",
+      "AEDC estimated billing",
+      "solar power Abuja",
+      "AEDC customer care complaint",
+      "buy solar panel Abuja",
+      "inverter system Abuja",
+      "AEDC disconnection",
+      "generator fuel cost Abuja 2023"
+    ]
+  },
+
+  "section_16_grid_defection_signals": {
+    "grid_defection_score_2023": 7,
+    "score_reasoning": "2023 is the WATERSHED year for solar adoption. Score rises to 7/10 from estimated 4/10 in 2019. Evidence within this report pointing to grid defection: (1) cost of electricity to consumers is rising sharply through tariff reforms — price-push to alternatives, (2) AEDC's own going concern note confirms grid is unreliable, (3) fuel subsidy removal in June 2023 made generator backup dramatically more expensive — accelerating solar as the rational alternative, (4) connection fee surge (+540%) suggests consumers are cycling in/out of the grid, (5) AEDC franchise area (FCT + Niger/Kogi/Nasarawa) is middle-class and urban — highest income consumers most likely to have solar capital.",
+    "quantitative_signals": {
+      "energy_sales_flat_while_infrastructure_expands": "Revenue from actual electricity contracts grew only 32% despite 68% headline growth — consistent with more customers paying less per unit or fewer units consumed",
+      "prepaid_adoption_accelerating": "Prepaid revenue up 50.6% — consumers taking control of their spend",
+      "super_vendor_commissions_tripling": "Suggests off-grid purchasing behaviours — POS agents, fintech — the same channels used for solar token vendors",
+      "reconnection_fee_surge": "540% increase in reconnection fees — consumers disconnecting and not reconnecting, consistent with solar adoption reducing need for grid reconnection",
+      "customer_contributed_assets_declining": {
+        "2023_N000": 2217301,
+        "2022_N000": 6609133,
+        "decline_pct": 66.4,
+        "vitics_interpretation": "Consumers contributed 66% LESS infrastructure to AEDC in 2023 vs 2022. This is a critical signal — consumers who are going solar have less reason to invest in building AEDC's grid. The decline from ₦6.6bn to ₦2.2bn is the clearest financial proxy for grid defection intent in this document."
+      }
+    },
+    "macro_context_2023": "June 2023 — Nigeria fuel subsidy removal. Generator petrol costs doubled or more. Solar payback period compressed dramatically. Urban Nigerian consumer faced choice: continue paying rising generator costs OR invest in solar. 2023 is the year that choice became financially obvious for middle-income households.",
+    "vitics_note": "The customer_contributed_assets decline is the most important grid defection signal in this report. When consumers stop investing in the grid they depend on — stop paying for transformers and substations — they are signalling exit intent. This ₦4.4bn decline happened in the same year fuel subsidies were removed. It is not coincidence."
+  },
+
+  "section_17_nigeria_specific_fields": {
+    "force_majeure_history": {
+      "2015_event": "KANN declared force majeure April 2015, withdrawn February 2016 — documented in AEDC 2015 report",
+      "2023_status": "No force majeure declared in 2023. Jeolan takeover in May 2023 replaced the operator that had declared force majeure.",
+      "ownership_instability_note": "Between 2013 and 2023, AEDC had four different controlling shareholders: KANN → CEC Africa (via KANN) → UCTL → Jeolan. Each transition created operational uncertainty for consumers."
+    },
+    "cbn_intervention_fund": {
+      "NEMSF_total_drawn_to_date_estimate_N000": 72000000,
+      "NEMSF_2023_drawdown_N000": 6490000,
+      "loan_terms": "9% interest, 84 months to December 2030",
+      "purpose_2023": "CAPEX — paid directly to vendors for distribution/transmission infrastructure",
+      "outstanding_CBN_loan_2023_N000": 38782178,
+      "observation": "CBN continues to be the primary lender enabling AEDC to survive. Without continued CBN intervention, AEDC would face immediate liquidity crisis. The state is effectively subsidising a private company's survival through below-market loans.",
+      "day_one_gain_on_CBN_loans_recognised_2023_N000": 1825594,
+      "deferred_income_from_CBN_day_one_gains_2023_N000": 15814379
+    },
+    "nelmco_transition_liabilities": {
+      "status": "Pre-completion liabilities (pre 31 October 2013) transferred to NELMCO per Deed of Assignment",
+      "reconciliation_status": "OUTSTANDING — as at report date (September 2024), reconciliation between AEDC and NELMCO has not yet happened — 11 years after privatisation",
+      "NELMCO_payable_2023_N000": 745711,
+      "NELMCO_loan_2023_N000": 807449,
+      "vitics_note": "The NELMCO reconciliation has been pending for 11 years. Pre-privatisation liabilities — the debts inherited from PHCN — remain formally unresolved. This is a governance signal: even the legal mechanics of the 2013 privatisation remain incomplete a decade later."
+    },
+    "customer_contributed_assets": {
+      "2023_N000": 2217301,
+      "2022_N000": 6609133,
+      "breakdown_2023": {
+        "transformers_and_substations_N000": 388000,
+        "meter_related_via_MAP_N000": 1829301
+      },
+      "CAPMI_outstanding_N000": 1115520,
+      "NERC_meter_reimbursement_order_2023": "From April 1 2023, DISCOs must repay MAP-funded customers via energy credits. Significant policy reversal — consumers being partially compensated for having funded their own meters.",
+      "vitics_note": "Customers have been funding AEDC's infrastructure since at least 2013. In 2023 a small but significant reversal began — NERC ordering energy credit reimbursements. But ₦388m in infrastructure still donated in 2023. The consumer-as-infrastructure-funder relationship has defined Nigerian electricity for a decade."
+    }
+  },
+
+  "section_18_vitics_analysis_instructions": {
+    "primary_vitics_signal": "2023 is the WATERSHED year. Use this report to explain WHY Nigerian consumers accelerated solar adoption in 2023 — the financial evidence is explicit.",
+    "three_headline_facts": [
+      "1. AEDC owes NBET ₦168.7bn — almost one full year of electricity revenue. This structural insolvency is what consumers are fleeing when they go solar.",
+      "2. Customer infrastructure contributions collapsed 66% — from ₦6.6bn to ₦2.2bn. Consumers stopped investing in the grid in the same year they adopted solar en masse.",
+      "3. Reconnection fees surged 540%. Consumers are being disconnected, choosing not to reconnect, because solar provides an alternative."
+    ],
+    "fuel_subsidy_removal_connection": "June 2023 fuel subsidy removal made generator backup prohibitively expensive. AEDC's own unreliability + expensive generator backup = solar adoption is now economically rational for urban/peri-urban consumers. This report is the financial proof.",
+    "ownership_change_signal": "Transcorp/Jeolan acquisition May 2023 = most credible turnaround attempt since privatisation. But consumers have heard turnaround promises since 2013. They are not waiting.",
+    "consumer_search_terms_direct": [
+      "AEDC no light Abuja 2023",
+      "solar panel installation Abuja",
+      "solar power system for home Abuja",
+      "AEDC estimated bill complaint",
+      "AEDC disconnect light",
+      "prepaid meter AEDC how to get",
+      "inverter battery Abuja price",
+      "generator fuel price Abuja 2023",
+      "AEDC Transcorp new owner"
+    ],
+    "consumer_search_terms_indirect": [
+      "how to reduce electricity bill Nigeria",
+      "best solar panel Nigeria 2023",
+      "solar panel price Nigeria naira",
+      "how long will AEDC last",
+      "Nigeria electricity problem solution",
+      "off-grid solar system Nigeria",
+      "lithium battery inverter price Nigeria",
+      "solar financing Nigeria",
+      "tier 1 solar panel Nigeria",
+      "buy solar panel pay installment Nigeria"
+    ],
+    "connection_to_vitics_mission": "When Vitics analyses YouTube content about Nigerian solar adoption in 2023, this financial report explains the WHY. Every viewer searching 'solar panel Nigeria 2023' is responding to the exact crisis documented in these pages: structural DISCO insolvency, unaffordable backup costs post-subsidy removal, and a decade of broken promises from successive AEDC owners.",
+    "comparison_to_aedc_2015": {
+      "accumulated_losses_2015": "₦41.97bn loss in 2015 alone",
+      "accumulated_losses_2023": "₦65.65bn cumulative losses (but reducing)",
+      "going_concern_continuity": "Going concern first raised 2015 — still present in 2023 (9 years)",
+      "consumer_infrastructure_funding": "₦127m in 2015 → ₦388m in 2023 (still happening, but declining as solar adoption rises)",
+      "key_change": "In 2015, grid defection was emerging. In 2023, it is accelerating at scale. The financial conditions that drove the transition are worse — not better — than 2015."
+    }
+  },
+
+  "document_quality": {
+    "method": "Digital PDF — text-based, highly legible. Full financial statements with notes. No reading degradation.",
+    "pages": 75,
+    "completeness": "Complete annual report — full income statement, balance sheet, cash flow, notes, five-year summary, value added statement",
+    "confidence": 9.5,
+    "limitations": "ATC&C loss percentage not published in this report. Number of metered vs unmetered customers not stated (except 90,000 migrated during year). Hours of supply per customer not disclosed.",
+    "auditor_signed": "26 September 2024 — filed 9 months after year-end, consistent with prior pattern of delayed filings"
+  }
+}

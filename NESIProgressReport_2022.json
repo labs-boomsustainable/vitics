@@ -1,0 +1,128 @@
+{
+  "document_id": "NESI_ProgressReport_2022",
+  "source": "World Bank / PPIAF Power Dialogue",
+  "date": "June 2022",
+  "document_title": "NESI: Progress Report and Outlook",
+  "document_type": "Policy dialogue report",
+  "publisher": "World Bank / PPIAF / Power Dialogue (70th Edition)",
+  "vitics_knowledge_base_version": "1.0",
+  "entries": [
+    {
+      "id": "KB001",
+      "topic": "Access gap",
+      "policy_claim": "Universal access as a goal via Nigeria Electrification Project and Rural Electrification Strategy",
+      "consumer_reality": "80 million Nigerians without electricity as of 2022",
+      "gap_severity": "Critical",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Rural Electrification Strategy and Implementation Plan"],
+      "suggested_ai_prompts": [
+        "Why are 80 million Nigerians still without electricity?",
+        "What is the Nigeria Electrification Project and has it worked?"
+      ]
+    },
+    {
+      "id": "KB002",
+      "topic": "Privatisation impact",
+      "policy_claim": "Private sector participation post-2016 privatisation expected to improve supply",
+      "consumer_reality": "Average daily supply still below 4GW six years after privatisation — no measurable improvement for consumers",
+      "gap_severity": "High",
+      "programmes_referenced": ["NESI privatisation 2016"],
+      "suggested_ai_prompts": [
+        "Why did privatisation in 2016 not improve my power supply?",
+        "Who owns the electricity distribution companies in Nigeria?"
+      ]
+    },
+    {
+      "id": "KB003",
+      "topic": "Grid capacity targets",
+      "policy_claim": "Presidential Power Initiative (PPI) with Siemens to deliver 7GW in Phase 1, scaling to 25GW by 2025",
+      "consumer_reality": "Average daily supply below 4GW at time of report (June 2022); 25GW target by 2025 not achieved",
+      "gap_severity": "High",
+      "programmes_referenced": ["Presidential Power Initiative (PPI)", "Siemens Energy partnership", "German government collaboration"],
+      "suggested_ai_prompts": [
+        "What is the Presidential Power Initiative and did it deliver?",
+        "Why is Nigeria's electricity generation still so low despite government promises?"
+      ]
+    },
+    {
+      "id": "KB004",
+      "topic": "Tariff policy inconsistency",
+      "policy_claim": "Power Sector Recovery Programme (PSRP) to achieve financial sustainability and consistent tariff policy",
+      "consumer_reality": "Inconsistent tariff policy implementation documented as an ongoing structural problem",
+      "gap_severity": "Medium",
+      "programmes_referenced": ["Power Sector Recovery Programme (PSRP)"],
+      "suggested_ai_prompts": [
+        "What is PSRP and how does it affect my electricity bill?",
+        "Why does my electricity bill keep changing without better service?"
+      ]
+    },
+    {
+      "id": "KB005",
+      "topic": "Distribution network losses",
+      "policy_claim": "Reforms under PSRP to reduce network losses and improve financial sustainability",
+      "consumer_reality": "High, unsustainable losses in distribution network documented; costs effectively passed to consumers through tariffs",
+      "gap_severity": "High",
+      "programmes_referenced": ["Power Sector Recovery Programme (PSRP)", "NESI distribution privatisation"],
+      "suggested_ai_prompts": [
+        "Why do I pay for electricity losses I didn't cause?",
+        "What are distribution network losses and why do they affect my bill?"
+      ]
+    },
+    {
+      "id": "KB006",
+      "topic": "Off-grid access scale",
+      "policy_claim": "USD 550 million from World Bank and AfDB via REA to connect rural communities at scale through mini-grids and solar home systems",
+      "consumer_reality": "Only 11,000 people connected through off-grid solutions — approximately 0.01% of the 80 million without access",
+      "gap_severity": "Critical",
+      "programmes_referenced": ["Nigeria Electrification Project (NEP)", "Rural Electrification Agency (REA)", "Solar Power Naija", "Energising Economies Initiative (EEI)"],
+      "suggested_ai_prompts": [
+        "Has the Nigeria Electrification Project actually connected people to power?",
+        "What is Solar Power Naija and who does it reach?"
+      ]
+    },
+    {
+      "id": "KB007",
+      "topic": "Clean energy accessibility",
+      "policy_claim": "14 solar projects to generate approximately 1GW of clean energy for Nigerian consumers",
+      "consumer_reality": "Projects explicitly kept off-grid because the national grid cannot absorb them; consumers cannot access clean energy output",
+      "gap_severity": "Medium",
+      "programmes_referenced": ["Solar power developer negotiations", "Nigeria Energy Transition Plan", "Rural Electrification Agency (REA)"],
+      "suggested_ai_prompts": [
+        "Why can't solar projects connect to the national grid?",
+        "What is Nigeria's Energy Transition Plan and does it help ordinary consumers?"
+      ]
+    },
+    {
+      "id": "KB008",
+      "topic": "Transmission infrastructure vulnerability",
+      "policy_claim": "NTEP1 (Nigeria Transmission Expansion Programme Phase 1) to rehabilitate and upgrade transmission substations and lines across NW, SE, South-South regions",
+      "consumer_reality": "Repeated vandalism of transmission towers (6 destroyed in Delta alone) causing blackouts; framed as a coordination problem rather than a consumer protection failure",
+      "gap_severity": "Medium",
+      "programmes_referenced": ["NTEP1", "Transmission Rehabilitation and Expansion Programme (TREP)"],
+      "suggested_ai_prompts": [
+        "Why does vandalism keep causing blackouts and what is being done?",
+        "What is NTEP1 and has it improved transmission in my region?"
+      ]
+    },
+    {
+      "id": "KB009",
+      "topic": "Private sector financing dependency",
+      "policy_claim": "Government and World Bank to create enabling environment for private investment to meet universal energy access targets",
+      "consumer_reality": "Government and development partners explicitly acknowledge they cannot meet financing requirements alone; universal access remains contingent on private sector participation that has not materialised at scale",
+      "gap_severity": "High",
+      "programmes_referenced": ["PSRP", "NEP", "World Bank portfolio (US$1.5 billion committed)"],
+      "suggested_ai_prompts": [
+        "Why is Nigeria's electricity problem still not solved despite billions in investment?",
+        "What role does the private sector play in Nigeria's electricity supply?"
+      ]
+    }
+  ],
+  "meta": {
+    "total_entries": 9,
+    "critical_gaps": 2,
+    "high_gaps": 4,
+    "medium_gaps": 3,
+    "key_stat": "80 million Nigerians without electricity access as of June 2022",
+    "most_damning_finding": "USD 550 million deployed for off-grid access connected only 11,000 people",
+    "policy_ambition_vs_reality_headline": "PPI promised 25GW by 2025; actual supply was below 4GW at report date"
+  }
+}

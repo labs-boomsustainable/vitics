@@ -1,0 +1,124 @@
+{
+  "doc": 5,
+  "title": "Nigerian Power Sector Investment Opportunities and Guidelines",
+  "year": "2005 (updated post-2023 Electricity Act)",
+  "document_type": "Investor prospectus / regulatory navigation guide",
+  "key_targets": {
+    "generation_by_2025": "25,000 MW",
+    "generation_by_2030": "30,000 MW (30% renewable)",
+    "annual_investment_required": "USD 3.5 billion (generation alone)",
+    "current_peak_generation": "5,625 MW",
+    "current_demand_estimate": "20,000 MW"
+  },
+  "present_energy_mix": {
+    "gas_thermal": "75%",
+    "hydropower": "25%",
+    "installed_capacity": "7,851 MWH/H average generation capability"
+  },
+  "target_energy_mix_2030": {
+    "gas": "55%",
+    "solar": "16%",
+    "large_hydro": "15%",
+    "coal": "3%",
+    "small_hydro": "4%",
+    "wind": "4%",
+    "biomass": "3%"
+  },
+  "electrification_status": {
+    "national_access_rate": "54%",
+    "rural_access_rate": "28%",
+    "non_electrified_clusters": "45,456 of 47,489 (95%)",
+    "people_without_electricity": "~111 million",
+    "people_in_electrified_areas": "89 million of 200+ million (46%)"
+  },
+  "comparative_failure_data": {
+    "nigeria_kwh_per_capita": 129,
+    "ghana_kwh_per_capita": 403,
+    "india_kwh_per_capita": 605,
+    "south_africa_kwh_per_capita": 4363,
+    "nigeria_generation_gw": 7.6,
+    "ghana_generation_gw": 3.0,
+    "note": "Nigeria has 6.8x Ghana's population but only 2.5x its generation capacity"
+  },
+  "gas_infrastructure_gap": {
+    "current_supply_mmscf_per_day": 600,
+    "requirement_mmscf_per_day": 2699,
+    "shortfall_percent": 77,
+    "new_pipelines_needed_km": 5000,
+    "existing_pipelines_to_replace_km": 5000
+  },
+  "hydropower_potential": {
+    "total_identified_mw": 14000,
+    "largest_site": "Mambilla (3,950 MW on Donga River)",
+    "mambilla_status": "Identified in 1988 study, still prospective as of this document",
+    "small_dams_convertible": "25+ dams capable of ~30 MW combined",
+    "existing_small_hydro_brownfield_sites": 23,
+    "greenfield_small_hydro_sites": 31
+  },
+  "solar_potential": {
+    "estimated_potential_mw": 426000,
+    "installed_capacity_2023": "~1,200 MW",
+    "utilisation_rate": "less than 0.3% of potential",
+    "best_irradiation_zone": "Northern Nigeria, exceeding 2,200 kWh/m²"
+  },
+  "coal_reserves": {
+    "estimated_reserve_metric_tons": "2 billion+",
+    "sub_bituminous_identified_mt": 12.8,
+    "power_potential": "10,000 MW plant for 30 years",
+    "status": "Most mines under federal concession, detailed exploration still needed"
+  },
+  "regulatory_agencies_required": {
+    "count": 9,
+    "agencies": [
+      "NERC (generation licence)",
+      "NBET (Power Purchase Agreement)",
+      "TCN (grid connection)",
+      "NEMSA (electrical inspection and certification)",
+      "NIPC (investment registration and incentives)",
+      "Federal Ministry of Water Resources (hydropower water rights)",
+      "Federal Ministry of Environment (EIA certification)",
+      "Federal Ministry of Mines and Steel Development (coal concession)",
+      "ICRC (PPP/concession regulatory compliance)"
+    ],
+    "analytical_note": "No single point of accountability; no published average time to financial close"
+  },
+  "key_legislation": {
+    "epsr_act": 2005,
+    "electricity_act": 2023,
+    "electricity_act_key_change": "States, companies and individuals empowered to generate, transmit and distribute electricity",
+    "states_with_enabling_legislation": ["Lagos", "Edo", "Kaduna"],
+    "states_still_under_nerc": 33
+  },
+  "incentives": {
+    "pioneer_status_incentive": "Corporate income tax holiday, 3 years initial, extendable to maximum 5 years",
+    "feed_in_tariff_base_year": 2016,
+    "fit_status": "Under Review",
+    "fit_solar_usd_per_mwh": 177.00,
+    "fit_wind_usd_per_mwh": 125.47,
+    "fit_small_hydro_usd_per_mwh": 154.72,
+    "fit_biomass_usd_per_mwh": 154.71,
+    "analytical_note": "FiT base year 2016 presented in post-2023 updated document — nine-year-old tariff schedule is a material credibility problem for prospective investors"
+  },
+  "nbet_portfolio": {
+    "annual_contract_value_usd": "~2 billion",
+    "function": "Bulk trader between GenCos/IPPs and DisCos",
+    "analytical_note": "Sector requires USD 3.5bn/year in generation investment alone; NBET manages USD 2bn total contract portfolio — structural underfunding evident"
+  },
+  "transmission": {
+    "current_wheeling_capacity_mw": 8000,
+    "target_wheeling_capacity_2030_mw": 30000,
+    "total_330kv_substations": 42,
+    "total_132kv_substations": 158,
+    "total_transmission_lines_km": 16845,
+    "analytical_note": "Lack of redundancy creates instability; financing models proposed include ROT and Management Contract due to budgetary constraints"
+  },
+  "thread_continuity": {
+    "fourth_generation_target_reset": "10,000 MW (2007) → 2010 Roadmap targets → 2020 interim → 30,000 MW by 2030; each reset without accounting for prior failure",
+    "mambilla_identification_age_years": 36,
+    "off_grid_gap_trajectory": "Acknowledged NEPP 2001 → mapped in detail here → still unaddressed; 95% of clusters non-electrified",
+    "gas_dependency_paradox": "Present mix 75% gas against 77% supply shortfall; 2030 target still 55% gas with no infrastructure pathway explained",
+    "liberalisation_form_vs_substance": "2023 Act enables state markets; only 3 of 36 states have passed enabling legislation",
+    "investor_information_gaps": "Document omits average time to financial close, percentage of PPAs reaching commercial operation, DISCO payment collection rates"
+  },
+  "ready_for": "Doc 6 — REPG 2006"
+}

@@ -1,0 +1,235 @@
+// ============================================================
+// VITICS KNOWLEDGE BASE — DOCUMENT EXTRACTION
+// Source: National Energy Efficiency Action Plans (NEEAP) 2015–2030
+// Approved: July 14, 2016 | Body: NACOP / ICREEE
+// Extracted: May 2026 | For: vitics-knowledge.js integration
+// ============================================================
+// FORMAT: Each entry = { id, source, year, topic, promise, reality, gap, keywords, severity }
+// severity: "critical" | "high" | "medium"
+// ============================================================
+
+const NEEAP_2016_ENTRIES = [
+
+  // ── 1. DISTRIBUTION LOSSES ──────────────────────────────────────────────
+  {
+    id: "neeap_2016_001",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Electricity Distribution Losses",
+    promise:
+      "Reduce total electricity distribution losses from the current 15–40% to below 10% by 2020 (medium-term target). Long-term target: below 10% by 2030.",
+    reality:
+      "As of the document's own tables (Table 9), ALL data fields for transmission losses, distribution losses, technical losses, and non-technical losses were marked 'NA' — meaning the government could not even measure the baseline it promised to fix. Nigeria's distribution losses have remained among the highest in Africa, with consumers experiencing near-daily outages, voltage fluctuations, and estimated billing rather than metered supply.",
+    gap:
+      "The government set a 2020 deadline to cut losses to below 10%, but could not produce a baseline figure at the time of writing (2016). No credible public measurement of this target was achieved by 2020. Consumers continued to pay for electricity they did not receive while DisCos reported losses of 40%+ in many zones.",
+    keywords: [
+      "distribution losses", "technical losses", "non-technical losses",
+      "DisCo", "power outages", "electricity theft", "billing", "NERC"
+    ],
+    severity: "critical"
+  },
+
+  // ── 2. EFFICIENT LIGHTING / LED TRANSITION ───────────────────────────────
+  {
+    id: "neeap_2016_002",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Efficient Lighting — LED & CFL Phase-Out",
+    promise:
+      "Replace ALL incandescent bulbs in every home, industry, and institution with LEDs and other energy-saving lamps by 2025. By 2020, efficient lighting used by 40% of households. By 2030, near 100% of households. Nigerian Clean Energy Access Program (NCEAP) to distribute 150 million bulbs over five years under CDM.",
+    reality:
+      "The document's own lighting targets table (Table 8) is filled entirely with 'NA' for penetration rates of energy-efficient lights — on-grid, off-grid, and street lighting — across ALL years from 2010 to 2030. No baseline data existed. The 150-million-bulb NCEAP program had no verifiable delivery record accessible to consumers. Millions of Nigerians continued burning kerosene lanterns, incandescent bulbs, or going without light entirely.",
+    gap:
+      "The promise was specific (150 million bulbs, 40% household coverage by 2020) but the tracking infrastructure was absent. A plan with no baseline, no measured penetration rate, and no enforcement body is not a plan — it is an aspiration. Consumers never saw a systematic national bulb replacement campaign reach their homes.",
+    keywords: [
+      "LED", "CFL", "energy efficient lighting", "bulb replacement",
+      "NCEAP", "kerosene", "off-grid lighting", "street lights", "150 million bulbs"
+    ],
+    severity: "critical"
+  },
+
+  // ── 3. ENERGY EFFICIENCY STANDARDS & LABELLING ──────────────────────────
+  {
+    id: "neeap_2016_003",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Appliance Standards & Energy Labels",
+    promise:
+      "Establish a broad range of equipment energy efficiency standards and labelling by 2025. Develop Minimum Energy Performance Standards (MEPS) for air conditioners, refrigerators, washing machines, fans, transformers. Harmonise with ECOWAS regional standards (ECOSHAM). SON to enforce labelling.",
+    reality:
+      "Table 10 (Standards and Labels Targets) is entirely 'NA' across all years and all categories — zero standards in force in 2010, 2015, 2016, or projected with numbers for 2020–2030. As of 2016, Nigeria had no functioning energy label on any consumer appliance in the market. Substandard and inefficient appliances — particularly air conditioners and refrigerators — continued to flood Nigerian markets unchecked, worsening power demand and consumer electricity bills.",
+    gap:
+      "Consumers were never told which appliances consumed more power. No label, no standard, no penalty for importing inefficient equipment. This directly worsened load demand on an already collapsing grid. The SON (Standards Organisation of Nigeria) was listed as responsible but had no enforcement capacity documented in the plan.",
+    keywords: [
+      "MEPS", "energy labels", "standards", "air conditioner", "refrigerator",
+      "SON", "appliance efficiency", "ECOSHAM", "ECOWAS standards", "import duty"
+    ],
+    severity: "high"
+  },
+
+  // ── 4. ENERGY EFFICIENCY IN BUILDINGS ───────────────────────────────────
+  {
+    id: "neeap_2016_004",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Energy Efficiency in Buildings",
+    promise:
+      "By 2020, 6% of new large private buildings and 10% of new public buildings to implement energy-efficient designs. By 2030, 30% private and 40% public. National building code to be updated with energy efficiency criteria by 2016. Energy performance certificates for public buildings. Building Energy Efficiency Guidelines (BEEG) to be developed.",
+    reality:
+      "Nigeria has no widely enforced national building energy code as of the mid-2020s. Energy performance certificates for public buildings were piloted only at the FMPWH headquarters — one building. Most new public buildings continued to be constructed without any energy efficiency criteria. Air conditioning units in government offices ran on diesel generators during the frequent outages. The building code update planned for 2015–2016 was not publicly enacted or enforced at scale.",
+    gap:
+      "Consumers who built or rented homes received no guidance, no standard, no incentive to build efficiently. Public buildings — which the government directly controls — were supposed to lead by example from 2015, yet only a single pilot audit was documented. Nigerians continued constructing thermally inefficient concrete structures dependent on air conditioning and diesel backup.",
+    keywords: [
+      "building code", "energy performance certificate", "BEEG",
+      "energy audit", "public buildings", "thermal efficiency", "FMPWH",
+      "GIZ", "bioclimatic", "construction"
+    ],
+    severity: "high"
+  },
+
+  // ── 5. INDUSTRIAL ENERGY EFFICIENCY ─────────────────────────────────────
+  {
+    id: "neeap_2016_005",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Industrial Energy Efficiency (ISO 50001)",
+    promise:
+      "Implement ISO 50001 Energy Management Systems (EnMS) across Nigerian industry. Certify energy managers. Run efficiency networks (EENs). Develop national industrial energy database. Replace inefficient motors with subsidised high-efficiency ones. Target: 20% improvement in energy efficiency for high-consuming sectors by 2020, 50% by 2030.",
+    reality:
+      "Tables 12 (Industry Targets) are entirely 'NA' — no data on number of industries, energy saving potential, or percentage implementing efficiency measures for any year from 2010 to 2030. The ISO 50001 programme was piloted at only two industrial facilities. No national industrial energy database was created. The motor replacement subsidy programme had no funded implementation record. Nigerian manufacturers continued running diesel generators at enormous cost — an efficiency loss that dwarfed any planned saving.",
+    gap:
+      "Nigerian industry — including SMEs — never received the promised subsidies, training, or efficiency audit infrastructure. The cost of self-generation (diesel) remained one of the highest operating costs for Nigerian businesses, making products uncompetitive. The government's own targets were aspirational with zero measured baseline.",
+    keywords: [
+      "ISO 50001", "EnMS", "energy management", "industrial efficiency",
+      "motor replacement", "diesel generator", "MAN", "NACCIMA", "SMEDAN",
+      "energy audit", "self-generation"
+    ],
+    severity: "high"
+  },
+
+  // ── 6. ELECTRIFICATION RATE vs EFFICIENCY PLANNING ───────────────────────
+  {
+    id: "neeap_2016_006",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Electrification Rate & Per-Capita Consumption",
+    promise:
+      "Nigeria's electrification rate was stated as growing from 24% (2006) to 38% (2014). Annual electricity consumption of approximately 19 kWh per capita per year (2010). The NEEAP aimed to improve this through efficiency — not just supply expansion.",
+    reality:
+      "19 kWh per capita per year is among the lowest electricity consumption figures in the world — not a sign of efficiency, but of extreme energy poverty. For context, the global average is over 3,000 kWh per capita. Nigerian consumers with grid connections received an average of less than 12 hours of electricity per day in this period. The 'electrification rate' included connections that were technically live but practically useless due to load shedding.",
+    gap:
+      "The document treated energy poverty data as a baseline for efficiency planning, without acknowledging that a country consuming 19 kWh/capita/year has no meaningful scope for 'efficiency savings' — the primary problem is access and supply, not waste. The entire framing of the NEEAP applied a developed-world efficiency template to a country where most citizens had little or no electricity to be efficient with.",
+    keywords: [
+      "electrification rate", "kWh per capita", "energy poverty",
+      "load shedding", "access", "rural electrification", "grid connection",
+      "per capita consumption"
+    ],
+    severity: "critical"
+  },
+
+  // ── 7. MONITORING & ENFORCEMENT FAILURE ──────────────────────────────────
+  {
+    id: "neeap_2016_007",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Monitoring, Verification & Enforcement (MV&E)",
+    promise:
+      "A national monitoring system for NEEAP implementation to be established. Federal Ministry of Power, Works & Housing to oversee. SON, NERC, NESREA all assigned roles. National registries for lighting products. Regular census of importers. Penalties for non-compliance. MV&E plan to be initiated as high priority.",
+    reality:
+      "No independent public report on NEEAP implementation progress was published by the Federal Government between 2016 and 2026. No national lighting product registry was made publicly accessible. SON continued to be underfunded and unable to enforce standards at ports. Substandard products — including counterfeit bulbs and dangerous electrical equipment — continued to be sold freely in Nigerian markets.",
+    gap:
+      "The monitoring system was described as 'being worked on' at the time of the plan's approval. A policy document that cannot monitor its own implementation offers no accountability to consumers. This is a structural governance failure — the NEEAP was approved without the enforcement infrastructure needed to make it real.",
+    keywords: [
+      "monitoring", "enforcement", "MV&E", "SON", "NERC", "NESREA",
+      "national registry", "compliance", "ports", "substandard products",
+      "accountability", "implementation"
+    ],
+    severity: "critical"
+  },
+
+  // ── 8. RURAL ENERGY ACCESS ───────────────────────────────────────────────
+  {
+    id: "neeap_2016_008",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Rural Energy Access & Kerosene Lantern Exchange",
+    promise:
+      "Rural Energy Access Project (2012–2020): Replace kerosene lanterns with solar lighting kits. Carbon emission reduction through clean energy migration. Target rural off-grid areas. Federal Ministry of Environment implementing.",
+    reality:
+      "Kerosene remained the primary lighting fuel for tens of millions of Nigerians throughout this period. Nigeria also maintained a petrol and kerosene subsidy regime that made switching to solar alternatives economically complex. No national scale-up of the solar kit exchange was documented. Rural women — who bear the greatest health burden of kerosene smoke — saw no systematic replacement programme reach their communities.",
+    gap:
+      "The kerosene lantern exchange was listed as 'existing' from 2012, yet the document provided no data on bulbs exchanged, communities reached, or carbon saved. A programme running since 2012 with no reported outcomes by 2016 is effectively non-operational. Consumers in off-grid communities continued spending significant portions of household income on kerosene.",
+    keywords: [
+      "kerosene", "solar lighting", "rural electrification", "off-grid",
+      "lantern exchange", "women", "health", "CDM", "solar kit",
+      "Rural Energy Access Project", "carbon emission"
+    ],
+    severity: "high"
+  },
+
+  // ── 9. CLEAN COOKING ─────────────────────────────────────────────────────
+  {
+    id: "neeap_2016_009",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Clean & Efficient Cooking Energy",
+    promise:
+      "ECOWAS target: 60% of population with access to clean, safe, efficient cooking by 2020; 100% by 2030. Nigeria to develop national cooking energy action plan. Phase out inefficient cookstoves after 2020. Promote LPG, biogas, solar cookers, ethanol. West African Clean Cooking Alliance (WACCA) to coordinate.",
+    reality:
+      "Over 80% of Nigerian households continued cooking with firewood and charcoal well past 2020. LPG penetration remained low, particularly in rural areas. Nigeria's LPG infrastructure — cylinders, refill points, affordability — remained inadequate. The indoor air pollution from traditional cooking remained a leading cause of respiratory illness, particularly for women and children. No national cooking energy action plan with funded implementation was publicly launched.",
+    gap:
+      "The 2020 target of 60% clean cooking access was missed by a wide margin. Cooking energy is often the largest component of household energy expenditure for low-income Nigerians, yet the NEEAP treated it as a secondary concern relative to industrial and building efficiency. The consumer impact — health, cost, time burden on women — was not adequately quantified or addressed.",
+    keywords: [
+      "cooking energy", "LPG", "cookstoves", "firewood", "charcoal",
+      "WACCA", "biogas", "indoor air pollution", "women", "rural households",
+      "clean cooking", "kerosene"
+    ],
+    severity: "high"
+  },
+
+  // ── 10. FINANCING GAP ────────────────────────────────────────────────────
+  {
+    id: "neeap_2016_010",
+    source: "NEEAP 2015–2030",
+    year: 2016,
+    topic: "Energy Efficiency Financing Mechanisms",
+    promise:
+      "Clean Technology Fund: $75 million USD for climate mitigation financing. NESP to identify EE financing mechanisms with banks. Develop credit lines, tax incentives, subsidies for efficient appliances and motors. On-bill financing for efficient lighting. Reduced import duties for efficient products.",
+    reality:
+      "No broad consumer-facing financing mechanism for energy-efficient appliances was launched at scale in Nigeria. Import duty reductions for efficient products were not systematically implemented. The $75M Clean Technology Fund was a multi-country programme, with Nigeria's share small and primarily directed at utility-scale projects. On-bill financing requires functioning billing — which millions of consumers did not have due to estimated billing and meter gaps.",
+    gap:
+      "The upfront cost of efficient appliances (LED bulbs, efficient ACs, solar kits) remained a barrier for the majority of Nigerian consumers. The financing mechanisms promised were either foreign-funded with limited local reach, or dependent on a banking/utility infrastructure that excluded most Nigerians. Without affordable financing, energy efficiency remained a luxury for the wealthy.",
+    keywords: [
+      "financing", "Clean Technology Fund", "on-bill financing",
+      "import duty", "tax incentive", "subsidy", "credit", "SMEDAN",
+      "energy efficiency finance", "appliance credit"
+    ],
+    severity: "high"
+  },
+
+];
+
+// ── DOCUMENT METADATA ────────────────────────────────────────────────────────
+const NEEAP_2016_META = {
+  documentId: "neeap_2016",
+  title: "National Energy Efficiency Action Plans (NEEAP) 2015–2030",
+  approvedBy: "National Council on Power (NACOP)",
+  adoptedBy: "Inter-Ministerial Committee on Renewable Energy and Energy Efficiency (ICREEE)",
+  date: "July 14, 2016",
+  ministry: "Federal Ministry of Power, Works and Housing",
+  partners: ["GIZ", "UNDP-GEF", "ECREEE", "World Bank", "ECOWAS"],
+  keyThemes: [
+    "energy efficiency", "distribution losses", "LED lighting",
+    "appliance standards", "building codes", "industrial efficiency",
+    "rural electrification", "clean cooking", "monitoring enforcement"
+  ],
+  criticalFinding:
+    "The NEEAP was approved with NO baseline data for its core targets. Tables for lighting penetration, distribution losses, appliance standards, and industrial efficiency are entirely filled with 'NA'. A plan approved with no measurable starting point has no accountability mechanism. The consumer was promised transformation; they received a template.",
+  entryCount: 10
+};
+
+// Export for vitics-knowledge.js integration
+// Usage: merge NEEAP_2016_ENTRIES into the main knowledgeBase array
+// Usage: add NEEAP_2016_META to documentRegistry
+
+module.exports = { NEEAP_2016_ENTRIES, NEEAP_2016_META };

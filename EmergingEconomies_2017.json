@@ -1,0 +1,470 @@
+{
+  "vitics_knowledge_base": {
+    "meta": {
+      "version": "1.1",
+      "created": "2026-05-15",
+      "project": "Vitics — Nigeria AI Energy Intelligence Platform",
+      "description": "Grounded knowledge entries extracted from Nigerian energy policy documents. Focus: what consumers actually experienced vs what policy promised.",
+      "documents_included": ["DOC_001", "DOC_002"]
+    },
+    "documents": [
+      {
+        "doc_id": "DOC_001",
+        "title": "Rural Electrification Strategy and Implementation Plan (RESIP)",
+        "issuer": "Federal Ministry of Power, Works and Housing",
+        "year": 2016,
+        "month": "July",
+        "category": "Rural Electrification Policy",
+        "tags": [
+          "rural-electrification",
+          "REA",
+          "REF",
+          "RESIP",
+          "DisCos",
+          "off-grid",
+          "mini-grid",
+          "access-gap",
+          "abandoned-projects",
+          "policy-failure",
+          "26-percent",
+          "FGN-promises",
+          "2020-target",
+          "population-growth",
+          "rural-consumer",
+          "kerosene-dependence",
+          "fuel-wood",
+          "energy-poverty"
+        ],
+        "policy_promises": [
+          {
+            "id": "P001",
+            "promise": "Electricity access for 75% of the population (rural and urban)",
+            "target_year": 2020,
+            "source_section": "Executive Summary / Section 2.4"
+          },
+          {
+            "id": "P002",
+            "promise": "Electricity access for 90% of the population",
+            "target_year": 2030,
+            "source_section": "Executive Summary / Section 2.4"
+          },
+          {
+            "id": "P003",
+            "promise": "Universal (100%) electrification",
+            "target_year": 2040,
+            "source_section": "Section 6"
+          },
+          {
+            "id": "P004",
+            "promise": "At least 10% renewable energy mix",
+            "target_year": 2025,
+            "source_section": "Executive Summary"
+          },
+          {
+            "id": "P005",
+            "promise": "Add 1 million rural connections and 800MW of generation capacity",
+            "target_year": 2016,
+            "note": "Interim target set within the document itself",
+            "source_section": "Section 2.4"
+          },
+          {
+            "id": "P006",
+            "promise": "DisCos (Distribution Companies) to add 4 million new connections",
+            "target_year": 2017,
+            "note": "Obligation under privatization contracts with BPE",
+            "source_section": "Section 3.1 / 3.2.1"
+          },
+          {
+            "id": "P007",
+            "promise": "Connect 1.1 million additional rural households per year",
+            "target_period": "2015–2020",
+            "source_section": "Section 6"
+          },
+          {
+            "id": "P008",
+            "promise": "Establish a transparent, competitive Rural Electrification Fund (REF) for capital subsidies",
+            "target_period": "From 2015",
+            "source_section": "Executive Summary / Section 5"
+          },
+          {
+            "id": "P009",
+            "promise": "Rural Electrification Agency (REA) to maintain 6 Zonal offices nationwide",
+            "target_period": "Ongoing",
+            "source_section": "Section 4.1"
+          },
+          {
+            "id": "P010",
+            "promise": "Reliable and affordable electricity for all Nigerians regardless of location",
+            "target_period": "Ongoing",
+            "source_section": "Section 2.1 (Guiding Principles)"
+          },
+          {
+            "id": "P011",
+            "promise": "Promote cheaper, cleaner alternatives to kerosene, candles, and fossil fuel generators in rural areas",
+            "target_period": "Ongoing",
+            "source_section": "Section 2.2 (Objectives)"
+          },
+          {
+            "id": "P012",
+            "promise": "Subsidies focused on expanding access rather than consumption — benefiting the poorest rural households",
+            "target_period": "Ongoing",
+            "source_section": "Executive Summary"
+          }
+        ],
+        "admitted_failures": [
+          {
+            "id": "F001",
+            "finding": "Rural electricity access was approximately 26% in 2016 — no significant improvement from when the Rural Electrification Programme began in 1981",
+            "severity": "critical",
+            "time_span_wasted": "35 years",
+            "source_section": "Section 2.1"
+          },
+          {
+            "id": "F002",
+            "finding": "Over 70 million rural Nigerians lacked access to reliable electricity supply",
+            "severity": "critical",
+            "source_section": "Section 2.4"
+          },
+          {
+            "id": "F003",
+            "finding": "Approximately 1,600 rural electrification projects were abandoned across all states as of 2012; contractors had left sites for more than 5 years",
+            "severity": "high",
+            "cost_to_complete_NGN": 40000000000,
+            "cost_to_complete_USD": 205000000,
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F004",
+            "finding": "Many completed rural electrification projects could not be put to meaningful use because they had no reliable source of power supply — infrastructure built but non-functional",
+            "severity": "high",
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F005",
+            "finding": "The Rural Electrification Agency (REA) was suspended in late 2009, stalling strategy development for years and explaining why a plan initiated in the early 2000s was only being published in 2016",
+            "severity": "high",
+            "source_section": "Section 2.3"
+          },
+          {
+            "id": "F006",
+            "finding": "Population growth outpaced new connections — the rate of new household formation exceeded the rate of new electricity connections",
+            "severity": "high",
+            "source_section": "Section 2.1"
+          },
+          {
+            "id": "F007",
+            "finding": "DisCos' commercial objectives led them to focus on urban areas, not rural communities, despite contractual rural obligations",
+            "severity": "high",
+            "source_section": "Section 3.1"
+          },
+          {
+            "id": "F008",
+            "finding": "Most abandoned projects were grid extension projects. Even when funded, they relied on a national grid that itself lacked reliable generation",
+            "severity": "high",
+            "source_section": "Section 3.5.12"
+          },
+          {
+            "id": "F009",
+            "finding": "The EPSR Act 2005 established the legal framework for rural electrification but contained 'few details on its implementation' — leaving a gap between legislation and action for over a decade",
+            "severity": "medium",
+            "source_section": "Section 1"
+          },
+          {
+            "id": "F010",
+            "finding": "Rural households continued to rely on fuel-wood, kerosene, candles, and fossil fuel generators — the same energy sources the programme was designed to replace since 1981",
+            "severity": "critical",
+            "consumer_impact": "direct",
+            "source_section": "Section 2.1 / Section 2.2"
+          }
+        ],
+        "key_metrics": {
+          "rural_electrification_rate_2016_percent": 26,
+          "rural_electrification_rate_1981_percent": 26,
+          "improvement_over_35_years_percent": 0,
+          "rural_nigerians_without_electricity_million": 70,
+          "abandoned_projects_count_2012": 1600,
+          "cost_to_complete_abandoned_NGN_billion": 40,
+          "cost_to_complete_abandoned_USD_million": 205,
+          "target_access_2020_percent": 75,
+          "target_access_2030_percent": 90,
+          "target_access_2040_percent": 100,
+          "target_renewable_mix_2025_percent": 10,
+          "interim_2016_target_connections_million": 1,
+          "interim_2016_target_generation_MW": 800,
+          "disco_connection_obligation_2017_million": 4,
+          "annual_rural_connections_needed_2015_2020_million": 1.1,
+          "new_generation_needed_to_reach_60pct_rural_MW": 6000,
+          "cost_to_reach_2020_target_NGN_billion_low": 311,
+          "cost_to_reach_2020_target_NGN_billion_high": 519,
+          "cost_universal_electrification_2040_NGN_trillion_low": 0.825,
+          "cost_universal_electrification_2040_NGN_trillion_high": 1.4,
+          "REA_annual_operating_budget_NGN_billion": 10,
+          "REA_annual_operating_budget_USD_million": 62.5
+        },
+        "policy_vs_reality_gaps": [
+          {
+            "gap_id": "G001",
+            "policy_assumption": "Private sector would drive rural electrification through DisCos and new market entrants",
+            "consumer_reality": "DisCos focused commercially on urban areas where returns were higher; rural areas remained unserved"
+          },
+          {
+            "gap_id": "G002",
+            "policy_assumption": "The REF would provide transparent, competitive capital subsidies from 2015",
+            "consumer_reality": "REA was suspended in 2009; REF was not operational; the 2016 document is still describing the fund as future intent"
+          },
+          {
+            "gap_id": "G003",
+            "policy_assumption": "4 million DisCo connections by 2017 would expand rural access",
+            "consumer_reality": "DisCo commercial incentives directed investment to urban, not rural, areas"
+          },
+          {
+            "gap_id": "G004",
+            "policy_assumption": "Grid extension would bring electricity to rural Local Government Areas",
+            "consumer_reality": "1,600 projects abandoned; completed projects had no reliable power supply"
+          },
+          {
+            "gap_id": "G005",
+            "policy_assumption": "Off-grid and mini-grid solutions would serve remote communities",
+            "consumer_reality": "No viable financing ecosystem; high barriers to entry; capacity gaps among developers"
+          },
+          {
+            "gap_id": "G006",
+            "policy_assumption": "75% national electricity access achievable by 2020",
+            "consumer_reality": "Rural access rate was still ~26% in 2016, unchanged from 1981"
+          },
+          {
+            "gap_id": "G007",
+            "policy_assumption": "Rural households would transition from kerosene and fuel-wood to grid or off-grid electricity",
+            "consumer_reality": "Rural households continued burning kerosene, candles, and fuel-wood — at expense to health, income, and environment"
+          },
+          {
+            "gap_id": "G008",
+            "policy_assumption": "The required 6,000MW of new generation for rural demand could be mobilised",
+            "consumer_reality": "6,000MW exceeded the entire existing capacity of the Nigerian power system at the time"
+          }
+        ],
+        "ai_narrative": "The 2016 RESIP is both a plan and an inadvertent confession. Nigeria's government admitted in writing that 35 years of rural electrification effort produced near-zero measurable improvement. The programme started in 1981. By 2016, the rural access rate was still approximately 26%. Meanwhile, 1,600 projects sat abandoned nationwide, and the very agency meant to fix the problem — the REA — had been suspended in 2009. The new plan required spending more than the entire capacity of the existing Nigerian power system just to hit its 2020 interim target. Rural consumers in 2016 were still burning firewood and kerosene — the same fuels the 1981 programme was designed to replace. The core failure was structural: grid extension as a strategy relied on a national grid that itself could not generate or deliver reliable power. Policy made promises the infrastructure could not keep.",
+        "consumer_experience_summary": "Rural Nigerians in 2016 experienced darkness, dependence on expensive and unhealthy alternatives (kerosene, candles, fuel-wood, generators), reduced economic productivity, compromised health and education outcomes, and continued migration to urban areas — all outcomes the 1981 Rural Electrification Programme and the 2005/2009 RE Policy explicitly promised to eliminate.",
+        "related_documents": [
+          "National Electric Power Policy (NEPP) 2001",
+          "National Energy Policy 2003",
+          "Electric Power Sector Reform (EPSR) Act 2005",
+          "Rural Electrification Policy 2009"
+        ]
+      },
+      {
+        "doc_id": "DOC_002",
+        "title": "Energizing Economies Programme Overview — Upscaling Minigrids for Least Cost and Timely Access to Electricity",
+        "issuer": "Rural Electrification Agency (REA)",
+        "year": 2017,
+        "event": "Action Learning Event, Abuja, December 4–8",
+        "category": "Commercial/Urban Energy Programme — Baseline Survey and Field Evidence",
+        "tags": [
+          "energizing-economies",
+          "REA",
+          "minigrid",
+          "off-grid",
+          "commercial-consumers",
+          "DisCo-failure",
+          "generator-dependence",
+          "diesel-cost",
+          "market-traders",
+          "economic-cluster",
+          "Ariaria",
+          "Sabon-Gari",
+          "Somolu",
+          "Sura",
+          "PPP",
+          "CNG",
+          "solar",
+          "energy-audit",
+          "self-generation",
+          "urban-energy-poverty",
+          "noise-pollution",
+          "HSE-risk"
+        ],
+        "programme_objectives": [
+          "Provide safe, reliable and predictable energy to industries and businesses to improve economic output",
+          "Create an incentive and working model for private investors in innovative power solutions",
+          "Provide street lighting to enable longer and safer business hours"
+        ],
+        "target_sites": [
+          {
+            "name": "Ariaria International Market",
+            "state": "Abia",
+            "total_shops": 31993,
+            "pct_using_disco_alternatives": 80,
+            "pct_would_expand_shops_if_power_reliable": 59,
+            "pct_believe_street_lighting_useful": 66,
+            "primary_safety_concern": "Harassment",
+            "total_load_MW": 2.06,
+            "load_lighting_MW": 0.96,
+            "load_cooling_MW": 0.86,
+            "load_other_MW": 0.25,
+            "installed_generator_capacity_KVA": 6435,
+            "estimated_co2_emissions_lbs_per_kwh_per_day": 223629.12,
+            "monthly_energy_consumption_kWh": 2779920,
+            "proposed_solution": "5 MW CNG gas fired power plant with independent distribution network and street lighting",
+            "proposed_installed_capacity_KW": 5500
+          },
+          {
+            "name": "Sabon Gari Market",
+            "state": "Kano",
+            "total_shops": 13598,
+            "pct_using_disco_alternatives": 72,
+            "pct_would_expand_shops_if_power_reliable": 51,
+            "pct_believe_street_lighting_useful": 44,
+            "primary_safety_concern": "Vandalism",
+            "total_load_MW": 1.38,
+            "load_lighting_MW": 0.56,
+            "load_cooling_MW": 0.72,
+            "load_other_MW": 0.09,
+            "installed_generator_capacity_KVA": 1300,
+            "monthly_energy_consumption_kWh": 561600,
+            "proposed_solution": "Stand-alone solar systems (1–2 KW per shop) or 1 MW solar hybrid power plant with street lighting",
+            "proposed_installed_capacity_KW": 1500
+          },
+          {
+            "name": "Somolu Printing Community",
+            "state": "Lagos",
+            "total_shops": 4262,
+            "pct_using_disco_alternatives": 84,
+            "pct_would_expand_shops_if_power_reliable": 45,
+            "pct_believe_street_lighting_useful": 63,
+            "primary_safety_concern": "Robbery",
+            "total_load_MW": 32,
+            "load_lighting_MW": 4,
+            "load_cooling_MW": 7,
+            "load_other_MW": 21,
+            "note_other": "21 MW is printing equipment — critical productive load",
+            "generators_documented": 450,
+            "installed_generator_capacity_KVA": 5893.45,
+            "estimated_co2_emissions_lbs_per_kwh_per_day": 204809.17,
+            "monthly_energy_consumption_kWh": 2545970,
+            "proposed_solution": "3–5 MW CNG natural gas fired power plant with independent distribution network and street lighting",
+            "proposed_installed_capacity_KW": 5000
+          },
+          {
+            "name": "Sura Shopping Complex",
+            "state": "Lagos",
+            "total_shops": 1047,
+            "pct_using_disco_alternatives": 84,
+            "pct_would_hire_more_staff_if_power_reliable": 43,
+            "pct_believe_public_lighting_useful_at_entrances": 40,
+            "primary_safety_concern": "Robbery",
+            "total_load_MW": 0.83,
+            "load_lighting_MW": 0.07,
+            "load_cooling_MW": 0.48,
+            "load_other_MW": 0.28,
+            "proposed_solution": "Connection to existing gas fired power plant on Lagos Island with independent distribution network and street lighting"
+          }
+        ],
+        "aggregate_metrics": {
+          "total_shops_all_markets": 50900,
+          "collective_daily_generator_spend_USD": 70000,
+          "avg_pct_using_disco_alternatives_percent": 80,
+          "total_generators_documented_somolu_only": 450,
+          "total_installed_generator_capacity_KVA": 13628.45,
+          "total_co2_emissions_diesel_lbs_per_kwh_per_day": 428438.29,
+          "total_monthly_energy_consumption_kWh": 5887490,
+          "total_proposed_installed_capacity_KW": 12000,
+          "total_proposed_installed_capacity_MW": 12
+        },
+        "status_quo_conditions": [
+          {
+            "id": "SQ001",
+            "condition": "72–84% of traders across all four markets were using alternatives to DisCo (grid) power — the majority had effectively abandoned the national grid",
+            "severity": "critical",
+            "consumer_impact": "direct economic cost"
+          },
+          {
+            "id": "SQ002",
+            "condition": "Market traders collectively paying over $70,000 per day for self-generated diesel power across the four markets",
+            "severity": "critical",
+            "consumer_impact": "direct financial burden on small and micro businesses"
+          },
+          {
+            "id": "SQ003",
+            "condition": "480+ diesel generators documented running in markets — causing noise pollution and Health, Safety, and Environment (HSE) risks from ad hoc installations",
+            "severity": "high",
+            "consumer_impact": "health, safety, environmental"
+          },
+          {
+            "id": "SQ004",
+            "condition": "Old and dangerous overhead distribution lines documented at market sites — infrastructure degradation compounding unreliability",
+            "severity": "high",
+            "consumer_impact": "safety and reliability"
+          },
+          {
+            "id": "SQ005",
+            "condition": "Darkness after business hours linked to robbery, harassment, and vandalism — crime directly attributable to lack of reliable street lighting and power",
+            "severity": "high",
+            "consumer_impact": "personal safety, economic activity restriction"
+          },
+          {
+            "id": "SQ006",
+            "condition": "43–59% of traders stated they would expand their shops or hire more staff if given reliable power — demonstrating suppressed economic growth directly caused by energy failure",
+            "severity": "critical",
+            "consumer_impact": "suppressed GDP, job creation foregone"
+          },
+          {
+            "id": "SQ007",
+            "condition": "Somolu Printing Community required 21 MW for printing equipment alone — meaning Nigeria's printing industry was running almost entirely on diesel at enormous cost and carbon output",
+            "severity": "high",
+            "consumer_impact": "industrial productivity and competitiveness"
+          }
+        ],
+        "policy_vs_reality_gaps": [
+          {
+            "gap_id": "G001",
+            "policy_assumption": "DisCos would serve commercial and industrial clusters reliably after privatization",
+            "consumer_reality": "72–84% of market traders had abandoned DisCo power and were self-generating with diesel"
+          },
+          {
+            "gap_id": "G002",
+            "policy_assumption": "Privatization of DisCos would lower energy costs and improve reliability for businesses",
+            "consumer_reality": "Businesses paying >$70,000 per day collectively for generator power with zero government subsidy"
+          },
+          {
+            "gap_id": "G003",
+            "policy_assumption": "Grid-connected electricity would support Nigerian commerce and industry",
+            "consumer_reality": "Commercial clusters running 480+ diesel generators as primary power — grid was effectively irrelevant to daily business operations"
+          },
+          {
+            "gap_id": "G004",
+            "policy_assumption": "Urban and peri-urban consumers would benefit from DisCo service improvement",
+            "consumer_reality": "Even large, commercially active urban markets (Lagos, Kano, Abia) with high willingness to pay had been abandoned by DisCos"
+          },
+          {
+            "gap_id": "G005",
+            "policy_assumption": "Economic growth and job creation would follow improved electricity access",
+            "consumer_reality": "43–59% of traders explicitly said they were holding back on expansion and hiring due to energy unreliability — growth was being actively suppressed"
+          },
+          {
+            "gap_id": "G006",
+            "policy_assumption": "Safety and quality of life would improve as electricity access expanded",
+            "consumer_reality": "Darkness from grid failure directly enabling robbery, harassment, and vandalism in major commercial markets"
+          }
+        ],
+        "cross_document_links": [
+          {
+            "linked_doc": "DOC_001",
+            "link_type": "confirms_failure",
+            "note": "DOC_001 (RESIP 2016) promised DisCos would add 4 million connections by 2017; DOC_002 shows that one year into that deadline, 72–84% of commercial traders had abandoned DisCo power entirely"
+          },
+          {
+            "linked_doc": "DOC_001",
+            "link_type": "confirms_gap",
+            "note": "DOC_001 described subsidies for consumers and affordable electricity for businesses; DOC_002 shows businesses bearing 100% of energy costs through expensive diesel self-generation"
+          }
+        ],
+        "ai_narrative": "By 2017, the government's own field surveys confirmed what every Nigerian market trader already knew: the grid had effectively ceased to function as a business utility. In four of Nigeria's most economically active commercial clusters — Ariaria, Sabon Gari, Somolu, Sura — between 72% and 84% of traders had given up on DisCo power entirely and were self-generating with diesel. These markets collectively housed over 50,000 shops and were spending more than $70,000 every day just to keep the lights on. The noise, fumes, and fire risk of hundreds of generators running simultaneously had become the normal operating environment for Nigerian commerce. The Energizing Economies programme was a tacit government admission: the grid could not be fixed fast enough, so off-grid minigrids would have to substitute for it in Nigeria's economic heartland. The 43–59% of traders who said they would expand their businesses if given reliable power represents the starkest measure of how much economic output Nigeria was losing every single day.",
+        "consumer_experience_summary": "In 2017, Nigeria's commercial consumers — market traders, printers, shop owners in some of the country's largest urban markets — were bearing the full cost of grid failure through daily diesel expenditure, health risks from generator fumes, restricted business hours due to darkness, crime enabled by inadequate lighting, and suppressed economic expansion. These were not rural households — they were the urban commercial engine of the Nigerian economy. And they had been abandoned by the grid.",
+        "related_documents": [
+          "REA Energizing Economies Baseline Survey and Energy Audit Report, 2017",
+          "RESIP 2016 (DOC_001)"
+        ]
+      }
+    ]
+  }
+}

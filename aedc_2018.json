@@ -1,0 +1,423 @@
+{
+  "schema_version": "disco_financial_schema_v1.1",
+  "document_id": "AEDC_2018",
+
+  "section_1_metadata": {
+    "disco_name": "Abuja Electricity Distribution Plc (AEDC)",
+    "report_year": 2018,
+    "period_end": "31 December 2018",
+    "date_signed": "7 May 2019",
+    "registration_number": "638681",
+    "incorporation_date": "8 November 2005",
+    "registered_office": "1 Ziguinchor Street, Off IBB Way, Wuse Zone 4, Abuja",
+    "coverage_states": ["Federal Capital Territory (FCT)", "Niger State", "Kogi State", "Nasarawa State"],
+    "area_offices": 32,
+    "parent_company": "KANN Utility Company Limited (60% shareholder)",
+    "shareholders": {
+      "KANN_Utility_Company_Limited": "60%",
+      "Bureau_of_Public_Enterprises": "32%",
+      "Ministry_of_Finance_Incorporated": "8%"
+    },
+    "KANN_ultimate_owners": "Joint venture between Xerxes Global Investment Ltd and CEC Africa Investments Ltd",
+    "auditor": "KPMG Professional Services, Lagos",
+    "audit_signed": "16 May 2019",
+    "auditor_lead_partner": "Ayodele A. Soyinka FCA",
+    "bankers": ["Access Bank Plc", "Diamond Bank Plc", "Ecobank Nigeria Limited", "First Bank of Nigeria Limited", "Guaranty Trust Bank Plc", "Polaris Bank Limited", "Sterling Bank Plc", "Union Bank of Nigeria Plc", "United Bank for Africa Plc", "Unity Bank Plc", "Zenith Bank Plc"],
+    "licence_expiry": "2028 (with 10-year renewal option)",
+    "regulatory_framework": "Multi-Year Tariff Order (MYTO), NERC",
+    "market_rules": "Transitional Electricity Market (TEM) Rules effective 1 February 2015; Company entered TEM in May 2018",
+    "currency": "Nigerian Naira (NGN)",
+    "reporting_standard": "IFRS (first year applying IFRS 15 and IFRS 9)"
+  },
+
+  "section_2_income_statement": {
+    "revenue_NGN_000": 82220731,
+    "revenue_prior_year_NGN_000": 65715312,
+    "revenue_change_pct": 25.1,
+    "cost_of_sales_NGN_000": 95402526,
+    "gross_loss_NGN_000": -13181795,
+    "gross_loss_prior_year_NGN_000": -19291395,
+    "other_income_NGN_000": 1414139,
+    "impairment_loss_on_receivables_NGN_000": -19190827,
+    "impairment_prior_year_NGN_000": -8558144,
+    "administrative_expenses_NGN_000": -31183148,
+    "operating_loss_NGN_000": -62141631,
+    "operating_loss_prior_year_NGN_000": -49473493,
+    "finance_income_NGN_000": 885958,
+    "finance_costs_NGN_000": -24360868,
+    "net_finance_costs_NGN_000": -23474910,
+    "loss_before_tax_NGN_000": -85719329,
+    "loss_before_tax_prior_year_NGN_000": -75977300,
+    "income_tax_expense_NGN_000": 0,
+    "minimum_tax_NGN_000": -102788,
+    "loss_for_year_NGN_000": -85719329,
+    "loss_for_year_prior_year_NGN_000": -75977300,
+    "other_comprehensive_income_NGN_000": 24528781,
+    "total_comprehensive_loss_NGN_000": -61190548,
+    "revenue_breakdown": {
+      "private_individuals_and_companies_NGN_000": 64530039,
+      "government_institutions_NGN_000": 17690692,
+      "postpaid_NGN_000": 65305262,
+      "prepaid_NGN_000": 16915469
+    },
+    "cost_of_energy_NGN_000": 89595699,
+    "note_revenue_recognition": "First year applying IFRS 15 (Revenue from Contracts with Customers). Revenue from non-paying customers and MAN customer disputes recognised as contract assets. Prepaid unearned revenue NGN 524.57 million treated as contract liability.",
+    "note_on_revenue_quality": "A significant portion of billings are estimated (unmetered customers). KPMG flagged revenue recognition as a key audit matter due to estimation risk."
+  },
+
+  "section_3_balance_sheet": {
+    "total_assets_NGN_000": 169942529,
+    "total_assets_prior_year_NGN_000": 120147561,
+    "total_liabilities_NGN_000": 298712127,
+    "total_liabilities_prior_year_NGN_000": 206242165,
+    "total_equity_NGN_000": -128769598,
+    "total_equity_prior_year_NGN_000": -86094604,
+    "share_capital_NGN_000": 10000,
+    "revaluation_reserve_NGN_000": 43957542,
+    "accumulated_deficit_NGN_000": -172737140,
+    "accumulated_deficit_prior_year_NGN_000": -105580722,
+    "ppe_NGN_000": 111649532,
+    "ppe_prior_year_NGN_000": 91952036,
+    "trade_and_other_receivables_current_NGN_000": 42307449,
+    "trade_and_other_receivables_noncurrent_NGN_000": 9345410,
+    "cash_and_equivalents_NGN_000": 4395622,
+    "cash_and_equivalents_prior_year_NGN_000": 4342225,
+    "trade_payables_NBET_ONEM_NGN_000": 235103570,
+    "trade_payables_NBET_ONEM_prior_year_NGN_000": 178981004,
+    "total_trade_and_other_payables_NGN_000": 263007818,
+    "total_trade_and_other_payables_prior_year_NGN_000": 196171452,
+    "loans_and_borrowings_total_NGN_000": 23974050,
+    "loans_and_borrowings_prior_year_NGN_000": 3236689,
+    "current_liabilities_NGN_000": 269308014,
+    "current_assets_NGN_000": 47739608,
+    "net_current_liabilities_NGN_000": -221568406,
+    "total_liabilities_exceed_total_assets_by_NGN_000": 128769598,
+    "five_year_net_assets": {
+      "2018": -128769598,
+      "2017": -86094604,
+      "2016": -11019635,
+      "2015": 36428285,
+      "2014": 63123448
+    }
+  },
+
+  "section_4_cash_flow": {
+    "net_cash_used_in_operating_activities_NGN_000": -12431560,
+    "net_cash_used_in_investing_activities_NGN_000": -13264063,
+    "net_cash_from_financing_activities_NGN_000": 25763014,
+    "net_increase_in_cash_NGN_000": 67391,
+    "cash_opening_NGN_000": 4342225,
+    "cash_closing_NGN_000": 4395622,
+    "capex_PPE_purchases_NGN_000": -4737606,
+    "proceeds_from_loans_NGN_000": 31825238,
+    "CAPMI_refunds_NGN_000": -437121,
+    "interest_paid_NGN_000": -2380791,
+    "principal_repayments_NGN_000": -3244312
+  },
+
+  "section_5_revenue_and_collection": {
+    "billed_revenue_NGN_000": 82220731,
+    "collection_efficiency_disclosed": false,
+    "collection_efficiency_note": "Not explicitly stated as a single percentage. Company disclosed it paid NGN 53.75 billion to NBET/ONEM in 2018 against energy cost of NGN 89.60 billion — implying payment rate to upstream of ~60%. MDA direct cash collection reached about 89% of MDA billings (up from 78% in 2017).",
+    "MDA_billing_collection_rate_2018": "89%",
+    "MDA_billing_collection_rate_2017": "78%",
+    "trade_receivables_gross_NGN_000": 93018792,
+    "loss_allowance_on_receivables_NGN_000": -51691369,
+    "net_trade_receivables_NGN_000": 41327423,
+    "impairment_loss_recognised_in_year_NGN_000": 19190827,
+    "impairment_loss_prior_year_NGN_000": 8558144,
+    "impairment_rate_by_customer_segment": {
+      "prepaid_customers_PPM": "63% weighted average loss rate",
+      "government_agencies": "30%",
+      "metered_maximum_demand": "16%",
+      "unmetered_maximum_demand": "14%",
+      "unmetered_non_maximum_demand_low_tier": "59%"
+    },
+    "unbilled_revenue_included_NGN_000": 6360000,
+    "prepaid_unearned_revenue_contract_liability_NGN_000": 524570,
+    "note_collection_crisis": "Trade payables to NBET/ONEM grew from NGN 179bn to NGN 235bn. Interest on unpaid NBET/ONEM bills accruing at NIBOR+4%. Accumulated interest/penalties on NBET/MO debt reached NGN 60.53 billion by year end.",
+    "interest_on_NBET_ONEM_bills_NGN_000": 20278074
+  },
+
+  "section_6_tariff_and_regulatory": {
+    "tariff_framework": "Multi-Year Tariff Order (MYTO)",
+    "tariff_shortfall_2015_2016_NERC_estimate_NGN_bn": 27.36,
+    "tariff_shortfall_2017_2018_NERC_estimate_NGN_bn": 80.07,
+    "tariff_shortfall_PSRP_acknowledged_2015_2016_NGN_bn": 44.86,
+    "tariff_shortfall_company_view_2015_2017_NGN_bn": 61.37,
+    "tariff_regime": "Below cost-reflective — identified as primary cause of DISCO financial distress",
+    "tariff_shortfall_settlement_mechanism": "Net-off against NBET/MO payables (under negotiation at year end)",
+    "PSRP_tariff_review": "NERC commenced preliminary tariff shortfall computation during 2018 (minor tariff review)",
+    "MAN_tariff_dispute": "Manufacturing Association of Nigeria (MAN) members paying MYTO-2 (2014) tariff while being billed at MYTO 2.1 (2015) rates — AEDC recognised contract asset for disputed difference",
+    "cost_reflective_tariff_achieved": false,
+    "conditions_for_loss_reduction_targets": [
+      "NERC must implement cost-reflective tariff regime",
+      "FGN to provide subsidy where tariffs capped below cost-reflective levels",
+      "Historical tariff shortfalls written off against DISCO indebtedness to MO and NBET",
+      "Interest on shortfall also to be written off"
+    ]
+  },
+
+  "section_7_metering": {
+    "metering_gap_acknowledged": true,
+    "metering_gap_description": "Significant proportion of customers unmetered; billing estimated by load wattage method per feeder",
+    "CAPMI_scheme_status": "Abolished in 2016. Existing CAPMI loan balance fully current by year end (NGN 998.89 million). Refunds of NGN 437.12 million paid to customers via units of energy.",
+    "CAPMI_loan_balance_NGN_000": 998892,
+    "MAP_regulation": "NERC approved Meter Asset Provider (MAP) Regulation. AEDC appointed three MAPs: Mojec International (FCT/Kogi — 487,000 meters), Meron Consortium (Nasarawa — 213,000 meters), Turbo Engineering (Niger — 200,000 meters). Rollout directed to commence by 1 May 2019.",
+    "total_meters_to_be_deployed": 900000,
+    "InCMS_system": "Integrated Commercial Management System (InCMS) deployed December 2018 for prepaid customers; full rollout February 2019. Enables unified postpaid and prepaid customer database.",
+    "KPMG_audit_matter": "Revenue recognition and impairment of trade receivables both designated as Key Audit Matters — directly linked to metering gap. KPMG challenged estimation assumptions and reviewed against NERC filings.",
+    "vendor_financed_meter_loans": "Two unsecured vendor-financed contracts for meter acquisition/installation at 12% interest, tenors of 12 and 32 months. NGN 1.16 billion outstanding at year end."
+  },
+
+  "section_8_losses_and_efficiency": {
+    "ATC_and_C_losses_disclosed": false,
+    "ATC_and_C_note": "Not disclosed as a single percentage in this report. Implied in the metering and collection narrative — unaccounted energy billed to unmetered customers represents unrecovered losses. NBET energy cost (NGN 89.60 billion) vs revenue (NGN 82.22 billion) implies gross energy cost exceeds revenue collected.",
+    "energy_cost_vs_revenue_gap_NGN_000": -7374968,
+    "cost_of_energy_as_pct_of_revenue": "109% — paying more for energy than collecting from customers",
+    "NIPP_assets_energised": "Six injection substations from Niger Delta Power Holding Company (NDPHC) energised during 2018. Fair value NGN 1.64 billion.",
+    "distribution_network_assets_fair_value_NGN_000": 90258992,
+    "capital_commitments_NGN_000": 334630
+  },
+
+  "section_9_going_concern": {
+    "going_concern_flag": true,
+    "going_concern_severity": "MATERIAL UNCERTAINTY — KPMG issued explicit going concern emphasis paragraph",
+    "auditor_going_concern_language": "Material uncertainty exists that may cast significant doubt on the Company's ability to continue as a going concern",
+    "loss_for_year_NGN_000": -85719329,
+    "current_liabilities_exceed_current_assets_NGN_000": 221210000,
+    "total_liabilities_exceed_total_assets_NGN_000": 128770000,
+    "consecutive_loss_years": "At least 5 years (2014-2018) — all five years in five-year summary show losses",
+    "five_year_cumulative_losses": {
+      "2018": -85719329,
+      "2017": -75977300,
+      "2016": -47447920,
+      "2015": -41972588,
+      "2014": -25971035
+    },
+    "going_concern_mitigation_cited": [
+      "PSRP implementation (World Bank-backed) — NGN 701 billion Payment Assurance Guarantee (PAG) issued",
+      "CBN NEMSF drawdown of NGN 23.72 billion used to reduce NBET/ONEM payables",
+      "NERC tariff shortfall review ongoing",
+      "FGN MDA debt verification for 2013-2016 billings",
+      "MAP rollout to reduce metering/collection losses",
+      "InCMS deployment for billing efficiency",
+      "BPE revised performance target dates — 3 additional years granted but conditional on FGN meeting obligations"
+    ],
+    "BPE_performance_target_revision": "On 21 February 2019, BPE declared first two years (2015-2016) as force majeure years under MYTO. DISCOs now have 3 years remaining to meet loss reduction targets — but conditions precedent not yet met at date of financial statements.",
+    "conditions_precedent_not_yet_met": true,
+    "directors_conclusion": "Reasonable expectation the Company will continue as a going concern — on the basis that FGN/NERC will implement PSRP measures"
+  },
+
+  "section_10_debt_and_financing": {
+    "total_loans_and_borrowings_NGN_000": 23974050,
+    "loans_breakdown": {
+      "CBN_NEMSF_loan_NGN_000": 15916574,
+      "TCN_loan_NGN_000": 4956483,
+      "NELMCO_loan_NGN_000": 938232,
+      "CAPMI_loan_NGN_000": 998892,
+      "vendor_financed_meter_loan_NGN_000": 1163869
+    },
+    "CBN_NEMSF_details": "Nigerian Electricity Market Stabilisation Facility. Total facility NGN 213 billion industry-wide. AEDC received two tranches: NGN 20.23 billion and NGN 3.49 billion = NGN 23.72 billion total. Repayable within 81 months at 10% interest. Proceeds used to settle NBET/ONEM trade payables.",
+    "TCN_and_NELMCO_loans": "NGN 6.50 billion (TCN) and NGN 1.21 billion (NELMCO) — drawn to collateralise letter of credit for NBET participation in TEM. 48-month tenor at 10% interest.",
+    "letter_of_credit_UBA_NGN_000": 10500000,
+    "letter_of_credit_cash_collateral_NGN_000": 8299743,
+    "NBET_ONEM_payables_NGN_000": 235103570,
+    "NBET_ONEM_pct_of_total_liabilities": "78.7%",
+    "interest_on_NBET_ONEM_accruing_rate": "NIBOR+4% (previously NIBOR+10% before TEM)",
+    "accumulated_interest_penalties_on_NBET_MO_NGN_000": 60530000,
+    "write_off_interest_and_penalties_status": "Under negotiation with NERC — directors expect write-off as part of industry reset. NGN 60.53 billion to be written off eventually.",
+    "day_one_gain_on_below_market_loans_NGN_000": 9048724,
+    "deferred_income_day_one_gain_NGN_000": 7306354
+  },
+
+  "section_11_force_majeure_history": {
+    "force_majeure_events": [
+      {
+        "entity": "KANN Utility Company Limited (parent/majority shareholder)",
+        "event": "KANN declared force majeure in April 2015",
+        "withdrawal": "February 2016",
+        "impact": "Majority shareholder effective default on performance obligations — severe governance disruption during critical early privatisation years",
+        "source": "Referenced from aedc_2015.json; not re-stated in 2018 report but material history"
+      },
+      {
+        "entity": "BPE / DISCOs sector-wide",
+        "event": "BPE declared 2015-2016 as force majeure years under MYTO performance agreements",
+        "declaration_date": "21 February 2019 (post year-end event)",
+        "impact": "Effectively resets DISCO loss-reduction performance clock. DISCOs granted 3 additional years. Removes obligation to meet 2015-2016 targets but conditions precedent still unmet.",
+        "source": "Note 28 and Note 29 of 2018 financial statements"
+      }
+    ],
+    "regulatory_context": "Force majeure declarations reflect government acknowledgment that DISCOs cannot meet performance targets under non-cost-reflective tariff regime"
+  },
+
+  "section_12_cbn_intervention_fund": {
+    "fund_name": "Nigerian Electricity Market Stabilisation Facility (NEMSF)",
+    "also_known_as": "CBN Intervention Fund",
+    "total_facility_industry_NGN_bn": 213,
+    "AEDC_drawdown_2018_NGN_000": 23720000,
+    "tranches": [
+      {"amount_NGN_bn": 20.23, "year": 2018},
+      {"amount_NGN_bn": 3.49, "year": 2018}
+    ],
+    "repayment_period_months": 81,
+    "interest_rate_pct": 10,
+    "use_of_proceeds": "Settled outstanding NBET/ONEM trade payables (not operational investment)",
+    "loan_balance_at_year_end_NGN_000": 15916574,
+    "day_one_gain_recognised_NGN_000": 7306354,
+    "vitics_signal": "CBN fund used purely to transfer debt — not to invest in infrastructure or reduce losses. Consumer saw no benefit from this fund. It temporarily reduced NBET payables but did not change underlying loss-making structure.",
+    "prior_year_status": "In 2015 the CBN fund was expected (NGN 27bn) but not yet received. By 2018 it was drawn but purely debt-recycling."
+  },
+
+  "section_13_nelmco_transition_liabilities": {
+    "NELMCO_description": "Nigeria Electricity Liability Management Company — government entity established to take over stranded assets and pre-completion liabilities from PHCN",
+    "pre_completion_receivables": "All trade receivables as at 31 October 2013 transferred to NELMCO without recourse",
+    "pre_completion_liabilities": "All liabilities as at 31 October 2013 transferred to NELMCO subject to conditions",
+    "NELMCO_cash_balance_dispute": "NERC interpretation required cash and cash equivalents as at 31 October 2013 also transferred — AEDC disputed this. Agreed amount NGN 1.56 billion; excess NGN 325.64 million written back to P&L in 2018.",
+    "NELMCO_loan_outstanding_NGN_000": 938232,
+    "TCN_loan_for_TEM_collateral_NGN_000": 4956483,
+    "derecognition_date": "31 October 2013",
+    "ongoing_disputes": "Individual trade debtors and liabilities transferred still not agreed item by item between AEDC and NELMCO at year end 2018 — 5 years post privatisation",
+    "NELMCO_provision_written_back_NGN_000": 325642,
+    "vitics_signal": "Five years after privatisation, AEDC and NELMCO still had not individually agreed the transferred debts and liabilities. This unresolved transition is a structural drag on DISCO governance and investor confidence."
+  },
+
+  "section_14_customer_contributed_assets": {
+    "CAPMI_scheme": {
+      "description": "Credited Advance Payment for Metering Implementation — customers advance-funded their own meters",
+      "status": "Abolished 2016. No new additions.",
+      "loan_balance_year_end_NGN_000": 998892,
+      "refunds_paid_in_2018_NGN_000": 437121,
+      "refund_method": "Units of energy (not cash refunds)",
+      "installation_fees_income_2018_NGN_000": 1449,
+      "total_CAPMI_historical_significance": "Consumers paid for their own meters and AEDC owed them repayment. The scheme exposed the regulatory fiction that privatisation would resolve metering — private capital could not fund basic metering infrastructure."
+    },
+    "government_granted_assets": {
+      "description": "Assets granted by government to improve infrastructure — streetlights, line maintenance vehicles from USAID",
+      "balance_NGN_000": 3092499,
+      "amortisation_to_PL_2018_NGN_000": 1082857,
+      "NIPP_assets_energised_2018_fair_value_NGN_000": 1641984
+    },
+    "customer_contributed_assets_note": "Contributions by customers of items of PPE recognised at fair value with corresponding deferred income. Released as income when performance obligation discharged over time.",
+    "vitics_signal": "Even in 2018 — three years after CAPMI abolition — AEDC was still repaying consumers in electricity units (not cash) for meters they pre-funded. This is a consumer-pays-for-own-infrastructure story that Nigerian energy consumers understand instinctively."
+  },
+
+  "section_15_grid_defection_signals": {
+    "grid_defection_score": 5,
+    "grid_defection_score_note": "Upgraded from 3/10 in 2015. Conditions for defection now structurally present.",
+    "energy_sales_trend": {
+      "revenue_2018_NGN_000": 82220731,
+      "revenue_2017_NGN_000": 65715312,
+      "revenue_2016_NGN_000": 61147917,
+      "revenue_2015_NGN_000": 62534676,
+      "revenue_2014_NGN_000": 48097381,
+      "note": "Revenue grew 25% in 2018 but primarily driven by tariff movement, not necessarily more units delivered. Energy cost (NGN 89.6bn) exceeds revenue (NGN 82.2bn) — meaning AEDC is paying for more energy than it collects for."
+    },
+    "customer_count_trend": "Not disclosed as explicit customer count in this report",
+    "prepaid_revenue_growth": {
+      "2018": 16915469,
+      "2017": 13770463,
+      "growth_pct": 22.8,
+      "note": "Prepaid share of revenue growing as customers shift to prepaid — this segment shows 63% weighted average loss rate on receivables, suggesting many prepaid customers have migrated from unpaying postpaid accounts"
+    },
+    "solar_market_context_2018": {
+      "year": 2018,
+      "national_event": "EEI (Energising Economies Initiative) launched — government solar for markets",
+      "consumer_solar_awareness": "Rising — YouTube Nigeria solar content searchable at scale from 2017",
+      "PSRP_off_grid_component": "PSRP explicitly included 'Implementation of off-grid renewable solutions to increase energy access' as a key initiative",
+      "AEDC_response": "None visible in financial statements — no off-grid strategy, no renewable reference beyond government-dictated acknowledgment in Directors' report"
+    },
+    "key_defection_indicators": [
+      "Energy cost exceeds revenue — AEDC structurally cannot provide affordable electricity",
+      "Going concern 5th consecutive year — no pathway to stability visible",
+      "60.53 billion in accumulated interest/penalties on upstream bills — structural debt trap",
+      "MAP rollout of 900,000 meters ordered — shows how deep the metering gap still is in 2018",
+      "Prepaid revenue growing faster than postpaid — consumers choosing control over grid billing",
+      "NBET/ONEM payables at 78.7% of total liabilities — upstream strangling distribution",
+      "BPE reset clock to 2022 for performance targets — 9 years post-privatisation before accountability expected"
+    ],
+    "vitics_signal": "2018 is the year the grid defection preconditions solidified. The EEI solar market programme was live. The financial death spiral was undeniable in audited accounts. Consumers in AEDC territory had every rational reason to look for alternatives — cost, reliability, and five years of financial evidence that the grid was not improving."
+  },
+
+  "section_16_consumer_impact": {
+    "consumer_impact_score": 8,
+    "consumer_impact_score_rationale": "Score elevated from 7/10 (2015) to 8/10. Going concern in 5th year, energy cost exceeds revenue, 900,000 meters still needed, accumulated losses now NGN 172.7 billion. Consumer situation materially worse than 2015.",
+    "headline_findings": [
+      "AEDC paid NGN 89.6 billion for energy but only collected NGN 82.2 billion — paying more for electricity than it can charge consumers",
+      "Total accumulated deficit reached NGN 172.7 billion — up from NGN 105.6 billion in 2017",
+      "Equity deeply negative: minus NGN 128.8 billion",
+      "NBET/ONEM owed NGN 235 billion by year end",
+      "5 consecutive years of losses: total approximately NGN 377 billion lost 2014-2018",
+      "900,000 meters still to be installed — MAP scheme just being activated in 2018/2019",
+      "Consumers in Abuja, Kogi, Nasarawa, Niger receiving service from a company with no viable path to profitability under current regime",
+      "CAPMI consumers still being refunded in electricity units — not cash — three years after scheme abolition"
+    ],
+    "consumer_vocabulary_implied": [
+      "NEPA wahala / PHCN never work",
+      "Light bills too high for the darkness they give",
+      "Estimated billing cheat — no meter, just guess",
+      "Why am I paying when there is no light?",
+      "AEDC disconnection for debt I don't understand",
+      "Solar is better than this suffering",
+      "Generator cost killing me — AEDC not helping",
+      "Why is Abuja electricity this bad when we pay?"
+    ],
+    "PSRP_consumer_impact": "Power Sector Recovery Program announced April 2017 (World Bank-backed). NGN 701 billion PAG issued. Direct MDA cash collection improved 78% to 89%. BUT none of the structural conditions precedent (cost-reflective tariff, write-off of DISCO debts) met by year end 2018.",
+    "tariff_reform_note": "No tariff increase announced in 2018 (contrast with 49% increase announced Feb 2016). NERC commenced preliminary tariff review but no rate change implemented."
+  },
+
+  "section_17_psrp_and_policy_context": {
+    "PSRP_approved": "April 2017 (World Bank-backed)",
+    "PSRP_key_provisions": [
+      "Elimination of accumulated deficits for 2015, 2016 and 2017",
+      "Commitment to fund future sector deficits to 2021",
+      "Payment of MDA debts and mechanism for future MDA bills",
+      "Implementation of off-grid renewable solutions",
+      "Foreign exchange policy for power sector",
+      "End-user cost-reflective tariff trajectory over 5 years"
+    ],
+    "PSRP_implementation_status_2018": {
+      "PAG_issued": "NGN 701 billion Payment Assurance Guarantee by FGN",
+      "MDA_direct_collection": "89% of MDA billings collected directly (improved from 78%)",
+      "tariff_review_commenced": "NERC preliminary computation started",
+      "accumulated_deficit_elimination": "NOT achieved",
+      "cost_reflective_tariff": "NOT achieved",
+      "off_grid_programme": "Not visible in AEDC financials"
+    },
+    "vitics_signal": "PSRP 2017 was the most credible government intervention attempt since privatisation. Yet by end 2018 — 18 months in — the structural conditions were still unmet. This is the gap between policy announcement and consumer reality that Vitics tracks."
+  },
+
+  "section_18_vitics_analysis_instructions": {
+    "primary_narrative": "AEDC 2018 is the audited proof that five years of privatisation had not only failed to stabilise the electricity sector but had produced a company with NGN 172 billion in accumulated losses, paying more for energy than it could collect from consumers, with 900,000 customers still unmetered, under going concern doubt for the fifth straight year.",
+    "key_signals_for_youtube_analysis": [
+      "2018 is the year EEI solar market programme launched nationally — cross-reference YouTube Nigeria solar market search trends",
+      "PSRP off-grid component formally written into FGN programme — this is government acknowledging grid failure in policy language",
+      "MAP regulation ordering 900,000 meters shows how far from normal metering coverage AEDC was — consumers knew they were being estimated",
+      "CBN NEMSF fund (NGN 23.72bn) used for upstream debt — not consumer benefit — deepens cynicism",
+      "BPE reset performance clock to 2022 — consumers had effectively been told: wait 9 years post-privatisation for accountability"
+    ],
+    "cross_reference_aedc_2015": [
+      "2015: NGN 18.3bn impairment. 2018: NGN 19.2bn — collection crisis not resolved in 3 years",
+      "2015: CBN fund expected NGN 27bn. 2018: NGN 23.72bn drawn — but used to pay NBET, not fix infrastructure",
+      "2015: Going concern year 1. 2018: Going concern year 5. Severity escalating.",
+      "2015: Grid defection score 3/10. 2018: Score 5/10 — conditions building toward mass market solar adoption"
+    ],
+    "transition_marker": true,
+    "transition_note": "2018 is a critical bridge year — the year government solar programmes became visible (EEI), MAP metering was ordered, PSRP was active but failing, and AEDC's finances showed no pathway to consumer-serving stability. The EEI programme gave ordinary Nigerians their first government-branded solar experience precisely when AEDC's going concern doubt was in its fifth year. The consumer psychology shift from 'grid will improve' to 'solar is the answer' was accelerating.",
+    "what_consumers_experienced": "Same darkness, higher bills estimated without meters, company with no money, government promising recovery but conditions not met, and a new solar option appearing in their markets through EEI. The rational consumer response was beginning.",
+    "lens": "Did this DISCO report change anything for the Nigerian energy consumer — and what did they say about it? Answer: No structural change. The report documents systemic failure with no consumer-facing solution in sight. Consumers' rational response: seek exit via solar."
+  },
+
+  "document_quality": {
+    "source": "Signed financial statements — company-authorised and KPMG-audited",
+    "total_pages": 72,
+    "document_type": "Annual Report and Financial Statements",
+    "readability": "High — typed document, clean formatting, all pages legible",
+    "confidence_level": "Very High — KPMG-audited, signed by directors 7 May 2019, all key schedules present",
+    "five_year_summary_available": true,
+    "notes_to_accounts_available": true,
+    "new_standards_applied_2018": ["IFRS 15 (Revenue from Contracts)", "IFRS 9 (Financial Instruments)"],
+    "accounting_policy_changes_impact": "IFRS 9 reduced opening impairment allowance by NGN 11.6bn on transition. IFRS 15 added NGN 6.9bn to retained earnings on transition (non-paying and MAN customers now recognised as contract assets).",
+    "extraction_method": "Full visual reading of all 72 pages of embedded PDF — all financial tables, notes, directors report and audit report read in full"
+  }
+}

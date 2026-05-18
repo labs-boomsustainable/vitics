@@ -337,7 +337,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
       <li><a href="#"><i data-lucide="settings" style="width:14px;height:14px"></i>Settings</a></li>
     </ul>
   </div>
-  <div class="sb-foot"><div class="sb-ver">v3.0.0 · Phase 3 · © 2025 Vitics</div></div>
+  <div class="sb-foot"><div class="sb-ver">v3.1.0 · Phase 3 · © 2025 Vitics</div></div>
 </aside>
 
 <!-- CONTENT -->
@@ -685,35 +685,39 @@ async function fetchYouTubeData(){
 }
 
 // ── CLAUDE ANALYSIS PROMPT ──
-function buildAnalysisPrompt(ytData){
+function buildAnalysisPrompt(ytData, knowledgeContext){
   const textSample = ytData.texts.slice(0, 25).join('\n---\n');
+  const kbBlock = knowledgeContext || '[Knowledge base not loaded — using general Nigeria energy market knowledge]';
 
-  return `You are an expert energy intelligence analyst specialising in Nigeria's decentralised energy market. Analyse the following anonymised YouTube content about Nigerian energy (all PII has been removed).
+  return `You are an expert energy intelligence analyst specialising in Nigeria's decentralised energy market. You have access to a structured knowledge base built from 24 years of Nigerian energy policy documents and 10 years of AEDC financial statements. Use this grounded context to interpret consumer discourse with precision.
 
-CONTENT SAMPLE (${ytData.texts.length} items, query: "${ytData.query}"):
+${kbBlock}
+
+ANONYMISED CONSUMER CONTENT (${ytData.texts.length} items, query: "${ytData.query}"):
+All PII stripped — no usernames, emails or phone numbers remain.
 ---
 ${textSample}
 ---
 
-Analyse this content and return ONLY a valid JSON object with exactly this structure (no markdown, no explanation, just JSON):
+Using your knowledge base context above, analyse this content and return ONLY a valid JSON object with this exact structure (no markdown, no explanation, just JSON):
 
 {
   "sentiment": {
     "positive": <integer 0-100>,
     "neutral": <integer 0-100>,
     "negative": <integer 0-100>,
-    "summary": "<one sentence summary of overall sentiment>"
+    "summary": "<one sentence grounded in knowledge base context>"
   },
   "products": [
-    {"name": "<product/brand name>", "score": <integer 0-100>, "category": "<category>", "sentiment": "<positive|neutral|negative>"},
+    {"name": "<product/brand>", "score": <integer 0-100>, "category": "<category>", "sentiment": "<positive|neutral|negative>"},
     {"name": "...", "score": <integer>, "category": "...", "sentiment": "..."}
   ],
   "geographic_signals": [
-    {"state": "<Nigerian state name>", "score": <integer 0-100>, "signal": "<what the signal is>"},
+    {"state": "<Nigerian state>", "score": <integer 0-100>, "signal": "<contextualised signal>"},
     {"state": "...", "score": <integer>, "signal": "..."}
   ],
   "topics": [
-    {"topic": "<topic name>", "type": "<hot|rising|neutral|declining>", "count": <integer>}
+    {"topic": "<topic>", "type": "<hot|rising|neutral|declining>", "count": <integer>}
   ],
   "fossil_vs_clean": {
     "fossil_pct": <integer 0-100>,
@@ -729,28 +733,259 @@ Analyse this content and return ONLY a valid JSON object with exactly this struc
     "sdg10": <integer 0-100>,
     "sdg13": <integer 0-100>
   },
-  "key_insight": "<2-3 sentence headline insight about Nigeria energy transition from this data>",
-  "product_insight": "<1-2 sentence insight about which products are gaining or losing consumer trust>",
+  "policy_signals": [
+    {"policy": "<policy name or programme>", "sentiment": "<positive|neutral|negative>", "awareness": "<high|medium|low>"}
+  ],
+  "aedc_signals": {
+    "complaint_level": "<High|Medium|Low>",
+    "tariff_mentions": <true|false>,
+    "grid_defection_evidence": "<any signs consumers switching from grid to solar>"
+  },
+  "key_insight": "<2-3 sentence headline insight grounded in 24-year policy context>",
+  "product_insight": "<1-2 sentence insight about product trust trends>",
+  "policy_gap_insight": "<1 sentence on gap between what policy promised and what consumers experience>",
   "total_conversations_estimate": <integer>,
-  "data_quality": "<high|moderate|low>"
+  "data_quality": "<high|moderate|low>",
+  "knowledge_base_applied": "<which specific policy year or AEDC year was most relevant>"
 }
 
 Rules:
 - sentiment positive+neutral+negative must sum to exactly 100
 - fossil_pct + clean_pct must sum to exactly 100
-- Return at least 3 products, 3 geographic signals, 5 topics
-- Base all scores on actual content — do not fabricate
-- For Nigerian states, only use real state names
-- Products should be real Nigerian energy brands where detectable (Lumos, Daystar, EcoFlow, BBOXX, Rensource, Greenlight Planet, Arnergy, Rubitec etc)
-- If a field cannot be determined from content, use reasonable Nigeria energy market defaults`;
+- Return at least 3 products, 3 geographic signals, 5 topics, 1 policy signal
+- Base all scores on actual content — never fabricate
+- Cross-reference consumer frustration against policy timeline above
+- For AEDC franchise area (FCT, Niger, Kogi, Nasarawa) use AEDC financial context
+- Products: real Nigerian energy brands (Lumos, Daystar, EcoFlow, BBOXX, Rensource, Greenlight Planet, Arnergy, Rubitec)
+- Post-2023 content: apply fuel subsidy removal watershed context
+- knowledge_base_applied must name the specific policy/AEDC year most relevant\`;
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// VITICS KNOWLEDGE BASE LOADER — Option B
+// Fetches policy JSONs and AEDC financial JSONs from GitHub
+// before every Claude analysis run
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+const GITHUB_RAW = 'https://raw.githubusercontent.com/labs-boomsustainable/vitics/main/';
+
+// ── POLICY JSON FILES ──
+const POLICY_FILES = [
+  'nepp_2001.json',
+  'nep_2003.json',
+  'epsra_2005.json',
+  'remp_2005.json',
+  'repg_2006.json',
+  'reap_2006.json',
+  'biofuel_2007.json',
+  'needs_2008.json',
+  'privatisation_2013.json',
+  'nreeep_2015.json',
+  'minigrid_2015.json',
+  'resip_2016.json',
+  'etp_discussions_2017.json',
+  'eei_2018.json',
+  'solar_naija_planning_2019.json',
+  'solar_naija_2020.json',
+  'pia_2021.json',
+  'etp_2021.json',
+  'niimip_2022.json',
+  'electricity_act_2023.json',
+  'state_markets_2024.json',
+  'niep_2025.json'
+];
+
+// ── AEDC FINANCIAL JSON FILES ──
+const AEDC_FILES = [
+  'aedc_2015.json',
+  'aedc_2016.json',
+  'aedc_2017.json',
+  'aedc_2018.json',
+  'aedc_2019.json',
+  'aedc_2020.json',
+  'aedc_2021.json',
+  'aedc_2022.json',
+  'aedc_2023.json',
+  'aedc_2024.json'
+];
+
+// ── FETCH A SINGLE JSON FILE FROM GITHUB ──
+async function fetchKnowledgeFile(filename){
+  try {
+    const res = await fetch(GITHUB_RAW + filename, { cache: 'no-store' });
+    if(!res.ok) return null;
+    return await res.json();
+  } catch(e){
+    return null;
+  }
+}
+
+// ── EXTRACT POLICY INTELLIGENCE SUMMARY ──
+// Pulls only the fields Claude needs — keeps prompt efficient
+function extractPolicySummary(data){
+  if(!data) return null;
+  return {
+    id:             data.policy_id || data.id || '',
+    year:           data.metadata?.year || data.year || '',
+    name:           data.metadata?.short_name || data.short_name || '',
+    impact_score:   data.consumer_reality?.impact_score || 0,
+    gap_score:      data.policy_to_reality_gap?.gap_score || 0,
+    transition:     data.transition_marker || false,
+    transition_note:data.transition_note || '',
+    consumer_exp:   data.consumer_reality?.assessment ||
+                    data.consumer_reality?.consumer_experience_summary || '',
+    search_terms:   [
+      ...(data.consumer_search_terms?.direct_references || []),
+      ...(data.consumer_search_terms?.indirect_consumer_discourse || []),
+      ...(data.consumer_search_terms?.franchise_specific || [])
+    ].slice(0, 8),
+    analysis_note:  data.vitics_analysis_instructions?.when_analysing_content ||
+                    data.vitics_intelligence_signals?.key_insight || ''
+  };
+}
+
+// ── EXTRACT AEDC INTELLIGENCE SUMMARY ──
+function extractAedcSummary(data){
+  if(!data) return null;
+  return {
+    year:             data.company?.report_year || '',
+    loss_ngn_bn:      data.financial_performance?.profitability?.loss_after_tax_ngn_thousands
+                        ? (data.financial_performance.profitability.loss_after_tax_ngn_thousands / 1000000).toFixed(1)
+                        : null,
+    revenue_ngn_bn:   data.financial_performance?.revenue?.total_revenue_ngn_thousands
+                        ? (data.financial_performance.revenue.total_revenue_ngn_thousands / 1000000).toFixed(1)
+                        : null,
+    tariff_increase:  data.financial_performance?.tariff_data?.average_tariff_increase_pct || null,
+    consumer_impact:  data.consumer_intelligence?.consumer_impact_score || 0,
+    grid_defection:   data.grid_defection_signals?.grid_defection_score || 0,
+    consumer_summary: data.consumer_intelligence?.consumer_experience_summary || '',
+    key_insight:      data.vitics_intelligence_signals?.key_insight || '',
+    transition_signal:data.vitics_intelligence_signals?.transition_signal || '',
+    force_majeure:    data.force_majeure_history?.length > 0
+                        ? data.force_majeure_history[0].grounds : null
+  };
+}
+
+// ── MASTER KNOWLEDGE LOADER ──
+// Called once per analysis run — fetches all files in parallel
+// Returns a structured knowledge context object
+async function loadKnowledgeBase(){
+  aiLog('Loading Vitics knowledge base from GitHub...','active');
+
+  // Fetch all files in parallel — fast
+  const [policyResults, aedcResults] = await Promise.all([
+    Promise.all(POLICY_FILES.map(f => fetchKnowledgeFile(f))),
+    Promise.all(AEDC_FILES.map(f => fetchKnowledgeFile(f)))
+  ]);
+
+  // Extract summaries — filter nulls (files not yet uploaded)
+  const policies = policyResults
+    .map(d => extractPolicySummary(d))
+    .filter(Boolean);
+
+  const aedc = aedcResults
+    .map(d => extractAedcSummary(d))
+    .filter(Boolean);
+
+  const loaded = policies.length + aedc.length;
+  aiLog(`Knowledge base loaded — ${policies.length} policy files, ${aedc.length} AEDC years`, 'done');
+
+  // Identify transition markers for priority context
+  const transitionMarkers = policies
+    .filter(p => p.transition)
+    .map(p => `${p.year}: ${p.transition_note}`)
+    .join(' | ');
+
+  // Find most recent AEDC data
+  const latestAedc = aedc.sort((a,b) => b.year - a.year)[0];
+
+  return {
+    policies,
+    aedc,
+    loaded,
+    transitionMarkers,
+    latestAedc,
+    timestamp: new Date().toISOString()
+  };
+}
+
+// ── BUILD KNOWLEDGE CONTEXT BLOCK FOR CLAUDE ──
+// Formats the knowledge base into a compact, structured context
+// that Claude reads before analysing consumer content
+function buildKnowledgeContext(kb){
+  if(!kb || kb.loaded === 0){
+    return `[Knowledge base unavailable — using general Nigeria energy market knowledge]`;
+  }
+
+  // Policy timeline — sorted by year
+  const policyLines = kb.policies
+    .sort((a,b) => a.year - b.year)
+    .map(p => {
+      const marker = p.transition ? '★ TRANSITION MARKER' : '';
+      const impact = `Impact:${p.impact_score}/10 Gap:${p.gap_score}/10`;
+      return `${p.year} ${p.name} [${impact}] ${marker}\n   Consumer reality: ${p.consumer_exp.substring(0,120)}`;
+    })
+    .join('\n');
+
+  // AEDC financial timeline
+  const aedcLines = kb.aedc
+    .sort((a,b) => a.year - b.year)
+    .map(a => {
+      const loss = a.loss_ngn_bn ? `Loss:₦${Math.abs(a.loss_ngn_bn)}bn` : '';
+      const defection = `GridDefection:${a.grid_defection}/10`;
+      const impact = `ConsumerImpact:${a.consumer_impact}/10`;
+      return `${a.year} AEDC [${loss} ${defection} ${impact}]\n   ${a.consumer_summary.substring(0,100)}`;
+    })
+    .join('\n');
+
+  // Latest AEDC snapshot
+  const aedcLatest = kb.latestAedc
+    ? `LATEST AEDC (${kb.latestAedc.year}): ${kb.latestAedc.key_insight?.substring(0,150)}`
+    : '';
+
+  return `
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VITICS KNOWLEDGE BASE — GROUNDED CONTEXT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+This intelligence is derived from ${kb.policies.length} Nigerian energy policy
+documents (2001-2025) and ${kb.aedc.length} years of AEDC financial statements.
+Use it to interpret consumer discourse accurately.
+
+KEY TRANSITION MOMENTS (★):
+${kb.transitionMarkers}
+
+NIGERIA ENERGY POLICY TIMELINE — CONSUMER REALITY:
+${policyLines}
+
+AEDC FINANCIAL INTELLIGENCE (FCT + Niger, Kogi, Nasarawa):
+${aedcLines}
+
+${aedcLatest}
+
+CRITICAL ANALYTICAL RULES:
+1. When consumers mention AEDC/NEPA/electricity bills — cross-reference
+   against the AEDC financial data above. High consumer frustration in
+   a year of high tariff increases is EXPECTED, not surprising.
+2. When consumers discuss solar adoption — check which transition moment
+   they are post. Post-2023 fuel subsidy removal = watershed context.
+3. The grid defection signal: if AEDC financial data shows declining
+   energy sales but stable customers, consumers are migrating to solar.
+   Consumer discourse should reflect this.
+4. Policy gap signal: when consumers reference government programmes
+   (Solar Power Naija, REA, NERC), check the policy impact score.
+   Low impact score = consumer skepticism is historically justified.
+5. Never treat Nigerian energy consumer frustration as random —
+   it has a 24-year documented policy failure context behind it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+`.trim();
 }
 
 // ── CALL CLAUDE ──
-async function analyseWithClaude(ytData){
+async function analyseWithClaude(ytData, knowledgeContext){
   aiLog('Sending anonymised data to Claude (Anthropic API)...','active');
   aiProgress(55);
 
-  const prompt = buildAnalysisPrompt(ytData);
+  const prompt = buildAnalysisPrompt(ytData, knowledgeContext);
 
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -761,7 +996,7 @@ async function analyseWithClaude(ytData){
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-20250514',
       max_tokens: 1500,
       messages: [{
         role: 'user',
@@ -950,24 +1185,61 @@ function updateDashboard(analysis, ytData){
 
   aiLog('Dashboard updated with real YouTube + Claude intelligence','done');
   aiLog(`Video titles analysed: ${ytData.videoTitles.slice(0,2).join(' | ')}`, 'done');
+
+  // Log knowledge base application
+  if(analysis.policy_gap_insight){
+    aiLog(`Policy gap: ${analysis.policy_gap_insight.substring(0,80)}...`, 'done');
+  }
+  if(analysis.knowledge_base_applied){
+    aiLog(`KB context applied: ${analysis.knowledge_base_applied.substring(0,80)}`, 'done');
+  }
+
+  // Show policy gap insight on dashboard
+  if(analysis.policy_gap_insight){
+    const gapEl = document.getElementById('convInsightText');
+    if(gapEl && analysis.key_insight){
+      gapEl.textContent = analysis.key_insight + ' — ' + analysis.policy_gap_insight;
+    }
+  }
+
+  // Update AEDC signals if present
+  if(analysis.aedc_signals){
+    const as = analysis.aedc_signals;
+    const genTag = document.getElementById('genTag');
+    if(genTag && as.complaint_level){
+      genTag.textContent = as.complaint_level + ' complaints';
+      genTag.className = 'tag ' + (as.complaint_level === 'High' ? 'tr' : as.complaint_level === 'Medium' ? 'ta' : 'tg');
+    }
+  }
+
+  // Update NDC alignment with knowledge base context
+  if(analysis.sdg_signals){
+    const ndcEl = document.getElementById('ndca');
+    if(ndcEl) ndcEl.textContent = analysis.sdg_signals.sdg13 + '%';
+  }
 }
 
 // ── MAIN AI ENGINE ──
 async function runAIEngine(){
   aiState('Starting...');
   aiChip('AI: running');
-  aiLog('Vitics AI Engine v3.0 initialising...','active');
+  aiLog('Vitics AI Engine v3.1 initialising...','active');
   aiProgress(5);
 
   try {
-    // Step 1: Fetch YouTube data
+    // Step 1: Load knowledge base from GitHub (policy JSONs + AEDC financial JSONs)
+    const kb = await loadKnowledgeBase();
+    const knowledgeContext = buildKnowledgeContext(kb);
+    aiLog(`Knowledge base ready — ${kb.loaded} intelligence files loaded`,'done');
+
+    // Step 2: Fetch YouTube data
     const ytData = await fetchYouTubeData();
     aiLog(`YouTube data collected — ${ytData.texts.length} anonymised samples`,'done');
 
-    // Step 2: Analyse with Claude
-    const analysis = await analyseWithClaude(ytData);
+    // Step 3: Analyse with Claude — grounded in knowledge base
+    const analysis = await analyseWithClaude(ytData, knowledgeContext);
 
-    // Step 3: Update dashboard
+    // Step 4: Update dashboard
     updateDashboard(analysis, ytData);
 
     // Collapse AI status panel after 8 seconds

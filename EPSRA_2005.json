@@ -1,0 +1,57 @@
+{
+  "doc_id": "DOC-2005-EPSRA",
+  "title": "Electric Power Sector Reform Act 2005",
+  "year": 2005,
+  "issuer": "Federal Republic of Nigeria — National Assembly",
+  "consumer_impact_score": 3,
+  "type": "Legislation",
+  "key_promises": [
+    "Unbundle NEPA into generation, transmission, distribution and trading successor companies",
+    "Establish Nigerian Electricity Regulatory Commission (NERC) as independent regulator",
+    "Introduce competitive electricity market in two phases",
+    "Establish Rural Electrification Agency and Rural Electrification Fund",
+    "Establish Power Consumer Assistance Fund for underprivileged consumers",
+    "Implement cost-reflective tariff methodology",
+    "Protect consumers through mandatory service standards and compensation",
+    "Complete privatisation of successor companies"
+  ],
+  "consumer_reality": {
+    "privatisation_delay": "Privatisation not completed until November 2013 — 8 years after enactment",
+    "rural_electrification": "REA not operational until approximately 2015 — 10 years after enactment",
+    "tariff_reform": "MYTO not operational until 2008; disputed through mid-2010s",
+    "gas_supply": "Act silent on gas supply — root cause of generation collapse unaddressed",
+    "captive_generation": "Sub-1MW exemption institutionalised the private generator economy",
+    "consumer_protection": "Standards published; enforcement negligible; outages continued unaddressed",
+    "power_assistance_fund": "Never meaningfully operationalised pre-2015"
+  },
+  "key_quantitative_targets": {
+    "holding_company_formation": "Within 6 months of enactment",
+    "successor_companies_formation": "Within 8 months of holding company formation",
+    "asset_transfer_to_successors": "Within 1 year of initial transfer date",
+    "rural_electrification_strategy": "Within 1 year of commencement",
+    "interim_licence_validity": "Maximum 18 months for holding company; 1 year for successor companies",
+    "licence_duration": "Up to 10 years, renewable"
+  },
+  "notable_finding": "The EPSRA 2005 built a legally sound framework for sector reform but contained a fatal structural omission: no gas supply mandate. Nigeria's gas-dependent generation sector remained crippled by pipeline vandalism, unprofitable gas contracts, and absent upstream-to-power linkages. The Act also institutionalised the two-tier electricity system via the captive generation exemption. Legal architecture was complete by 2005; consumer benefit did not follow for 8-13 years.",
+  "targets_met": [
+    "NERC established as independent regulatory body (2005-2006)",
+    "Legal unbundling framework created",
+    "Licensing regime established",
+    "Successor companies eventually formed and privatised (2013)"
+  ],
+  "targets_missed": [
+    "8-month successor company formation deadline",
+    "1-year asset transfer deadline",
+    "1-year rural electrification strategy deadline",
+    "Power Consumer Assistance Fund operationalisation",
+    "Competitive market declaration (conditions not met within any foreseeable timeframe post-2005)",
+    "Gas supply security (not addressed at all)"
+  ],
+  "links_to_next": [
+    "REMP 2005 must address rural electrification implementation that EPSRA only legislated",
+    "2008 gas flaring deadline (from NEP 2003) still unmet at time of EPSRA passage — gas-to-power gap deepens",
+    "10,000 MW by 2007 target (from NEEDS 2004) now structurally impossible — no privatised GENCOs, no investment framework yet operational",
+    "Captive generation exemption sets up the generator economy that subsequent documents will need to price or replace",
+    "MYTO development becomes the next measurable policy commitment to track"
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "vitics_knowledge_base": {
+    "document": {
+      "id": "DOC001",
+      "title": "National Integrated Electricity Policy (NIEP-SIP)",
+      "source": "Federal Ministry of Power, Federal Republic of Nigeria",
+      "year": 2025,
+      "type": "government_policy",
+      "url": null
+    },
+    "knowledge_entries": [
+      {
+        "id": "KE001",
+        "tag": "policy_gap_privatisation_failure",
+        "category": "reform_failure",
+        "policy_promised": "Privatisation of generation and distribution sub-sectors (cornerstone of NEPP 2001 and EPSRA 2005) would attract private capital, introduce competition, improve efficiency, and transform the electricity sector.",
+        "consumer_experienced": "After 20+ years, privatisation has not yielded its intended benefits. The government's own 2025 policy document states explicitly: 'the intended results of privatisation have not been achieved.'",
+        "data_points": [
+          "11 DisCos transferred to 60% private ownership between 2011–2013",
+          "1 additional DisCo (Aba) fully privatised",
+          "Only 1 notable IPP commissioned since the 2005 Act",
+          "FGN forced to intervene financially in the distribution sector since 2014",
+          "Transmission assets remain entirely under government ownership despite reform"
+        ],
+        "severity": "critical",
+        "source_section": "Section 1.1.3"
+      },
+      {
+        "id": "KE002",
+        "tag": "grid_capacity_vs_delivered_4200MW",
+        "category": "infrastructure_gap",
+        "policy_promised": "Reforms would unlock Nigeria's generation capacity and deliver reliable electricity to meet growing residential, commercial, and industrial demand.",
+        "consumer_experienced": "Nigeria has 13,000MW installed capacity but delivers only ~4,200MW on a typical day — 32% utilisation. Available capacity is 7,652MW but only 3,500–4,200MW reaches the grid daily.",
+        "data_points": [
+          "Installed capacity: ~13,000MW",
+          "Available capacity (2023–2024): 7,652MW",
+          "Daily average grid-connected capacity: 3,500–4,200MW",
+          "This represents only ~24% of recorded peak demand",
+          "Gap caused by: gas supply constraints, maintenance failures, distribution sector non-creditworthiness, financial insolvency"
+        ],
+        "severity": "critical",
+        "source_section": "Section 1.4.1, Section 2.1.2"
+      },
+      {
+        "id": "KE003",
+        "tag": "consumer_hours_supply_6to7hrs",
+        "category": "service_quality",
+        "policy_promised": "Reformed, privatised distribution companies would improve service delivery and reliability to all customer classes.",
+        "consumer_experienced": "Weak distribution systems deliver an average of 6–7 hours of uninterrupted supply daily to most customers. Band A customers (the best-served) receive 20+ hours — but they are a small minority.",
+        "data_points": [
+          "Average daily supply: 6–7 hours for most consumers",
+          "Band A threshold (20+ hours/day) used to justify April 2024 subsidy removal",
+          "Distribution asset base described as 'obsolete and poorly maintained'",
+          "Frequent load shedding and outages are the norm",
+          "ATC&C (Aggregate Technical, Collection and Commercial) losses are 'unacceptably high'"
+        ],
+        "severity": "high",
+        "source_section": "Section 1.6.3, Section 2.1.2"
+      },
+      {
+        "id": "KE004",
+        "tag": "access_deficit_94million_unelectrified",
+        "category": "access_gap",
+        "policy_promised": "NEPP 2001 included a rural electrification sub-policy aimed at rapidly expanding access. EPSRA 2005 established a Rural Electrification Fund. Universal access by 2030 is the current target.",
+        "consumer_experienced": "An estimated 94 million Nigerians (45% of the population) have no electricity access at all, with the vast majority in rural communities. Nigeria holds the largest energy access deficit in sub-Saharan Africa.",
+        "data_points": [
+          "94 million Nigerians without electricity access (IEA data cited)",
+          "National electrification rate: ~55% (as of 2019)",
+          "Urban electrification rate: 84%",
+          "Rural electrification rate: 26%",
+          "Nigeria: most populous country in Africa, 4th largest economy — yet largest energy access deficit in sub-Saharan Africa",
+          "55% of population lacks electricity connections (used in universal access section)"
+        ],
+        "severity": "critical",
+        "source_section": "Section 2.1.1, Section 2.3, Section 6.1"
+      },
+      {
+        "id": "KE005",
+        "tag": "tariff_shock_band_A_april2024",
+        "category": "affordability",
+        "policy_promised": "EPSRA 2005 established the Power Consumer Assistance Fund (PCAF) to subsidise electricity for underprivileged consumers. Tariffs would be set to ensure affordable electricity for all Nigerians.",
+        "consumer_experienced": "In April 2024, electricity subsidies were removed for Band A consumers (those receiving 20+ hours/day). Policymakers concluded subsidies are 'no longer sustainable'. Unclear PCAF eligibility criteria leave many without affordable electricity.",
+        "data_points": [
+          "Subsidy removal effective: April 2024",
+          "Band A consumers: 20+ hours supply/day — the relatively better-served urban segment",
+          "Service-based tariff methodology implemented — customers reclassified by hours received",
+          "PCAF described as having 'unclear eligibility criteria' that 'hinder its effectiveness'",
+          "46% poverty rate (World Bank 2023) — ~104 million Nigerians may be unable to afford electricity",
+          "MSMEs spend 30–40% of income on electricity costs"
+        ],
+        "severity": "high",
+        "source_section": "Section 1.5, Section 6.3.2"
+      },
+      {
+        "id": "KE006",
+        "tag": "generator_economy_45GW_parallel",
+        "category": "coping_costs",
+        "policy_promised": "A reliable grid would make self-generation unnecessary. Reforms would reduce dependence on expensive diesel generators.",
+        "consumer_experienced": "Nigeria has built a 45GW parallel generator economy — more than 3x the grid's delivered capacity — entirely because the public grid failed. This imposes massive costs on households and businesses.",
+        "data_points": [
+          "Private generator capacity: 45GW",
+          "Grid-connected capacity delivered: ~4GW",
+          "Nigeria has one of the highest genset usage rates globally",
+          "Generator emissions significantly outweigh emissions from grid-connected gas power plants",
+          "MSMEs spend 30–40% of income on electricity (mostly diesel/gas generators)",
+          "Manufacturing production output declined 9.7% in 2022 due to energy costs",
+          "161 million Nigerians lack clean cooking access — compounding fossil fuel dependency"
+        ],
+        "severity": "critical",
+        "source_section": "Section 4.2.1, Section 6.1.4"
+      },
+      {
+        "id": "KE007",
+        "tag": "grid_collapse_564_instances",
+        "category": "system_reliability",
+        "policy_promised": "Reforms including TCN investment, private sector participation, and independent system operation would create a stable, reliable national grid.",
+        "consumer_experienced": "The national grid experienced 564 partial or complete collapses between 2000 and 2022 — roughly one every two weeks for 22 years. System operation still relies on manual systems with no SCADA/EMS.",
+        "data_points": [
+          "564 partial or complete grid collapses: 2000–2022",
+          "System Operator still uses manual systems — no automated real-time grid management",
+          "Shortage of ancillary services forces reliance on under-frequency relays for grid stability",
+          "Northwest Nigeria served by radial single-circuit lines — any outage blacks out entire region",
+          "Transmission technical losses: 7–9%",
+          "SCADA/EMS project incomplete as of 2025 — grid cannot integrate intermittent renewables without it"
+        ],
+        "severity": "critical",
+        "source_section": "Section 1.7, Section 6.1"
+      },
+      {
+        "id": "KE008",
+        "tag": "msme_energy_burden_30to40pct",
+        "category": "economic_impact",
+        "policy_promised": "Reliable, affordable electricity would power economic growth, support SMEs, and create jobs across Nigeria.",
+        "consumer_experienced": "MSMEs — which account for 96% of all businesses, 49% of GDP, and employ 84% of the workforce — spend 30–40% of income on electricity. Power failures caused a 9.7% decline in manufacturing production output in 2022.",
+        "data_points": [
+          "MSMEs: 96% of all Nigerian businesses",
+          "MSMEs contribution to GDP: 49%",
+          "MSMEs share of national workforce: 84%",
+          "MSMEs electricity spend: 30–40% of income (Manufacturers Association of Nigeria, 2023)",
+          "Manufacturing production output decline: 9.7% in 2022",
+          "Cost passed to consumers via price increases — declining product demand cycle",
+          "Healthcare, hospitality, transport, communication sectors all cited as 'crippled by frequent power outages'"
+        ],
+        "severity": "high",
+        "source_section": "Section 6.1.4"
+      },
+      {
+        "id": "KE009",
+        "tag": "rural_access_26pct",
+        "category": "access_gap",
+        "policy_promised": "Rural electrification sub-policy (NEPP 2001) and Rural Electrification Fund (EPSRA 2005) would rapidly and cost-effectively expand electricity access in rural and semi-urban areas.",
+        "consumer_experienced": "Rural electricity access stands at 26% — against 84% in urban areas. Rural communities rely on petrol/diesel generators or kerosene lamps. Women and girls bear a double burden of energy poverty and unremunerated labour.",
+        "data_points": [
+          "Rural electrification rate: 26%",
+          "Urban electrification rate: 84%",
+          "54.28% of Nigerians live in urban areas; remainder rural",
+          "40% of primary health centres lack adequate power for standard procedures",
+          "Rural women: double burden of energy poverty + collecting fuelwood",
+          "REA programmes (NEP, DARES) underway but access gap remains severe",
+          "DARES project: $750M IDA credit targeting 17.5 million Nigerians — scale of unmet need"
+        ],
+        "severity": "critical",
+        "source_section": "Section 1.5, Section 4.1.2, Section 6.1"
+      },
+      {
+        "id": "KE010",
+        "tag": "energy_poverty_mortality_94300",
+        "category": "human_cost",
+        "policy_promised": "Universal energy access would reduce poverty, improve health outcomes, and support human development.",
+        "consumer_experienced": "94,300 Nigerians die prematurely each year from illnesses linked to indoor smoke from polluting stoves — the 3rd leading cause of mortality after malaria and HIV/AIDS. Energy poverty directly kills.",
+        "data_points": [
+          "Premature deaths from indoor smoke annually: 94,300 (WHO estimate)",
+          "Ranking: 3rd cause of mortality in Nigeria behind malaria and HIV/AIDS",
+          "161 million Nigerians lack access to clean cooking fuels and technologies",
+          "Between 2000–2010: over 50% of Nigeria's primary forests destroyed — 70% of population using firewood",
+          "Poverty rate 2023: 46% (~104 million people) — World Bank",
+          "Hospitals serving the poor affected by erratic power supply — rising mortality rates cited",
+          "Energy poverty disproportionately affects women and marginalised groups"
+        ],
+        "severity": "critical",
+        "source_section": "Section 4.2.2, Section 6.1.1, Section 6.1.3"
+      },
+      {
+        "id": "KE011",
+        "tag": "gas_supply_circular_debt_trap",
+        "category": "structural_failure",
+        "policy_promised": "Market reforms and firm contracts would ensure reliable gas supply to power plants, securing generation capacity.",
+        "consumer_experienced": "Gas supply contracts operate on 'best endeavour' — not firm obligations. Gas suppliers won't commit because DisCos won't pay, DisCos can't pay because consumers can't afford cost-reflective tariffs. A circular debt trap that has persisted for decades.",
+        "data_points": [
+          "Gas supply contracts: 'best endeavour basis' — no firm supply obligations",
+          "Reason: counterparty payment risk from DisCos",
+          "Gas constraints include: inadequate volume, low delivery pressure, out-of-specification gas quality",
+          "Pipeline vandalism compounds supply unreliability",
+          "NESI described as financially insolvent",
+          "Debts across the electricity value chain — including to gas suppliers — collated and audited but unresolved",
+          "Gas-to-power contracts: Naira/dollar currency mismatch adds further instability"
+        ],
+        "severity": "critical",
+        "source_section": "Section 2.1.2, Section 2.2, Section 8.1"
+      },
+      {
+        "id": "KE012",
+        "tag": "metering_gap_estimated_billing",
+        "category": "consumer_rights",
+        "policy_promised": "Smart metering rollout was a priority post-privatisation. Consumers would be billed accurately for electricity actually consumed.",
+        "consumer_experienced": "Multiple smart meter rollout efforts have 'consistently failed to deliver effective results'. Consumers are billed on estimates. The metering gap remains a critical unresolved issue in 2025.",
+        "data_points": [
+          "Described as: 'various efforts at rolling out smart meters that have consistently failed'",
+          "Metering gap review mandated as a critical early action in NIEP 2025",
+          "Shortages in prepaid electricity metering make it difficult for persons with disabilities to pay bills",
+          "Estimated billing (no meter) is a known source of consumer disputes and revenue leakage",
+          "Policy now calls for comprehensive metering gap review in collaboration with DisCos, end-users, manufacturers, and financial institutions"
+        ],
+        "severity": "high",
+        "source_section": "Section 1.6.3, Section 8.2"
+      },
+      {
+        "id": "KE013",
+        "tag": "transmission_single_circuit_regional_blackouts",
+        "category": "infrastructure_gap",
+        "policy_promised": "Investment in TCN and transmission infrastructure would create a resilient, redundant national grid.",
+        "consumer_experienced": "Most of the Northwest and the entire Northeast are served by radial single-circuit transmission lines. A single fault blacks out entire regions. Despite years of investment, equipment obsolescence and 7–9% technical losses persist.",
+        "data_points": [
+          "Northwest: radial single-circuit lines — any outage = regional blackout",
+          "Northeast: entirely on single-circuit lines",
+          "Transmission technical losses: 7–9% (described as 'relatively high')",
+          "Equipment obsolescence persists despite 'massive investment' post-privatisation",
+          "Investment primarily from FG-backed concessionary loans — not private capital",
+          "TCN still entirely government-owned",
+          "SCADA/EMS (automation system) incomplete — grid operated manually"
+        ],
+        "severity": "high",
+        "source_section": "Section 1.6.2"
+      },
+      {
+        "id": "KE014",
+        "tag": "policy_review_22yr_gap",
+        "category": "governance_failure",
+        "policy_promised": "The National Electric Power Policy 2001 required reviews every five years to address evolving challenges.",
+        "consumer_experienced": "No formal policy review was initiated for 22 years — from 2001 until September 2023. The 2025 NIEP is the first update. Successive ministers were 'consumed with oversight of a sector always in crisis', allowing policymaking to lapse entirely.",
+        "data_points": [
+          "NEPP 2001 required half-decade reviews — none conducted until 2023",
+          "22-year policy vacuum: 2001–2023",
+          "Reason cited: no compulsory mandate on Ministers for policymaking; crisis management consumed attention",
+          "Electricity Act 2023 now mandates review every 5 years with FEC approval",
+          "The 2025 NIEP is thus the first substantive electricity policy update in over two decades"
+        ],
+        "severity": "high",
+        "source_section": "Section 8.3"
+      }
+    ],
+    "meta": {
+      "total_entries": 14,
+      "created": "2025-05-17",
+      "project": "Vitics — Nigeria AI Energy Intelligence Platform",
+      "purpose": "Grounded knowledge base: policy promises vs consumer reality",
+      "next_document": "awaiting"
+    }
+  }
+}

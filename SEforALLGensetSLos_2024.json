@@ -1,0 +1,336 @@
+{
+  "vitics_knowledge_base": {
+    "version": "1.0",
+    "last_updated": "2026-05-17",
+    "documents": [
+      {
+        "id": "doc_001",
+        "title": "Beyond Gensets: Advancing the Energy Transition in Lagos State",
+        "source": "SEforALL / Lagos State Government / GEAPP",
+        "date": "October 2024",
+        "classification": "Confidential/Proprietary — SEforALL. Used for internal AI grounding only. No reproduction.",
+        "focus": "Lagos State fossil fuel genset study — quantity, usage patterns, environmental and economic impacts",
+        "policy_promises": [
+          {
+            "id": "pp_001",
+            "promise": "Universal energy access by 2030",
+            "source_policy": "Nigeria Energy Transition Plan (ETP)"
+          },
+          {
+            "id": "pp_002",
+            "promise": "Net-zero emissions by 2060",
+            "source_policy": "Nigeria Energy Transition Plan (ETP)"
+          },
+          {
+            "id": "pp_003",
+            "promise": "State-wide distributed solar PV programme to replace fossil fuel gensets",
+            "source_policy": "Lagos State Government energy policy intent"
+          },
+          {
+            "id": "pp_004",
+            "promise": "Fossil fuel genset displacement programme informed by comprehensive data",
+            "source_policy": "SEforALL / Lagos State Ministry of Energy and Mineral Resources"
+          }
+        ],
+        "consumer_reality": {
+          "grid_access_and_reliability": [
+            {
+              "id": "cr_001",
+              "finding": "98% of households are connected to the grid",
+              "context": "Connection rate is high but actual supply is critically insufficient"
+            },
+            {
+              "id": "cr_002",
+              "finding": "Only ~20% of Lagos electricity demand is met by the grid",
+              "context": "The remaining 80% deficit is largely covered by gensets"
+            },
+            {
+              "id": "cr_003",
+              "finding": "37% of households receive 9–12 hours of grid supply daily",
+              "context": "Most common supply band; 13% receive less than 4 hours daily"
+            },
+            {
+              "id": "cr_004",
+              "finding": "6% of households receive more than 18 hours of grid supply daily",
+              "context": "Reliable supply is a minority experience"
+            },
+            {
+              "id": "cr_005",
+              "finding": "25% of households do not know their tariff band",
+              "context": "Indicates low awareness of energy policy among consumers"
+            },
+            {
+              "id": "cr_006",
+              "finding": "41% of MSMEs are not connected to the grid at all",
+              "context": "Of those without connection, 91% cite unreliability as the reason"
+            }
+          ],
+          "genset_ownership_and_usage": [
+            {
+              "id": "cr_007",
+              "finding": "72% of Lagos households own at least one genset",
+              "context": "Approximately 4,323,000 generators owned by households"
+            },
+            {
+              "id": "cr_008",
+              "finding": "84% of households purchased gensets primarily due to grid unreliability",
+              "context": "Grid failure is the dominant driver of genset adoption"
+            },
+            {
+              "id": "cr_009",
+              "finding": "68% of households cope with power outages using backup gensets",
+              "context": "Second most common coping strategy is portable lighting (25%)"
+            },
+            {
+              "id": "cr_010",
+              "finding": "94% of MSMEs own at least one genset",
+              "context": "Total estimated MSME gensets: 113,642"
+            },
+            {
+              "id": "cr_011",
+              "finding": "13% of households use gensets for income generation",
+              "context": "Gensets serve dual residential and economic functions"
+            },
+            {
+              "id": "cr_012",
+              "finding": "Most residential gensets are under 5kVA and fuelled by petrol (97.7%)",
+              "context": "49% are 0.1–1.2kVA class; 47% are 1.3–5kVA class"
+            },
+            {
+              "id": "cr_013",
+              "finding": "Commercial gensets predominantly use diesel (59%), followed by petrol (38%)",
+              "context": "Commercial gensets often operate as primary — not backup — power sources"
+            },
+            {
+              "id": "cr_014",
+              "finding": "73% of residential genset peak use occurs at night (8pm–12am)",
+              "context": "Reflects gensets filling the gap when grid supply is lowest"
+            },
+            {
+              "id": "cr_015",
+              "finding": "67% of MSMEs experience peak load demand in the afternoon (12pm–4pm)",
+              "context": "Commercial and residential genset use patterns differ significantly"
+            }
+          ],
+          "economic_burden": [
+            {
+              "id": "cr_016",
+              "finding": "Lagos households collectively spent ~₦532 billion acquiring current gensets",
+              "context": "Range ₦338bn–₦725bn depending on purchase cost assumptions"
+            },
+            {
+              "id": "cr_017",
+              "finding": "Households annually spend ~₦1.43 trillion on genset fuel",
+              "context": "Based on 9 billion litres consumed at average Lagos petrol prices"
+            },
+            {
+              "id": "cr_018",
+              "finding": "Households annually spend ~₦192 billion on genset maintenance",
+              "context": "Combined fuel and maintenance cost vastly exceeds grid electricity cost"
+            },
+            {
+              "id": "cr_019",
+              "finding": "Average cost of genset electricity exceeds grid supply cost by over ₦2,000 per hour",
+              "context": "Pre-subsidy removal estimate; current costs are likely higher"
+            },
+            {
+              "id": "cr_020",
+              "finding": "Petrol genset electricity costs ~83% more than grid electricity",
+              "context": "Cost estimates pre-date subsidy removal; actual gap is now wider"
+            },
+            {
+              "id": "cr_021",
+              "finding": "Average small business spends ₦20,000–40,000 per month on genset fuel alone",
+              "context": "Fuel cost is the single largest operating cost for many SMEs"
+            },
+            {
+              "id": "cr_022",
+              "finding": "Nigerians spend ~$10 billion (₦7.6 trillion) annually on small petrol gensets nationwide",
+              "context": "Fuel and maintenance costs combined"
+            },
+            {
+              "id": "cr_023",
+              "finding": "MSMEs spend ~₦5.3 trillion on genset fuel annually",
+              "context": "Diesel and petrol users combined across 80,072 MSMEs in Lagos State"
+            }
+          ],
+          "subsidy_removal_impact": [
+            {
+              "id": "cr_024",
+              "finding": "84% of households reduced typical hours of genset use after petrol subsidy removal",
+              "context": "Only 2% switched to renewables; 9% went without electricity during outages"
+            },
+            {
+              "id": "cr_025",
+              "finding": "79% of commercial enterprises reduced typical hours of genset usage post-subsidy removal",
+              "context": "Subsidy removal significantly disrupted business energy access"
+            },
+            {
+              "id": "cr_026",
+              "finding": "28% of households have specifically considered alternative energy since subsidy removal",
+              "context": "Subsidy removal created some openness to solar transition"
+            }
+          ],
+          "health_and_environment": [
+            {
+              "id": "cr_027",
+              "finding": "~1,500 deaths per year nationally from inhaling genset smoke and carbon monoxide",
+              "context": "Direct health toll of grid failure and genset dependence"
+            },
+            {
+              "id": "cr_028",
+              "finding": "70% increased risk of lung cancer from genset smoke exposure",
+              "context": "Long-term health burden concentrated in urban households"
+            },
+            {
+              "id": "cr_029",
+              "finding": "More than 2 in 3 genset users report impaired hearing",
+              "context": "Noise pollution is a pervasive but underreported consequence"
+            },
+            {
+              "id": "cr_030",
+              "finding": "Lagos genset emissions: ~39 million tCO2e annually",
+              "context": "Nearly 4x the total annual emissions of Togo, Rwanda, or Gabon individually"
+            },
+            {
+              "id": "cr_031",
+              "finding": "Residential gensets produce ~21 million tCO2e per year",
+              "context": "From 9 billion litres of fuel consumed annually"
+            },
+            {
+              "id": "cr_032",
+              "finding": "Commercial gensets produce ~17.8 million tCO2e per year",
+              "context": "Despite fewer units than residential, emissions are nearly equal due to higher utilization"
+            },
+            {
+              "id": "cr_033",
+              "finding": "55% of households believe gensets contribute to air pollution",
+              "context": "60% believe gensets significantly contribute to noise pollution"
+            }
+          ],
+          "solar_transition_barriers": [
+            {
+              "id": "cr_034",
+              "finding": "88% of households would consider alternative energy if available",
+              "context": "Demand for cleaner alternatives is very high"
+            },
+            {
+              "id": "cr_035",
+              "finding": "75% of households are interested in solar; 70% are aware of solar power",
+              "context": "Awareness and interest are not translating into adoption"
+            },
+            {
+              "id": "cr_036",
+              "finding": "Only 2% of households currently use solar power",
+              "context": "The gap between interest and adoption is enormous"
+            },
+            {
+              "id": "cr_037",
+              "finding": "84% of non-adopters cite high upfront capital cost as the reason for not adopting solar",
+              "context": "The primary barrier is financial, not awareness or interest"
+            },
+            {
+              "id": "cr_038",
+              "finding": "At point of purchase, gensets appear 10–15x cheaper than equivalent solar PV systems",
+              "context": "Over a 10-year total cost of ownership, solar is only ~20% more expensive"
+            },
+            {
+              "id": "cr_039",
+              "finding": "58% of households prefer a lease-to-own model for solar ownership",
+              "context": "23% prefer energy-as-a-service; 18% prefer full payment"
+            },
+            {
+              "id": "cr_040",
+              "finding": "Only 3% of MSMEs currently use solar power despite 64% expressing interest",
+              "context": "56% of MSMEs prefer energy-as-a-service model"
+            }
+          ]
+        },
+        "key_statistics": {
+          "lagos_context": {
+            "population": "~24 million",
+            "households": "~4.8 million",
+            "gdp_share_of_nigeria": "~27%",
+            "grid_demand_met": "~20%",
+            "unconstrained_annual_electricity_demand_twh": "30–40",
+            "grid_dispatched_to_lagos_mw": "~1,000",
+            "grid_hours_daily": "~12"
+          },
+          "genset_capacity": {
+            "lagos_total_gw": "~19",
+            "residential_gw": "~8.8",
+            "commercial_msme_gw": "~10.4",
+            "markets_mw": "~192",
+            "nigeria_national_grid_installed_gw": "12.2",
+            "nigeria_grid_average_available_gw": "~4.2",
+            "nigeria_grid_peak_available_gw": "~5.4"
+          },
+          "genset_counts": {
+            "residential": 4323000,
+            "commercial_msme": 113642,
+            "markets": 13704
+          },
+          "annual_fuel_consumption_litres": {
+            "residential": "9 billion",
+            "commercial_msme": "6.6 billion",
+            "markets": "61 million"
+          },
+          "annual_emissions_tco2e": {
+            "residential": "21 million",
+            "commercial_msme": "17.8 million",
+            "markets": 141125,
+            "total_lagos": "~39 million"
+          },
+          "solar_adoption": {
+            "households_using_solar_pct": 2,
+            "households_interested_in_solar_pct": 75,
+            "msmes_using_solar_pct": 3,
+            "msmes_interested_in_solar_pct": 64
+          }
+        },
+        "policy_vs_reality_gaps": [
+          {
+            "dimension": "Grid access",
+            "promise": "Universal energy access by 2030",
+            "reality": "Only 20% of demand met by grid; 37% of households receive less than 12 hours daily"
+          },
+          {
+            "dimension": "Energy affordability",
+            "promise": "Affordable, reliable power",
+            "reality": "Genset electricity costs ~83% more than grid; households spend ₦1.43 trillion/year on fuel alone"
+          },
+          {
+            "dimension": "Clean energy transition",
+            "promise": "Fossil fuel displacement programme; solar PV rollout",
+            "reality": "Only 2% solar adoption; upfront cost barrier unaddressed; 4.3 million gensets still operating"
+          },
+          {
+            "dimension": "Health protection",
+            "promise": "Cleaner, more sustainable energy future",
+            "reality": "1,500 deaths/year; hearing impairment in 2/3 of users; 70% increased lung cancer risk"
+          },
+          {
+            "dimension": "Emissions reduction",
+            "promise": "Net-zero by 2060; NDC commitments",
+            "reality": "Lagos gensets alone emit ~39 million tCO2e/year — 4x the emissions of entire African nations"
+          },
+          {
+            "dimension": "Data for policy",
+            "promise": "Evidence-based energy planning",
+            "reality": "Prior to this 2024 study, all existing datasets were fragmented, outdated, or methodologically limited"
+          }
+        ],
+        "study_methodology_notes": {
+          "survey_type": "Stratified cluster, random walk",
+          "sample_size_households": 7186,
+          "sample_size_commercial": 240,
+          "lgas_covered": 20,
+          "collection_period": "October 12 – November 30, 2023",
+          "enumerators": 99,
+          "ml_extrapolation": "Fraym AI/ML software used to extrapolate residential data to full Lagos State at 1km2 resolution",
+          "data_platform": "Nigeria Integrated Energy Planning (IEP) tool — https://nigeria-iep.sdg7energyplanning.org/"
+        }
+      }
+    ]
+  }
+}
