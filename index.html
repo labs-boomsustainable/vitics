@@ -848,33 +848,39 @@ Rules:
 const GITHUB_RAW = 'https://raw.githubusercontent.com/labs-boomsustainable/vitics/main/';
 
 // ── POLICY JSON FILES ──
+// Filenames must match exactly what is in your GitHub repository
 const POLICY_FILES = [
-  'nepp_2001.json',
-  'nep_2003.json',
-  'epsra_2005.json',
-  'remp_2005.json',
-  'repg_2006.json',
-  'reap_2006.json',
-  'biofuel_2007.json',
-  'needs_2008.json',
-  'privatisation_2013.json',
-  'nreeep_2015.json',
-  'minigrid_2015.json',
-  'resip_2016.json',
-  'etp_discussions_2017.json',
-  'eei_2018.json',
-  'solar_naija_planning_2019.json',
-  'solar_naija_2020.json',
-  'pia_2021.json',
-  'etp_2021.json',
-  'niimip_2022.json',
-  'electricity_act_2023.json',
-  'state_markets_2024.json',
-  'niep_2025.json'
+  'NEPP_2001.json',
+  'NEP_2003.json',
+  'EPSRA_2005.json',
+  'REMP_2005.json',
+  'NPSIG_2005.json',
+  'NREEEP_2015.json',
+  'GIZNES_2015.json',
+  'NREAP-2016.json',
+  'NEEAP_2016.json',
+  'NERCMINIGRID_2016.json',
+  'RESIP_2016.json',
+  'EmergingEconomies_2017.json',
+  'EIAGRE_2021.json',
+  'NETP_2021.json',
+  'NESIProgressReport_2022.json',
+  'NIINP_2020.json',
+  'IRENANg_2023.json',
+  'Solar_MarketCreation_2023.json',
+  'PRG_2013.json',
+  'NIRP_2024.json',
+  'SEForAllSolarValueChain_2024.json',
+  'SEforALLGensetSLos_2024.json',
+  'NigerialEPT_2025.json',
+  'NIEP_2025.json',
+  'NEEDS_2004.json',
+  'electricityact_2023.json'
 ];
 
 // ── AEDC FINANCIAL JSON FILES ──
 const AEDC_FILES = [
+  'aedc_2014.json',
   'aedc_2015.json',
   'aedc_2016.json',
   'aedc_2017.json',
@@ -1058,7 +1064,7 @@ async function analyseWithClaude(ytData, knowledgeContext){
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 1500,
       messages: [{
         role: 'user',
