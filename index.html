@@ -269,6 +269,29 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .tl-aedc-card{background:rgba(56,189,248,0.05);border-color:rgba(56,189,248,0.2)}
 .tl-aedc-bar{height:3px;border-radius:2px;margin-top:4px}
 .tl-era{font-size:8px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px;padding-left:4px;border-left:2px solid var(--border)}
+/* ── PLATFORM STATUS ── */
+.ps-row{display:flex;align-items:center;gap:7px;padding:4px 0;border-bottom:1px solid var(--border3)}
+.ps-row:last-child{border-bottom:none}
+.ps-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.ps-label{font-size:10px;color:var(--text2);flex:1}
+.ps-val{font-size:9px;font-family:var(--mono);color:var(--text3)}
+/* ── AI SIGNAL CARDS ── */
+.ai-sig-card{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:7px 9px;transition:border-color 0.2s}
+.ai-sig-card:hover{border-color:var(--border)}
+.ai-sig-type{font-size:8px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
+.ai-sig-val{font-size:11px;font-weight:600;color:var(--text);margin-bottom:1px}
+.ai-sig-sub{font-size:9px;color:var(--text3)}
+/* ── YOUTUBE THUMBNAILS ── */
+.yt-thumb-card{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--border3);transition:opacity 0.2s}
+.yt-thumb-card:hover{opacity:0.85}
+.yt-thumb-card:last-child{border-bottom:none}
+.yt-thumb-wrap{position:relative;width:72px;height:48px;flex-shrink:0;border-radius:5px;overflow:hidden;background:var(--bg4)}
+.yt-thumb-img{width:100%;height:100%;object-fit:cover;display:block}
+.yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;color:#fff;pointer-events:none}
+.yt-kw-badge{position:absolute;bottom:2px;left:2px;background:rgba(34,197,94,0.85);color:#000;font-size:7px;font-family:var(--mono);padding:1px 3px;border-radius:2px;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.yt-thumb-info{flex:1;min-width:0}
+.yt-thumb-title{font-size:10px;color:var(--text);line-height:1.3;margin-bottom:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.yt-thumb-meta{font-size:9px;color:var(--text3);font-family:var(--mono)}
 
 /* SIGNAL CARDS */
 .sigrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
@@ -552,6 +575,125 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span><span style="width:13px;border-top:2px dashed var(--blue);display:inline-block"></span>NDC target</span>
           </div>
           <div id="emChart"></div>
+
+          <!-- ── GENERATOR ECONOMY STATS ── -->
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border3)">
+            <div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px">Nigeria generator economy · SEforALL / Lagos State 2024</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+              <div style="background:var(--rdim);border:1px solid rgba(244,63,94,0.15);border-radius:var(--r);padding:8px">
+                <div style="font-size:16px;font-weight:700;color:var(--red);font-family:var(--mono)">₦7.6tn</div>
+                <div style="font-size:9px;color:var(--text3);margin-top:2px">Annual household spend on genset fuel nationwide</div>
+              </div>
+              <div style="background:var(--adim);border:1px solid rgba(245,158,11,0.15);border-radius:var(--r);padding:8px">
+                <div style="font-size:16px;font-weight:700;color:var(--amber);font-family:var(--mono)">22M</div>
+                <div style="font-size:9px;color:var(--text3);margin-top:2px">Small petrol generators in Nigerian households</div>
+              </div>
+              <div style="background:var(--pdim);border:1px solid rgba(192,132,252,0.15);border-radius:var(--r);padding:8px">
+                <div style="font-size:16px;font-weight:700;color:var(--purple);font-family:var(--mono)">39Mt</div>
+                <div style="font-size:9px;color:var(--text3);margin-top:2px">CO₂e from Lagos gensets alone per year</div>
+              </div>
+              <div style="background:var(--rdim);border:1px solid rgba(244,63,94,0.15);border-radius:var(--r);padding:8px">
+                <div style="font-size:16px;font-weight:700;color:var(--red);font-family:var(--mono)">~1,500</div>
+                <div style="font-size:9px;color:var(--text3);margin-top:2px">Deaths per year from genset CO poisoning</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── ACCESS GAP TRACKER ── -->
+          <div style="padding-top:12px;border-top:1px solid var(--border3);margin-bottom:12px">
+            <div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px">Energy access gap · progress to SDG7 2030 target</div>
+            <div style="margin-bottom:6px">
+              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
+                <span style="color:var(--text2)">National grid access</span>
+                <span style="color:var(--amber)">~60% · 92M without</span>
+              </div>
+              <div style="height:5px;background:var(--bg5);border-radius:3px;position:relative">
+                <div style="width:60%;height:5px;background:linear-gradient(to right,var(--amber),var(--green));border-radius:3px"></div>
+                <div style="position:absolute;top:-1px;left:90%;width:2px;height:7px;background:var(--green);border-radius:1px" title="2030 SDG7 target: 90%"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--text3);font-family:var(--mono);margin-top:2px"><span>0%</span><span style="color:var(--green)">SDG7 target: 90%</span><span>100%</span></div>
+            </div>
+            <div style="margin-bottom:6px">
+              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
+                <span style="color:var(--text2)">Rural electrification</span>
+                <span style="color:var(--red)">~26% · unchanged since 1981</span>
+              </div>
+              <div style="height:5px;background:var(--bg5);border-radius:3px">
+                <div style="width:26%;height:5px;background:var(--red);border-radius:3px"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
+                <span style="color:var(--text2)">Clean cooking access</span>
+                <span style="color:var(--red)">~27% · 40M households excluded</span>
+              </div>
+              <div style="height:5px;background:var(--bg5);border-radius:3px">
+                <div style="width:27%;height:5px;background:var(--red);border-radius:3px"></div>
+              </div>
+            </div>
+            <div style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-top:6px">Source: Solar Market Creation 2023 · IEPT 2022 · RESIP 2016</div>
+          </div>
+
+          <!-- ── SOLAR SAVINGS CALCULATOR ── -->
+          <div style="padding:10px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+              <span style="font-size:14px">☀️</span>
+              <div>
+                <div style="font-size:10px;font-weight:600;color:var(--text)">Your solar contribution to Nigeria's transition</div>
+                <div style="font-size:9px;color:var(--text3)">Calculate emissions avoided + fuel saved by switching to solar</div>
+              </div>
+            </div>
+
+            <!-- Inputs -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+              <div>
+                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Solar panel size (Watts)</div>
+                <select id="solarWatts" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
+                  <option value="100">100W panel</option>
+                  <option value="200">200W panel</option>
+                  <option value="300">300W panel</option>
+                  <option value="500" selected>500W panel</option>
+                  <option value="1000">1000W / 1kW</option>
+                  <option value="2000">2kW system</option>
+                  <option value="5000">5kW system</option>
+                </select>
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Daily sun hours</div>
+                <select id="sunHours" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
+                  <option value="4">4 hrs (cloudy/south)</option>
+                  <option value="5" selected>5 hrs (Lagos/Abuja)</option>
+                  <option value="6">6 hrs (middle belt)</option>
+                  <option value="7">7 hrs (north — Kano/Sokoto)</option>
+                </select>
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Replacing generator (kVA)</div>
+                <select id="replaceKva" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
+                  <option value="0">No generator (off-grid)</option>
+                  <option value="1">1 kVA genset</option>
+                  <option value="2.5" selected>2.5 kVA genset</option>
+                  <option value="5">5 kVA genset</option>
+                  <option value="10">10 kVA genset</option>
+                </select>
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Genset hours replaced/day</div>
+                <input id="genHoursReplaced" type="number" min="0" max="24" value="4" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
+              </div>
+            </div>
+
+            <!-- Results -->
+            <div id="solarResult"></div>
+
+            <!-- Contribution badge -->
+            <div id="solarBadge" style="display:none;margin-top:8px;padding:8px;background:var(--gdim);border:1px solid rgba(34,197,94,0.2);border-radius:var(--r);text-align:center">
+              <div style="font-size:9px;color:var(--green);font-family:var(--mono);letter-spacing:0.5px;margin-bottom:3px">YOUR TRANSITION CONTRIBUTION</div>
+              <div id="solarBadgeText" style="font-size:11px;color:var(--text);line-height:1.5"></div>
+              <div style="font-size:8px;color:var(--text3);margin-top:4px">Nigeria needs 92M households to make this shift · You are part of the 2%</div>
+            </div>
+          </div>
+
           <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip am"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span>&nbsp;Indicative · IEA + GOGLA baseline · Modelled</a></div>
         </div>
         <div class="panel" id="policyTimelinePanel">
@@ -631,14 +773,44 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
     <!-- ASIDE -->
     <aside class="aside">
+      <!-- YouTube video thumbnails with detected keywords -->
       <div class="aw">
-        <div class="awt">Live signals <a href="#">See all</a></div>
-        <div class="sfeed" id="sfeed"></div>
+        <div class="awt" style="display:flex;justify-content:space-between;align-items:center">
+          <span>Live signals <span id="signalCount" style="font-size:9px;color:var(--text3);font-family:var(--mono)"></span></span>
+          <span style="font-size:8px;font-family:var(--mono);color:var(--text3)" id="ytLiveTag">YouTube live</span>
+        </div>
+        <!-- YouTube thumbnail feed -->
+        <div id="ytThumbFeed" style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px"></div>
+        <!-- AI signal cards below thumbnails -->
+        <div id="aiSignalCards" style="display:flex;flex-direction:column;gap:5px"></div>
       </div>
+
       <div class="aw">
         <div class="awt">Top states <a href="#">Map</a></div>
         <div class="stlist" id="stlist"></div>
       </div>
+
+      <!-- Platform status -->
+      <div class="aw">
+        <div class="awt">Platform status</div>
+        <div id="platformStatus" style="display:flex;flex-direction:column;gap:4px">
+          <div class="ps-row" id="ps-claude"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">Claude AI</span><span class="ps-val" id="ps-claude-val">Waiting</span></div>
+          <div class="ps-row" id="ps-yt"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">YouTube API</span><span class="ps-val" id="ps-yt-val">Waiting</span></div>
+          <div class="ps-row" id="ps-kb"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">Knowledge base</span><span class="ps-val" id="ps-kb-val">Loading</span></div>
+          <div class="ps-row" id="ps-map"><span class="ps-dot" style="background:var(--green)"></span><span class="ps-label">Mapbox</span><span class="ps-val" id="ps-map-val">Live</span></div>
+          <div style="padding-top:6px;border-top:1px solid var(--border3);margin-top:2px">
+            <div style="font-size:9px;color:var(--text3);font-family:var(--mono)">Last analysis</div>
+            <div id="lastAnalysisTime" style="font-size:10px;color:var(--text2);font-family:var(--mono);margin-top:1px">—</div>
+            <div style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-top:5px;line-height:1.6">
+              Model: claude-haiku-4-5<br>
+              KB: <span id="ps-kb-count">—</span> documents<br>
+              Refresh: 5 min cycle<br>
+              <a href="methodology.html" style="color:var(--green);text-decoration:none">Methodology →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="aw">
         <div class="awt">SDG quick view</div>
         <div id="sdgd"></div>
@@ -801,11 +973,21 @@ async function fetchYouTubeData(){
   const totalTexts = [...videoTexts, ...commentTexts];
   aiLog(`PII stripped — ${totalTexts.length} text samples ready for analysis`, 'done');
 
+  // Build video objects with thumbnails for the sidebar feed
+  const videoObjects = (searchData.items || []).slice(0, 8).map(item => ({
+    id: item.id?.videoId || '',
+    title: item.snippet?.title || '',
+    thumbnail: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
+    channel: item.snippet?.channelTitle || '',
+    detectedKeyword: query
+  }));
+
   return {
     texts: totalTexts,
     videoCount: searchData.items.length,
     commentCount: commentTexts.length,
     query: query,
+    videos: videoObjects,
     videoTitles: searchData.items.map(i => i.snippet?.title || '').slice(0, 3)
   };
 }
@@ -1698,6 +1880,177 @@ window.addEventListener('load', function(){
 });
 
 
+// ── SOLAR SAVINGS CALCULATOR ──────────────────────────────────────────────
+function calcSolar(){
+  var watts = parseFloat(document.getElementById('solarWatts').value) || 500;
+  var sunHrs = parseFloat(document.getElementById('sunHours').value) || 5;
+  var kva = parseFloat(document.getElementById('replaceKva').value) || 2.5;
+  var genHrsReplaced = parseFloat(document.getElementById('genHoursReplaced').value) || 4;
+
+  // Solar output
+  var kwhPerDay = (watts / 1000) * sunHrs * 0.8; // 80% efficiency
+  var kwhPerYear = kwhPerDay * 365;
+
+  // CO2 avoided — grid emission factor Nigeria: 0.43 kgCO2/kWh
+  var co2AvoidedKgYear = kwhPerYear * 0.43;
+
+  // Genset fuel saved
+  var litresPerDay = kva > 0 ? genHrsReplaced * kva * 0.6 : 0;
+  var litresSavedYear = litresPerDay * 365;
+  var co2GenAvoidedKg = litresSavedYear * 2.31;
+  var fuelSavedNaira = litresSavedYear * 1100;
+
+  // Total CO2 avoided
+  var totalCO2Avoided = co2AvoidedKgYear + co2GenAvoidedKg;
+
+  var el = document.getElementById('solarResult');
+  if(!el) return;
+
+  el.innerHTML =
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">' +
+      '<div style="background:var(--gdim);border:1px solid rgba(34,197,94,0.15);border-radius:var(--r);padding:7px">' +
+        '<div style="font-size:15px;font-weight:700;color:var(--green);font-family:var(--mono)">' + (totalCO2Avoided/1000).toFixed(2) + 't</div>' +
+        '<div style="font-size:9px;color:var(--text3)">CO\u2082 avoided / year</div>' +
+      '</div>' +
+      '<div style="background:var(--gdim);border:1px solid rgba(34,197,94,0.15);border-radius:var(--r);padding:7px">' +
+        '<div style="font-size:15px;font-weight:700;color:var(--green);font-family:var(--mono)">' + kwhPerYear.toFixed(0) + '</div>' +
+        '<div style="font-size:9px;color:var(--text3)">kWh clean energy / year</div>' +
+      '</div>' +
+      (kva > 0 ?
+        '<div style="background:var(--adim);border:1px solid rgba(245,158,11,0.15);border-radius:var(--r);padding:7px">' +
+          '<div style="font-size:15px;font-weight:700;color:var(--amber);font-family:var(--mono)">\u20a6' + (fuelSavedNaira/1000000).toFixed(1) + 'M</div>' +
+          '<div style="font-size:9px;color:var(--text3)">Fuel saved / year</div>' +
+        '</div>' +
+        '<div style="background:var(--bdim);border:1px solid rgba(56,189,248,0.15);border-radius:var(--r);padding:7px">' +
+          '<div style="font-size:15px;font-weight:700;color:var(--blue);font-family:var(--mono)">' + litresSavedYear.toFixed(0) + 'L</div>' +
+          '<div style="font-size:9px;color:var(--text3)">Petrol saved / year</div>' +
+        '</div>'
+      : '') +
+    '</div>' +
+    '<div style="font-size:9px;color:var(--text3);font-family:var(--mono);line-height:1.5">' +
+      watts + 'W panel \u00b7 ' + kwhPerDay.toFixed(1) + ' kWh/day \u00b7 ' + sunHrs + ' sun hrs \u00b7 Nigeria grid factor 0.43kgCO\u2082/kWh' +
+    '</div>';
+
+  // Show contribution badge
+  var badge = document.getElementById('solarBadge');
+  var badgeText = document.getElementById('solarBadgeText');
+  if(badge && badgeText){
+    badge.style.display = 'block';
+    var trees = Math.round(totalCO2Avoided / 21); // avg tree absorbs 21kg CO2/yr
+    badgeText.innerHTML =
+      'Your ' + watts + 'W system avoids <strong style="color:var(--green)">' + (totalCO2Avoided/1000).toFixed(2) + ' tonnes</strong> of CO\u2082 annually \u2014 equivalent to planting <strong style="color:var(--green)">' + trees + ' trees</strong>' +
+      (kva > 0 ? ' and saving <strong style="color:var(--amber)">\u20a6' + (fuelSavedNaira/1000).toFixed(0) + 'k</strong> in fuel' : '');
+  }
+}
+
+// ── YOUTUBE THUMBNAIL FEED ─────────────────────────────────────────────────
+// Renders real video thumbnails from the last YouTube API fetch
+// Called after fetchYouTubeData completes
+function renderYtThumbnails(ytData){
+  var container = document.getElementById('ytThumbFeed');
+  if(!container || !ytData) return;
+
+  var videos = ytData.videos || [];
+  if(!videos.length){
+    container.innerHTML = '<div style="font-size:10px;color:var(--text3);font-family:var(--mono);padding:8px 0">Fetching videos...</div>';
+    return;
+  }
+
+  // Show top 4 videos with thumbnails
+  var html = videos.slice(0,4).map(function(v){
+    var thumb = v.thumbnail || ('https://img.youtube.com/vi/' + v.id + '/mqdefault.jpg');
+    var title = v.title || 'Energy video';
+    var shortTitle = title.length > 48 ? title.substring(0,47) + '\u2026' : title;
+    var views = v.viewCount ? formatViews(v.viewCount) : '';
+    var keyword = v.detectedKeyword || ytData.query || '';
+
+    return '<a href="https://www.youtube.com/watch?v=' + v.id + '" target="_blank" rel="noopener" style="text-decoration:none;display:block">' +
+      '<div class="yt-thumb-card">' +
+        '<div class="yt-thumb-wrap">' +
+          '<img src="' + thumb + '" alt="" class="yt-thumb-img" onerror="this.style.display=\'none\'">' +
+          '<div class="yt-play-btn">\u25b6</div>' +
+          (keyword ? '<div class="yt-kw-badge">' + keyword + '</div>' : '') +
+        '</div>' +
+        '<div class="yt-thumb-info">' +
+          '<div class="yt-thumb-title">' + shortTitle + '</div>' +
+          (views ? '<div class="yt-thumb-meta">' + views + ' views \u00b7 YouTube</div>' : '') +
+        '</div>' +
+      '</div>' +
+    '</a>';
+  }).join('');
+
+  container.innerHTML = html;
+
+  // Update signal count
+  var countEl = document.getElementById('signalCount');
+  if(countEl) countEl.textContent = videos.length + ' videos · live';
+  var tagEl = document.getElementById('ytLiveTag');
+  if(tagEl){
+    tagEl.textContent = '\u25cf YouTube live';
+    tagEl.style.color = 'var(--green)';
+  }
+}
+
+function formatViews(n){
+  n = parseInt(n) || 0;
+  if(n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if(n >= 1000) return (n/1000).toFixed(0) + 'K';
+  return n.toString();
+}
+
+// ── AI SIGNAL CARDS ───────────────────────────────────────────────────────
+function updateSignalCards(analysis){
+  var container = document.getElementById('aiSignalCards');
+  if(!container || !analysis) return;
+  var cards = [];
+  if(analysis.products && analysis.products.length){
+    var top = analysis.products[0];
+    cards.push({type:'Top product mention',val:top.name,sub:top.category+' \u00b7 '+top.sentiment,color:top.sentiment==='positive'?'var(--green)':top.sentiment==='negative'?'var(--red)':'var(--amber)'});
+  }
+  if(analysis.geographic_signals && analysis.geographic_signals.length){
+    var geo = analysis.geographic_signals[0];
+    cards.push({type:'Strongest state signal',val:geo.state,sub:(geo.signal||'Signal score: '+geo.score).substring(0,55),color:'var(--blue)'});
+  }
+  if(analysis.policy_gap_insight){
+    cards.push({type:'Policy gap detected',val:analysis.knowledge_base_applied||'See policy timeline',sub:analysis.policy_gap_insight.substring(0,60)+'\u2026',color:'var(--purple)'});
+  }
+  if(analysis.fossil_vs_clean){
+    var fc = analysis.fossil_vs_clean;
+    cards.push({type:'Energy transition signal',val:fc.clean_pct+'% clean \u00b7 '+fc.fossil_pct+'% fossil',sub:'Solar switching: '+(fc.solar_switching||'\u2014')+' \u00b7 Gen: '+(fc.generator_complaints||'\u2014'),color:fc.clean_pct>50?'var(--green)':'var(--amber)'});
+  }
+  container.innerHTML = cards.map(function(c){
+    return '<div class="ai-sig-card"><div class="ai-sig-type"><span style="width:5px;height:5px;border-radius:50%;background:'+c.color+';display:inline-block;margin-right:4px"></span>'+c.type+'</div><div class="ai-sig-val" style="color:'+c.color+'">'+c.val+'</div><div class="ai-sig-sub">'+c.sub+'</div></div>';
+  }).join('');
+  var countEl = document.getElementById('signalCount');
+  if(countEl) countEl.textContent = cards.length+' active';
+}
+
+// ── PLATFORM STATUS ───────────────────────────────────────────────────────
+function setPlatformStatus(service, status, val){
+  var row = document.getElementById('ps-'+service);
+  var valEl = document.getElementById('ps-'+service+'-val');
+  if(!row||!valEl) return;
+  var dot = row.querySelector('.ps-dot');
+  var colors = {ok:'var(--green)',warn:'var(--amber)',err:'var(--red)',loading:'var(--amber)'};
+  if(dot) dot.style.background = colors[status]||'var(--text3)';
+  valEl.textContent = val;
+  valEl.style.color = status==='ok'?'var(--green)':status==='err'?'var(--red)':'var(--text3)';
+}
+function updateLastAnalysisTime(){
+  var el = document.getElementById('lastAnalysisTime');
+  if(el) el.textContent = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' WAT';
+}
+// Set KB count once VITICS_KNOWLEDGE loads
+setTimeout(function(){
+  var kbCount = typeof VITICS_KNOWLEDGE!=='undefined' ? VITICS_KNOWLEDGE.policies.length+11 : '\u2014';
+  var el = document.getElementById('ps-kb-count');
+  if(el) el.textContent = kbCount;
+  setPlatformStatus('kb','ok',kbCount+' docs');
+  // Init solar calculator
+  calcSolar();
+}, 700);
+
+
 async function runAIEngine(){
   aiState('Starting...');
   aiChip('AI: running');
@@ -1713,12 +2066,17 @@ async function runAIEngine(){
     // Step 2: Fetch YouTube data
     const ytData = await fetchYouTubeData();
     aiLog(`YouTube data collected — ${ytData.texts.length} anonymised samples`,'done');
+    renderYtThumbnails(ytData);
 
     // Step 3: Analyse with Claude — grounded in knowledge base
     const analysis = await analyseWithClaude(ytData, knowledgeContext);
 
     // Step 4: Update dashboard
     updateDashboard(analysis, ytData);
+    updateSignalCards(analysis);
+    setPlatformStatus('claude', 'ok', 'Connected');
+    setPlatformStatus('yt', 'ok', ytData.texts.length + ' samples');
+    updateLastAnalysisTime();
 
     // Keep AI status panel visible — pin it open, scrollable, with completion badge
     setTimeout(()=>{
@@ -1749,6 +2107,7 @@ async function runAIEngine(){
     aiLog('Error: '+err.message,'error');
     aiState('Error — using baseline data');
     aiChip('AI: fallback mode');
+    setPlatformStatus('claude', 'err', 'Error');
     console.error('Vitics AI Engine error:',err);
     // Fall back to simulated data
     runSimulatedFallback();
