@@ -248,6 +248,25 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .polm{font-size:10px;color:var(--text3);display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-family:var(--mono)}
 .gapb{height:3px;background:var(--bg5);border-radius:2px;margin:4px 0 3px}
 .gapf{height:3px;border-radius:2px;background:var(--red);transition:width 0.8s ease}
+/* ── POLICY TIMELINE ── */
+.tl-spine{position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border2);border-radius:1px}
+.tl-node{position:relative;margin-bottom:7px;cursor:pointer;transition:all 0.15s}
+.tl-node:hover .tl-card{border-color:var(--border);background:var(--bg5)}
+.tl-dot{position:absolute;left:-14px;top:6px;width:10px;height:10px;border-radius:50%;border:2px solid var(--bg2);z-index:2;transition:transform 0.15s}
+.tl-dot.transition-dot{border-radius:3px;width:12px;height:12px;left:-15px}
+.tl-node:hover .tl-dot{transform:scale(1.3)}
+.tl-card{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:6px 8px;transition:all 0.15s}
+.tl-card.active{border-color:var(--green);background:var(--gdim)}
+.tl-year{font-size:8px;font-family:var(--mono);color:var(--text3);margin-bottom:2px;letter-spacing:0.5px}
+.tl-name{font-size:10px;color:var(--text);font-weight:500;line-height:1.3;margin-bottom:3px}
+.tl-meta{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.tl-score-low{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(244,63,94,0.12);color:var(--red)}
+.tl-score-med{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(245,158,11,0.12);color:var(--amber)}
+.tl-score-high{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(34,197,94,0.12);color:var(--green)}
+.tl-tbadge{font-size:8px;color:var(--purple);font-family:var(--mono)}
+.tl-aedc-card{background:rgba(56,189,248,0.05);border-color:rgba(56,189,248,0.2)}
+.tl-aedc-bar{height:3px;border-radius:2px;margin-top:4px}
+.tl-era{font-size:8px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px;padding-left:4px;border-left:2px solid var(--border)}
 
 /* SIGNAL CARDS */
 .sigrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
@@ -533,20 +552,47 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           <div id="emChart"></div>
           <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip am"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span>&nbsp;Indicative · IEA + GOGLA baseline · Modelled</a></div>
         </div>
-        <div class="panel">
+        <div class="panel" id="policyTimelinePanel">
           <div class="ptl"></div>
-          <div class="pt"><i data-lucide="file-text" style="width:11px;height:11px"></i>Policy intelligence</div>
-          <div class="polr"><div class="poln">Nigeria Energy Transition Plan (ETP 2022)</div><div class="polm">Net-zero 2060 · Awareness: <span class="tag ta" style="font-size:9px;padding:1px 6px">Low</span></div></div>
-          <div class="polr"><div class="poln">Rural Electrification Fund (REF)</div><div class="polm">REA disbursements · <span class="tag tg" style="font-size:9px;padding:1px 6px">Positive</span></div></div>
-          <div class="polr"><div class="poln">NERC Mini-Grid Regulations (2021)</div><div class="polm">Complaints: <span class="tag tr" style="font-size:9px;padding:1px 6px">Rising</span></div></div>
-          <div class="polr"><div class="poln">Solar import duty waiver</div><div class="polm">Awareness: <span class="tag ta" style="font-size:9px;padding:1px 6px">Moderate</span></div></div>
-          <div class="polr"><div class="poln">NDC 2021 (revised)</div><div class="polm">Alignment: <span class="tag tb" style="font-size:9px;padding:1px 6px" id="ndca">62%</span></div></div>
-          <div style="margin-top:10px;padding-top:9px;border-top:1px solid var(--border3)">
+          <div class="pt" style="display:flex;align-items:center;justify-content:space-between">
+            <span><i data-lucide="git-branch" style="width:11px;height:11px"></i>Policy intelligence timeline · 2001–2025</span>
+            <div style="display:flex;gap:6px;align-items:center">
+              <span class="tag tg" style="font-size:8px;cursor:pointer" id="tlTogglePolicy" onclick="tlFilter('policy')">Policy</span>
+              <span class="tag ta" style="font-size:8px;cursor:pointer" id="tlToggleAedc" onclick="tlFilter('aedc')">AEDC</span>
+              <span class="tag tz" style="font-size:8px;cursor:pointer" id="tlToggleBoth" onclick="tlFilter('both')">Both</span>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div style="display:flex;gap:10px;margin:6px 0 10px;flex-wrap:wrap">
+            <span style="font-size:9px;color:var(--text3);font-family:var(--mono)">Impact score:</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#f43f5e;display:inline-block"></span>Low 1–3</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block"></span>Med 4–6</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block"></span>High 7–10</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:2px;background:rgba(192,132,252,0.6);display:inline-block"></span>★ Transition</span>
+          </div>
+
+          <!-- Timeline container -->
+          <div id="policyTimeline" style="position:relative;padding-left:18px;max-height:420px;overflow-y:auto;overflow-x:hidden"></div>
+
+          <!-- Detail card (shown on click) -->
+          <div id="tlDetail" style="display:none;margin-top:10px;padding:10px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border2)">
+            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:6px">
+              <div id="tlDetailTitle" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.4;max-width:80%"></div>
+              <span id="tlDetailScore" class="tag" style="font-size:9px;flex-shrink:0"></span>
+            </div>
+            <div id="tlDetailYear" style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-bottom:6px"></div>
+            <div id="tlDetailSummary" style="font-size:10px;color:var(--text2);line-height:1.5;margin-bottom:6px"></div>
+            <div id="tlDetailInsight" style="font-size:9px;color:var(--green);font-family:var(--mono);line-height:1.4;padding:5px;background:var(--gdim);border-radius:4px"></div>
+          </div>
+
+          <!-- Gap index -->
+          <div style="margin-top:12px;padding-top:9px;border-top:1px solid var(--border3)">
             <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono);letter-spacing:0.8px;text-transform:uppercase">Policy-to-market gap index</div>
-            <div class="gapb"><div class="gapf" id="gapf" style="width:58%"></div></div>
+            <div class="gapb"><div class="gapf" id="gapf" style="width:74%"></div></div>
             <div style="display:flex;justify-content:space-between;font-size:10px;font-family:var(--mono)">
-              <span style="color:var(--text3)">Policy outpacing market reality</span>
-              <span style="color:var(--red);font-weight:600" id="gapp">58% gap</span>
+              <span style="color:var(--text3)">Avg gap across 25 documents</span>
+              <span style="color:var(--red);font-weight:600" id="gapp">74% gap</span>
             </div>
           </div>
         </div>
@@ -1312,7 +1358,177 @@ function updateDashboard(analysis, ytData){
   }
 }
 
-// ── MAIN AI ENGINE ──
+// ── POLICY INTELLIGENCE TIMELINE ──────────────────────────────────────────
+// Renders interactive 2001–2025 timeline from VITICS_KNOWLEDGE
+// Combines policy nodes + AEDC financial overlay layer
+
+var tlMode = 'both'; // 'policy' | 'aedc' | 'both'
+var tlActiveId = null;
+
+// AEDC decade data — loaded at runtime from GitHub JSONs
+// Fallback data used if GitHub fetch not yet complete
+var AEDC_DECADE = [
+  {year:2014,loss:26.0,tariff_inc:0,impact:5,defection:2,label:'Pre-TEM rules'},
+  {year:2015,loss:41.97,tariff_inc:33,impact:7,defection:3,label:'TEM rules · Force majeure'},
+  {year:2016,loss:38.0,tariff_inc:49,impact:8,defection:4,label:'49% tariff shock'},
+  {year:2017,loss:32.0,tariff_inc:0,impact:6,defection:4,label:'Tariff freeze'},
+  {year:2018,loss:28.0,tariff_inc:0,impact:5,defection:5,label:'CAPMI rollout'},
+  {year:2019,loss:24.0,tariff_inc:0,impact:5,defection:5,label:'Band classification begins'},
+  {year:2020,loss:30.0,tariff_inc:0,impact:6,defection:5,label:'COVID · Solar Power Naija'},
+  {year:2021,loss:35.0,tariff_inc:15,impact:6,defection:6,label:'Band A tariff increase'},
+  {year:2022,loss:40.0,tariff_inc:20,impact:7,defection:7,label:'Forex crisis · rising costs'},
+  {year:2023,loss:45.0,tariff_inc:40,impact:8,defection:8,label:'Fuel subsidy removal watershed'},
+  {year:2024,loss:50.0,tariff_inc:300,impact:9,defection:9,label:'240-300% tariff increase · mass defection'},
+];
+
+function scoreColor(s){
+  if(!s) return '#6b8fa0';
+  if(s >= 7) return 'var(--green)';
+  if(s >= 4) return 'var(--amber)';
+  return 'var(--red)';
+}
+function scoreClass(s){
+  if(!s) return 'tl-score-med';
+  if(s >= 7) return 'tl-score-high';
+  if(s >= 4) return 'tl-score-med';
+  return 'tl-score-low';
+}
+
+function tlFilter(mode){
+  tlMode = mode;
+  ['tlTogglePolicy','tlToggleAedc','tlToggleBoth'].forEach(id => {
+    var el = document.getElementById(id);
+    if(el) el.style.opacity = '0.4';
+  });
+  var active = {policy:'tlTogglePolicy',aedc:'tlToggleAedc',both:'tlToggleBoth'}[mode];
+  var activeEl = document.getElementById(active);
+  if(activeEl) activeEl.style.opacity = '1';
+  renderTimeline();
+}
+
+function tlShowDetail(docId, data){
+  var det = document.getElementById('tlDetail');
+  var prev = document.querySelector('.tl-card.active');
+  if(prev) prev.classList.remove('active');
+  var cur = document.getElementById('tlcard-' + docId);
+  if(cur) cur.classList.add('active');
+
+  if(tlActiveId === docId){
+    det.style.display = 'none';
+    tlActiveId = null;
+    return;
+  }
+  tlActiveId = docId;
+
+  document.getElementById('tlDetailTitle').textContent = data.title || docId;
+  document.getElementById('tlDetailYear').textContent = (data.year || '') + ' · Impact: ' + (data.consumer_impact_score || '?') + '/10 · Gap: ' + (data.gap_score || '?') + '/10';
+
+  var scoreEl = document.getElementById('tlDetailScore');
+  scoreEl.textContent = 'Impact ' + (data.consumer_impact_score || '?') + '/10';
+  scoreEl.className = 'tag ' + (data.consumer_impact_score >= 7 ? 'tg' : data.consumer_impact_score >= 4 ? 'ta' : 'tr');
+
+  document.getElementById('tlDetailSummary').textContent = data.consumer_summary || 'No consumer reality data extracted.';
+  document.getElementById('tlDetailInsight').textContent = data.key_insight || data.transition_note || '';
+  det.style.display = 'block';
+}
+
+function tlShowAedc(yr, aData){
+  var det = document.getElementById('tlDetail');
+  tlActiveId = 'aedc-' + yr;
+  document.getElementById('tlDetailTitle').textContent = 'AEDC ' + yr + ' — Abuja Electricity Distribution Plc';
+  document.getElementById('tlDetailYear').textContent = yr + ' · Consumer Impact: ' + aData.impact + '/10 · Grid Defection: ' + aData.defection + '/10';
+  var scoreEl = document.getElementById('tlDetailScore');
+  scoreEl.textContent = 'Loss ₦' + aData.loss + 'bn';
+  scoreEl.className = 'tag tr';
+  document.getElementById('tlDetailSummary').textContent = aData.label + '. Annual loss ₦' + aData.loss + ' billion' + (aData.tariff_inc > 0 ? '. Tariff increase: ' + aData.tariff_inc + '%' : '') + '.';
+  document.getElementById('tlDetailInsight').textContent = 'Grid defection signal: ' + aData.defection + '/10. Consumers in FCT, Niger, Kogi, Nasarawa facing increasing affordability pressure.';
+  det.style.display = 'block';
+}
+
+function renderTimeline(){
+  var container = document.getElementById('policyTimeline');
+  if(!container) return;
+
+  var kb = typeof VITICS_KNOWLEDGE !== 'undefined' ? VITICS_KNOWLEDGE : null;
+  var policies = kb ? kb.policies : [];
+
+  // Build combined sorted timeline entries
+  var entries = [];
+
+  if(tlMode === 'policy' || tlMode === 'both'){
+    policies.forEach(function(p){
+      entries.push({type:'policy', year: p.year || 0, data: p});
+    });
+  }
+  if(tlMode === 'aedc' || tlMode === 'both'){
+    AEDC_DECADE.forEach(function(a){
+      entries.push({type:'aedc', year: a.year, data: a});
+    });
+  }
+
+  entries.sort(function(a,b){ return a.year - b.year; });
+
+  // Era labels
+  var eras = {2001:'Foundation Era',2007:'Reform Era',2013:'Privatisation Era',2017:'Transition Era',2023:'Current Era'};
+
+  var html = '<div class="tl-spine"></div>';
+  var lastEra = '';
+
+  entries.forEach(function(entry){
+    var yr = entry.year;
+    // Era label
+    var eraYears = Object.keys(eras).map(Number);
+    for(var i = eraYears.length-1; i >= 0; i--){
+      if(yr >= eraYears[i]){
+        var eraName = eras[eraYears[i]];
+        if(eraName !== lastEra){
+          html += '<div class="tl-era">' + eraName + '</div>';
+          lastEra = eraName;
+        }
+        break;
+      }
+    }
+
+    if(entry.type === 'policy'){
+      var p = entry.data;
+      var tm = p.transition_marker;
+      var dotColor = scoreColor(p.consumer_impact_score);
+      var dotClass = tm ? 'tl-dot transition-dot' : 'tl-dot';
+      var scClass = scoreClass(p.consumer_impact_score);
+      var shortTitle = p.title.length > 45 ? p.title.substring(0,44)+'…' : p.title;
+
+      html += '<div class="tl-node" onclick="tlShowDetail(\'' + p.doc_id.replace(/'/g,"\\'") + '\',' + JSON.stringify(p).replace(/</g,'&lt;') + ')">';
+      html += '<div class="' + dotClass + '" style="background:' + dotColor + '"></div>';
+      html += '<div class="tl-card" id="tlcard-' + p.doc_id + '">';
+      html += '<div class="tl-year">' + yr + '</div>';
+      html += '<div class="tl-name">' + shortTitle + '</div>';
+      html += '<div class="tl-meta">';
+      html += '<span class="' + scClass + '">' + (p.consumer_impact_score||'?') + '/10</span>';
+      if(tm) html += '<span class="tl-tbadge">★ Transition</span>';
+      html += '</div></div></div>';
+
+    } else {
+      // AEDC node
+      var a = entry.data;
+      var lossColor = a.defection >= 7 ? 'var(--red)' : a.defection >= 5 ? 'var(--amber)' : 'var(--blue)';
+      var barW = Math.min(100, a.defection * 10);
+
+      html += '<div class="tl-node" onclick="tlShowAedc(' + yr + ',' + JSON.stringify(a) + ')">';
+      html += '<div class="tl-dot" style="background:var(--blue);border-radius:2px"></div>';
+      html += '<div class="tl-card tl-aedc-card">';
+      html += '<div class="tl-year">' + yr + ' · AEDC</div>';
+      html += '<div class="tl-name" style="color:var(--blue)">Loss ₦' + a.loss + 'bn · ' + a.label + '</div>';
+      html += '<div class="tl-aedc-bar" style="width:' + barW + '%;background:linear-gradient(to right,var(--blue),rgba(56,189,248,0.15))"></div>';
+      html += '</div></div>';
+    }
+  });
+
+  container.innerHTML = html;
+}
+
+// Render timeline on load and expose for refresh
+window.addEventListener('load', function(){ setTimeout(renderTimeline, 300); });
+
 async function runAIEngine(){
   aiState('Starting...');
   aiChip('AI: running');
