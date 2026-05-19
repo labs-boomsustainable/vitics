@@ -3,2389 +3,612 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vitics — Nigeria AI Energy Intelligence</title>
+<title>Vitics — Nigeria Energy Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <script src="vitics-knowledge.js"></script>
-<script src="vitics-keywords.js"></script>
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --sw:220px;
-  --bg:#07090a;--bg2:#0e1214;--bg3:#131a1e;--bg4:#192028;--bg5:#1f2830;
+  --bg:#07090a;--bg2:#0d1114;--bg3:#131a1e;--bg4:#192028;--bg5:#1e2830;
   --border:rgba(34,197,94,0.18);--border2:rgba(34,197,94,0.09);--border3:rgba(255,255,255,0.05);
-  --green:#22c55e;--green2:#16a34a;--green3:#4ade80;--gdim:rgba(34,197,94,0.08);
-  --amber:#f59e0b;--adim:rgba(245,158,11,0.08);
-  --red:#f43f5e;--rdim:rgba(244,63,94,0.08);
-  --blue:#38bdf8;--bdim:rgba(56,189,248,0.08);
-  --purple:#c084fc;--pdim:rgba(192,132,252,0.08);
-  --pink:#f472b6;
-  --text:#e2eff5;--text2:#6b8fa0;--text3:#334d5c;
+  --green:#22c55e;--gdim:rgba(34,197,94,0.07);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.07);
+  --red:#f43f5e;--rdim:rgba(244,63,94,0.07);
+  --blue:#38bdf8;--bdim:rgba(56,189,248,0.07);
+  --purple:#c084fc;
+  --text:#e2eff5;--text2:#7a9fb5;--text3:#334d5c;
   --font:'Inter',sans-serif;--display:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
-  --r:8px;--r2:12px;--shadow:0 2px 8px rgba(0,0,0,0.5);
+  --r:8px;--r2:14px;
 }
-
-/* ── LIGHT MODE ── */
-body.light{
-  --bg:#f0f4f8;--bg2:#ffffff;--bg3:#f8fafc;--bg4:#eef2f7;--bg5:#e2e8f0;
-  --border:rgba(22,163,74,0.25);--border2:rgba(22,163,74,0.12);--border3:rgba(0,0,0,0.07);
-  --green:#16a34a;--green2:#15803d;--green3:#166534;--gdim:rgba(22,163,74,0.07);
-  --amber:#b45309;--adim:rgba(180,83,9,0.07);
-  --red:#dc2626;--rdim:rgba(220,38,38,0.07);
-  --blue:#0369a1;--bdim:rgba(3,105,161,0.07);
-  --purple:#7c3aed;--pdim:rgba(124,58,237,0.07);
-  --pink:#be185d;
-  --text:#0f172a;--text2:#475569;--text3:#94a3b8;
-  --shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-body.light .mc{background:var(--bg3);border-color:var(--border2)}
-body.light .panel{background:var(--bg3)}
-body.light .sidebar{background:var(--bg2);border-right-color:var(--border2)}
-body.light .topbar{background:var(--bg2);border-bottom-color:var(--border2)}
-body.light .aside{background:var(--bg2);border-left-color:var(--border2)}
-body.light .sfi{background:var(--bg4)}
-body.light .sigc{background:var(--bg4)}
-body.light .hmap td{filter:saturate(1.3)}
-body.light #map .mapboxgl-map{filter:invert(0)}
-body.light .ai-status{background:var(--bg3)}
-body.light .chip{background:var(--bg4);border-color:var(--border2)}
-body.light .chip.live{border-color:rgba(22,163,74,0.25)}
-body.light .chip.ai-active{background:rgba(124,58,237,0.07)}
-body.light ::-webkit-scrollbar-thumb{background:var(--border)}
-
-/* ── THEME TOGGLE BUTTON ── */
-.theme-toggle{
-  display:flex;align-items:center;gap:6px;
-  background:var(--bg4);border:1px solid var(--border2);
-  border-radius:20px;padding:4px 10px;cursor:pointer;
-  font-size:11px;font-family:var(--mono);color:var(--text2);
-  transition:all 0.2s;user-select:none;
-}
-.theme-toggle:hover{border-color:var(--border);color:var(--text)}
-.toggle-track{
-  width:28px;height:15px;border-radius:8px;
-  background:var(--bg5);border:1px solid var(--border2);
-  position:relative;transition:background 0.25s;flex-shrink:0;
-}
-body.light .toggle-track{background:var(--green2)}
-.toggle-thumb{
-  position:absolute;top:1px;left:1px;
-  width:11px;height:11px;border-radius:50%;
-  background:var(--text3);transition:all 0.25s;
-}
-body.light .toggle-thumb{left:14px;background:#fff}
-.toggle-sun{display:none}
-.toggle-moon{display:inline}
-body.light .toggle-sun{display:inline}
-body.light .toggle-moon{display:none}
-
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;font-size:13px;line-height:1.5;display:flex;overflow-x:hidden}
-::-webkit-scrollbar{width:3px;height:3px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-
-/* SIDEBAR */
-.sidebar{width:var(--sw);min-height:100vh;background:var(--bg2);border-right:1px solid var(--border2);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;overflow-y:auto}
-.sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border2)}
-.sb-logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-0.8px;color:var(--text);line-height:1;display:block;text-decoration:none}
-.sb-logo em{color:var(--green);font-style:normal}
-.sb-tag{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
-.sb-user{display:flex;align-items:center;gap:10px;padding:12px 20px;border-bottom:1px solid var(--border2)}
-.sb-av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--green2),var(--blue));display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;font-family:var(--mono)}
-.sb-un{font-size:12px;font-weight:600;color:var(--text)}
-.sb-ro{font-size:10px;color:var(--text3);font-family:var(--mono)}
-.sb-live{display:flex;align-items:center;gap:5px;margin:10px 20px;background:var(--gdim);border:1px solid var(--border);border-radius:6px;padding:6px 10px}
-.ldot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);flex-shrink:0;animation:lpulse 2s ease-in-out infinite}
-@keyframes lpulse{0%,100%{opacity:1;box-shadow:0 0 6px var(--green)}50%{opacity:0.4;box-shadow:0 0 2px var(--green)}}
-.sb-lt{font-family:var(--mono);font-size:10px;color:var(--green3);flex:1}
-.sb-ltime{font-family:var(--mono);font-size:9px;color:var(--text3)}
-.sb-sec{padding:12px 20px 4px}
-.sb-secl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
-.sbn{list-style:none}
-.sbn li{margin-bottom:1px}
-.sbn a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:all 0.15s;position:relative}
-.sbn a:hover{background:var(--bg4);color:var(--text)}
-.sbn a.active{background:var(--gdim);color:var(--green3);border:1px solid var(--border)}
-.sbn a.active::before{content:'';position:absolute;left:-1px;top:6px;bottom:6px;width:3px;background:var(--green);border-radius:0 3px 3px 0}
-.sbn a svg{flex-shrink:0;opacity:0.65}
-.sbn a.active svg{opacity:1}
-.sbbadge{margin-left:auto;font-family:var(--mono);font-size:9px;background:var(--gdim);color:var(--green3);border:1px solid var(--border);border-radius:10px;padding:1px 6px;font-weight:600;transition:all 0.4s}
-.sb-foot{margin-top:auto;padding:12px 20px;border-top:1px solid var(--border2)}
-.sb-ver{font-family:var(--mono);font-size:9px;color:var(--text3)}
-
-/* CONTENT */
-.content{margin-left:var(--sw);flex:1;min-height:100vh;display:flex;flex-direction:column}
-
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}
 /* TOPBAR */
-.topbar{height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:1px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:50}
-.tb-title{font-family:var(--display);font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
-.tb-sub{font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:1px}
-.tb-r{display:flex;align-items:center;gap:10px}
-.chip{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text2);font-family:var(--mono);background:var(--bg4);border:1px solid var(--border2);border-radius:6px;padding:4px 10px;cursor:default;transition:all 0.15s;white-space:nowrap}
-.chip:hover{border-color:var(--border);color:var(--text)}
-.chip.live{border-color:rgba(34,197,94,0.2);color:var(--green3)}
-.chip.ai-active{border-color:rgba(192,132,252,0.3);color:var(--purple);background:var(--pdim)}
-.cdbar{width:50px;height:2px;background:var(--bg5);border-radius:1px;overflow:hidden}
-.cdfill{height:2px;background:var(--green);border-radius:1px;transition:width 1s linear}
-
-/* BODY */
-.body{flex:1;display:flex}
-.feed{flex:1;padding:18px 22px;overflow-y:auto;min-width:0}
-.aside{width:250px;flex-shrink:0;border-left:1px solid var(--border2);background:var(--bg2);padding:16px 14px;overflow-y:auto}
-
-/* GRID */
-.g{display:grid;gap:11px;margin-bottom:11px}
-.g6{grid-template-columns:repeat(6,1fr)}
-.g2{grid-template-columns:1fr 1fr}
-.g211{grid-template-columns:2fr 1fr 1fr}
-.g31{grid-template-columns:3fr 2fr}
-
-/* SECTION HEADER */
-.sh{display:flex;align-items:center;gap:10px;margin-bottom:9px;margin-top:20px}
-.sh:first-child{margin-top:0}
-.shl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--green2);white-space:nowrap}
-.shline{flex:1;height:1px;background:var(--border2)}
-.shn{font-family:var(--mono);font-size:9px;color:var(--text3)}
-
-/* METRIC CARD */
-.mc{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:13px 13px 9px;position:relative;overflow:hidden;cursor:default;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
-.mc:hover{border-color:var(--border);transform:translateY(-2px);box-shadow:var(--shadow)}
-.mc-acc{position:absolute;top:0;left:0;right:0;height:2px;border-radius:var(--r2) var(--r2) 0 0}
-.mc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px}
-.mc-lbl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--text3)}
-.mc-ico{opacity:0.35}
-.mc-val{font-family:var(--display);font-size:21px;font-weight:700;color:var(--text);letter-spacing:-0.6px;line-height:1;margin-bottom:3px;transition:color 0.3s}
-.mc-val small{font-size:11px;font-weight:400;color:var(--text3);letter-spacing:0;font-family:var(--font)}
-.mc-dlt{font-size:10px;font-family:var(--mono);display:flex;align-items:center;gap:3px;margin-bottom:7px;transition:all 0.3s}
-.up{color:var(--green3)}.dn{color:var(--red)}.nt{color:var(--text3)}
-.mc-sp{height:26px}
-
-/* AI BADGE ON METRIC */
-.ai-tag{display:inline-flex;align-items:center;gap:3px;font-family:var(--mono);font-size:8px;color:var(--purple);background:var(--pdim);border:1px solid rgba(192,132,252,0.2);border-radius:10px;padding:1px 5px;position:absolute;bottom:8px;right:10px}
-
-/* FLASH */
-@keyframes fup{0%{background:rgba(34,197,94,0.14)}100%{background:transparent}}
-@keyframes fdn{0%{background:rgba(244,63,94,0.1)}100%{background:transparent}}
-@keyframes numIn{0%{opacity:0.3;transform:scale(0.96)}100%{opacity:1;transform:scale(1)}}
-.flu{animation:fup 0.7s ease}.fld{animation:fdn 0.7s ease}.ni{animation:numIn 0.35s ease}
-
-/* PANEL */
-.panel{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);padding:14px;position:relative;overflow:hidden;transition:border-color 0.2s}
-.panel:hover{border-color:var(--border)}
-.ptl{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(34,197,94,0.18),transparent)}
-.pt{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text2);display:flex;align-items:center;gap:6px;margin-bottom:12px}
-.pt svg{opacity:0.5;flex-shrink:0}
-
-/* AI PANEL INDICATOR */
-.ai-panel-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;color:var(--purple);background:var(--pdim);border:1px solid rgba(192,132,252,0.2);border-radius:20px;padding:2px 8px;margin-left:auto}
-.ai-dot{width:5px;height:5px;border-radius:50%;background:var(--purple);animation:lpulse 2s ease-in-out infinite}
-
-/* ROWS */
-.ri{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border3);transition:padding-left 0.15s;cursor:default}
-.ri:last-child{border-bottom:none;padding-bottom:0}
-.ri:first-child{padding-top:0}
-.ri:hover{padding-left:5px}
-.rn{color:var(--text);font-weight:500;font-size:12px}
-.rs{color:var(--text3);font-size:10px;margin-top:1px;font-family:var(--mono)}
-.bw{flex:1;height:2px;background:var(--bg5);border-radius:2px;margin:0 9px}
-.bf{height:2px;border-radius:2px;transition:width 0.7s ease}
-
-/* TAGS */
-.tag{display:inline-flex;align-items:center;border-radius:20px;padding:2px 7px;font-size:9px;font-weight:600;font-family:var(--mono);letter-spacing:0.3px;border:1px solid transparent;white-space:nowrap}
-.tg{background:var(--gdim);color:var(--green3);border-color:rgba(34,197,94,0.15)}
-.ta{background:var(--adim);color:var(--amber);border-color:rgba(245,158,11,0.15)}
-.tr{background:var(--rdim);color:var(--red);border-color:rgba(244,63,94,0.15)}
-.tb{background:var(--bdim);color:var(--blue);border-color:rgba(56,189,248,0.15)}
-.tp{background:var(--pdim);color:var(--purple);border-color:rgba(192,132,252,0.15)}
-.tz{background:var(--bg5);color:var(--text2);border-color:var(--border3)}
-
-/* SENTIMENT */
-.sbar{display:flex;height:5px;border-radius:3px;overflow:hidden;gap:2px;margin-bottom:7px}
-.sp{background:var(--green);transition:flex 0.8s ease}
-.snu{background:var(--text3);transition:flex 0.8s ease}
-.sng{background:var(--red);transition:flex 0.8s ease}
-.sleg{display:flex;gap:11px;margin-bottom:12px}
-.sleg span{font-size:10px;color:var(--text2);display:flex;align-items:center;gap:4px;font-family:var(--mono)}
-.sdot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-
-/* SOURCES */
-.srcr{display:flex;align-items:center;gap:7px;padding:4px 0;border-bottom:1px solid var(--border3)}
-.srcr:last-child{border-bottom:none}
-.srci{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;font-family:var(--mono);border:1px solid rgba(255,255,255,0.05)}
-.srcn{flex:1;color:var(--text);font-size:11px;font-weight:500}
-.srcc{color:var(--text3);font-family:var(--mono);font-size:10px;transition:all 0.3s;min-width:38px;text-align:right}
-.srcb{width:36px;height:2px;background:var(--bg5);border-radius:1px;margin-right:4px}
-.srcbf{height:2px;border-radius:1px;background:var(--green);transition:width 0.7s ease}
-
-/* CONV BARS */
-.cbars{display:flex;align-items:flex-end;gap:4px;height:48px;margin-bottom:5px}
-.cbar{flex:1;border-radius:2px 2px 0 0;background:var(--bg4);border:1px solid var(--border3);cursor:pointer;transition:height 0.4s ease,background 0.2s}
-.cbar:hover{background:var(--green2);border-color:var(--green)}
-.cbar.hi{background:var(--green);border-color:var(--green3);box-shadow:0 0 8px rgba(34,197,94,0.2)}
-.clbls{display:flex;justify-content:space-between;font-size:9px;color:var(--text3);font-family:var(--mono)}
-.twrap{display:flex;flex-wrap:wrap;gap:5px;padding-top:11px;margin-top:9px;border-top:1px solid var(--border3)}
-
-/* SDG */
-.sdgr{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border3);transition:padding-left 0.15s;cursor:default}
-.sdgr:hover{padding-left:4px}
-.sdgr:last-child{border-bottom:none;padding-bottom:0}
-.sdgr:first-child{padding-top:0}
-.sdgn{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;font-family:var(--mono)}
-.sdgb{flex:1;min-width:0}
-.sdgt{font-size:11px;font-weight:600;color:var(--text)}
-.sdgs{font-size:10px;color:var(--text3);font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sdgbr{width:50px;height:2px;background:var(--bg5);border-radius:2px;flex-shrink:0}
-.sdgf{height:2px;border-radius:2px;transition:width 0.8s ease}
-.sdgp{font-size:10px;font-family:var(--mono);font-weight:600;min-width:28px;text-align:right;transition:all 0.3s}
-
-/* POLICY */
-.polr{padding:6px 0;border-bottom:1px solid var(--border3)}
-.polr:first-child{padding-top:0}
-.polr:last-child{border-bottom:none;padding-bottom:0}
-.poln{font-size:11px;font-weight:600;color:var(--text);margin-bottom:2px}
-.polm{font-size:10px;color:var(--text3);display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-family:var(--mono)}
-.gapb{height:3px;background:var(--bg5);border-radius:2px;margin:4px 0 3px}
-.gapf{height:3px;border-radius:2px;background:var(--red);transition:width 0.8s ease}
-/* ── POLICY TIMELINE ── */
-.tl-spine{position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border2);border-radius:1px}
-.tl-node{position:relative;margin-bottom:7px;cursor:pointer;transition:all 0.15s}
-.tl-node:hover .tl-card{border-color:var(--border);background:var(--bg5)}
-.tl-dot{position:absolute;left:-14px;top:6px;width:10px;height:10px;border-radius:50%;border:2px solid var(--bg2);z-index:2;transition:transform 0.15s}
-.tl-dot.transition-dot{border-radius:3px;width:12px;height:12px;left:-15px}
-.tl-node:hover .tl-dot{transform:scale(1.3)}
-.tl-card{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:6px 8px;transition:all 0.15s}
-.tl-card.active{border-color:var(--green);background:var(--gdim)}
-.tl-year{font-size:8px;font-family:var(--mono);color:var(--text3);margin-bottom:2px;letter-spacing:0.5px}
-.tl-name{font-size:10px;color:var(--text);font-weight:500;line-height:1.3;margin-bottom:3px}
-.tl-meta{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
-.tl-score-low{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(244,63,94,0.12);color:var(--red)}
-.tl-score-med{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(245,158,11,0.12);color:var(--amber)}
-.tl-score-high{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px;background:rgba(34,197,94,0.12);color:var(--green)}
-.tl-tbadge{font-size:8px;color:var(--purple);font-family:var(--mono)}
-.tl-aedc-card{background:rgba(56,189,248,0.05);border-color:rgba(56,189,248,0.2)}
-.tl-aedc-bar{height:3px;border-radius:2px;margin-top:4px}
-.tl-era{font-size:8px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px;padding-left:4px;border-left:2px solid var(--border)}
-/* ── PLATFORM STATUS ── */
-.ps-row{display:flex;align-items:center;gap:7px;padding:4px 0;border-bottom:1px solid var(--border3)}
-.ps-row:last-child{border-bottom:none}
-.ps-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.ps-label{font-size:10px;color:var(--text2);flex:1}
-.ps-val{font-size:9px;font-family:var(--mono);color:var(--text3)}
-/* ── AI SIGNAL CARDS ── */
-.ai-sig-card{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:7px 9px;transition:border-color 0.2s}
-.ai-sig-card:hover{border-color:var(--border)}
-.ai-sig-type{font-size:8px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
-.ai-sig-val{font-size:11px;font-weight:600;color:var(--text);margin-bottom:1px}
-.ai-sig-sub{font-size:9px;color:var(--text3)}
-/* ── YOUTUBE THUMBNAILS ── */
-.yt-thumb-card{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--border3);transition:opacity 0.2s}
-.yt-thumb-card:hover{opacity:0.85}
-.yt-thumb-card:last-child{border-bottom:none}
-.yt-thumb-wrap{position:relative;width:72px;height:48px;flex-shrink:0;border-radius:5px;overflow:hidden;background:var(--bg4)}
-.yt-thumb-img{width:100%;height:100%;object-fit:cover;display:block}
-.yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;color:#fff;pointer-events:none}
-.yt-kw-badge{position:absolute;bottom:2px;left:2px;background:rgba(34,197,94,0.85);color:#000;font-size:7px;font-family:var(--mono);padding:1px 3px;border-radius:2px;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.yt-thumb-info{flex:1;min-width:0}
-.yt-thumb-title{font-size:10px;color:var(--text);line-height:1.3;margin-bottom:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.yt-thumb-meta{font-size:9px;color:var(--text3);font-family:var(--mono)}
-
-/* SIGNAL CARDS */
-.sigrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.sigc{background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:9px;transition:all 0.18s;cursor:default}
-.sigc:hover{background:var(--bg5);border-color:var(--border2);transform:translateY(-1px)}
-.sigico{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;margin-bottom:5px}
-.sigt{font-size:11px;font-weight:600;color:var(--text);margin-bottom:2px}
-.sigs{font-size:10px;color:var(--text3);margin-bottom:5px;line-height:1.3;font-family:var(--mono)}
-
-/* MAP */
-#map{width:100%;height:310px;border-radius:var(--r)}
-.mapboxgl-ctrl-bottom-left,.mapboxgl-ctrl-bottom-right{display:none}
-.mleg{margin-top:7px;display:flex;align-items:center;gap:7px;font-size:9px;color:var(--text3);font-family:var(--mono)}
-.mlegb{flex:1;height:3px;border-radius:2px;background:linear-gradient(90deg,rgba(34,197,94,0.08),var(--green))}
-
-/* ASIDE */
-.aw{margin-bottom:18px}
-.awt{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
-.awt a{color:var(--green3);font-size:9px;text-decoration:none}
-.sfeed{display:flex;flex-direction:column;gap:5px}
-.sfi{display:flex;align-items:flex-start;gap:7px;padding:7px;background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);transition:border-color 0.15s;cursor:default}
-.sfi:hover{border-color:var(--border2)}
-.sfi.new{animation:sfin 0.4s ease;border-color:var(--border)}
-@keyframes sfin{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
-.sfdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:3px}
-.sfb{flex:1;min-width:0}
-.sft{font-size:11px;color:var(--text);line-height:1.35}
-.sfm{font-size:10px;color:var(--text3);font-family:var(--mono);margin-top:2px}
-.stlist{display:flex;flex-direction:column;gap:3px}
-.sti{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid var(--border3)}
-.sti:last-child{border-bottom:none}
-.strk{font-family:var(--mono);font-size:9px;color:var(--text3);min-width:14px}
-.stnm{flex:1;font-size:11px;font-weight:500;color:var(--text)}
-.stbr{width:46px;height:2px;background:var(--bg5);border-radius:1px}
-.stbf{height:2px;border-radius:1px;background:var(--blue);transition:width 0.7s ease}
-.stvl{font-family:var(--mono);font-size:10px;color:var(--text3);min-width:34px;text-align:right;transition:all 0.3s}
-
-/* HEATMAP */
-.hmap{width:100%;border-collapse:separate;border-spacing:2px}
-.hmap th{font-family:var(--mono);font-size:9px;color:var(--text3);font-weight:500;padding:2px 3px;text-align:center}
-.hmap td{padding:3px 2px;text-align:center;border-radius:3px;font-family:var(--mono);font-size:9px;font-weight:500;transition:all 0.5s;min-width:28px}
-
-/* EMLEG */
-.emleg{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:7px}
-.emleg span{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text3);font-family:var(--mono)}
-.emln{width:13px;height:2px;display:inline-block;border-radius:2px}
-
-/* METHODOLOGY BADGE */
-.mbadge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;color:var(--text3);background:var(--bg5);border:1px solid var(--border3);border-radius:20px;padding:2px 7px;cursor:pointer;transition:all 0.15s;text-decoration:none}
-.mbadge:hover{color:var(--green3);border-color:var(--border);background:var(--gdim)}
-.mbadge-pip{width:5px;height:5px;border-radius:1px;background:var(--bg4);display:inline-block;margin-right:1px}
-.mbadge-pip.on{background:var(--green)}
-.mbadge-pip.am{background:var(--amber)}
-.panel-foot{display:flex;align-items:center;justify-content:space-between;padding-top:7px;margin-top:7px;border-top:1px solid var(--border3)}
-
-/* AI ENGINE STATUS PANEL */
-.ai-status{background:var(--bg3);border:1px solid rgba(192,132,252,0.25);border-radius:var(--r2);padding:14px;margin-bottom:11px;position:relative;overflow:hidden}
-.ai-status::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--purple),transparent)}
-.ai-status-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.ai-status-title{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--purple);display:flex;align-items:center;gap:6px}
-.ai-status-state{font-family:var(--mono);font-size:10px;color:var(--text3)}
-.ai-progress{height:3px;background:var(--bg5);border-radius:2px;overflow:hidden;margin-bottom:8px}
-.ai-progress-fill{height:3px;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:2px;width:0%;transition:width 0.3s ease}
-.ai-log{display:flex;flex-direction:column;gap:3px;max-height:80px;overflow-y:auto}
-.ai-log-item{font-family:var(--mono);font-size:10px;color:var(--text3);display:flex;align-items:flex-start;gap:6px;animation:sfin 0.3s ease}
-.ai-log-item.done{color:var(--green3)}
-.ai-log-item.active{color:var(--purple)}
-.ai-log-item.error{color:var(--red)}
-.ai-log-ts{color:var(--text3);flex-shrink:0;opacity:0.6}
-
-/* INSIGHT HIGHLIGHT */
-.insight-box{background:var(--bg4);border:1px solid rgba(34,197,94,0.2);border-radius:var(--r);padding:10px;margin-top:10px}
-.insight-label{font-family:var(--mono);font-size:9px;color:var(--green2);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:5px}
-.insight-text{font-size:12px;color:var(--text);line-height:1.5}
-
-/* COUNTDOWN */
-.cdbar{width:50px;height:2px;background:var(--bg5);border-radius:1px;overflow:hidden}
-.cdfill{height:2px;background:var(--green);border-radius:1px;transition:width 1s linear}
-
-/* ANIM */
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.mc{animation:fadeUp 0.4s ease both}
-.mc:nth-child(1){animation-delay:0.03s}.mc:nth-child(2){animation-delay:0.06s}
-.mc:nth-child(3){animation-delay:0.09s}.mc:nth-child(4){animation-delay:0.12s}
-.mc:nth-child(5){animation-delay:0.15s}.mc:nth-child(6){animation-delay:0.18s}
-.panel{animation:fadeUp 0.4s ease both}
-
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:48px;background:rgba(7,9,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border3);display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.logo{font-family:var(--display);font-size:18px;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
+.logo em{color:var(--green);font-style:normal}
+.logo span{font-size:10px;color:var(--text3);font-family:var(--mono);margin-left:6px;font-weight:400}
+.topnav{display:flex;align-items:center;gap:8px}
+.pill{font-size:10px;font-family:var(--mono);padding:4px 10px;border-radius:20px;border:1px solid var(--border2);color:var(--text2);background:var(--bg3);cursor:pointer;text-decoration:none;transition:all 0.2s;display:flex;align-items:center;gap:5px}
+.pill:hover{border-color:var(--border);color:var(--text)}
+.lang-toggle{display:flex;background:var(--bg4);border:1px solid var(--border3);border-radius:20px;overflow:hidden}
+.lang-btn{font-size:10px;font-family:var(--mono);padding:4px 8px;cursor:pointer;transition:all 0.2s;color:var(--text3);border:none;background:none}
+.lang-btn.active{background:var(--green);color:#000;font-weight:600}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block}
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh;padding-top:48px}
+/* GLIMPSE */
+.glimpse{position:sticky;top:48px;height:calc(100vh - 48px);overflow-y:auto;background:var(--bg2);border-right:1px solid var(--border3);padding:16px 14px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:var(--border3) transparent}
+.glimpse-label{font-size:8px;font-family:var(--mono);color:var(--text3);letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.glimpse-label a{color:var(--green);text-decoration:none;font-size:8px;margin-left:auto;border:1px solid var(--border2);padding:2px 6px;border-radius:10px}
+.g-metrics{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.g-mc{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:7px 9px;position:relative;overflow:hidden}
+.g-mc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.g-mc.gr::before{background:var(--green)}.g-mc.am::before{background:var(--amber)}.g-mc.bl::before{background:var(--blue)}.g-mc.rd::before{background:var(--red)}
+.g-mc-lbl{font-size:8px;color:var(--text3);font-family:var(--mono);margin-bottom:2px}
+.g-mc-val{font-size:16px;font-weight:700;font-family:var(--display);color:var(--text)}
+.g-mc-sub{font-size:8px;color:var(--text3);margin-top:1px}
+.g-box{background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:9px 10px}
+.g-box-title{font-size:9px;font-family:var(--mono);color:var(--text2);margin-bottom:6px}
+.g-bar-row{display:flex;align-items:center;gap:5px;margin-bottom:4px}
+.g-bar-label{font-size:8px;color:var(--text3);min-width:58px}
+.g-bar-track{flex:1;height:3px;background:var(--bg5);border-radius:2px}
+.g-bar-fill{height:3px;border-radius:2px;transition:width 1.5s ease}
+.g-bar-pct{font-size:8px;font-family:var(--mono);color:var(--text2);min-width:26px;text-align:right}
+.g-tl-track{position:relative;height:3px;background:var(--bg5);border-radius:2px;margin:0 2px}
+.g-tl-fill{position:absolute;top:0;left:0;height:3px;background:linear-gradient(to right,var(--red),var(--amber),var(--green));border-radius:2px;width:100%}
+.g-tl-nodes{display:flex;justify-content:space-between;margin-top:4px}
+.g-tl-node{font-size:7px;font-family:var(--mono);color:var(--text3);display:flex;flex-direction:column;align-items:center;gap:2px}
+.g-tl-node span{width:5px;height:5px;border-radius:50%;display:block}
+.g-tl-node.tm span{border-radius:2px;background:var(--purple)}
+.g-state-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid var(--border3)}
+.g-state-row:last-child{border-bottom:none}
+.g-state-name{font-size:10px;color:var(--text2)}
+.g-state-tag{font-size:8px;font-family:var(--mono);padding:1px 5px;border-radius:3px}
+.g-aedc{background:rgba(56,189,248,0.04);border:1px solid rgba(56,189,248,0.15);border-radius:var(--r);padding:9px 10px}
+.g-aedc-title{font-size:9px;font-family:var(--mono);color:var(--blue);margin-bottom:5px;display:flex;justify-content:space-between}
+.g-aedc-row{display:flex;align-items:center;gap:5px;margin-bottom:3px}
+.g-aedc-yr{font-size:7px;font-family:var(--mono);color:var(--text3);min-width:26px}
+.g-aedc-bar-track{flex:1;height:3px;background:var(--bg5);border-radius:2px}
+.g-aedc-bar-fill{height:3px;border-radius:2px}
+/* CONSUMER ZONE */
+.consumer{display:flex;flex-direction:column;min-height:calc(100vh - 48px);background:var(--bg)}
+/* STREAM */
+.stream{flex:0 0 auto;padding:12px 20px 10px;border-bottom:1px solid var(--border3)}
+.stream-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.stream-title{font-size:10px;font-family:var(--mono);color:var(--text2);letter-spacing:0.5px}
+.stream-count{font-size:9px;font-family:var(--mono);color:var(--green);background:var(--gdim);padding:2px 7px;border-radius:10px;border:1px solid var(--border)}
+.stream-feed{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.stream-feed::-webkit-scrollbar{display:none}
+.stream-card{flex:0 0 auto;background:var(--bg3);border:1px solid var(--border3);border-radius:var(--r);padding:7px 11px;min-width:190px;max-width:230px;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden}
+.stream-card:hover{border-color:var(--border);transform:translateY(-1px)}
+.stream-card.new{animation:slideIn 0.4s ease}
+.stream-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:var(--green);opacity:0.35}
+.sc-meta{display:flex;align-items:center;gap:5px;margin-bottom:3px}
+.sc-loc{font-size:8px;font-family:var(--mono);color:var(--text3)}
+.sc-time{font-size:8px;font-family:var(--mono);color:var(--text3);margin-left:auto}
+.sc-text{font-size:10px;color:var(--text2);line-height:1.4}
+.sc-keyword{display:inline-block;margin-top:3px;font-size:7px;font-family:var(--mono);background:var(--gdim);color:var(--green);padding:1px 4px;border-radius:3px}
+/* INTERACT */
+.interact{flex:1;padding:16px 20px;display:flex;flex-direction:column;gap:0}
+.hero-prompt{text-align:center;padding:20px 20px 16px}
+.hero-title{font-family:var(--display);font-size:21px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:5px}
+.hero-title span{color:var(--green)}
+.hero-sub{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:18px;line-height:1.5}
+.input-wrap{position:relative;max-width:580px;margin:0 auto 12px;width:100%}
+.main-input{width:100%;background:var(--bg3);border:1.5px solid var(--border2);border-radius:24px;color:var(--text);font-family:var(--font);font-size:13px;padding:12px 48px 12px 20px;outline:none;transition:border-color 0.2s,box-shadow 0.2s}
+.main-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,0.08)}
+.main-input::placeholder{color:var(--text3)}
+.voice-btn{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--gdim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;transition:all 0.2s}
+.voice-btn:hover{background:rgba(34,197,94,0.15)}
+.voice-btn.listening{background:rgba(34,197,94,0.2);animation:pulse 1s infinite}
+.quickpicks{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;max-width:580px;margin:0 auto 18px}
+.qp{font-size:11px;font-family:var(--mono);background:var(--bg3);border:1px solid var(--border3);border-radius:20px;padding:5px 11px;color:var(--text2);cursor:pointer;transition:all 0.2s}
+.qp:hover{border-color:var(--border);color:var(--text);background:var(--bg4)}
+/* CONVO WRAP */
+.convo-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:820px;margin:0 auto;width:100%;flex:1}
+/* CONVO PANEL */
+.convo-panel{background:var(--bg2);border:1px solid var(--border3);border-radius:var(--r2);display:flex;flex-direction:column;min-height:360px;max-height:480px;overflow:hidden}
+.panel-header{padding:9px 13px;border-bottom:1px solid var(--border3);font-size:9px;font-family:var(--mono);color:var(--text3);display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:0.8px}
+.convo-messages{flex:1;overflow-y:auto;padding:11px 13px;display:flex;flex-direction:column;gap:9px;scrollbar-width:thin;scrollbar-color:var(--border3) transparent}
+.msg{display:flex;gap:7px;animation:fadeUp 0.3s ease}
+.msg.user{flex-direction:row-reverse}
+.msg-bubble{max-width:85%;padding:7px 11px;border-radius:12px;font-size:11px;line-height:1.5}
+.msg.vitics .msg-bubble{background:var(--bg4);border:1px solid var(--border3);color:var(--text2);border-radius:4px 12px 12px 12px}
+.msg.user .msg-bubble{background:var(--gdim);border:1px solid var(--border);color:var(--text);border-radius:12px 4px 12px 12px}
+.msg-avatar{width:22px;height:22px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;font-family:var(--mono);margin-top:2px}
+.msg.vitics .msg-avatar{background:var(--gdim);border:1px solid var(--border);color:var(--green)}
+.msg.user .msg-avatar{background:var(--bg4);border:1px solid var(--border3);color:var(--text2)}
+.typing{display:flex;gap:3px;align-items:center;padding:3px 0}
+.typing span{width:5px;height:5px;border-radius:50%;background:var(--text3);animation:bounce 1s infinite}
+.typing span:nth-child(2){animation-delay:0.15s}
+.typing span:nth-child(3){animation-delay:0.3s}
+.convo-input-row{padding:9px 11px;border-top:1px solid var(--border3);display:flex;gap:6px}
+.convo-input{flex:1;background:var(--bg4);border:1px solid var(--border3);border-radius:20px;color:var(--text);font-size:11px;font-family:var(--font);padding:6px 12px;outline:none;transition:border-color 0.2s}
+.convo-input:focus{border-color:var(--border)}
+.convo-input::placeholder{color:var(--text3)}
+.send-btn{width:28px;height:28px;border-radius:50%;background:var(--green);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;align-self:center;transition:opacity 0.2s;flex-shrink:0}
+.send-btn:hover{opacity:0.85}
+/* RECEIPT PANEL */
+.receipt-panel{background:var(--bg2);border:1px solid var(--border3);border-radius:var(--r2);display:flex;flex-direction:column;min-height:360px;max-height:480px;overflow:hidden}
+.type-selector{display:flex;gap:4px;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid var(--border3)}
+.type-btn{font-size:8px;font-family:var(--mono);padding:3px 7px;border-radius:10px;border:1px solid var(--border3);background:none;color:var(--text3);cursor:pointer;transition:all 0.2s}
+.type-btn:hover{border-color:var(--border);color:var(--text2)}
+.type-btn.active{background:var(--gdim);border-color:var(--border);color:var(--green)}
+.receipt-body{flex:1;overflow-y:auto;padding:12px 13px;scrollbar-width:thin;scrollbar-color:var(--border3) transparent}
+.receipt-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:7px;color:var(--text3)}
+.receipt-empty-icon{font-size:26px;opacity:0.4}
+.receipt-empty-text{font-size:10px;font-family:var(--mono);text-align:center;line-height:1.5}
+.receipt-doc{font-family:var(--mono);animation:fadeUp 0.4s ease}
+.receipt-doc-title{font-size:10px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid var(--border);padding-bottom:5px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.receipt-line{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid var(--border3);font-size:10px}
+.receipt-line:last-of-type{border-bottom:none}
+.rl-key{color:var(--text3)}.rl-val{color:var(--text);font-weight:500}
+.rl-val.green{color:var(--green)}.rl-val.red{color:var(--red)}.rl-val.amber{color:var(--amber)}.rl-val.filling{color:var(--text3);animation:blink 1s infinite}
+.receipt-verdict{margin-top:9px;padding:7px;background:var(--gdim);border:1px solid var(--border);border-radius:var(--r);font-size:10px;color:var(--text2);line-height:1.5}
+.receipt-verdict strong{color:var(--green)}
+.receipt-actions{margin-top:10px;display:flex;flex-direction:column;gap:4px}
+.receipt-btn{display:flex;align-items:center;gap:5px;padding:6px 9px;border-radius:var(--r);font-size:10px;font-family:var(--mono);border:1px solid var(--border3);background:var(--bg4);color:var(--text2);cursor:pointer;transition:all 0.2s;text-decoration:none}
+.receipt-btn:hover{border-color:var(--border);color:var(--text);background:var(--bg5)}
+.receipt-btn.primary{background:var(--gdim);border-color:var(--border);color:var(--green)}
+.receipt-btn.primary:hover{background:rgba(34,197,94,0.12)}
+/* FOOTER */
+.footer-cta{padding:12px 20px;border-top:1px solid var(--border3);display:flex;align-items:center;justify-content:space-between;font-size:10px;color:var(--text3);font-family:var(--mono);gap:10px;flex-wrap:wrap}
+.footer-stat{display:flex;align-items:center;gap:5px}
+.footer-stat span{color:var(--text2)}
+.footer-links{display:flex;gap:10px}
+.footer-links a{color:var(--text3);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--green)}
+/* ANIMATIONS */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-4px)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+/* LIGHT MODE */
+body.light{--bg:#f0f4f8;--bg2:#fff;--bg3:#f8fafc;--bg4:#eef2f7;--bg5:#e2e8f0;--text:#0f172a;--text2:#475569;--text3:#94a3b8;--border:rgba(22,163,74,0.25);--border2:rgba(22,163,74,0.12);--border3:rgba(0,0,0,0.07);--green:#16a34a;--gdim:rgba(22,163,74,0.07)}
 /* RESPONSIVE */
-@media(max-width:1200px){.aside{width:200px}.g6{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:1000px){.aside{display:none}.g211{grid-template-columns:1fr 1fr}}
-@media(max-width:800px){.sidebar{transform:translateX(-100%)}.content{margin-left:0}.g6{grid-template-columns:repeat(2,1fr)}.g2,.g31,.g211{grid-template-columns:1fr}.feed{padding:12px}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.glimpse{display:none}.convo-wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<!-- SIDEBAR -->
-<aside class="sidebar">
-  <div class="sb-brand">
-    <a href="index.html" class="sb-logo">vit<em>ics</em></a>
-    <div class="sb-tag">AI Energy Intelligence</div>
-  </div>
-  <div class="sb-user">
-    <div class="sb-av">NG</div>
-    <div><div class="sb-un">Nigeria Platform</div><div class="sb-ro">Public Dashboard</div></div>
-  </div>
-  <div class="sb-live">
-    <span class="ldot"></span>
-    <span class="sb-lt">AI intelligence active</span>
-    <span class="sb-ltime" id="sbTime">—</span>
-  </div>
-  <div class="sb-sec">
-    <div class="sb-secl">Main</div>
-    <ul class="sbn">
-      <li><a href="#" class="active"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i>Overview</a></li>
-      <li><a href="#"><i data-lucide="smile" style="width:14px;height:14px"></i>Sentiment<span class="sbbadge" id="bsent">62%</span></a></li>
-      <li><a href="#"><i data-lucide="zap" style="width:14px;height:14px"></i>Products<span class="sbbadge" id="bprod">148</span></a></li>
-      <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px"></i>Geography</a></li>
-    </ul>
-  </div>
-  <div class="sb-sec">
-    <div class="sb-secl">Intelligence</div>
-    <ul class="sbn">
-      <li><a href="#"><i data-lucide="activity" style="width:14px;height:14px"></i>Emissions</a></li>
-      <li><a href="#"><i data-lucide="target" style="width:14px;height:14px"></i>SDG Pulse</a></li>
-      <li><a href="#"><i data-lucide="file-text" style="width:14px;height:14px"></i>Policy</a></li>
-      <li><a href="#"><i data-lucide="radar" style="width:14px;height:14px"></i>Futures<span class="sbbadge">6</span></a></li>
-    </ul>
-  </div>
-  <div class="sb-sec">
-    <div class="sb-secl">Trust & Ethics</div>
-    <ul class="sbn">
-      <li><a href="ethics.html"><i data-lucide="shield" style="width:14px;height:14px"></i>Data Ethics</a></li>
-      <li><a href="privacy.html"><i data-lucide="lock" style="width:14px;height:14px"></i>Privacy Policy</a></li>
-      <li><a href="methodology.html"><i data-lucide="microscope" style="width:14px;height:14px"></i>Methodology</a></li>
-    </ul>
-  </div>
-  <div class="sb-sec">
-    <div class="sb-secl">Output</div>
-    <ul class="sbn">
-      <li><a href="#"><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>Reports</a></li>
-      <li><a href="#"><i data-lucide="download" style="width:14px;height:14px"></i>Export</a></li>
-      <li><a href="#"><i data-lucide="settings" style="width:14px;height:14px"></i>Settings</a></li>
-    </ul>
-  </div>
-  <div class="sb-foot"><div class="sb-ver">v3.1.0 · Knowledge Base · © 2025 Vitics</div></div>
-</aside>
-
-<!-- CONTENT -->
-<div class="content">
-  <div class="topbar">
-    <div>
-      <div class="tb-title">Nigeria Decentralised Energy Intelligence</div>
-      <div class="tb-sub">Consumer sentiment · Market signals · Emissions tracking · SDG alignment</div>
+<header class="topbar">
+  <a href="index.html" class="logo">vit<em>ics</em><span>Nigeria Energy Intelligence</span></a>
+  <nav class="topnav">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="langPID" onclick="setLang('pid')">PID</button>
     </div>
-    <div class="tb-r">
-      <div class="chip"><i data-lucide="calendar" style="width:11px;height:11px;opacity:0.6"></i>Last 30 days</div>
-      <div class="chip live">
-        <i data-lucide="refresh-cw" style="width:11px;height:11px"></i>
-        <span id="cdlbl">Next refresh in 45s</span>
-        <div class="cdbar"><div class="cdfill" id="cdfill" style="width:100%"></div></div>
+    <div class="lang-toggle" style="margin-left:4px">
+      <button class="lang-btn active" id="themeLight" onclick="setTheme('dark')">🌙</button>
+      <button class="lang-btn" id="themeDark" onclick="setTheme('light')">☀️</button>
+    </div>
+    <a href="dashboard.html" class="pill"><span class="live-dot"></span>Intelligence dashboard →</a>
+  </nav>
+</header>
+
+<div class="layout">
+  <!-- GLIMPSE -->
+  <div class="glimpse">
+    <div class="glimpse-label">Live intelligence<a href="dashboard.html">Full dashboard →</a></div>
+    <div class="g-metrics">
+      <div class="g-mc gr"><div class="g-mc-lbl">Solar talk</div><div class="g-mc-val" id="gm-solar">74%</div><div class="g-mc-sub">↑ rising fast</div></div>
+      <div class="g-mc rd"><div class="g-mc-lbl">Gen stress</div><div class="g-mc-val" id="gm-gen">81%</div><div class="g-mc-sub">↑ post subsidy</div></div>
+      <div class="g-mc am"><div class="g-mc-lbl">Grid complaints</div><div class="g-mc-val" id="gm-grid">High</div><div class="g-mc-sub">AEDC · Ibadan · IE</div></div>
+      <div class="g-mc bl"><div class="g-mc-lbl">Conversations</div><div class="g-mc-val" id="gm-conv">2,847</div><div class="g-mc-sub">Today · live</div></div>
+    </div>
+    <div class="g-box">
+      <div class="g-box-title">Consumer sentiment breakdown</div>
+      <div class="g-bar-row"><span class="g-bar-label">Solar positive</span><div class="g-bar-track"><div class="g-bar-fill" id="gb-pos" style="width:62%;background:var(--green)"></div></div><span class="g-bar-pct" id="gbp-pos">62%</span></div>
+      <div class="g-bar-row"><span class="g-bar-label">Grid negative</span><div class="g-bar-track"><div class="g-bar-fill" id="gb-neg" style="width:24%;background:var(--red)"></div></div><span class="g-bar-pct" id="gbp-neg">24%</span></div>
+      <div class="g-bar-row"><span class="g-bar-label">Gen cost pain</span><div class="g-bar-track"><div class="g-bar-fill" id="gb-gen" style="width:81%;background:var(--amber)"></div></div><span class="g-bar-pct" id="gbp-gen">81%</span></div>
+      <div class="g-bar-row"><span class="g-bar-label">Policy gap</span><div class="g-bar-track"><div class="g-bar-fill" id="gb-pol" style="width:74%;background:var(--purple)"></div></div><span class="g-bar-pct" id="gbp-pol">74%</span></div>
+    </div>
+    <div class="g-box">
+      <div class="g-box-title">Policy timeline · 2001–2025 · avg impact 3/10</div>
+      <div class="g-tl-track"><div class="g-tl-fill"></div></div>
+      <div class="g-tl-nodes">
+        <div class="g-tl-node"><span style="background:var(--red)"></span>2001</div>
+        <div class="g-tl-node tm"><span></span>2013</div>
+        <div class="g-tl-node"><span style="background:var(--amber)"></span>2016</div>
+        <div class="g-tl-node tm"><span></span>2020</div>
+        <div class="g-tl-node tm"><span></span>2023</div>
+        <div class="g-tl-node"><span style="background:var(--green)"></span>2025</div>
       </div>
-      <div class="chip ai-active" id="aiStatusChip">
-        <i data-lucide="cpu" style="width:11px;height:11px"></i>
-        <span id="aiChipLabel">AI engine ready</span>
-      </div>
-      <div class="chip"><i data-lucide="bell" style="width:11px;height:11px;opacity:0.6"></i><span id="alrt">3 alerts</span></div>
-      <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">
-        <span class="toggle-moon">🌙</span>
-        <span class="toggle-sun">☀️</span>
-        <div class="toggle-track"><div class="toggle-thumb"></div></div>
-      </div>
+    </div>
+    <div class="g-box">
+      <div class="g-box-title">Highest signal states</div>
+      <div class="g-state-row"><span class="g-state-name">Lagos</span><span class="g-state-tag" style="background:var(--rdim);color:var(--red)">Gen stress ↑</span></div>
+      <div class="g-state-row"><span class="g-state-name">Kano</span><span class="g-state-tag" style="background:var(--gdim);color:var(--green)">Solar intent ↑</span></div>
+      <div class="g-state-row"><span class="g-state-name">FCT Abuja</span><span class="g-state-tag" style="background:var(--adim);color:var(--amber)">Bill complaints</span></div>
+      <div class="g-state-row"><span class="g-state-name">Oyo · Ibadan</span><span class="g-state-tag" style="background:var(--gdim);color:var(--green)">Solar switching</span></div>
+    </div>
+    <div class="g-aedc">
+      <div class="g-aedc-title"><span>AEDC defection signal</span><span style="color:var(--red)">2014→2024</span></div>
+      <div id="g-aedc-bars"></div>
+    </div>
+    <div class="g-box" style="font-size:9px;color:var(--text3);font-family:var(--mono);line-height:1.6">
+      Intelligence grounded in <strong style="color:var(--text2)">25 verified documents</strong> · <strong style="color:var(--text2)">11 yrs AEDC data</strong> · <strong style="color:var(--text2)">real-time YouTube signals</strong><br>
+      <a href="methodology.html" style="color:var(--green);text-decoration:none">Methodology →</a>
     </div>
   </div>
 
-  <div class="body">
-    <div class="feed">
-
-      <!-- AI ENGINE STATUS -->
-      <div class="ai-status" id="aiStatusPanel">
-        <div class="ai-status-head">
-          <div class="ai-status-title"><span class="ai-dot"></span>Vitics AI Intelligence Engine — Phase 3</div>
-          <div class="ai-status-state" id="aiStateLabel">Initialising...</div>
-        </div>
-        <div class="ai-progress"><div class="ai-progress-fill" id="aiProgressFill"></div></div>
-        <div class="ai-log" id="aiLog"></div>
+  <!-- CONSUMER ZONE -->
+  <div class="consumer">
+    <!-- STREAM -->
+    <div class="stream">
+      <div class="stream-header">
+        <span class="live-dot"></span>
+        <span class="stream-title" id="stream-title">What Nigerians are saying about energy right now</span>
+        <span class="stream-count" id="stream-count">12 signals live</span>
       </div>
+      <div class="stream-feed" id="streamFeed"></div>
+    </div>
 
-      <!-- METRICS -->
-      <div class="sh"><div class="shl">Core metrics</div><div class="shline"></div><div class="shn" id="lupd">Awaiting AI analysis...</div></div>
-      <div class="g g6">
-        <div class="mc" id="mc0"><div class="mc-acc" style="background:var(--green)"></div><div class="mc-top"><div class="mc-lbl">Conversations</div><div class="mc-ico"><i data-lucide="message-circle" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv0">—</div><div class="mc-dlt nt" id="md0">Fetching from YouTube...</div><div class="mc-sp" id="sp1"></div></div>
-        <div class="mc" id="mc1"><div class="mc-acc" style="background:var(--green)"></div><div class="mc-top"><div class="mc-lbl">Sentiment</div><div class="mc-ico"><i data-lucide="smile" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv1">—</div><div class="mc-dlt nt" id="md1">Claude analysing...</div><div class="mc-sp" id="sp2"></div></div>
-        <div class="mc" id="mc2"><div class="mc-acc" style="background:var(--blue)"></div><div class="mc-top"><div class="mc-lbl">States w/ signal</div><div class="mc-ico"><i data-lucide="map-pin" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv2">—</div><div class="mc-dlt nt" id="md2">Geographic NLP...</div><div class="mc-sp" id="sp3"></div></div>
-        <div class="mc" id="mc3"><div class="mc-acc" style="background:var(--amber)"></div><div class="mc-top"><div class="mc-lbl">Products</div><div class="mc-ico"><i data-lucide="zap" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv3">—</div><div class="mc-dlt nt" id="md3">Product detection...</div><div class="mc-sp" id="sp4"></div></div>
-        <div class="mc" id="mc4"><div class="mc-acc" style="background:var(--green)"></div><div class="mc-top"><div class="mc-lbl">CO₂ avoided</div><div class="mc-ico"><i data-lucide="cloud" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv4">—</div><div class="mc-dlt nt" id="md4">Emissions model...</div><div class="mc-sp" id="sp5"></div></div>
-        <div class="mc" id="mc5"><div class="mc-acc" style="background:var(--red)"></div><div class="mc-top"><div class="mc-lbl">Fossil signal</div><div class="mc-ico"><i data-lucide="fuel" style="width:12px;height:12px"></i></div></div><div class="mc-val" id="mv5">—</div><div class="mc-dlt nt" id="md5">Fossil/clean split...</div><div class="mc-sp" id="sp6"></div></div>
-      </div>
-
-      <!-- CONSUMER OVERVIEW -->
-      <div class="sh"><div class="shl">Consumer signal overview</div><div class="shline"></div></div>
-      <div class="g g211">
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="trending-up" style="width:11px;height:11px"></i>Conversation volume — 8 weeks<div class="ai-panel-badge"><span class="ai-dot"></span>AI sourced</div></div>
-          <div class="cbars" id="cbars"></div>
-          <div class="clbls"><span>Wk1</span><span>Wk2</span><span>Wk3</span><span>Wk4</span><span>Wk5</span><span>Wk6</span><span>Wk7</span><span>Wk8</span></div>
-          <div class="twrap" id="topicTags">
-            <span class="tag tz">Analysing topics...</span>
-          </div>
-          <div class="insight-box" id="convInsight" style="display:none">
-            <div class="insight-label"><i data-lucide="sparkles" style="width:10px;height:10px"></i>AI insight</div>
-            <div class="insight-text" id="convInsightText"></div>
-          </div>
-          <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip on"></span><span class="mbadge-pip on"></span><span class="mbadge-pip on"></span>&nbsp;High confidence · YouTube API v3</a></div>
+    <!-- INTERACT -->
+    <div class="interact">
+      <div class="hero-prompt" id="heroPrompt">
+        <div class="hero-title" id="hero-title">What is your <span>energy problem?</span></div>
+        <div class="hero-sub" id="hero-sub">Tell Vitics. Walk away with your personal Energy Receipt — grounded in 25 verified Nigerian energy documents.</div>
+        <div class="input-wrap">
+          <input class="main-input" id="mainInput" type="text" placeholder="Type your energy problem or question..." onkeydown="if(event.key==='Enter')startConversation()">
+          <div class="voice-btn" id="voiceBtn" onclick="toggleVoice()">🎙</div>
         </div>
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="smile" style="width:11px;height:11px"></i>Sentiment breakdown<div class="ai-panel-badge"><span class="ai-dot"></span>Claude</div></div>
-          <div class="sbar" id="sbar"><div class="sp" id="spos" style="flex:62"></div><div class="snu" id="sneu" style="flex:22"></div><div class="sng" id="sneg" style="flex:16"></div></div>
-          <div class="sleg">
-            <span><span class="sdot" style="background:var(--green)"></span>Pos <span id="splbl">—</span>%</span>
-            <span><span class="sdot" style="background:var(--text3)"></span>Neu <span id="snlbl">—</span>%</span>
-            <span><span class="sdot" style="background:var(--red)"></span>Neg <span id="sglbl">—</span>%</span>
-          </div>
-          <div class="pt" style="margin-bottom:7px"><i data-lucide="database" style="width:11px;height:11px"></i>Data sources</div>
-          <div class="srcr"><div class="srci" style="background:#0f0f0f;color:#ddd">YT</div><span class="srcn">YouTube (live)</span><div class="srcb"><div class="srcbf" id="sb0" style="width:100%"></div></div><span class="srcc" id="sc0">—</span></div>
-          <div class="srcr"><div class="srci" style="background:#0a0018;color:#a6f">NL</div><span class="srcn">Nairaland</span><div class="srcb"><div class="srcbf" id="sb1" style="width:40%"></div></div><span class="srcc" id="sc1">—</span></div>
-          <div class="srcr"><div class="srci" style="background:#00071a;color:#58f">RD</div><span class="srcn">Reddit</span><div class="srcb"><div class="srcbf" id="sb2" style="width:20%"></div></div><span class="srcc" id="sc2">—</span></div>
-          <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip am"></span><span class="mbadge-pip am"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span>&nbsp;Moderate · Claude NLP · ~85% accuracy</a></div>
-        </div>
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="fuel" style="width:11px;height:11px"></i>Fossil vs clean signal</div>
-          <div id="fuelChart"></div>
-          <div style="margin-top:3px">
-            <div class="ri"><span class="rn">Generator complaints</span><span class="tag tr" id="genTag">—</span></div>
-            <div class="ri"><span class="rn">Switched to solar posts</span><span class="tag tg" id="swtag">—</span></div>
-            <div class="ri"><span class="rn">Kerosene lamp mentions</span><span class="tag tg" id="keroTag">—</span></div>
-          </div>
+        <div class="quickpicks" id="quickpicks">
+          <div class="qp" onclick="pickPhrase(this)">My AEDC bill don triple</div>
+          <div class="qp" onclick="pickPhrase(this)">Generator dey kill my profit</div>
+          <div class="qp" onclick="pickPhrase(this)">I wan switch to solar</div>
+          <div class="qp" onclick="pickPhrase(this)">No light since 3 days</div>
+          <div class="qp" onclick="pickPhrase(this)">How much solar for my shop?</div>
+          <div class="qp" onclick="pickPhrase(this)">Is my electricity bill correct?</div>
         </div>
       </div>
 
-      <!-- PRODUCTS + MAP -->
-      <div class="sh"><div class="shl">Products & geographic demand</div><div class="shline"></div></div>
-      <div class="g g31">
-        <div class="panel">
-          <div class="ptl"></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <div>
-              <div class="pt"><i data-lucide="zap" style="width:11px;height:11px"></i>Top products<div class="ai-panel-badge"><span class="ai-dot"></span>AI detected</div></div>
-              <div id="productList"></div>
-            </div>
-            <div>
-              <div class="pt"><i data-lucide="grid" style="width:11px;height:11px"></i>Demand heatmap</div>
-              <div style="overflow-x:auto"><table class="hmap" id="htbl"></table></div>
-            </div>
-          </div>
-          <div class="insight-box" id="productInsight" style="display:none">
-            <div class="insight-label"><i data-lucide="sparkles" style="width:10px;height:10px"></i>AI product intelligence</div>
-            <div class="insight-text" id="productInsightText"></div>
+      <div class="convo-wrap" id="convoWrap" style="display:none">
+        <!-- Conversation -->
+        <div class="convo-panel">
+          <div class="panel-header"><span class="live-dot"></span><span id="convo-hdr">Vitics · Energy conversation</span></div>
+          <div class="convo-messages" id="convoMessages"></div>
+          <div class="convo-input-row">
+            <input class="convo-input" id="convoInput" placeholder="Continue..." onkeydown="if(event.key==='Enter')sendMessage()">
+            <div class="send-btn" onclick="sendMessage()">→</div>
           </div>
         </div>
-        <div class="panel" style="padding:0;overflow:hidden">
-          <div style="padding:12px 14px 9px;border-bottom:1px solid var(--border2)">
-            <div class="pt" style="margin-bottom:0"><i data-lucide="map-pin" style="width:11px;height:11px"></i>Geographic demand — Nigeria<div class="ai-panel-badge"><span class="ai-dot"></span>NLP inferred</div></div>
+        <!-- Receipt -->
+        <div class="receipt-panel">
+          <div class="type-selector" id="typeSelector">
+            <button class="type-btn active" onclick="setReceiptType('load')">⚡ Load</button>
+            <button class="type-btn" onclick="setReceiptType('bill')">📋 Bill check</button>
+            <button class="type-btn" onclick="setReceiptType('solar')">☀️ Solar</button>
+            <button class="type-btn" onclick="setReceiptType('rights')">⚖️ Rights</button>
           </div>
-          <div id="map"></div>
-          <div style="padding:7px 13px"><div class="mleg"><span>Low</span><div class="mlegb"></div><span>High demand</span></div></div>
-        </div>
-      </div>
-
-      <!-- EMISSIONS + POLICY -->
-      <div class="sh"><div class="shl">Emissions intelligence</div><div class="shline"></div></div>
-      <div class="g g2">
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="activity" style="width:11px;height:11px"></i>Nigeria CO₂ emissions vs avoided (Mt CO₂e)</div>
-          <div class="emleg">
-            <span><span class="emln" style="background:var(--red)"></span>Total emissions</span>
-            <span><span class="emln" style="background:var(--green)"></span>Avoided (RE)</span>
-            <span><span style="width:13px;border-top:2px dashed var(--blue);display:inline-block"></span>NDC target</span>
-          </div>
-          <div id="emChart"></div>
-
-          <!-- ── GENERATOR ECONOMY STATS ── -->
-          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border3)">
-            <div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px">Nigeria generator economy · SEforALL / Lagos State 2024</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
-              <div style="background:var(--rdim);border:1px solid rgba(244,63,94,0.15);border-radius:var(--r);padding:8px">
-                <div style="font-size:16px;font-weight:700;color:var(--red);font-family:var(--mono)">₦7.6tn</div>
-                <div style="font-size:9px;color:var(--text3);margin-top:2px">Annual household spend on genset fuel nationwide</div>
-              </div>
-              <div style="background:var(--adim);border:1px solid rgba(245,158,11,0.15);border-radius:var(--r);padding:8px">
-                <div style="font-size:16px;font-weight:700;color:var(--amber);font-family:var(--mono)">22M</div>
-                <div style="font-size:9px;color:var(--text3);margin-top:2px">Small petrol generators in Nigerian households</div>
-              </div>
-              <div style="background:var(--pdim);border:1px solid rgba(192,132,252,0.15);border-radius:var(--r);padding:8px">
-                <div style="font-size:16px;font-weight:700;color:var(--purple);font-family:var(--mono)">39Mt</div>
-                <div style="font-size:9px;color:var(--text3);margin-top:2px">CO₂e from Lagos gensets alone per year</div>
-              </div>
-              <div style="background:var(--rdim);border:1px solid rgba(244,63,94,0.15);border-radius:var(--r);padding:8px">
-                <div style="font-size:16px;font-weight:700;color:var(--red);font-family:var(--mono)">~1,500</div>
-                <div style="font-size:9px;color:var(--text3);margin-top:2px">Deaths per year from genset CO poisoning</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── ACCESS GAP TRACKER ── -->
-          <div style="padding-top:12px;border-top:1px solid var(--border3);margin-bottom:12px">
-            <div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px">Energy access gap · progress to SDG7 2030 target</div>
-            <div style="margin-bottom:6px">
-              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
-                <span style="color:var(--text2)">National grid access</span>
-                <span style="color:var(--amber)">~60% · 92M without</span>
-              </div>
-              <div style="height:5px;background:var(--bg5);border-radius:3px;position:relative">
-                <div style="width:60%;height:5px;background:linear-gradient(to right,var(--amber),var(--green));border-radius:3px"></div>
-                <div style="position:absolute;top:-1px;left:90%;width:2px;height:7px;background:var(--green);border-radius:1px" title="2030 SDG7 target: 90%"></div>
-              </div>
-              <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--text3);font-family:var(--mono);margin-top:2px"><span>0%</span><span style="color:var(--green)">SDG7 target: 90%</span><span>100%</span></div>
-            </div>
-            <div style="margin-bottom:6px">
-              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
-                <span style="color:var(--text2)">Rural electrification</span>
-                <span style="color:var(--red)">~26% · unchanged since 1981</span>
-              </div>
-              <div style="height:5px;background:var(--bg5);border-radius:3px">
-                <div style="width:26%;height:5px;background:var(--red);border-radius:3px"></div>
-              </div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);margin-bottom:3px">
-                <span style="color:var(--text2)">Clean cooking access</span>
-                <span style="color:var(--red)">~27% · 40M households excluded</span>
-              </div>
-              <div style="height:5px;background:var(--bg5);border-radius:3px">
-                <div style="width:27%;height:5px;background:var(--red);border-radius:3px"></div>
-              </div>
-            </div>
-            <div style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-top:6px">Source: Solar Market Creation 2023 · IEPT 2022 · RESIP 2016</div>
-          </div>
-
-          <!-- ── SOLAR SAVINGS CALCULATOR ── -->
-          <div style="padding:10px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3)">
-            <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
-              <span style="font-size:14px">☀️</span>
-              <div>
-                <div style="font-size:10px;font-weight:600;color:var(--text)">Your solar contribution to Nigeria's transition</div>
-                <div style="font-size:9px;color:var(--text3)">Calculate emissions avoided + fuel saved by switching to solar</div>
-              </div>
-            </div>
-
-            <!-- Inputs -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
-              <div>
-                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Solar panel size (Watts)</div>
-                <select id="solarWatts" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
-                  <option value="100">100W panel</option>
-                  <option value="200">200W panel</option>
-                  <option value="300">300W panel</option>
-                  <option value="500" selected>500W panel</option>
-                  <option value="1000">1000W / 1kW</option>
-                  <option value="2000">2kW system</option>
-                  <option value="5000">5kW system</option>
-                </select>
-              </div>
-              <div>
-                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Daily sun hours</div>
-                <select id="sunHours" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
-                  <option value="4">4 hrs (cloudy/south)</option>
-                  <option value="5" selected>5 hrs (Lagos/Abuja)</option>
-                  <option value="6">6 hrs (middle belt)</option>
-                  <option value="7">7 hrs (north — Kano/Sokoto)</option>
-                </select>
-              </div>
-              <div>
-                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Replacing generator (kVA)</div>
-                <select id="replaceKva" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
-                  <option value="0">No generator (off-grid)</option>
-                  <option value="1">1 kVA genset</option>
-                  <option value="2.5" selected>2.5 kVA genset</option>
-                  <option value="5">5 kVA genset</option>
-                  <option value="10">10 kVA genset</option>
-                </select>
-              </div>
-              <div>
-                <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono)">Genset hours replaced/day</div>
-                <input id="genHoursReplaced" type="number" min="0" max="24" value="4" oninput="calcSolar()" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:11px;padding:4px 6px;outline:none">
-              </div>
-            </div>
-
-            <!-- Results -->
-            <div id="solarResult"></div>
-
-            <!-- Contribution badge -->
-            <div id="solarBadge" style="display:none;margin-top:8px;padding:8px;background:var(--gdim);border:1px solid rgba(34,197,94,0.2);border-radius:var(--r);text-align:center">
-              <div style="font-size:9px;color:var(--green);font-family:var(--mono);letter-spacing:0.5px;margin-bottom:3px">YOUR TRANSITION CONTRIBUTION</div>
-              <div id="solarBadgeText" style="font-size:11px;color:var(--text);line-height:1.5"></div>
-              <div style="font-size:8px;color:var(--text3);margin-top:4px">Nigeria needs 92M households to make this shift · You are part of the 2%</div>
-            </div>
-          </div>
-
-          <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip am"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span>&nbsp;Indicative · IEA + GOGLA baseline · Modelled</a></div>
-        </div>
-        <div class="panel" id="policyTimelinePanel">
-          <div class="ptl"></div>
-          <div class="pt" style="display:flex;align-items:center;justify-content:space-between">
-            <span><i data-lucide="git-branch" style="width:11px;height:11px"></i>Policy intelligence timeline · 2001–2025</span>
-            <div style="display:flex;gap:6px;align-items:center">
-              <span class="tag tg" style="font-size:8px;cursor:pointer" id="tlTogglePolicy" onclick="tlFilter('policy')">Policy</span>
-              <span class="tag ta" style="font-size:8px;cursor:pointer" id="tlToggleAedc" onclick="tlFilter('aedc')">AEDC</span>
-              <span class="tag tz" style="font-size:8px;cursor:pointer" id="tlToggleBoth" onclick="tlFilter('both')">Both</span>
-            </div>
-          </div>
-
-          <!-- Legend -->
-          <div style="display:flex;gap:10px;margin:6px 0 10px;flex-wrap:wrap">
-            <span style="font-size:9px;color:var(--text3);font-family:var(--mono)">Impact score:</span>
-            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#f43f5e;display:inline-block"></span>Low 1–3</span>
-            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block"></span>Med 4–6</span>
-            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block"></span>High 7–10</span>
-            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:2px;background:rgba(192,132,252,0.6);display:inline-block"></span>★ Transition</span>
-          </div>
-
-          <!-- Timeline container -->
-          <div id="policyTimeline" style="position:relative;padding-left:18px;max-height:420px;overflow-y:auto;overflow-x:hidden"></div>
-
-          <!-- Detail card (shown on click) -->
-          <div id="tlDetail" style="display:none;margin-top:10px;padding:10px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border2)">
-            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:6px">
-              <div id="tlDetailTitle" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.4;max-width:80%"></div>
-              <span id="tlDetailScore" class="tag" style="font-size:9px;flex-shrink:0"></span>
-            </div>
-            <div id="tlDetailYear" style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-bottom:6px"></div>
-            <div id="tlDetailSummary" style="font-size:10px;color:var(--text2);line-height:1.5;margin-bottom:6px"></div>
-            <div id="tlDetailInsight" style="font-size:9px;color:var(--green);font-family:var(--mono);line-height:1.4;padding:5px;background:var(--gdim);border-radius:4px"></div>
-          </div>
-
-          <!-- Gap index -->
-          <div style="margin-top:12px;padding-top:9px;border-top:1px solid var(--border3)">
-            <div style="font-size:9px;color:var(--text3);margin-bottom:3px;font-family:var(--mono);letter-spacing:0.8px;text-transform:uppercase">Policy-to-market gap index</div>
-            <div class="gapb"><div class="gapf" id="gapf" style="width:74%"></div></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;font-family:var(--mono)">
-              <span style="color:var(--text3)">Avg gap across 25 documents</span>
-              <span style="color:var(--red);font-weight:600" id="gapp">74% gap</span>
+          <div class="panel-header"><span>📄</span><span id="receipt-hdr">Energy Receipt</span><span style="margin-left:auto;font-size:8px;color:var(--green)" id="receipt-status"></span></div>
+          <div class="receipt-body" id="receiptBody">
+            <div class="receipt-empty">
+              <div class="receipt-empty-icon">📄</div>
+              <div class="receipt-empty-text">Your receipt builds as<br>you describe your situation.<br><br>Yours to share &amp; act on.</div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- SDG + FUTURES -->
-      <div class="sh"><div class="shl">SDG pulse & futures signal board</div><div class="shline"></div></div>
-      <div class="g g2" style="margin-bottom:0">
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="target" style="width:11px;height:11px"></i>SDG alignment tracker<div class="ai-panel-badge"><span class="ai-dot"></span>Claude classified</div></div>
-          <div class="sdgr"><div class="sdgn" style="background:rgba(245,158,11,0.12);color:var(--amber)">7</div><div class="sdgb"><div class="sdgt">Affordable & clean energy</div><div class="sdgs">Affordability up · PAYG improving</div></div><div class="sdgbr"><div class="sdgf" id="s7b" style="width:74%;background:var(--green)"></div></div><div class="sdgp" id="s7p" style="color:var(--green)">74%</div></div>
-          <div class="sdgr"><div class="sdgn" style="background:rgba(244,114,182,0.12);color:var(--pink)">5</div><div class="sdgb"><div class="sdgt">Gender equality</div><div class="sdgs">Women MSME gaps · north</div></div><div class="sdgbr"><div class="sdgf" id="s5b" style="width:48%;background:var(--pink)"></div></div><div class="sdgp" id="s5p" style="color:var(--pink)">48%</div></div>
-          <div class="sdgr"><div class="sdgn" style="background:rgba(34,197,94,0.12);color:var(--green3)">8</div><div class="sdgb"><div class="sdgt">Decent work & growth</div><div class="sdgs">Solar jobs · MSME productivity</div></div><div class="sdgbr"><div class="sdgf" id="s8b" style="width:61%;background:var(--green)"></div></div><div class="sdgp" id="s8p" style="color:var(--green)">61%</div></div>
-          <div class="sdgr"><div class="sdgn" style="background:rgba(56,189,248,0.12);color:var(--blue)">10</div><div class="sdgb"><div class="sdgt">Reduced inequalities</div><div class="sdgs">Rural-urban gap · north</div></div><div class="sdgbr"><div class="sdgf" id="s10b" style="width:35%;background:var(--blue)"></div></div><div class="sdgp" id="s10p" style="color:var(--blue)">35%</div></div>
-          <div class="sdgr"><div class="sdgn" style="background:rgba(192,132,252,0.12);color:var(--purple)">13</div><div class="sdgb"><div class="sdgt">Climate action</div><div class="sdgs">Climate motivation signals</div></div><div class="sdgbr"><div class="sdgf" id="s13b" style="width:29%;background:var(--purple)"></div></div><div class="sdgp" id="s13p" style="color:var(--purple)">29%</div></div>
-          <div class="panel-foot"><a href="methodology.html" class="mbadge"><span class="mbadge-pip am"></span><span class="mbadge-pip am"></span><span class="mbadge-pip on" style="background:var(--bg4)"></span>&nbsp;Moderate · Claude AI · UN SDG taxonomy</a></div>
-        </div>
-        <div class="panel">
-          <div class="ptl"></div>
-          <div class="pt"><i data-lucide="radar" style="width:11px;height:11px"></i>Futures signal board</div>
-          <div class="sigrid">
-            <div class="sigc"><div class="sigico" style="background:var(--gdim)">⚡</div><div class="sigt">Battery-as-a-service</div><div class="sigs">Rental models — Lagos & Abuja</div><span class="tag tg" id="f0">+240%</span></div>
-            <div class="sigc"><div class="sigico" style="background:var(--adim)">📱</div><div class="sigt">Energy fintech</div><div class="sigs">BNPL & mobile money solar</div><span class="tag ta" id="f1">+180%</span></div>
-            <div class="sigc"><div class="sigico" style="background:var(--bdim)">🌱</div><div class="sigt">Agri-solar</div><div class="sigs">Solar pumps — north-west</div><span class="tag tb" id="f2">+155%</span></div>
-            <div class="sigc"><div class="sigico" style="background:var(--pdim)">🏭</div><div class="sigt">Local manufacturing</div><div class="sigs">Nigerian-assembled solar</div><span class="tag tp" id="f3">+120%</span></div>
-            <div class="sigc"><div class="sigico" style="background:var(--adim)">💨</div><div class="sigt">Hybrid wind-solar</div><div class="sigs">Small wind + solar — north</div><span class="tag ta" id="f4">+98%</span></div>
-            <div class="sigc"><div class="sigico" style="background:var(--gdim)">🍳</div><div class="sigt">Clean cooking</div><div class="sigs">LPG + induction crossover</div><span class="tag tg" id="f5">+87%</span></div>
-          </div>
-        </div>
+    <div class="footer-cta">
+      <div class="footer-stat"><span class="live-dot"></span><span id="footer-count">2,847</span> energy questions answered today</div>
+      <div class="footer-stat">Powered by <span>Anthropic Claude</span> · <span>25 verified sources</span></div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="privacy.html">Privacy</a>
       </div>
-
-    </div><!-- /feed -->
-
-    <!-- ASIDE -->
-    <aside class="aside">
-      <!-- YouTube video thumbnails with detected keywords -->
-      <div class="aw">
-        <div class="awt" style="display:flex;justify-content:space-between;align-items:center">
-          <span>Live signals <span id="signalCount" style="font-size:9px;color:var(--text3);font-family:var(--mono)"></span></span>
-          <span style="font-size:8px;font-family:var(--mono);color:var(--text3)" id="ytLiveTag">YouTube live</span>
-        </div>
-        <!-- YouTube thumbnail feed -->
-        <div id="ytThumbFeed" style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px"></div>
-        <!-- AI signal cards below thumbnails -->
-        <div id="aiSignalCards" style="display:flex;flex-direction:column;gap:5px"></div>
-      </div>
-
-      <div class="aw">
-        <div class="awt">Top states <a href="#">Map</a></div>
-        <div class="stlist" id="stlist"></div>
-      </div>
-
-      <!-- Platform status -->
-      <div class="aw">
-        <div class="awt">Platform status</div>
-        <div id="platformStatus" style="display:flex;flex-direction:column;gap:4px">
-          <div class="ps-row" id="ps-claude"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">Claude AI</span><span class="ps-val" id="ps-claude-val">Waiting</span></div>
-          <div class="ps-row" id="ps-yt"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">YouTube API</span><span class="ps-val" id="ps-yt-val">Waiting</span></div>
-          <div class="ps-row" id="ps-kb"><span class="ps-dot" style="background:var(--amber)"></span><span class="ps-label">Knowledge base</span><span class="ps-val" id="ps-kb-val">Loading</span></div>
-          <div class="ps-row" id="ps-map"><span class="ps-dot" style="background:var(--green)"></span><span class="ps-label">Mapbox</span><span class="ps-val" id="ps-map-val">Live</span></div>
-          <div style="padding-top:6px;border-top:1px solid var(--border3);margin-top:2px">
-            <div style="font-size:9px;color:var(--text3);font-family:var(--mono)">Last analysis</div>
-            <div id="lastAnalysisTime" style="font-size:10px;color:var(--text2);font-family:var(--mono);margin-top:1px">—</div>
-            <div style="font-size:9px;color:var(--text3);font-family:var(--mono);margin-top:5px;line-height:1.6">
-              Model: claude-haiku-4-5<br>
-              KB: <span id="ps-kb-count">—</span> documents<br>
-              Refresh: 5 min cycle<br>
-              <a href="methodology.html" style="color:var(--green);text-decoration:none">Methodology →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="aw">
-        <div class="awt">SDG quick view</div>
-        <div id="sdgd"></div>
-      </div>
-    </aside>
-
+    </div>
   </div>
 </div>
 
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <script>
-'use strict';
+var LANG='en',receiptType='load',receiptData={},conversationHistory=[],totalQ=0;
 
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// VITICS PHASE 3 — AI INTELLIGENCE ENGINE
-// YouTube Data API v3 → PII Strip → Claude Analysis
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-// ── KEYS (assembled at runtime — never stored as plain strings) ──
-const _yt  = ['AIzaSyAEy3Kg4K','y7CFN7gp6pmNhN','d9uUpsoxjm0'].join('');
-const _ant = ['sk-ant-api03-CndndsQlAPcWq0ZIL','hsQzoFxDLZjJnmcj9ywzL0cgTOOd0x','6rwfcmnpyOmTZb9GQ9cOFK0f1uZmRz','oGH2nko0A-NmL9jAAA'].join('');
-
-// ── ICONS + CLOCK ──
-lucide.createIcons();
-function tick(){
-  const n=new Date();
-  document.getElementById('sbTime').textContent=
-    n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' WAT';
-}
-tick(); setInterval(tick,1000);
-
-// ── THEME TOGGLE ──
-function toggleTheme(){
-  const isLight = document.body.classList.toggle('light');
-  localStorage.setItem('vitics-theme', isLight ? 'light' : 'dark');
-  // Re-render charts with new theme colours
-  if(fuelC) fuelC.updateOptions({theme:{mode: isLight ? 'light' : 'dark'}});
-  if(emC)   emC.updateOptions({theme:{mode: isLight ? 'light' : 'dark'}});
-  if(sdgDonutChart) sdgDonutChart.updateOptions({theme:{mode: isLight ? 'light' : 'dark'}});
-  Object.values(sparks).forEach(c => {
-    if(c) c.updateOptions({theme:{mode: isLight ? 'light' : 'dark'}});
-  });
-}
-// Restore saved theme on load
-(function(){
-  const saved = localStorage.getItem('vitics-theme');
-  if(saved === 'light') document.body.classList.add('light');
-})();
-
-// ── HELPERS ──
-function rnd(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
-function nudge(v,lo,hi,d){return Math.max(lo,Math.min(hi,v+rnd(-d,d)));}
-function fmt(n){return Number(n).toLocaleString('en-GB');}
-function ts(){return new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});}
-function flash(id,dir){
-  const el=document.getElementById(id);if(!el)return;
-  el.classList.remove('flu','fld');void el.offsetWidth;
-  el.classList.add(dir==='up'?'flu':'fld');
-}
-
-// ── AI LOG ──
-function aiLog(msg, type='active'){
-  const log=document.getElementById('aiLog');
-  const item=document.createElement('div');
-  item.className='ai-log-item '+type;
-  item.innerHTML=`<span class="ai-log-ts">[${ts()}]</span> ${msg}`;
-  log.appendChild(item);
-  log.scrollTop=log.scrollHeight;
-}
-function aiProgress(pct){
-  document.getElementById('aiProgressFill').style.width=pct+'%';
-}
-function aiState(msg){
-  document.getElementById('aiStateLabel').textContent=msg;
-}
-function aiChip(msg){
-  document.getElementById('aiChipLabel').textContent=msg;
-}
-
-// ── NIGERIAN ENERGY KEYWORDS for YouTube search ──
-const YT_QUERIES = [
-  'solar energy Nigeria 2024',
-  'inverter Nigeria review',
-  'NEPA light Nigeria generator',
-  'mini grid Nigeria rural',
-  'PAYG solar Nigeria',
-  'solar panel installation Nigeria',
-  'battery storage Nigeria',
-  'diesel generator Nigeria solar switch',
-  'renewable energy Nigeria',
-  'EcoFlow Nigeria PowerTank'
-];
-
-// ── PII STRIPPING ──
-// Removes usernames, channel handles, emails, phone numbers before AI processing
-function stripPII(text){
-  if(!text) return '';
-  return text
-    .replace(/@[\w\d_]+/g, '@[user]')           // @mentions
-    .replace(/\b[\w.+-]+@[\w-]+\.[\w.]+\b/g, '[email]')  // emails
-    .replace(/\b0[789][01]\d{8}\b/g, '[phone]') // Nigerian phone numbers
-    .replace(/https?:\/\/\S+/g, '[link]')        // URLs
-    .replace(/\b\d{10,11}\b/g, '[number]')       // long numbers
-    .trim();
-}
-
-// ── FETCH YOUTUBE COMMENTS ──
-async function fetchYouTubeData(){
-  aiLog('Connecting to YouTube Data API v3...','active');
-  aiProgress(10);
-
-  const query = YT_QUERIES[rnd(0, YT_QUERIES.length-1)];
-  aiLog(`Searching: "${query}"`, 'active');
-
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&maxResults=8&relevanceLanguage=en&regionCode=NG&key=${_yt}`;
-
-  const searchRes = await fetch(searchUrl);
-  if(!searchRes.ok) throw new Error('YouTube search failed: '+searchRes.status);
-  const searchData = await searchRes.json();
-
-  if(!searchData.items || searchData.items.length === 0){
-    throw new Error('No YouTube videos found for query');
-  }
-
-  aiLog(`Found ${searchData.items.length} relevant videos`, 'done');
-  aiProgress(25);
-
-  // Collect video titles and descriptions (no comment API needed — titles are rich enough)
-  const videoTexts = searchData.items.map(item => {
-    const title = item.snippet?.title || '';
-    const desc  = (item.snippet?.description || '').substring(0, 200);
-    const channel = ''; // intentionally blank — we strip channel identity
-    return stripPII(`${title}. ${desc}`);
-  });
-
-  // Also fetch comments from top video
-  const topVideoId = searchData.items[0].id.videoId;
-  aiLog(`Fetching comments from top video...`, 'active');
-
-  const commentsUrl = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${topVideoId}&maxResults=30&order=relevance&key=${_yt}`;
-  let commentTexts = [];
-
-  try {
-    const commentsRes = await fetch(commentsUrl);
-    if(commentsRes.ok){
-      const commentsData = await commentsRes.json();
-      if(commentsData.items){
-        commentTexts = commentsData.items.map(item => {
-          const text = item.snippet?.topLevelComment?.snippet?.textDisplay || '';
-          return stripPII(text.substring(0, 300));
-        }).filter(t => t.length > 10);
-        aiLog(`Collected ${commentTexts.length} anonymised comments`, 'done');
-      }
-    }
-  } catch(e){
-    aiLog('Comments unavailable for this video — using titles only', 'active');
-  }
-
-  aiProgress(40);
-
-  const totalTexts = [...videoTexts, ...commentTexts];
-  aiLog(`PII stripped — ${totalTexts.length} text samples ready for analysis`, 'done');
-
-  // Build video objects with thumbnails for the sidebar feed
-  const videoObjects = (searchData.items || []).slice(0, 8).map(item => ({
-    id: item.id?.videoId || '',
-    title: item.snippet?.title || '',
-    thumbnail: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
-    channel: item.snippet?.channelTitle || '',
-    detectedKeyword: query
-  }));
-
-  return {
-    texts: totalTexts,
-    videoCount: searchData.items.length,
-    commentCount: commentTexts.length,
-    query: query,
-    videos: videoObjects,
-    videoTitles: searchData.items.map(i => i.snippet?.title || '').slice(0, 3)
-  };
-}
-
-// ── CLAUDE ANALYSIS PROMPT ──
-function buildAnalysisPrompt(ytData, knowledgeContext){
-  const textSample = ytData.texts.slice(0, 25).join('\n---\n');
-  const kbBlock = knowledgeContext || '[Knowledge base not loaded — using general Nigeria energy market knowledge]';
-
-  return `You are an expert energy intelligence analyst specialising in Nigeria's decentralised energy market. You have access to a structured knowledge base built from 24 years of Nigerian energy policy documents and 10 years of AEDC financial statements. Use this grounded context to interpret consumer discourse with precision.
-
-${kbBlock}
-
-ANONYMISED CONSUMER CONTENT (${ytData.texts.length} items, query: "${ytData.query}"):
-All PII stripped — no usernames, emails or phone numbers remain.
----
-${textSample}
----
-
-Using your knowledge base context above, analyse this content and return ONLY a valid JSON object with this exact structure (no markdown, no explanation, just JSON):
-
-{
-  "sentiment": {
-    "positive": <integer 0-100>,
-    "neutral": <integer 0-100>,
-    "negative": <integer 0-100>,
-    "summary": "<one sentence grounded in knowledge base context>"
+var STRINGS={
+  en:{
+    heroTitle:'What is your <span>energy problem?</span>',
+    heroSub:'Tell Vitics. Walk away with your personal Energy Receipt — grounded in 25 verified Nigerian energy documents.',
+    placeholder:'Type your energy problem or question...',
+    streamTitle:'What Nigerians are saying about energy right now',
+    greeting:"Hello! I'm Vitics — Nigeria's energy intelligence assistant.\n\nTell me your energy situation and I'll give you a grounded answer based on 25 verified Nigerian energy documents.\n\nWhat's your problem?",
+    qp:['My AEDC bill has tripled','Generator costs killing my profit','I want to switch to solar','No electricity for 3 days','How much solar for my shop?','Is my electricity bill correct?']
   },
-  "products": [
-    {"name": "<product/brand>", "score": <integer 0-100>, "category": "<category>", "sentiment": "<positive|neutral|negative>"},
-    {"name": "...", "score": <integer>, "category": "...", "sentiment": "..."}
-  ],
-  "geographic_signals": [
-    {"state": "<Nigerian state>", "score": <integer 0-100>, "signal": "<contextualised signal>"},
-    {"state": "...", "score": <integer>, "signal": "..."}
-  ],
-  "topics": [
-    {"topic": "<topic>", "type": "<hot|rising|neutral|declining>", "count": <integer>}
-  ],
-  "fossil_vs_clean": {
-    "fossil_pct": <integer 0-100>,
-    "clean_pct": <integer 0-100>,
-    "generator_complaints": "<Rising|Stable|Declining>",
-    "solar_switching": "<percentage string like +34% MoM>",
-    "kerosene_trend": "<Rising|Stable|Declining>"
-  },
-  "sdg_signals": {
-    "sdg7": <integer 0-100>,
-    "sdg5": <integer 0-100>,
-    "sdg8": <integer 0-100>,
-    "sdg10": <integer 0-100>,
-    "sdg13": <integer 0-100>
-  },
-  "policy_signals": [
-    {"policy": "<policy name or programme>", "sentiment": "<positive|neutral|negative>", "awareness": "<high|medium|low>"}
-  ],
-  "aedc_signals": {
-    "complaint_level": "<High|Medium|Low>",
-    "tariff_mentions": <true|false>,
-    "grid_defection_evidence": "<any signs consumers switching from grid to solar>"
-  },
-  "key_insight": "<2-3 sentence headline insight grounded in 24-year policy context>",
-  "product_insight": "<1-2 sentence insight about product trust trends>",
-  "policy_gap_insight": "<1 sentence on gap between what policy promised and what consumers experience>",
-  "total_conversations_estimate": <integer>,
-  "data_quality": "<high|moderate|low>",
-  "knowledge_base_applied": "<which specific policy year or AEDC year was most relevant>"
-}
-
-Rules:
-- sentiment positive+neutral+negative must sum to exactly 100
-- fossil_pct + clean_pct must sum to exactly 100
-- Return at least 3 products, 3 geographic signals, 5 topics, 1 policy signal
-- Base all scores on actual content — never fabricate
-- Cross-reference consumer frustration against policy timeline above
-- For AEDC franchise area (FCT, Niger, Kogi, Nasarawa) use AEDC financial context
-- Products: real Nigerian energy brands (Lumos, Daystar, EcoFlow, BBOXX, Rensource, Greenlight Planet, Arnergy, Rubitec)
-- Post-2023 content: apply fuel subsidy removal watershed context
-- knowledge_base_applied must name the specific policy/AEDC year most relevant`;
-}
-
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// VITICS KNOWLEDGE BASE LOADER — Option B
-// Fetches policy JSONs and AEDC financial JSONs from GitHub
-// before every Claude analysis run
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-const GITHUB_RAW = 'https://raw.githubusercontent.com/labs-boomsustainable/vitics/main/';
-
-// ── POLICY JSON FILES ──
-// Filenames must match exactly what is in your GitHub repository
-const POLICY_FILES = [
-  'NEPP_2001.json',
-  'NEP_2003.json',
-  'EPSRA_2005.json',
-  'REMP_2005.json',
-  'NPSIG_2005.json',
-  'NREEEP_2015.json',
-  'GIZNES_2015.json',
-  'NREAP-2016.json',
-  'NEEAP_2016.json',
-  'NERCMINIGRID_2016.json',
-  'RESIP_2016.json',
-  'EmergingEconomies_2017.json',
-  'EIAGRE_2021.json',
-  'NETP_2021.json',
-  'NESIProgressReport_2022.json',
-  'NIINP_2020.json',
-  'IRENANg_2023.json',
-  'Solar_MarketCreation_2023.json',
-  'PRG_2013.json',
-  'NIRP_2024.json',
-  'SEForAllSolarValueChain_2024.json',
-  'SEforALLGensetSLos_2024.json',
-  'NigerialEPT_2025.json',
-  'NIEP_2025.json',
-  'NEEDS_2004.json',
-  'electricityact_2023.json'
-];
-
-// ── AEDC FINANCIAL JSON FILES ──
-const AEDC_FILES = [
-  'aedc_2014.json',
-  'aedc_2015.json',
-  'aedc_2016.json',
-  'aedc_2017.json',
-  'aedc_2018.json',
-  'aedc_2019.json',
-  'aedc_2020.json',
-  'aedc_2021.json',
-  'aedc_2022.json',
-  'aedc_2023.json',
-  'aedc_2024.json'
-];
-
-// ── FETCH A SINGLE JSON FILE FROM GITHUB ──
-async function fetchKnowledgeFile(filename){
-  try {
-    const res = await fetch(GITHUB_RAW + filename, { cache: 'no-store' });
-    if(!res.ok) return null;
-    return await res.json();
-  } catch(e){
-    return null;
+  pid:{
+    heroTitle:'Wetin be your <span>energy wahala?</span>',
+    heroSub:'Tell Vitics. You go collect your Energy Receipt — based on 25 real Nigerian energy documents.',
+    placeholder:'Type your energy wahala here...',
+    streamTitle:'Wetin Nigerians dey talk about energy now now',
+    greeting:"How you dey! I be Vitics — Nigeria energy intelligence.\n\nTell me your energy wahala and I go give you proper answer based on 25 real Nigerian energy documents.\n\nWetin dey happen?",
+    qp:['My AEDC bill don triple','Generator dey kill my profit','I wan go solar','No light since 3 days','How much solar I need for my shop?','My electricity bill correct so?']
   }
-}
-
-// ── EXTRACT POLICY INTELLIGENCE SUMMARY ──
-// Pulls only the fields Claude needs — keeps prompt efficient
-function extractPolicySummary(data){
-  if(!data) return null;
-  return {
-    id:             data.policy_id || data.id || '',
-    year:           data.metadata?.year || data.year || '',
-    name:           data.metadata?.short_name || data.short_name || '',
-    impact_score:   data.consumer_reality?.impact_score || 0,
-    gap_score:      data.policy_to_reality_gap?.gap_score || 0,
-    transition:     data.transition_marker || false,
-    transition_note:data.transition_note || '',
-    consumer_exp:   data.consumer_reality?.assessment ||
-                    data.consumer_reality?.consumer_experience_summary || '',
-    search_terms:   [
-      ...(data.consumer_search_terms?.direct_references || []),
-      ...(data.consumer_search_terms?.indirect_consumer_discourse || []),
-      ...(data.consumer_search_terms?.franchise_specific || [])
-    ].slice(0, 8),
-    analysis_note:  data.vitics_analysis_instructions?.when_analysing_content ||
-                    data.vitics_intelligence_signals?.key_insight || ''
-  };
-}
-
-// ── EXTRACT AEDC INTELLIGENCE SUMMARY ──
-function extractAedcSummary(data){
-  if(!data) return null;
-  return {
-    year:             data.company?.report_year || '',
-    loss_ngn_bn:      data.financial_performance?.profitability?.loss_after_tax_ngn_thousands
-                        ? (data.financial_performance.profitability.loss_after_tax_ngn_thousands / 1000000).toFixed(1)
-                        : null,
-    revenue_ngn_bn:   data.financial_performance?.revenue?.total_revenue_ngn_thousands
-                        ? (data.financial_performance.revenue.total_revenue_ngn_thousands / 1000000).toFixed(1)
-                        : null,
-    tariff_increase:  data.financial_performance?.tariff_data?.average_tariff_increase_pct || null,
-    consumer_impact:  data.consumer_intelligence?.consumer_impact_score || 0,
-    grid_defection:   data.grid_defection_signals?.grid_defection_score || 0,
-    consumer_summary: data.consumer_intelligence?.consumer_experience_summary || '',
-    key_insight:      data.vitics_intelligence_signals?.key_insight || '',
-    transition_signal:data.vitics_intelligence_signals?.transition_signal || '',
-    force_majeure:    data.force_majeure_history?.length > 0
-                        ? data.force_majeure_history[0].grounds : null
-  };
-}
-
-// ── MASTER KNOWLEDGE LOADER ──
-// Called once per analysis run — fetches all files in parallel
-// Returns a structured knowledge context object
-async function loadKnowledgeBase(){
-  aiLog('Loading Vitics knowledge base from GitHub...','active');
-
-  // Fetch all files in parallel — fast
-  const [policyResults, aedcResults] = await Promise.all([
-    Promise.all(POLICY_FILES.map(f => fetchKnowledgeFile(f))),
-    Promise.all(AEDC_FILES.map(f => fetchKnowledgeFile(f)))
-  ]);
-
-  // Extract summaries — filter nulls (files not yet uploaded)
-  const policies = policyResults
-    .map(d => extractPolicySummary(d))
-    .filter(Boolean);
-
-  const aedc = aedcResults
-    .map(d => extractAedcSummary(d))
-    .filter(Boolean);
-
-  const loaded = policies.length + aedc.length;
-  aiLog(`Knowledge base loaded — ${policies.length} policy files, ${aedc.length} AEDC years`, 'done');
-
-  // Identify transition markers for priority context
-  const transitionMarkers = policies
-    .filter(p => p.transition)
-    .map(p => `${p.year}: ${p.transition_note}`)
-    .join(' | ');
-
-  // Find most recent AEDC data
-  const latestAedc = aedc.sort((a,b) => b.year - a.year)[0];
-
-  return {
-    policies,
-    aedc,
-    loaded,
-    transitionMarkers,
-    latestAedc,
-    timestamp: new Date().toISOString()
-  };
-}
-
-// ── BUILD KNOWLEDGE CONTEXT BLOCK FOR CLAUDE ──
-// Uses string concatenation (not template literals) for safety
-function buildKnowledgeContext(kb){
-  if(!kb || kb.loaded === 0){
-    return '[Knowledge base unavailable - using general Nigeria energy market knowledge]';
-  }
-
-  var lines = [];
-  lines.push('VITICS KNOWLEDGE BASE - GROUNDED CONTEXT');
-  lines.push('Derived from ' + kb.policies.length + ' Nigerian energy policy documents (2001-2025)');
-  lines.push('and ' + kb.aedc.length + ' years of AEDC financial statements.');
-  lines.push('');
-
-  lines.push('KEY TRANSITION MOMENTS:');
-  lines.push(kb.transitionMarkers || 'See policy timeline below');
-  lines.push('');
-
-  lines.push('NIGERIA ENERGY POLICY TIMELINE - CONSUMER REALITY:');
-  kb.policies.sort(function(a,b){return a.year - b.year;}).forEach(function(p){
-    var marker = p.transition ? ' [TRANSITION MARKER]' : '';
-    var impact = 'Impact:' + p.impact_score + '/10 Gap:' + p.gap_score + '/10';
-    lines.push(p.year + ' ' + p.name + ' [' + impact + ']' + marker);
-    if(p.consumer_exp){
-      lines.push('  Reality: ' + p.consumer_exp.substring(0, 120));
-    }
-  });
-  lines.push('');
-
-  lines.push('AEDC FINANCIAL INTELLIGENCE (FCT + Niger, Kogi, Nasarawa):');
-  kb.aedc.sort(function(a,b){return a.year - b.year;}).forEach(function(a){
-    var loss = a.loss_ngn_bn ? 'Loss:N' + Math.abs(a.loss_ngn_bn) + 'bn ' : '';
-    var scores = 'GridDefection:' + a.grid_defection + '/10 ConsumerImpact:' + a.consumer_impact + '/10';
-    lines.push(a.year + ' AEDC [' + loss + scores + ']');
-    if(a.consumer_summary){
-      lines.push('  ' + a.consumer_summary.substring(0, 100));
-    }
-  });
-  lines.push('');
-
-  if(kb.latestAedc && kb.latestAedc.key_insight){
-    lines.push('LATEST AEDC (' + kb.latestAedc.year + '): ' + kb.latestAedc.key_insight.substring(0, 150));
-    lines.push('');
-  }
-
-  lines.push('CRITICAL ANALYTICAL RULES:');
-  lines.push('1. Cross-reference consumer frustration against policy timeline above.');
-  lines.push('2. Post-2023 fuel subsidy removal = watershed - everything accelerates.');
-  lines.push('3. Grid defection signal: declining AEDC sales + stable customers = solar migration.');
-  lines.push('4. Low policy impact score = consumer skepticism is historically justified.');
-  lines.push('5. Nigerian energy consumer frustration has a 24-year documented policy failure context.');
-
-  return lines.join('\n');
-}
-
-
-// ── CALL CLAUDE ──
-async function analyseWithClaude(ytData, knowledgeContext){
-  aiLog('Sending anonymised data to Claude (Anthropic API)...','active');
-  aiProgress(55);
-
-  const prompt = buildAnalysisPrompt(ytData, knowledgeContext);
-
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': _ant,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true'
-    },
-    body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 3000,
-      messages: [{
-        role: 'user',
-        content: prompt
-      }]
-    })
-  });
-
-  if(!response.ok){
-    const err = await response.text();
-    throw new Error('Claude API error: '+response.status+' — '+err.substring(0,100));
-  }
-
-  const data = await response.json();
-  const rawText = data.content[0].text.trim();
-
-  aiLog('Claude analysis complete — parsing intelligence...','done');
-  aiProgress(75);
-
-  // Clean and parse JSON
-  let jsonStr = rawText;
-  if(jsonStr.includes('```json')) jsonStr = jsonStr.replace(/```json/g,'').replace(/```/g,'');
-  if(jsonStr.includes('```')) jsonStr = jsonStr.replace(/```/g,'');
-  jsonStr = jsonStr.trim();
-
-  // Resilient parsing — if JSON is truncated, find last valid closing brace
-  let analysis;
-  try {
-    analysis = JSON.parse(jsonStr);
-  } catch(e) {
-    aiLog('JSON truncated — attempting recovery...', 'active');
-    // Find the last complete top-level closing brace
-    const lastBrace = jsonStr.lastIndexOf('}');
-    if(lastBrace > 0){
-      // Try progressively shorter strings until valid JSON found
-      let recovered = false;
-      for(let i = lastBrace; i > jsonStr.length * 0.5; i--){
-        if(jsonStr[i] === '}'){
-          try {
-            analysis = JSON.parse(jsonStr.substring(0, i+1) + '}');
-            aiLog('JSON recovered successfully', 'done');
-            recovered = true;
-            break;
-          } catch(e2){ continue; }
-        }
-      }
-      if(!recovered) throw new Error('JSON recovery failed: ' + e.message);
-    } else {
-      throw new Error('JSON parse failed: ' + e.message);
-    }
-  }
-  aiLog(`Intelligence extracted — quality: ${analysis.data_quality}`, 'done');
-
-  return analysis;
-}
-
-// ── UPDATE DASHBOARD WITH REAL AI DATA ──
-function updateDashboard(analysis, ytData){
-  aiLog('Updating dashboard with real intelligence...','active');
-  aiProgress(85);
-
-  const now = new Date();
-  document.getElementById('lupd').textContent =
-    'AI analysis complete — ' + now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-
-  // ── METRICS ──
-  const convCount = analysis.total_conversations_estimate || (ytData.videoCount * 1200 + ytData.commentCount * 80);
-  document.getElementById('mv0').innerHTML = fmt(convCount);
-  document.getElementById('md0').textContent = `↑ from ${ytData.videoCount} videos + ${ytData.commentCount} comments`;
-  document.getElementById('md0').className = 'mc-dlt up';
-  flash('mc0','up');
-
-  const pos = analysis.sentiment.positive;
-  const neu = analysis.sentiment.neutral;
-  const neg = analysis.sentiment.negative;
-  document.getElementById('mv1').innerHTML = pos+'% <small>pos.</small>';
-  document.getElementById('md1').textContent = analysis.sentiment.summary.substring(0,40)+'...';
-  document.getElementById('md1').className = 'mc-dlt '+(pos>50?'up':'nt');
-  flash('mc1', pos>50?'up':'dn');
-  document.getElementById('bsent').textContent = pos+'%';
-
-  // States with signal from geographic data
-  const stateCount = analysis.geographic_signals ? analysis.geographic_signals.length : 12;
-  document.getElementById('mv2').innerHTML = stateCount+' <small>/ 37</small>';
-  document.getElementById('md2').textContent = 'geographic signals detected';
-  document.getElementById('md2').className = 'mc-dlt nt';
-
-  // Products
-  const prodCount = analysis.products ? analysis.products.length : 8;
-  document.getElementById('mv3').innerHTML = fmt(148 + prodCount);
-  document.getElementById('md3').textContent = prodCount+' products identified in analysis';
-  document.getElementById('md3').className = 'mc-dlt up';
-  document.getElementById('bprod').textContent = 148 + prodCount;
-
-  // CO2
-  document.getElementById('mv4').innerHTML = '2.3 <small>Mt</small>';
-  document.getElementById('md4').textContent = '↑ 18% vs 2023 (modelled)';
-  document.getElementById('md4').className = 'mc-dlt up';
-
-  // Fossil
-  const fossilPct = analysis.fossil_vs_clean?.fossil_pct || 41;
-  document.getElementById('mv5').innerHTML = fossilPct+'% <small>fossil</small>';
-  document.getElementById('md5').textContent = '↓ declining — clean energy rising';
-  document.getElementById('md5').className = 'mc-dlt dn';
-
-  // ── SENTIMENT BAR ──
-  document.getElementById('spos').style.flex = pos;
-  document.getElementById('sneu').style.flex = neu;
-  document.getElementById('sneg').style.flex = neg;
-  document.getElementById('splbl').textContent = pos;
-  document.getElementById('snlbl').textContent = neu;
-  document.getElementById('sglbl').textContent = neg;
-
-  // ── SOURCE COUNTS ──
-  document.getElementById('sc0').textContent = fmt(ytData.videoCount * 1200 + ytData.commentCount);
-  document.getElementById('sc1').textContent = fmt(rnd(3000,8000));
-  document.getElementById('sc2').textContent = fmt(rnd(800,2500));
-
-  // ── FOSSIL VS CLEAN ──
-  const fv = analysis.fossil_vs_clean;
-  if(fv){
-    document.getElementById('genTag').textContent = fv.generator_complaints;
-    document.getElementById('genTag').className = 'tag '+(fv.generator_complaints==='Rising'?'tr':'tg');
-    document.getElementById('swtag').textContent = fv.solar_switching;
-    document.getElementById('keroTag').textContent = fv.kerosene_trend === 'Declining' ? 'Declining' : fv.kerosene_trend;
-    document.getElementById('keroTag').className = 'tag '+(fv.kerosene_trend==='Declining'?'tg':'tr');
-  }
-
-  // ── TOPICS ──
-  const topicWrap = document.getElementById('topicTags');
-  if(analysis.topics && analysis.topics.length > 0){
-    topicWrap.innerHTML = analysis.topics.slice(0,12).map(t => {
-      const cls = t.type==='hot'?'tr':t.type==='rising'?'tg':t.type==='declining'?'tr':'tz';
-      return `<span class="tag ${cls}">${t.topic}</span>`;
-    }).join('');
-  }
-
-  // ── CONV INSIGHT ──
-  if(analysis.key_insight){
-    document.getElementById('convInsight').style.display='block';
-    document.getElementById('convInsightText').textContent = analysis.key_insight;
-  }
-
-  // ── PRODUCTS ──
-  const prodList = document.getElementById('productList');
-  if(analysis.products && analysis.products.length > 0){
-    const prods = analysis.products.slice(0,7);
-    prodList.innerHTML = prods.map((p,i) => `
-      <div class="ri">
-        <div><div class="rn">${p.name}</div><div class="rs">${p.category}</div></div>
-        <div style="display:flex;align-items:center;gap:5px">
-          <div class="bw" style="margin:0;width:44px"><div class="bf" style="width:${p.score}%;background:var(--green)"></div></div>
-          <span style="font-size:10px;color:var(--text3);font-family:var(--mono);min-width:18px">${p.score}</span>
-        </div>
-      </div>`).join('');
-  }
-
-  // ── PRODUCT INSIGHT ──
-  if(analysis.product_insight){
-    document.getElementById('productInsight').style.display='block';
-    document.getElementById('productInsightText').textContent = analysis.product_insight;
-  }
-
-  // ── SDG SCORES ──
-  const sdg = analysis.sdg_signals;
-  if(sdg){
-    const sdgMap = {7:sdg.sdg7, 5:sdg.sdg5, 8:sdg.sdg8, 10:sdg.sdg10, 13:sdg.sdg13};
-    Object.entries(sdgMap).forEach(([k,v])=>{
-      const b=document.getElementById('s'+k+'b');
-      const p=document.getElementById('s'+k+'p');
-      if(b && v) b.style.width=v+'%';
-      if(p && v) p.textContent=v+'%';
-    });
-    // Update donut
-    if(sdgDonutChart){
-      sdgDonutChart.updateSeries([sdg.sdg7,sdg.sdg5,sdg.sdg8,sdg.sdg10,sdg.sdg13]);
-    }
-  }
-
-  // ── GEOGRAPHIC MAP UPDATE ──
-  if(analysis.geographic_signals && mapLoaded){
-    analysis.geographic_signals.forEach(sig => {
-      const stateKey = sig.state;
-      if(mapMarkers[stateKey]){
-        // Update existing marker opacity based on new score
-        const el = mapMarkers[stateKey];
-        const op = 0.12 + (sig.score/100)*0.55;
-        el.style.background = `rgba(34,197,94,${op})`;
-      }
-    });
-  }
-
-  // ── AI STATUS ──
-  aiProgress(100);
-  aiState('Analysis complete ✓');
-  aiChip('AI: live data');
-  document.getElementById('aiStatusChip').style.borderColor='rgba(34,197,94,0.3)';
-  document.getElementById('aiStatusChip').style.color='var(--green3)';
-  document.getElementById('aiStatusChip').style.background='var(--gdim)';
-
-  // Add AI badges to metric cards
-  ['mc0','mc1','mc2','mc3'].forEach(id=>{
-    const mc = document.getElementById(id);
-    if(mc && !mc.querySelector('.ai-tag')){
-      const badge = document.createElement('div');
-      badge.className = 'ai-tag';
-      badge.innerHTML = '✦ AI';
-      mc.appendChild(badge);
-    }
-  });
-
-  aiLog('Dashboard updated with real YouTube + Claude intelligence','done');
-  aiLog(`Video titles analysed: ${ytData.videoTitles.slice(0,2).join(' | ')}`, 'done');
-
-  // Log knowledge base application
-  if(analysis.policy_gap_insight){
-    aiLog(`Policy gap: ${analysis.policy_gap_insight.substring(0,80)}...`, 'done');
-  }
-  if(analysis.knowledge_base_applied){
-    aiLog(`KB context applied: ${analysis.knowledge_base_applied.substring(0,80)}`, 'done');
-  }
-
-  // Show policy gap insight on dashboard
-  if(analysis.policy_gap_insight){
-    const gapEl = document.getElementById('convInsightText');
-    if(gapEl && analysis.key_insight){
-      gapEl.textContent = analysis.key_insight + ' — ' + analysis.policy_gap_insight;
-    }
-  }
-
-  // Update AEDC signals if present
-  if(analysis.aedc_signals){
-    const as = analysis.aedc_signals;
-    const genTag = document.getElementById('genTag');
-    if(genTag && as.complaint_level){
-      genTag.textContent = as.complaint_level + ' complaints';
-      genTag.className = 'tag ' + (as.complaint_level === 'High' ? 'tr' : as.complaint_level === 'Medium' ? 'ta' : 'tg');
-    }
-  }
-
-  // Update NDC alignment with knowledge base context
-  if(analysis.sdg_signals){
-    const ndcEl = document.getElementById('ndca');
-    if(ndcEl) ndcEl.textContent = analysis.sdg_signals.sdg13 + '%';
-  }
-}
-
-// ── POLICY INTELLIGENCE TIMELINE ──────────────────────────────────────────
-// Renders interactive 2001–2025 timeline from VITICS_KNOWLEDGE
-// Combines policy nodes + AEDC financial overlay layer
-
-var tlMode = 'both'; // 'policy' | 'aedc' | 'both'
-var tlActiveId = null;
-
-// AEDC decade data — loaded at runtime from GitHub JSONs
-// Fallback data used if GitHub fetch not yet complete
-var AEDC_DECADE = [
-  {year:2014,loss:26.0,tariff_inc:0,impact:5,defection:2,label:'Pre-TEM rules'},
-  {year:2015,loss:41.97,tariff_inc:33,impact:7,defection:3,label:'TEM rules · Force majeure'},
-  {year:2016,loss:38.0,tariff_inc:49,impact:8,defection:4,label:'49% tariff shock'},
-  {year:2017,loss:32.0,tariff_inc:0,impact:6,defection:4,label:'Tariff freeze'},
-  {year:2018,loss:28.0,tariff_inc:0,impact:5,defection:5,label:'CAPMI rollout'},
-  {year:2019,loss:24.0,tariff_inc:0,impact:5,defection:5,label:'Band classification begins'},
-  {year:2020,loss:30.0,tariff_inc:0,impact:6,defection:5,label:'COVID · Solar Power Naija'},
-  {year:2021,loss:35.0,tariff_inc:15,impact:6,defection:6,label:'Band A tariff increase'},
-  {year:2022,loss:40.0,tariff_inc:20,impact:7,defection:7,label:'Forex crisis · rising costs'},
-  {year:2023,loss:45.0,tariff_inc:40,impact:8,defection:8,label:'Fuel subsidy removal watershed'},
-  {year:2024,loss:50.0,tariff_inc:300,impact:9,defection:9,label:'240-300% tariff increase · mass defection'},
-];
-
-function scoreColor(s){
-  if(!s) return '#6b8fa0';
-  if(s >= 7) return 'var(--green)';
-  if(s >= 4) return 'var(--amber)';
-  return 'var(--red)';
-}
-function scoreClass(s){
-  if(!s) return 'tl-score-med';
-  if(s >= 7) return 'tl-score-high';
-  if(s >= 4) return 'tl-score-med';
-  return 'tl-score-low';
-}
-
-function tlFilter(mode){
-  tlMode = mode;
-  ['tlTogglePolicy','tlToggleAedc','tlToggleBoth'].forEach(id => {
-    var el = document.getElementById(id);
-    if(el) el.style.opacity = '0.4';
-  });
-  var active = {policy:'tlTogglePolicy',aedc:'tlToggleAedc',both:'tlToggleBoth'}[mode];
-  var activeEl = document.getElementById(active);
-  if(activeEl) activeEl.style.opacity = '1';
-  renderTimeline();
-}
-
-function tlShowDetail(docId, data){
-  var det = document.getElementById('tlDetail');
-  var prev = document.querySelector('.tl-card.active');
-  if(prev) prev.classList.remove('active');
-  var cur = document.getElementById('tlcard-' + docId);
-  if(cur) cur.classList.add('active');
-
-  if(tlActiveId === docId){
-    det.style.display = 'none';
-    tlActiveId = null;
-    return;
-  }
-  tlActiveId = docId;
-
-  document.getElementById('tlDetailTitle').textContent = data.title || docId;
-  document.getElementById('tlDetailYear').textContent = (data.year || '') + ' · Impact: ' + (data.consumer_impact_score || '?') + '/10 · Gap: ' + (data.gap_score || '?') + '/10';
-
-  var scoreEl = document.getElementById('tlDetailScore');
-  scoreEl.textContent = 'Impact ' + (data.consumer_impact_score || '?') + '/10';
-  scoreEl.className = 'tag ' + (data.consumer_impact_score >= 7 ? 'tg' : data.consumer_impact_score >= 4 ? 'ta' : 'tr');
-
-  document.getElementById('tlDetailSummary').textContent = data.consumer_summary || 'No consumer reality data extracted.';
-  document.getElementById('tlDetailInsight').textContent = data.key_insight || data.transition_note || '';
-  det.style.display = 'block';
-}
-
-function tlShowAedc(yr, aData){
-  var det = document.getElementById('tlDetail');
-  tlActiveId = 'aedc-' + yr;
-  document.getElementById('tlDetailTitle').textContent = 'AEDC ' + yr + ' — Abuja Electricity Distribution Plc';
-  document.getElementById('tlDetailYear').textContent = yr + ' · Consumer Impact: ' + aData.impact + '/10 · Grid Defection: ' + aData.defection + '/10';
-  var scoreEl = document.getElementById('tlDetailScore');
-  scoreEl.textContent = 'Loss ₦' + aData.loss + 'bn';
-  scoreEl.className = 'tag tr';
-  document.getElementById('tlDetailSummary').textContent = aData.label + '. Annual loss ₦' + aData.loss + ' billion' + (aData.tariff_inc > 0 ? '. Tariff increase: ' + aData.tariff_inc + '%' : '') + '.';
-  document.getElementById('tlDetailInsight').textContent = 'Grid defection signal: ' + aData.defection + '/10. Consumers in FCT, Niger, Kogi, Nasarawa facing increasing affordability pressure.';
-  det.style.display = 'block';
-}
-
-function renderTimeline(){
-  var container = document.getElementById('policyTimeline');
-  if(!container) return;
-
-  var kb = typeof VITICS_KNOWLEDGE !== 'undefined' ? VITICS_KNOWLEDGE : null;
-  var policies = kb ? kb.policies : [];
-
-  // If no policies loaded yet, show loading state
-  if(!policies.length && (tlMode === 'policy' || tlMode === 'both')){
-    container.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text3);font-size:11px;font-family:var(--mono)">Loading knowledge base from GitHub...</div>';
-    setTimeout(renderTimeline, 1500);
-    return;
-  }
-
-  var entries = [];
-  if(tlMode === 'policy' || tlMode === 'both'){
-    policies.forEach(function(p){ entries.push({type:'policy', year: p.year || 0, data: p}); });
-  }
-  if(tlMode === 'aedc' || tlMode === 'both'){
-    AEDC_DECADE.forEach(function(a){ entries.push({type:'aedc', year: a.year, data: a}); });
-  }
-  entries.sort(function(a,b){ return a.year - b.year; });
-
-  var eras = {2001:'Foundation Era',2007:'Reform Era',2013:'Privatisation Era',2017:'Transition Era',2023:'Current Era'};
-  var html = '<div class="tl-spine"></div>';
-  var lastEra = '';
-
-  entries.forEach(function(entry){
-    var yr = entry.year;
-    var eraYears = Object.keys(eras).map(Number);
-    for(var i = eraYears.length-1; i >= 0; i--){
-      if(yr >= eraYears[i]){
-        var eraName = eras[eraYears[i]];
-        if(eraName !== lastEra){
-          html += '<div class="tl-era">' + eraName + '</div>';
-          lastEra = eraName;
-        }
-        break;
-      }
-    }
-
-    if(entry.type === 'policy'){
-      var p = entry.data;
-      var tm = p.transition_marker;
-      var dotColor = scoreColor(p.consumer_impact_score);
-      var dotClass = tm ? 'tl-dot transition-dot' : 'tl-dot';
-      var scClass = scoreClass(p.consumer_impact_score);
-      var shortTitle = p.title.length > 45 ? p.title.substring(0,44)+'\u2026' : p.title;
-      var safeId = p.doc_id.replace(/[^a-zA-Z0-9_]/g,'_');
-      html += '<div class="tl-node" onclick="tlShowDetail(\'' + safeId + '\',kbPolicyById(\'' + p.doc_id + '\'))">';
-      html += '<div class="' + dotClass + '" style="background:' + dotColor + '"></div>';
-      html += '<div class="tl-card" id="tlcard-' + safeId + '">';
-      html += '<div class="tl-year">' + yr + '</div>';
-      html += '<div class="tl-name">' + shortTitle + '</div>';
-      html += '<div class="tl-meta">';
-      html += '<span class="' + scClass + '">' + (p.consumer_impact_score||'?') + '/10</span>';
-      if(p.gap_score) html += '<span style="font-size:8px;font-family:var(--mono);color:var(--text3)">Gap:' + p.gap_score + '/10</span>';
-      if(tm) html += '<span class="tl-tbadge">\u2605 Transition</span>';
-      html += '</div></div></div>';
-    } else {
-      var a = entry.data;
-      var barW = Math.min(100, a.defection * 10);
-      var aColor = a.defection >= 7 ? 'var(--red)' : a.defection >= 5 ? 'var(--amber)' : 'var(--blue)';
-      html += '<div class="tl-node" onclick="tlShowAedc(' + yr + ',aedcById(' + yr + '))">';
-      html += '<div class="tl-dot" style="background:var(--blue);border-radius:2px"></div>';
-      html += '<div class="tl-card tl-aedc-card">';
-      html += '<div class="tl-year">' + yr + ' \u00b7 AEDC Financial Statement</div>';
-      html += '<div class="tl-name" style="color:var(--blue)">\u20a6' + a.loss + 'bn loss \u00b7 ' + a.label + '</div>';
-      html += '<div class="tl-aedc-bar" style="width:' + barW + '%;background:linear-gradient(to right,' + aColor + ',rgba(56,189,248,0.1))"></div>';
-      html += '</div></div>';
-    }
-  });
-
-  container.innerHTML = html;
-
-  // Append intelligence report
-  renderIntelReport();
-}
-
-// ── Helper: look up policy by doc_id from VITICS_KNOWLEDGE ──
-function kbPolicyById(docId){
-  if(typeof VITICS_KNOWLEDGE === 'undefined') return {};
-  var found = VITICS_KNOWLEDGE.policies.filter(function(p){ return p.doc_id === docId; });
-  return found.length ? found[0] : {};
-}
-function aedcById(yr){
-  var found = AEDC_DECADE.filter(function(a){ return a.year === yr; });
-  return found.length ? found[0] : {};
-}
-
-// ── INTELLIGENCE REPORT + LIVE REFERENCES ──────────────────────────────────
-function renderIntelReport(){
-  // Remove existing report if any
-  var existing = document.getElementById('tlIntelReport');
-  if(existing) existing.remove();
-
-  var container = document.getElementById('policyTimelinePanel');
-  if(!container) return;
-
-  var kb = typeof VITICS_KNOWLEDGE !== 'undefined' ? VITICS_KNOWLEDGE : null;
-  var policyCount = kb ? kb.policies.length : 25;
-  var avgGap = kb ? 74 : 74;
-
-  // Build reference list from VITICS_KNOWLEDGE policies
-  var refs = kb ? kb.policies.map(function(p, i){
-    return { n: i+1, year: p.year, title: p.title, id: p.doc_id };
-  }) : [];
-
-  // Add AEDC references
-  var aedcStart = refs.length + 1;
-  AEDC_DECADE.forEach(function(a, i){
-    refs.push({ n: aedcStart + i, year: a.year, title: 'AEDC Annual Report ' + a.year + ' — Abuja Electricity Distribution Plc', id: 'aedc_' + a.year, isAedc: true });
-  });
-
-  // Filter by mode
-  var filteredRefs = refs;
-  if(tlMode === 'policy') filteredRefs = refs.filter(function(r){ return !r.isAedc; });
-  if(tlMode === 'aedc') filteredRefs = refs.filter(function(r){ return r.isAedc; });
-
-  var report = document.createElement('div');
-  report.id = 'tlIntelReport';
-  report.style.cssText = 'margin-top:14px;padding-top:12px;border-top:1px solid var(--border2)';
-
-  // Trust header
-  report.innerHTML =
-    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">' +
-      '<div style="width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0"></div>' +
-      '<span style="font-size:10px;font-weight:600;color:var(--text);font-family:var(--mono);letter-spacing:0.5px">VITICS INTELLIGENCE SUMMARY</span>' +
-    '</div>' +
-
-    // Key stats row
-    '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:12px">' +
-      intelStat(policyCount + ' Documents', 'Primary sources · 2001–2025', 'var(--green)') +
-      intelStat('74% avg gap', 'Policy vs consumer reality', 'var(--red)') +
-      intelStat('4 Transition', 'Watershed moments identified', 'var(--purple)') +
-    '</div>' +
-
-    // Era analysis
-    (kb && kb.era_analysis ? buildEraAnalysis(kb.era_analysis) : '') +
-
-    // AEDC summary (show if aedc or both tab)
-    (tlMode !== 'policy' ? buildAedcSummary() : '') +
-
-    // Transition moments
-    (kb && kb.transition_moments && (tlMode === 'policy' || tlMode === 'both') ? buildTransitionMoments(kb.transition_moments) : '') +
-
-    // Live references
-    '<div style="margin-top:12px">' +
-      '<div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px">' +
-        '<span style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block"></span>' +
-        'Verified primary sources · ' + filteredRefs.length + ' references' +
-      '</div>' +
-      '<div id="tlRefList" style="max-height:200px;overflow-y:auto">' +
-        filteredRefs.map(function(r){
-          var color = r.isAedc ? 'var(--blue)' : 'var(--text2)';
-          var badge = r.isAedc ?
-            '<span style="font-size:8px;background:rgba(56,189,248,0.1);color:var(--blue);padding:1px 4px;border-radius:3px;font-family:var(--mono);flex-shrink:0">AEDC</span>' :
-            '<span style="font-size:8px;background:var(--gdim);color:var(--green);padding:1px 4px;border-radius:3px;font-family:var(--mono);flex-shrink:0">POLICY</span>';
-          var ghUrl = 'https://github.com/labs-boomsustainable/vitics/blob/main/' + r.id + '.json';
-          return '<div style="display:flex;gap:6px;align-items:start;padding:5px 0;border-bottom:1px solid var(--border3)">' +
-            '<span style="font-size:9px;color:var(--text3);font-family:var(--mono);min-width:18px;flex-shrink:0">[' + r.n + ']</span>' +
-            badge +
-            '<div style="flex:1">' +
-              '<div style="font-size:10px;color:' + color + ';line-height:1.4">' + r.title + '</div>' +
-              '<div style="font-size:8px;color:var(--text3);font-family:var(--mono);display:flex;gap:8px;margin-top:2px">' +
-                '<span>' + (r.year || '') + '</span>' +
-                '<a href="' + ghUrl + '" target="_blank" style="color:var(--green);text-decoration:none" title="View source JSON on GitHub">' +
-                  '\u2197 GitHub source' +
-                '</a>' +
-              '</div>' +
-            '</div>' +
-          '</div>';
-        }).join('') +
-      '</div>' +
-    '</div>' +
-
-    // Trust footer
-    '<div style="margin-top:10px;padding:8px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border3);font-size:9px;color:var(--text3);font-family:var(--mono);line-height:1.6">' +
-      '\u26a1 Vitics intelligence is grounded in ' + policyCount + ' verified primary documents. ' +
-      'All source JSON files are publicly accessible on GitHub. ' +
-      'Consumer impact scores reflect documented policy outcomes, not editorial opinion. ' +
-      'AI analysis powered by Anthropic Claude claude-haiku-4-5-20251001. ' +
-      '<a href="methodology.html" style="color:var(--green);text-decoration:none">View full methodology \u2192</a>' +
-    '</div>';
-
-  container.appendChild(report);
-}
-
-function intelStat(val, label, color){
-  return '<div style="background:var(--bg4);border:1px solid var(--border3);border-radius:var(--r);padding:7px 8px">' +
-    '<div style="font-size:13px;font-weight:700;color:' + color + ';font-family:var(--mono)">' + val + '</div>' +
-    '<div style="font-size:9px;color:var(--text3);margin-top:2px">' + label + '</div>' +
-  '</div>';
-}
-
-function buildEraAnalysis(eras){
-  var html = '<div style="margin-bottom:10px">' +
-    '<div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px">Era analysis — avg consumer impact</div>' +
-    '<div style="display:flex;flex-direction:column;gap:4px">';
-  Object.entries(eras).forEach(function(e){
-    var era = e[0]; var data = e[1];
-    var pct = (data.avg_impact / 10) * 100;
-    var col = data.avg_impact >= 6 ? 'var(--green)' : data.avg_impact >= 4 ? 'var(--amber)' : 'var(--red)';
-    html += '<div style="display:flex;align-items:center;gap:8px">' +
-      '<div style="font-size:9px;color:var(--text2);min-width:130px;font-family:var(--mono)">' + era + '</div>' +
-      '<div style="flex:1;height:4px;background:var(--bg5);border-radius:2px">' +
-        '<div style="width:' + pct + '%;height:4px;background:' + col + ';border-radius:2px;transition:width 1s ease"></div>' +
-      '</div>' +
-      '<div style="font-size:9px;color:' + col + ';font-family:var(--mono);min-width:30px">' + data.avg_impact + '/10</div>' +
-    '</div>';
-  });
-  return html + '</div></div>';
-}
-
-function buildAedcSummary(){
-  var latest = AEDC_DECADE[AEDC_DECADE.length-1];
-  return '<div style="background:rgba(56,189,248,0.05);border:1px solid rgba(56,189,248,0.15);border-radius:var(--r);padding:8px;margin-bottom:10px">' +
-    '<div style="font-size:9px;font-family:var(--mono);color:var(--blue);letter-spacing:0.5px;margin-bottom:5px">AEDC DECADE INTELLIGENCE \u00b7 2014\u20132024</div>' +
-    '<div style="font-size:10px;color:var(--text2);line-height:1.5">' +
-      'Abuja DISCO recorded losses every year 2014\u20132024. ' +
-      'Grid defection signal rose from 2/10 in 2014 to 9/10 in 2024. ' +
-      'The 2024 240\u2013300% tariff increase is the highest in DISCO history \u2014 driving mass solar adoption. ' +
-    '</div>' +
-    '<div style="margin-top:6px;display:flex;gap:10px">' +
-      '<div style="font-size:9px;font-family:var(--mono);color:var(--red)">\u20a6' + latest.loss + 'bn 2024 loss</div>' +
-      '<div style="font-size:9px;font-family:var(--mono);color:var(--amber)">+' + latest.tariff_inc + '% tariff 2024</div>' +
-      '<div style="font-size:9px;font-family:var(--mono);color:var(--green)">Defection: ' + latest.defection + '/10</div>' +
-    '</div>' +
-  '</div>';
-}
-
-function buildTransitionMoments(moments){
-  return '<div style="margin-bottom:10px">' +
-    '<div style="font-size:9px;font-family:var(--mono);color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px">\u2605 Watershed transition moments</div>' +
-    moments.map(function(t){
-      return '<div style="display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border3)">' +
-        '<span style="font-size:9px;font-family:var(--mono);color:var(--purple);min-width:32px">' + t.year + '</span>' +
-        '<span style="font-size:10px;color:var(--text2);line-height:1.4">' + t.note + '</span>' +
-      '</div>';
-    }).join('') +
-  '</div>';
-}
-
-// Render timeline on load — wait for VITICS_KNOWLEDGE to load
-window.addEventListener('load', function(){
-  setTimeout(function(){
-    renderTimeline();
-  }, 500);
-});
-
-
-// ── SOLAR SAVINGS CALCULATOR ──────────────────────────────────────────────
-function calcSolar(){
-  var watts = parseFloat(document.getElementById('solarWatts').value) || 500;
-  var sunHrs = parseFloat(document.getElementById('sunHours').value) || 5;
-  var kva = parseFloat(document.getElementById('replaceKva').value) || 2.5;
-  var genHrsReplaced = parseFloat(document.getElementById('genHoursReplaced').value) || 4;
-
-  // Solar output
-  var kwhPerDay = (watts / 1000) * sunHrs * 0.8; // 80% efficiency
-  var kwhPerYear = kwhPerDay * 365;
-
-  // CO2 avoided — grid emission factor Nigeria: 0.43 kgCO2/kWh
-  var co2AvoidedKgYear = kwhPerYear * 0.43;
-
-  // Genset fuel saved
-  var litresPerDay = kva > 0 ? genHrsReplaced * kva * 0.6 : 0;
-  var litresSavedYear = litresPerDay * 365;
-  var co2GenAvoidedKg = litresSavedYear * 2.31;
-  var fuelSavedNaira = litresSavedYear * 1100;
-
-  // Total CO2 avoided
-  var totalCO2Avoided = co2AvoidedKgYear + co2GenAvoidedKg;
-
-  var el = document.getElementById('solarResult');
-  if(!el) return;
-
-  el.innerHTML =
-    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">' +
-      '<div style="background:var(--gdim);border:1px solid rgba(34,197,94,0.15);border-radius:var(--r);padding:7px">' +
-        '<div style="font-size:15px;font-weight:700;color:var(--green);font-family:var(--mono)">' + (totalCO2Avoided/1000).toFixed(2) + 't</div>' +
-        '<div style="font-size:9px;color:var(--text3)">CO\u2082 avoided / year</div>' +
-      '</div>' +
-      '<div style="background:var(--gdim);border:1px solid rgba(34,197,94,0.15);border-radius:var(--r);padding:7px">' +
-        '<div style="font-size:15px;font-weight:700;color:var(--green);font-family:var(--mono)">' + kwhPerYear.toFixed(0) + '</div>' +
-        '<div style="font-size:9px;color:var(--text3)">kWh clean energy / year</div>' +
-      '</div>' +
-      (kva > 0 ?
-        '<div style="background:var(--adim);border:1px solid rgba(245,158,11,0.15);border-radius:var(--r);padding:7px">' +
-          '<div style="font-size:15px;font-weight:700;color:var(--amber);font-family:var(--mono)">\u20a6' + (fuelSavedNaira/1000000).toFixed(1) + 'M</div>' +
-          '<div style="font-size:9px;color:var(--text3)">Fuel saved / year</div>' +
-        '</div>' +
-        '<div style="background:var(--bdim);border:1px solid rgba(56,189,248,0.15);border-radius:var(--r);padding:7px">' +
-          '<div style="font-size:15px;font-weight:700;color:var(--blue);font-family:var(--mono)">' + litresSavedYear.toFixed(0) + 'L</div>' +
-          '<div style="font-size:9px;color:var(--text3)">Petrol saved / year</div>' +
-        '</div>'
-      : '') +
-    '</div>' +
-    '<div style="font-size:9px;color:var(--text3);font-family:var(--mono);line-height:1.5">' +
-      watts + 'W panel \u00b7 ' + kwhPerDay.toFixed(1) + ' kWh/day \u00b7 ' + sunHrs + ' sun hrs \u00b7 Nigeria grid factor 0.43kgCO\u2082/kWh' +
-    '</div>';
-
-  // Show contribution badge
-  var badge = document.getElementById('solarBadge');
-  var badgeText = document.getElementById('solarBadgeText');
-  if(badge && badgeText){
-    badge.style.display = 'block';
-    var trees = Math.round(totalCO2Avoided / 21); // avg tree absorbs 21kg CO2/yr
-    badgeText.innerHTML =
-      'Your ' + watts + 'W system avoids <strong style="color:var(--green)">' + (totalCO2Avoided/1000).toFixed(2) + ' tonnes</strong> of CO\u2082 annually \u2014 equivalent to planting <strong style="color:var(--green)">' + trees + ' trees</strong>' +
-      (kva > 0 ? ' and saving <strong style="color:var(--amber)">\u20a6' + (fuelSavedNaira/1000).toFixed(0) + 'k</strong> in fuel' : '');
-  }
-}
-
-// ── YOUTUBE THUMBNAIL FEED ─────────────────────────────────────────────────
-// Renders real video thumbnails from the last YouTube API fetch
-// Called after fetchYouTubeData completes
-function renderYtThumbnails(ytData){
-  var container = document.getElementById('ytThumbFeed');
-  if(!container || !ytData) return;
-
-  var videos = ytData.videos || [];
-  if(!videos.length){
-    container.innerHTML = '<div style="font-size:10px;color:var(--text3);font-family:var(--mono);padding:8px 0">Fetching videos...</div>';
-    return;
-  }
-
-  // Show top 4 videos with thumbnails
-  var html = videos.slice(0,4).map(function(v){
-    var thumb = v.thumbnail || ('https://img.youtube.com/vi/' + v.id + '/mqdefault.jpg');
-    var title = v.title || 'Energy video';
-    var shortTitle = title.length > 48 ? title.substring(0,47) + '\u2026' : title;
-    var views = v.viewCount ? formatViews(v.viewCount) : '';
-    var keyword = v.detectedKeyword || ytData.query || '';
-
-    return '<a href="https://www.youtube.com/watch?v=' + v.id + '" target="_blank" rel="noopener" style="text-decoration:none;display:block">' +
-      '<div class="yt-thumb-card">' +
-        '<div class="yt-thumb-wrap">' +
-          '<img src="' + thumb + '" alt="" class="yt-thumb-img" onerror="this.style.display=\'none\'">' +
-          '<div class="yt-play-btn">\u25b6</div>' +
-          (keyword ? '<div class="yt-kw-badge">' + keyword + '</div>' : '') +
-        '</div>' +
-        '<div class="yt-thumb-info">' +
-          '<div class="yt-thumb-title">' + shortTitle + '</div>' +
-          (views ? '<div class="yt-thumb-meta">' + views + ' views \u00b7 YouTube</div>' : '') +
-        '</div>' +
-      '</div>' +
-    '</a>';
-  }).join('');
-
-  container.innerHTML = html;
-
-  // Update signal count
-  var countEl = document.getElementById('signalCount');
-  if(countEl) countEl.textContent = videos.length + ' videos · live';
-  var tagEl = document.getElementById('ytLiveTag');
-  if(tagEl){
-    tagEl.textContent = '\u25cf YouTube live';
-    tagEl.style.color = 'var(--green)';
-  }
-}
-
-function formatViews(n){
-  n = parseInt(n) || 0;
-  if(n >= 1000000) return (n/1000000).toFixed(1) + 'M';
-  if(n >= 1000) return (n/1000).toFixed(0) + 'K';
-  return n.toString();
-}
-
-// ── AI SIGNAL CARDS ───────────────────────────────────────────────────────
-function updateSignalCards(analysis){
-  var container = document.getElementById('aiSignalCards');
-  if(!container || !analysis) return;
-  var cards = [];
-  if(analysis.products && analysis.products.length){
-    var top = analysis.products[0];
-    cards.push({type:'Top product mention',val:top.name,sub:top.category+' \u00b7 '+top.sentiment,color:top.sentiment==='positive'?'var(--green)':top.sentiment==='negative'?'var(--red)':'var(--amber)'});
-  }
-  if(analysis.geographic_signals && analysis.geographic_signals.length){
-    var geo = analysis.geographic_signals[0];
-    cards.push({type:'Strongest state signal',val:geo.state,sub:(geo.signal||'Signal score: '+geo.score).substring(0,55),color:'var(--blue)'});
-  }
-  if(analysis.policy_gap_insight){
-    cards.push({type:'Policy gap detected',val:analysis.knowledge_base_applied||'See policy timeline',sub:analysis.policy_gap_insight.substring(0,60)+'\u2026',color:'var(--purple)'});
-  }
-  if(analysis.fossil_vs_clean){
-    var fc = analysis.fossil_vs_clean;
-    cards.push({type:'Energy transition signal',val:fc.clean_pct+'% clean \u00b7 '+fc.fossil_pct+'% fossil',sub:'Solar switching: '+(fc.solar_switching||'\u2014')+' \u00b7 Gen: '+(fc.generator_complaints||'\u2014'),color:fc.clean_pct>50?'var(--green)':'var(--amber)'});
-  }
-  container.innerHTML = cards.map(function(c){
-    return '<div class="ai-sig-card"><div class="ai-sig-type"><span style="width:5px;height:5px;border-radius:50%;background:'+c.color+';display:inline-block;margin-right:4px"></span>'+c.type+'</div><div class="ai-sig-val" style="color:'+c.color+'">'+c.val+'</div><div class="ai-sig-sub">'+c.sub+'</div></div>';
-  }).join('');
-  var countEl = document.getElementById('signalCount');
-  if(countEl) countEl.textContent = cards.length+' active';
-}
-
-// ── PLATFORM STATUS ───────────────────────────────────────────────────────
-function setPlatformStatus(service, status, val){
-  var row = document.getElementById('ps-'+service);
-  var valEl = document.getElementById('ps-'+service+'-val');
-  if(!row||!valEl) return;
-  var dot = row.querySelector('.ps-dot');
-  var colors = {ok:'var(--green)',warn:'var(--amber)',err:'var(--red)',loading:'var(--amber)'};
-  if(dot) dot.style.background = colors[status]||'var(--text3)';
-  valEl.textContent = val;
-  valEl.style.color = status==='ok'?'var(--green)':status==='err'?'var(--red)':'var(--text3)';
-}
-function updateLastAnalysisTime(){
-  var el = document.getElementById('lastAnalysisTime');
-  if(el) el.textContent = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' WAT';
-}
-// Set KB count once VITICS_KNOWLEDGE loads
-setTimeout(function(){
-  var kbCount = typeof VITICS_KNOWLEDGE!=='undefined' ? VITICS_KNOWLEDGE.policies.length+11 : '\u2014';
-  var el = document.getElementById('ps-kb-count');
-  if(el) el.textContent = kbCount;
-  setPlatformStatus('kb','ok',kbCount+' docs');
-  // Init solar calculator
-  calcSolar();
-}, 700);
-
-
-async function runAIEngine(){
-  aiState('Starting...');
-  aiChip('AI: running');
-  aiLog('Vitics AI Engine v3.1 initialising...','active');
-  aiProgress(5);
-
-  try {
-    // Step 1: Load knowledge base from GitHub (policy JSONs + AEDC financial JSONs)
-    const kb = await loadKnowledgeBase();
-    const knowledgeContext = buildKnowledgeContext(kb);
-    aiLog(`Knowledge base ready — ${kb.loaded} intelligence files loaded`,'done');
-
-    // Step 2: Fetch YouTube data
-    const ytData = await fetchYouTubeData();
-    aiLog(`YouTube data collected — ${ytData.texts.length} anonymised samples`,'done');
-    renderYtThumbnails(ytData);
-
-    // Step 3: Analyse with Claude — grounded in knowledge base
-    const analysis = await analyseWithClaude(ytData, knowledgeContext);
-
-    // Step 4: Update dashboard
-    updateDashboard(analysis, ytData);
-    updateSignalCards(analysis);
-    setPlatformStatus('claude', 'ok', 'Connected');
-    setPlatformStatus('yt', 'ok', ytData.texts.length + ' samples');
-    updateLastAnalysisTime();
-
-    // Keep AI status panel visible — pin it open, scrollable, with completion badge
-    setTimeout(()=>{
-      const panel = document.getElementById('aiStatusPanel');
-      if(!panel) return;
-      // Pin open — always visible, scrollable log
-      panel.style.maxHeight = '220px';
-      panel.style.overflow = 'hidden';
-      panel.style.cursor = 'default';
-      // Add completion badge
-      const badge = document.createElement('div');
-      badge.style.cssText = 'margin-top:8px;padding:5px 8px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:6px;font-size:10px;font-family:var(--mono);color:var(--green);display:flex;align-items:center;gap:6px;';
-      badge.innerHTML = '<span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite"></span>Analysis complete · Powered by Anthropic Claude · YouTube Data API v3 · ' + new Date().toLocaleTimeString('en-GB') + ' WAT';
-      const logEl = document.getElementById('aiLog');
-      if(logEl) logEl.appendChild(badge);
-      // Scroll log to bottom
-      if(logEl) logEl.scrollTop = logEl.scrollHeight;
-      // Allow click to expand/collapse to full log
-      panel.style.cursor = 'pointer';
-      panel.title = 'Click to expand/collapse analysis log';
-      panel.onclick = ()=>{
-        panel.style.maxHeight = panel.style.maxHeight === '220px' ? '400px' : '220px';
-        if(logEl) logEl.scrollTop = logEl.scrollHeight;
-      };
-    }, 2000);
-
-  } catch(err){
-    aiLog('Error: '+err.message,'error');
-    aiState('Error — using baseline data');
-    aiChip('AI: fallback mode');
-    setPlatformStatus('claude', 'err', 'Error');
-    console.error('Vitics AI Engine error:',err);
-    // Fall back to simulated data
-    runSimulatedFallback();
-  }
-}
-
-// ── SIMULATED FALLBACK (if API fails) ──
-function runSimulatedFallback(){
-  aiLog('Switching to validated baseline intelligence...','active');
-  const D={conv:84217,sentPos:62,sentNeu:22,sentNeg:16,fossil:41};
-
-  document.getElementById('mv0').innerHTML = fmt(D.conv);
-  document.getElementById('md0').textContent = '↑ 12% this week (baseline)';
-  document.getElementById('md0').className = 'mc-dlt up';
-  document.getElementById('mv1').innerHTML = D.sentPos+'% <small>pos.</small>';
-  document.getElementById('md1').textContent = '↑ 4pts vs last month';
-  document.getElementById('md1').className = 'mc-dlt up';
-  document.getElementById('mv2').innerHTML = '31 <small>/ 37</small>';
-  document.getElementById('md2').textContent = 'of 36 states + FCT';
-  document.getElementById('md2').className = 'mc-dlt nt';
-  document.getElementById('mv3').innerHTML = '148';
-  document.getElementById('md3').textContent = '↑ 9 new this week';
-  document.getElementById('md3').className = 'mc-dlt up';
-  document.getElementById('mv4').innerHTML = '2.3 <small>Mt</small>';
-  document.getElementById('md4').textContent = '↑ 18% vs 2023';
-  document.getElementById('md4').className = 'mc-dlt up';
-  document.getElementById('mv5').innerHTML = D.fossil+'% <small>fossil</small>';
-  document.getElementById('md5').textContent = '↓ declining';
-  document.getElementById('md5').className = 'mc-dlt dn';
-  document.getElementById('bsent').textContent = D.sentPos+'%';
-  document.getElementById('spos').style.flex=D.sentPos;
-  document.getElementById('sneu').style.flex=D.sentNeu;
-  document.getElementById('sneg').style.flex=D.sentNeg;
-  document.getElementById('splbl').textContent=D.sentPos;
-  document.getElementById('snlbl').textContent=D.sentNeu;
-  document.getElementById('sglbl').textContent=D.sentNeg;
-  document.getElementById('sc0').textContent=fmt(34102);
-  document.getElementById('sc1').textContent=fmt(5420);
-  document.getElementById('sc2').textContent=fmt(1830);
-  document.getElementById('genTag').textContent='Rising';
-  document.getElementById('genTag').className='tag tr';
-  document.getElementById('swtag').textContent='+34% MoM';
-  document.getElementById('keroTag').textContent='Declining';
-
-  // Default products
-  const prodList=document.getElementById('productList');
-  const prods=[['Lumos Solar','PAYG Solar',88],['Daystar Power','C&I Solar',74],['Greenlight Planet','Solar lanterns',67],['Rubitec Solar','Inverter systems',54],['Rensource Energy','Mini-grid',48],['BBOXX Nigeria','Solar home',41],['Arnergy Solar','Commercial',35]];
-  prodList.innerHTML=prods.map(p=>`<div class="ri"><div><div class="rn">${p[0]}</div><div class="rs">${p[1]}</div></div><div style="display:flex;align-items:center;gap:5px"><div class="bw" style="margin:0;width:44px"><div class="bf" style="width:${p[2]}%;background:var(--green)"></div></div><span style="font-size:10px;color:var(--text3);font-family:var(--mono);min-width:18px">${p[2]}</span></div></div>`).join('');
-
-  // Default topics
-  document.getElementById('topicTags').innerHTML=['PAYG solar','grid failure','mini-grid','battery storage','inverter cost','rural electrification','solar pump','diesel prices','clean cooking','mini-grid policy'].map((t,i)=>`<span class="tag ${i<2?'tr':i<5?'tg':'tz'}">${t}</span>`).join('');
-
-  document.getElementById('lupd').textContent='Baseline intelligence loaded — '+new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  aiLog('Baseline intelligence active','done');
-}
-
-// ── CONV BARS ──
-const cvBase=[28,42,35,52,58,46,76,100];
-let cvCurrent=[...cvBase];
-const cbWrap=document.getElementById('cbars');
-let cbarEls=[];
-cvBase.forEach((h,i)=>{
-  const b=document.createElement('div');
-  b.className='cbar'+(i===7?' hi':'');
-  b.style.height=Math.round(h*0.46)+'px';
-  cbWrap.appendChild(b);
-  cbarEls.push(b);
-});
-
-// ── HEATMAP ──
-const hStates=['Lagos','Kano','Abuja','Kaduna','Rivers'];
-const hProds=['Solar','Inverter','Mini-grid','PAYG','Battery'];
-let heatData=[[95,62,34,78,45],[80,70,25,90,30],[70,55,40,60,55],[40,45,60,50,35],[60,38,20,42,28]];
-function drawHeatmap(){
-  const t=document.getElementById('htbl');if(!t)return;
-  let h='<tr><th></th>'+hProds.map(p=>`<th>${p}</th>`).join('')+'</tr>';
-  heatData.forEach((row,ri)=>{
-    h+=`<tr><td style="color:var(--text3);font-size:9px;text-align:left;padding-right:5px;white-space:nowrap">${hStates[ri]}</td>`;
-    row.forEach(v=>{
-      const op=(0.08+v/100*0.65).toFixed(2);
-      const tc=v>50?'var(--text)':'var(--text3)';
-      h+=`<td style="background:rgba(34,197,94,${op});color:${tc}">${v}</td>`;
-    });
-    h+='</tr>';
-  });
-  t.innerHTML=h;
-}
-drawHeatmap();
-
-// ── STATE LIST ──
-const stNames=['Lagos','Kano','Abuja FCT','Kaduna','Rivers','Ogun','Sokoto'];
-let stateScores=[100,74,60,46,38,29,22];
-let stateVals=[22410,16590,13440,10310,8520,6480,4920];
-function drawStateList(){
-  const el=document.getElementById('stlist');if(!el)return;
-  el.innerHTML=stNames.map((n,i)=>`
-    <div class="sti">
-      <span class="strk">0${i+1}</span><span class="stnm">${n}</span>
-      <div class="stbr"><div class="stbf" id="stb${i}" style="width:${stateScores[i]}%"></div></div>
-      <span class="stvl" id="stv${i}">${fmt(stateVals[i])}</span>
-    </div>`).join('');
-}
-drawStateList();
-
-// ── SIGNAL FEED ──
-const signals=[
-  {c:'var(--green)',t:'Surge in solar pump discussions — Kano & Sokoto',m:'847 posts'},
-  {c:'var(--red)',t:'Generator cost complaints spike — Lagos Island',m:'1.2k posts'},
-  {c:'var(--amber)',t:'REA mini-grid announcement driving interest',m:'412 posts'},
-  {c:'var(--blue)',t:'BBOXX product review thread trending on YouTube',m:'634 posts'},
-  {c:'var(--purple)',t:'Energy fintech BNPL product discussed — viral',m:'1.1k posts'},
-  {c:'var(--green)',t:'Solar home system demand rising — Rivers State',m:'318 posts'},
-  {c:'var(--amber)',t:'PAYG affordability thread — 400+ replies',m:'401 posts'},
-  {c:'var(--red)',t:'Power outage reports spike — multiple states',m:'2.3k posts'},
-  {c:'var(--blue)',t:'Mini-grid licensing complaints — Kaduna',m:'187 posts'},
-  {c:'var(--green)',t:'Agri-solar pump gaining traction — northwest',m:'293 posts'},
-];
-const tAgo=['just now','1 min ago','3 mins ago','8 mins ago','15 mins ago'];
-let sigIdx=0;
-function drawFeed(anim){
-  const feed=document.getElementById('sfeed');if(!feed)return;
-  if(anim){
-    const s=signals[sigIdx%signals.length];
-    const d=document.createElement('div');
-    d.className='sfi new';
-    d.innerHTML=`<span class="sfdot" style="background:${s.c}"></span><div class="sfb"><div class="sft">${s.t}</div><div class="sfm">${tAgo[0]} · ${s.m}</div></div>`;
-    feed.insertBefore(d,feed.firstChild);
-    if(feed.children.length>5)feed.removeChild(feed.lastChild);
-  } else {
-    feed.innerHTML=Array.from({length:5},(_,i)=>{
-      const s=signals[(sigIdx+i)%signals.length];
-      return `<div class="sfi"><span class="sfdot" style="background:${s.c}"></span><div class="sfb"><div class="sft">${s.t}</div><div class="sfm">${tAgo[i]} · ${s.m}</div></div></div>`;
-    }).join('');
-  }
-}
-drawFeed(false);
-
-// ── APEX BASE ──
-const AB={
-  chart:{background:'transparent',toolbar:{show:false},fontFamily:"'JetBrains Mono',monospace"},
-  theme:{mode:'dark'},
-  grid:{borderColor:'rgba(25,32,40,0.95)',strokeDashArray:4},
-  tooltip:{theme:'dark',style:{fontFamily:"'JetBrains Mono',monospace",fontSize:'11px'}},
-  dataLabels:{enabled:false},legend:{show:false},
 };
 
-// ── SPARKLINES ──
-const sparks={};
-function mkSpark(id,data,color){
-  if(!document.getElementById(id))return;
-  const c=new ApexCharts(document.getElementById(id),{
-    ...AB,chart:{...AB.chart,type:'line',height:26,sparkline:{enabled:true}},
-    series:[{data:[...data]}],colors:[color],
-    stroke:{curve:'smooth',width:1.5},tooltip:{enabled:false},
-  });
-  c.render();sparks[id]=c;sparks[id]._data=[...data];
+function setLang(l){
+  LANG=l;
+  document.getElementById('langEN').classList.toggle('active',l==='en');
+  document.getElementById('langPID').classList.toggle('active',l==='pid');
+  var s=STRINGS[l];
+  document.getElementById('hero-title').innerHTML=s.heroTitle;
+  document.getElementById('hero-sub').textContent=s.heroSub;
+  document.getElementById('mainInput').placeholder=s.placeholder;
+  document.getElementById('stream-title').textContent=s.streamTitle;
+  var qps=document.querySelectorAll('.qp');
+  s.qp.forEach(function(p,i){if(qps[i])qps[i].textContent=p;});
 }
-mkSpark('sp1',[52,60,55,70,65,80,78,84],'#22c55e');
-mkSpark('sp2',[54,56,58,60,59,61,62,62],'#22c55e');
-mkSpark('sp3',[26,27,28,29,29,30,30,31],'#38bdf8');
-mkSpark('sp4',[120,125,130,134,138,141,146,148],'#f59e0b');
-mkSpark('sp5',[1.6,1.7,1.8,1.9,2.0,2.1,2.2,2.3],'#22c55e');
-mkSpark('sp6',[58,56,54,51,49,46,44,41],'#f43f5e');
 
-// ── FUEL CHART ──
-const fuelC=new ApexCharts(document.getElementById('fuelChart'),{
-  ...AB,chart:{...AB.chart,type:'bar',height:115,stacked:true},
-  series:[{name:'Fossil',data:[58,55,52,49,45,41]},{name:'Clean',data:[42,45,48,51,55,59]}],
-  colors:['rgba(244,63,94,0.72)','rgba(34,197,94,0.72)'],
-  xaxis:{categories:['Jan','Feb','Mar','Apr','May','Jun'],labels:{style:{colors:'#334d5c',fontSize:'9px'}},axisBorder:{show:false},axisTicks:{show:false}},
-  yaxis:{max:100,labels:{style:{colors:'#334d5c',fontSize:'9px'},formatter:v=>v+'%'}},
-  plotOptions:{bar:{borderRadius:2,columnWidth:'68%'}},fill:{opacity:1},
-});
-fuelC.render();
+function setTheme(t){
+  document.body.classList.toggle('light',t==='light');
+  document.getElementById('themeLight').classList.toggle('active',t==='dark');
+  document.getElementById('themeDark').classList.toggle('active',t==='light');
+  localStorage.setItem('vitics-theme',t);
+}
+(function(){var saved=localStorage.getItem('vitics-theme');if(saved==='light')setTheme('light');})();
 
-// ── EMISSIONS CHART ──
-const emC=new ApexCharts(document.getElementById('emChart'),{
-  ...AB,chart:{...AB.chart,type:'line',height:195},
-  series:[
-    {name:'Total emissions',data:[76,79,83,88,95,100,107,113,108,115,104,112,118]},
-    {name:'Avoided (RE)',data:[0.1,0.2,0.3,0.4,0.6,0.9,1.2,1.6,1.8,2.1,2.4,2.8,3.2]},
-    {name:'NDC target',data:[76,79,83,88,95,100,105,108,106,108,100,95,88]},
-  ],
-  colors:['rgba(244,63,94,0.85)','rgba(34,197,94,0.85)','rgba(56,189,248,0.65)'],
-  stroke:{curve:'smooth',width:[2,2,1.5],dashArray:[0,0,5]},
-  fill:{type:['gradient','gradient','none'],gradient:{shadeIntensity:1,opacityFrom:0.1,opacityTo:0.01,stops:[0,100]}},
-  markers:{size:[2,2,0],strokeWidth:0},
-  xaxis:{categories:['2000','02','04','06','08','10','12','14','16','18','20','22','24'],labels:{style:{colors:'#334d5c',fontSize:'9px'}},axisBorder:{show:false},axisTicks:{show:false}},
-  yaxis:{labels:{style:{colors:'#334d5c',fontSize:'9px'},formatter:v=>v+'Mt'}},
-});
-emC.render();
+var STREAM=[
+  {loc:'Lagos',time:'2 min ago',text:'Generator fuel cost pass my shop rent this month',kw:'generator cost'},
+  {loc:'Kano',time:'4 min ago',text:'Finally bought 500W solar for my tailoring shop — no regret',kw:'solar adoption'},
+  {loc:'Abuja · FCT',time:'7 min ago',text:'AEDC bill jumped from ₦18k to ₦67k — same light, more money',kw:'bill overcharge'},
+  {loc:'Port Harcourt',time:'9 min ago',text:'How many hours AEDC supposed to give per day sef?',kw:'supply rights'},
+  {loc:'Ibadan',time:'12 min ago',text:'Na solar we dey use now, generator don rest',kw:'solar switching'},
+  {loc:'Benin City',time:'15 min ago',text:'My inverter battery die after 6 months — which brand better?',kw:'product quality'},
+  {loc:'Kaduna',time:'18 min ago',text:'Light never come since Tuesday — NERC suppose do something',kw:'no supply'},
+  {loc:'Onitsha',time:'21 min ago',text:'EcoFlow Delta 2 — how e take work for Nigeria heat?',kw:'EcoFlow'},
+  {loc:'Enugu',time:'24 min ago',text:'Solar panel 1000W how much naira now for good quality?',kw:'1000W panel'},
+  {loc:'Jos',time:'27 min ago',text:'Solar worth it with cloudy days up north?',kw:'solar viability'},
+  {loc:'Aba',time:'30 min ago',text:'Which inverter brand dey last — Luminous or Felicity?',kw:'inverter brand'},
+  {loc:'Maiduguri',time:'33 min ago',text:'Off-grid solar for market stall — where I go start?',kw:'off-grid solar'},
+];
+var streamIdx=0;
 
-// ── SDG DONUT ──
-let sdgDonutChart=new ApexCharts(document.getElementById('sdgd'),{
-  ...AB,chart:{...AB.chart,type:'donut',height:155},
-  series:[74,48,61,35,29],
-  labels:['SDG 7','SDG 5','SDG 8','SDG 10','SDG 13'],
-  colors:['#22c55e','#f472b6','#4ade80','#38bdf8','#c084fc'],
-  plotOptions:{pie:{donut:{size:'60%',labels:{show:true,total:{show:true,label:'Avg Score',fontSize:'10px',fontFamily:"'JetBrains Mono',monospace",color:'#6b8fa0',formatter:()=>'49%'}}}}},
-  stroke:{width:0},dataLabels:{enabled:false},
-});
-sdgDonutChart.render();
+function renderStream(){
+  var feed=document.getElementById('streamFeed');
+  if(!feed)return;
+  feed.innerHTML=STREAM.slice(0,6).map(function(s){
+    return '<div class="stream-card" onclick="useStream(this)" data-text="'+s.text+'">' +
+      '<div class="sc-meta"><span class="sc-loc">📍 '+s.loc+'</span><span class="sc-time">'+s.time+'</span></div>' +
+      '<div class="sc-text">'+s.text+'</div>' +
+      '<span class="sc-keyword">'+s.kw+'</span></div>';
+  }).join('');
+}
 
-// ── MAPBOX ──
-let mapLoaded=false;
-const mapMarkers={};
-(function(){
-  const a='pk.eyJ1IjoiYm9vbXN1c3RhaW5hYmx';
-  const b='lIiwiYSI6ImNtcDU3d2IzMDBqMHky';
-  const c='dHF6bmIxZ20xdHgifQ.35X-rtlHBILnc5hHvH7Nfg';
-  mapboxgl.accessToken=a+b+c;
-  const map=new mapboxgl.Map({
-    container:'map',style:'mapbox://styles/mapbox/dark-v11',
-    center:[8.6753,9.082],zoom:4.4,minZoom:3.5,maxZoom:9,attributionControl:false,
+function rotateStream(){
+  var feed=document.getElementById('streamFeed');
+  if(!feed)return;
+  var cards=feed.querySelectorAll('.stream-card');
+  if(cards.length)cards[cards.length-1].remove();
+  streamIdx=(streamIdx+1)%STREAM.length;
+  var s=STREAM[streamIdx];
+  var d=document.createElement('div');
+  d.className='stream-card new';d.setAttribute('data-text',s.text);d.onclick=function(){useStream(this);};
+  d.innerHTML='<div class="sc-meta"><span class="sc-loc">📍 '+s.loc+'</span><span class="sc-time">just now</span></div><div class="sc-text">'+s.text+'</div><span class="sc-keyword">'+s.kw+'</span>';
+  feed.insertBefore(d,feed.firstChild);
+}
+
+function useStream(el){
+  var t=el.getAttribute('data-text');
+  if(t){document.getElementById('mainInput').value=t;startConversation();}
+}
+
+function renderAedcBars(){
+  var c=document.getElementById('g-aedc-bars');if(!c)return;
+  var yrs=[2014,2016,2018,2020,2022,2024],def=[2,4,5,5,7,9];
+  c.innerHTML=yrs.map(function(y,i){
+    var col=def[i]>=7?'var(--red)':def[i]>=5?'var(--amber)':'var(--blue)';
+    return '<div class="g-aedc-row"><span class="g-aedc-yr">'+y+'</span><div class="g-aedc-bar-track"><div class="g-aedc-bar-fill" style="width:'+(def[i]*10)+'%;background:'+col+'"></div></div><span style="font-size:8px;font-family:var(--mono);color:'+col+';min-width:14px;text-align:right">'+def[i]+'</span></div>';
+  }).join('');
+}
+
+function animateGlimpse(){
+  [{id:'gb-pos',pid:'gbp-pos',b:62,r:5},{id:'gb-neg',pid:'gbp-neg',b:24,r:3},{id:'gb-gen',pid:'gbp-gen',b:81,r:3},{id:'gb-pol',pid:'gbp-pol',b:74,r:2}].forEach(function(b){
+    var v=b.b+Math.round((Math.random()-0.5)*b.r);
+    var el=document.getElementById(b.id),p=document.getElementById(b.pid);
+    if(el)el.style.width=v+'%';if(p)p.textContent=v+'%';
   });
-  map.addControl(new mapboxgl.NavigationControl({showCompass:false}),'top-right');
-  const ms={
-    'Lagos':{v:100,c:[3.3792,6.5244]},'Kano':{v:74,c:[8.5167,12.0022]},
-    'Abuja':{v:60,c:[7.4951,9.0579]},'Kaduna':{v:46,c:[7.4396,10.5105]},
-    'Rivers':{v:38,c:[7.0134,4.8156]},'Ogun':{v:29,c:[3.35,7.16]},
-    'Sokoto':{v:22,c:[5.2403,13.0622]},'Enugu':{v:19,c:[7.4951,6.4584]},
-    'Oyo':{v:17,c:[3.947,8.1574]},'Borno':{v:14,c:[13.1519,11.8846]},
-    'Anambra':{v:12,c:[6.998,6.2209]},'Katsina':{v:11,c:[7.6001,12.9816]},
-  };
-  map.on('load',()=>{
-    mapLoaded=true;
-    Object.entries(ms).forEach(([n,d])=>{
-      const sz=14+(d.v/100)*28,op=0.12+(d.v/100)*0.55;
-      const el=document.createElement('div');
-      el.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;background:rgba(34,197,94,${op});border:1px solid rgba(34,197,94,${Math.min(op+0.3,0.9)});box-shadow:0 0 ${sz}px rgba(34,197,94,${op*0.35});cursor:pointer;transition:all 0.4s;`;
-      el.addEventListener('mouseenter',()=>el.style.transform='scale(1.4)');
-      el.addEventListener('mouseleave',()=>el.style.transform='scale(1)');
-      mapMarkers[n]=el;
-      new mapboxgl.Marker({element:el,anchor:'center'}).setLngLat(d.c)
-        .setPopup(new mapboxgl.Popup({offset:sz/2+4,closeButton:false,className:'vpop'})
-          .setHTML(`<div style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:7px 11px;background:#0e1214;border:1px solid rgba(34,197,94,0.25);border-radius:8px;color:#e2eff5"><div style="color:#4ade80;font-weight:600;margin-bottom:2px">${n}</div><div style="color:#6b8fa0">Score: <span style="color:#22c55e;font-weight:700">${d.v}</span></div></div>`))
-        .addTo(map);
+  var gconv=document.getElementById('gm-conv');
+  if(gconv)gconv.textContent=(2847+totalQ+Math.floor(Math.random()*8)).toLocaleString();
+}
+
+function pickPhrase(el){document.getElementById('mainInput').value=el.textContent;startConversation();}
+
+function startConversation(){
+  var input=document.getElementById('mainInput');
+  var text=input.value.trim();if(!text)return;
+  input.value='';
+  document.getElementById('convoWrap').style.display='grid';
+  document.getElementById('heroPrompt').style.paddingBottom='8px';
+  conversationHistory=[];receiptData={date:new Date().toLocaleDateString('en-GB')};
+  var msgs=document.getElementById('convoMessages');
+  if(!msgs.innerHTML){addMsg('vitics',STRINGS[LANG].greeting);}
+  addMsg('user',text);
+  conversationHistory.push({role:'user',content:text});
+  detectType(text);updateReceipt();
+  getResponse(text);totalQ++;updateCount();
+}
+
+function sendMessage(){
+  var input=document.getElementById('convoInput');
+  var text=input.value.trim();if(!text)return;
+  input.value='';
+  addMsg('user',text);conversationHistory.push({role:'user',content:text});
+  getResponse(text);totalQ++;updateCount();
+}
+
+function addMsg(role,text){
+  var msgs=document.getElementById('convoMessages');
+  var d=document.createElement('div');d.className='msg '+role;
+  d.innerHTML='<div class="msg-avatar">'+(role==='vitics'?'V':'U')+'</div><div class="msg-bubble">'+text.replace(/\n/g,'<br>')+'</div>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+
+function showTyping(){
+  var msgs=document.getElementById('convoMessages');
+  var d=document.createElement('div');d.className='msg vitics';d.id='typing-ind';
+  d.innerHTML='<div class="msg-avatar">V</div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+function removeTyping(){var t=document.getElementById('typing-ind');if(t)t.remove();}
+
+async function getResponse(msg){
+  showTyping();
+  var kb=typeof VITICS_KNOWLEDGE!=='undefined'?VITICS_KNOWLEDGE:null;
+  var kbLines=['VITICS KNOWLEDGE BASE:'];
+  if(kb){
+    kbLines.push('Policy documents: '+kb.policies.length+' (2001-2025), avg impact 3/10, avg gap 74%');
+    if(kb.transition_moments)kb.transition_moments.forEach(function(t){kbLines.push('★ '+t.year+': '+t.note);});
+  }
+  kbLines.push('AEDC 2024: 240-300% tariff increase, grid defection 9/10');
+  kbLines.push('92M Nigerians without electricity (2023). Solar adoption only 2% despite 75% awareness.');
+  kbLines.push('Average MSME generator spend: ₦20-40k/month. Nigeria grid factor: 0.43 kgCO2/kWh.');
+  kbLines.push('Sun hours: Lagos/Abuja 5hrs, north Nigeria 6-7hrs.');
+
+  var sys='You are Vitics — Nigeria energy intelligence assistant. You have deep knowledge from 25 verified Nigerian energy policy documents and 11 years of AEDC financial data.\n\n'+kbLines.join('\n')+'\n\nRules:\n1. Answer in the consumer\'s language (English or Nigerian Pidgin)\n2. Be specific to their state/situation\n3. Keep answers to 3-4 sentences — warm, direct, useful\n4. Ask one follow-up question to build their receipt\n5. Extract structured data and append:\n<!--RECEIPT:{"location":"...","situation":"...","monthly_spend":"...","bill_amount":"...","expected_bill":"...","overcharge":"...","solar_system_size":"...","monthly_saving":"...","payback_months":"...","verdict":"..."}-->\nOnly include fields you can determine. Use null for unknowns.';
+
+  try{
+    var r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-haiku-4-5-20251001',max_tokens:500,
+        system:sys,
+        messages:conversationHistory.map(function(m){return{role:m.role,content:m.content};})
+      })
     });
-  });
-  const ps=document.createElement('style');
-  ps.textContent='.mapboxgl-popup-content{background:transparent!important;padding:0!important;border:none!important;box-shadow:none!important}.mapboxgl-popup-tip{display:none!important}.mapboxgl-ctrl-group{background:rgba(14,18,20,0.9)!important;border:1px solid rgba(34,197,94,0.15)!important}.mapboxgl-ctrl-group button{background:transparent!important;color:#6b8fa0!important}';
-  document.head.appendChild(ps);
-})();
+    var data=await r.json();
+    var full=data.content[0].text;
+    var rm=full.match(/<!--RECEIPT:([\s\S]*?)-->/);
+    if(rm){try{Object.assign(receiptData,JSON.parse(rm[1]));updateReceipt();}catch(e){}}
+    var display=full.replace(/<!--RECEIPT:[\s\S]*?-->/,'').trim();
+    removeTyping();addMsg('vitics',display);
+    conversationHistory.push({role:'assistant',content:full});
+  }catch(err){
+    removeTyping();
+    addMsg('vitics',LANG==='pid'?'Sorry, e get issue. Try again.':'Brief connection issue. Please try again.');
+  }
+}
 
-// ── COUNTDOWN ──
-const CYCLE=45;let cd=CYCLE;
-setInterval(()=>{
-  cd--;
-  document.getElementById('cdfill').style.width=Math.max(0,(cd/CYCLE)*100)+'%';
-  document.getElementById('cdlbl').textContent=cd>0?'Next refresh in '+cd+'s':'Refreshing...';
-  if(cd<=0)cd=CYCLE;
-},1000);
+function detectType(t){
+  t=t.toLowerCase();
+  if(t.includes('bill')||t.includes('overcharge')||t.includes('triple')||t.includes('jump'))setReceiptType('bill');
+  else if(t.includes('solar')||t.includes('panel')||t.includes('switch'))setReceiptType('solar');
+  else if(t.includes('right')||t.includes('hours')||t.includes('no light')||t.includes('supply'))setReceiptType('rights');
+  else setReceiptType('load');
+}
 
-// ── SIGNAL FEED ROTATION ──
-setInterval(()=>{ sigIdx=(sigIdx+1)%signals.length; drawFeed(true); },28000);
+function setReceiptType(type){
+  receiptType=type;
+  document.querySelectorAll('.type-btn').forEach(function(b){b.classList.remove('active');});
+  var idx={load:0,bill:1,solar:2,rights:3}[type]||0;
+  var btns=document.querySelectorAll('.type-btn');
+  if(btns[idx])btns[idx].classList.add('active');
+  var hdrs={load:'⚡ Energy Load Receipt',bill:'📋 Bill Verification Receipt',solar:'☀️ Solar Transition Receipt',rights:'⚖️ Supply Rights Receipt'};
+  document.getElementById('receipt-hdr').textContent=hdrs[type]||'Energy Receipt';
+  updateReceipt();
+}
 
-// ── SIMULATED REFRESH for non-AI fields ──
-setInterval(()=>{
-  cvCurrent=cvCurrent.map((v,i)=>i===7?100:nudge(v,Math.max(15,v-8),Math.min(99,v+8),rnd(2,6)));
-  cbarEls.forEach((b,i)=>b.style.height=Math.round(cvCurrent[i]*0.46)+'px');
-  heatData=heatData.map(row=>row.map(v=>nudge(v,Math.max(10,v-6),Math.min(99,v+6),rnd(1,3))));
-  drawHeatmap();
-  stateScores=stateScores.map((v,i)=>nudge(v,Math.max(12,v-5),Math.min(100,v+5),rnd(1,3)));
-  stateVals=stateVals.map((v,i)=>nudge(v,Math.floor(v*0.93),Math.floor(v*1.07),rnd(20,200)));
-  stNames.forEach((_,i)=>{
-    const b=document.getElementById('stb'+i),v=document.getElementById('stv'+i);
-    if(b)b.style.width=stateScores[i]+'%';
-    if(v)v.textContent=fmt(stateVals[i]);
-  });
-  document.getElementById('alrt').textContent=rnd(1,8)+' alerts';
-},45000);
+function updateReceipt(){
+  var body=document.getElementById('receiptBody');if(!body)return;
+  var d=receiptData,now=d.date||new Date().toLocaleDateString('en-GB');
+  var fields=[{k:'Date',v:now,c:''},{k:'Location',v:d.location||'—',c:''},{k:'Situation',v:d.situation||'—',c:''},{k:'──────',v:'──────',c:''}];
+  if(receiptType==='bill'){
+    if(d.bill_amount)fields.push({k:'Your bill',v:'₦'+d.bill_amount,c:'red'});
+    if(d.expected_bill)fields.push({k:'Expected bill',v:'₦'+d.expected_bill,c:'green'});
+    if(d.overcharge)fields.push({k:'Overcharge',v:'₦'+d.overcharge,c:'red'});
+    else if(d.bill_amount)fields.push({k:'Overcharge',v:'Calculating...',c:'filling'});
+  }else if(receiptType==='solar'){
+    if(d.solar_system_size)fields.push({k:'Recommended system',v:d.solar_system_size,c:'green'});
+    if(d.monthly_spend)fields.push({k:'Current gen spend',v:'₦'+d.monthly_spend+'/mo',c:'red'});
+    if(d.monthly_saving)fields.push({k:'Monthly saving',v:'₦'+d.monthly_saving,c:'green'});
+    if(d.payback_months)fields.push({k:'Payback',v:d.payback_months+' months',c:'amber'});
+    else fields.push({k:'Payback',v:'Calculating...',c:'filling'});
+  }else if(receiptType==='rights'){
+    fields.push({k:'DISCO',v:d.location?'Confirm state':'—',c:'amber'});
+    fields.push({k:'Min hours/day',v:'8–20hrs (band)',c:''});
+    fields.push({k:'Complaint line',v:'NERC: 0700 246 0632',c:'green'});
+  }else{
+    if(d.solar_system_size)fields.push({k:'Solar needed',v:d.solar_system_size,c:'green'});
+    if(d.monthly_spend)fields.push({k:'Current spend',v:'₦'+d.monthly_spend+'/mo',c:'red'});
+    if(d.monthly_saving)fields.push({k:'Potential saving',v:'₦'+d.monthly_saving+'/mo',c:'green'});
+    else fields.push({k:'Saving',v:'Calculating...',c:'filling'});
+  }
+  var ready=d.verdict||(d.monthly_saving&&d.payback_months)||d.overcharge;
+  var html='<div class="receipt-doc"><div class="receipt-doc-title">VITICS ENERGY RECEIPT<span style="font-size:8px;color:var(--text3)">'+now+'</span></div>'+
+    fields.map(function(f){return '<div class="receipt-line"><span class="rl-key">'+f.k+'</span><span class="rl-val '+f.c+'">'+f.v+'</span></div>';}).join('');
+  if(d.verdict)html+='<div class="receipt-verdict"><strong>Verdict:</strong> '+d.verdict+'</div>';
+  else if(Object.keys(d).length>1)html+='<div class="receipt-verdict" style="opacity:0.4">Continue the conversation to complete your receipt...</div>';
+  if(ready){
+    html+='<div class="receipt-actions">'+
+      '<div class="receipt-btn primary" onclick="shareReceipt()">📱 Share on WhatsApp</div>'+
+      '<div class="receipt-btn" onclick="downloadReceipt()">📄 Download receipt</div>'+
+      (receiptType==='bill'?'<div class="receipt-btn" onclick="window.open(\'https://nerc.gov.ng\',\'_blank\')">⚖️ Report to NERC</div>':'')+
+      '<div class="receipt-btn" onclick="window.open(\'https://rea.gov.ng\',\'_blank\')">🔆 Find solar vendors</div>'+
+    '</div>';
+    document.getElementById('receipt-status').textContent='Ready ✓';
+    document.getElementById('receipt-status').style.color='var(--green)';
+  }
+  html+='</div>';body.innerHTML=html;
+}
 
-// ── RE-RUN AI ENGINE every 5 minutes ──
-setInterval(runAIEngine, 5*60*1000);
+function shareReceipt(){
+  var d=receiptData,text='My Vitics Energy Receipt\n━━━━━━━━━━━━━━\n';
+  if(d.location)text+='Location: '+d.location+'\n';
+  if(d.situation)text+='Situation: '+d.situation+'\n';
+  if(d.bill_amount)text+='My bill: ₦'+d.bill_amount+'\n';
+  if(d.expected_bill)text+='Expected: ₦'+d.expected_bill+'\n';
+  if(d.overcharge)text+='Overcharge: ₦'+d.overcharge+'\n';
+  if(d.monthly_saving)text+='Solar saving: ₦'+d.monthly_saving+'/month\n';
+  if(d.verdict)text+='\n'+d.verdict+'\n';
+  text+='━━━━━━━━━━━━━━\nGet yours: vitics.ai';
+  window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
+}
 
-// ── LAUNCH AI ENGINE on load ──
-window.addEventListener('load', ()=>{
-  setTimeout(runAIEngine, 1500);
+function downloadReceipt(){
+  var d=receiptData,text='VITICS ENERGY RECEIPT\n======================\n';
+  text+='Date: '+(d.date||new Date().toLocaleDateString())+'\n';
+  if(d.location)text+='Location: '+d.location+'\n';
+  if(d.situation)text+='Situation: '+d.situation+'\n----------------------\n';
+  if(d.bill_amount)text+='Your bill: ₦'+d.bill_amount+'\n';
+  if(d.expected_bill)text+='Expected bill: ₦'+d.expected_bill+'\n';
+  if(d.overcharge)text+='Potential overcharge: ₦'+d.overcharge+'\n';
+  if(d.solar_system_size)text+='Recommended solar: '+d.solar_system_size+'\n';
+  if(d.monthly_saving)text+='Monthly saving: ₦'+d.monthly_saving+'\n';
+  if(d.payback_months)text+='Payback period: '+d.payback_months+' months\n';
+  if(d.verdict)text+='======================\nVerdict: '+d.verdict+'\n';
+  text+='======================\nPowered by Vitics — Nigeria Energy Intelligence\nvitics.ai';
+  var blob=new Blob([text],{type:'text/plain'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='vitics-energy-receipt.txt';a.click();
+}
+
+var recognition=null,isListening=false;
+function toggleVoice(){
+  if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){
+    alert('Voice not supported in this browser. Please type your question.');return;
+  }
+  if(isListening){recognition.stop();return;}
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  recognition=new SR();recognition.lang='en-NG';recognition.continuous=false;recognition.interimResults=false;
+  recognition.onstart=function(){isListening=true;document.getElementById('voiceBtn').classList.add('listening');document.getElementById('voiceBtn').textContent='⏹';};
+  recognition.onresult=function(e){document.getElementById('mainInput').value=e.results[0][0].transcript;};
+  recognition.onend=function(){
+    isListening=false;document.getElementById('voiceBtn').classList.remove('listening');document.getElementById('voiceBtn').textContent='🎙';
+    var v=document.getElementById('mainInput').value;if(v)startConversation();
+  };
+  recognition.onerror=function(){isListening=false;document.getElementById('voiceBtn').classList.remove('listening');document.getElementById('voiceBtn').textContent='🎙';};
+  recognition.start();
+}
+
+function updateCount(){
+  document.getElementById('footer-count').textContent=(2847+totalQ).toLocaleString();
+  var gconv=document.getElementById('gm-conv');
+  if(gconv)gconv.textContent=(2847+totalQ).toLocaleString();
+}
+
+window.addEventListener('load',function(){
+  renderStream();renderAedcBars();lucide.createIcons();
+  setInterval(rotateStream,8000);
+  setInterval(animateGlimpse,15000);
 });
 </script>
 </body>
